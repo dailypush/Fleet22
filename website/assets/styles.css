@@ -1,0 +1,242 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+}
+
+/* About Snippet Section */
+.about-snippet {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.about-snippet .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.about-snippet h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-snippet p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Upcoming Events Highlight Section */
+.events-highlight {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.events-highlight .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.events-highlight h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+.event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event-date,
+.event-location {
+    font-size: 1.1em;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.view-full-schedule {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view-full-schedule:hover {
+    background-color: #0056b3;
+}
+
+/* Gallery Preview Section */
+.gallery-preview {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.gallery-preview .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.gallery-preview h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform .3s;
+}
+
+/* Join the Fleet CTA Section */
+.join-fleet-cta {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.join-fleet-cta .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.join-fleet-cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.join-fleet-cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.site-footer .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info,
+.social-media,
+.copyright {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.site-footer h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer .social-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.site-footer .copyright {
+    flex-basis: 100%;
+    text-align: center;
+}
