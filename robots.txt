@@ -1,0 +1,16 @@
+# Allow all bots
+User-agent: *
+Disallow: 
+
+# Disallow all bots from certain paths
+# User-agent: *
+# Disallow: /private/
+# Disallow: /restricted/
+
+# Allow only Googlebot to index everything
+# User-agent: Googlebot
+# Disallow:
+
+# Prevent certain bots from indexing anything
+# User-agent: BadBot
+# Disallow: /
