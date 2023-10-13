@@ -1,0 +1,47 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container img {
+    max-width: 100%;
+}
+
+.primary-btn {
+    background-color: #D32F2F; /* Red color from the logo */
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: #B71C1C; /* Darkened red */
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+/* #event-details {
+    background-color: #fafafa;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+} */
+
+#event-details h5 {
+    color: #D32F2F; /* Using the red color from the logo */
+}
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#lastUpdated {
+    font-size: 0.9em;
+}
