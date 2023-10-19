@@ -45,3 +45,48 @@ footer {
 #lastUpdated {
     font-size: 0.9em;
 }
+/* Upcoming Events Highlight Section */
+.events-highlight {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.events-highlight .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.events-highlight h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+.event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event-date,
+.event-location {
+    font-size: 1.1em;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.view-full-schedule {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view-full-schedule:hover {
+    background-color: #0056b3;
+}
