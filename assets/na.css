@@ -90,3 +90,33 @@ footer {
 .view-full-schedule:hover {
     background-color: #0056b3;
 }
+
+
+
+/* Additional CSS classes for Get Involved Section */
+.get-involved-section {
+    margin-top: 60px; /* Adjust this value as needed */
+    background-color: #f2f2f2;
+    padding: 40px 0;
+}
+
+.get-involved-heading {
+    color: #007bff;
+}
+
+.get-involved-text {
+    color: #333;
+}
+
+.get-involved-lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.get-involved-btn-primary {
+    border-radius: 5px;
+}
+
+.get-involved-btn-secondary {
+    border-radius: 5px;
+}
