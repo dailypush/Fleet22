@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boats on Waves Animation</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="waveCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('waveCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let waveAmplitude = 5;
+        let waveFrequency = 0.02;
+        let waveSpeed = 0.002;
+
+        const waveHeight = canvas.height / 2;
+        let frameCount = 0;
+
+        const boatImage = new Image();
+        boatImage.src = './assets/images/scaled_j105_sailboat_64x64.png'; // Make sure this path is correct
+
+        // Define the boat positions
+        const boats = [{x: 100, y: 0}, {x: 300, y: 0}, {x: 500, y: 0}];
+
+        boatImage.onload = function() {
+            requestAnimationFrame(drawWave);
+        };
+
+        function drawWave() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.moveTo(0, waveHeight);
+
+    for (let x = 0; x < canvas.width; x++) {
+        let y = waveHeight + waveAmplitude * Math.sin((x * waveFrequency) + frameCount * waveSpeed);
+        ctx.lineTo(x, y);
+    }
+
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Draw boats with rotation
+    boats.forEach(boat => {
+        let waveY = waveHeight + waveAmplitude * Math.sin((boat.x * waveFrequency) + frameCount * waveSpeed);
+        boat.y = waveY - 64; // Offset for the boat height
+
+        // Calculate the slope of the wave at the boat's position
+        let slope = waveAmplitude * waveFrequency * Math.cos((boat.x * waveFrequency) + frameCount * waveSpeed);
+        // Calculate the angle of rotation for the boat
+        let angle = Math.atan(slope);
+
+        // Save the current context state
+        ctx.save();
+
+        // Translate to boat position and rotate the canvas
+        ctx.translate(boat.x + 32, boat.y + 32); // Translate to the center of the boat
+        ctx.rotate(angle); // Rotate the canvas by the angle
+
+        // Draw the boat image with rotation applied
+        ctx.drawImage(boatImage, -32, -32, 64, 64); // Draw the boat centered on the translation point
+
+        // Restore the canvas to its original state
+        ctx.restore();
+    });
+
+    waveAmplitude += 0.01;
+    waveFrequency -= 0.00005;
+    if (waveFrequency < 0.005) {
+        waveFrequency = 0.005;
+    }
+
+    frameCount++;
+    requestAnimationFrame(drawWave);
+}
+
+    </script>
+</body>
+</html>
