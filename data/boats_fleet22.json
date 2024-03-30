@@ -45,8 +45,8 @@
         "Hull Number": "423",
         "Boat Name": "Southbound",
         "Yacht Club": "SSC",
-        "Fleet Dues": "Paid",
-        "Class Dues": "Not Paid"
+        "Fleet Dues": "Not Paid",
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "376",
@@ -67,7 +67,7 @@
         "Boat Name": "Relentless",
         "Yacht Club": "NCYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "148",
@@ -116,7 +116,7 @@
         "Boat Name": "Fall Line",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "91",

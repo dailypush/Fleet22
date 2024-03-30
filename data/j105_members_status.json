@@ -1,5 +1,365 @@
 [
     {
+        "Hull": "1",
+        "Owners/Helmsmen": "David Patterson",
+        "Status": "OW",
+        "Boat Name": "Adios",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "2",
+        "Owners/Helmsmen": "Fusion Inc.",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "3",
+        "Owners/Helmsmen": "Tim Russell",
+        "Status": "OW",
+        "Boat Name": "Ne Ne",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "4",
+        "Owners/Helmsmen": "Moris Finvarb",
+        "Status": "OW",
+        "Boat Name": "Rafaga",
+        "Location": "Colombia",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "5",
+        "Owners/Helmsmen": "Richard Stearns",
+        "Status": "OW",
+        "Boat Name": "Glider IV",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "6",
+        "Owners/Helmsmen": "Mark Wolf",
+        "Status": "OW",
+        "Boat Name": "Liberty",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "7",
+        "Owners/Helmsmen": "Don Aakhus",
+        "Status": "OW",
+        "Boat Name": "007",
+        "Location": "Hawaii",
+        "Fleet": "0",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "8",
+        "Owners/Helmsmen": "Adrian Owles",
+        "Status": "OW",
+        "Boat Name": "Mad Blue",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "9",
+        "Owners/Helmsmen": "Chuck Driscoll",
+        "Status": "OW",
+        "Boat Name": "Blow Boat",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "9",
+        "Owners/Helmsmen": "Stephen Driscoll",
+        "Status": "CO",
+        "Boat Name": "Blow Boat",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "11",
+        "Owners/Helmsmen": "Chuck Shortz",
+        "Status": "OW",
+        "Boat Name": "Singularity",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "12",
+        "Owners/Helmsmen": "Doug Ferguson",
+        "Status": "OW",
+        "Boat Name": "Mischief",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "13",
+        "Owners/Helmsmen": "No Hull #13",
+        "Status": "OW",
+        "Boat Name": "none",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "14",
+        "Owners/Helmsmen": "Tom Hansen",
+        "Status": "OW",
+        "Boat Name": "Kristina",
+        "Location": "Georgia",
+        "Fleet": "11",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "15",
+        "Owners/Helmsmen": "Frederick Beyer",
+        "Status": "OW",
+        "Boat Name": "Summer Storm",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "16",
+        "Owners/Helmsmen": "Doug Bailey",
+        "Status": "OW",
+        "Boat Name": "Akula",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "17",
+        "Owners/Helmsmen": "Tom Coates",
+        "Status": "OW",
+        "Boat Name": "Masquerade",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "19",
+        "Owners/Helmsmen": "Paul Zajac",
+        "Status": "OW",
+        "Boat Name": "sk\u00e5l",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "19",
+        "Owners/Helmsmen": "Johan Blok",
+        "Status": "CO",
+        "Boat Name": "sk\u00e5l",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "20",
+        "Owners/Helmsmen": "Unknown",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "21",
+        "Owners/Helmsmen": "Oeyvind Karlsen",
+        "Status": "OW",
+        "Boat Name": "Bam-Bam",
+        "Location": "Norway",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "22",
+        "Owners/Helmsmen": "Giorgio Pierini",
+        "Status": "OW",
+        "Boat Name": "Cheecotts",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "23",
+        "Owners/Helmsmen": "Scott Spurlin",
+        "Status": "OW",
+        "Boat Name": "YOLO!",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "24",
+        "Owners/Helmsmen": "Michael Walsh",
+        "Status": "OW",
+        "Boat Name": "Sandpiper",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "25",
+        "Owners/Helmsmen": "Bobbi Coffey",
+        "Status": "OW",
+        "Boat Name": "elmo",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "26",
+        "Owners/Helmsmen": "Shannon Ryan",
+        "Status": "CO",
+        "Boat Name": "Donkey Jack",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "26",
+        "Owners/Helmsmen": "Rolf Kaiser",
+        "Status": "OW",
+        "Boat Name": "Donkey Jack",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "26",
+        "Owners/Helmsmen": "Steve Kleha",
+        "Status": "CO",
+        "Boat Name": "Donkey Jack",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "27",
+        "Owners/Helmsmen": "Randy Hecht",
+        "Status": "OW",
+        "Boat Name": "Niuhi",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "28",
+        "Owners/Helmsmen": "Yves Frechet",
+        "Status": "OW",
+        "Boat Name": "Illusion",
+        "Location": "Quebec",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "29",
+        "Owners/Helmsmen": "Ben duPont",
+        "Status": "OW",
+        "Boat Name": "Ctrl Alt Del",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "30",
+        "Owners/Helmsmen": "Wes Herdman",
+        "Status": "OW",
+        "Boat Name": "pNeuma-J",
+        "Location": "British Columbia",
+        "Fleet": "20",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "31",
+        "Owners/Helmsmen": "William Hoehler",
+        "Status": "OW",
+        "Boat Name": "Joyride",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "32",
+        "Owners/Helmsmen": "Richard Butts",
+        "Status": "OW",
+        "Boat Name": "Melilani",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "33",
+        "Owners/Helmsmen": "Eric & Kyung-hee Doelling",
+        "Status": "OW",
+        "Boat Name": "La Pavoni",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "34",
+        "Owners/Helmsmen": "Jay Heaslip",
+        "Status": "OW",
+        "Boat Name": "Lionheart",
+        "Location": "Vermont",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "35",
+        "Owners/Helmsmen": "Dave Wilson",
+        "Status": "CO",
+        "Boat Name": "Good Timin'",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "35",
+        "Owners/Helmsmen": "Chris Perkins",
+        "Status": "OW",
+        "Boat Name": "Good Timin'",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "35",
+        "Owners/Helmsmen": "Phillips Perkins",
+        "Status": "CO",
+        "Boat Name": "Good Timin'",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "36",
+        "Owners/Helmsmen": "Simon Curwen",
+        "Status": "OW",
+        "Boat Name": "Voador",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
         "Hull": "37",
         "Owners/Helmsmen": "John Lloyd Egan",
         "Status": "OW",
@@ -7,6 +367,366 @@
         "Location": "New York",
         "Fleet": "22",
         "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "38",
+        "Owners/Helmsmen": "Bob Stahler",
+        "Status": "OW",
+        "Boat Name": "Jubilee IV",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "39",
+        "Owners/Helmsmen": "Patrick Quinncannon",
+        "Status": "OW",
+        "Boat Name": "Jouster",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "40",
+        "Owners/Helmsmen": "Scooter Simmons",
+        "Status": "CO",
+        "Boat Name": "Blackhawk",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "40",
+        "Owners/Helmsmen": "Ryan Simmons",
+        "Status": "OW",
+        "Boat Name": "Blackhawk",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "41",
+        "Owners/Helmsmen": "Bill Mead",
+        "Status": "OW",
+        "Boat Name": "Spitfire",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "42",
+        "Owners/Helmsmen": "Michael Stephens",
+        "Status": "CO",
+        "Boat Name": "Jose Cuervo",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "42",
+        "Owners/Helmsmen": "Shawn Bennett",
+        "Status": "OW",
+        "Boat Name": "Jose Cuervo",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "43",
+        "Owners/Helmsmen": "Hugh Bethell",
+        "Status": "OW",
+        "Boat Name": "Jester",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "45",
+        "Owners/Helmsmen": "Stewart Cannon",
+        "Status": "OW",
+        "Boat Name": "J-OK",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "46",
+        "Owners/Helmsmen": "Charlie Pick",
+        "Status": "OW",
+        "Boat Name": "Box of Rain",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "47",
+        "Owners/Helmsmen": "Shaun Hagerman",
+        "Status": "CO",
+        "Boat Name": "Double Trouble",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "48",
+        "Owners/Helmsmen": "Philippe Pierrot",
+        "Status": "OW",
+        "Boat Name": "Legende",
+        "Location": "Hong Kong",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "49",
+        "Owners/Helmsmen": "French Guy",
+        "Status": "OW",
+        "Boat Name": "Jee-Mags",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "50",
+        "Owners/Helmsmen": "Daniel Neff",
+        "Status": "AM",
+        "Boat Name": "Eclipse",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "51",
+        "Owners/Helmsmen": "Art Guerrera",
+        "Status": "OW",
+        "Boat Name": "War Pony",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "52",
+        "Owners/Helmsmen": "Bill Self",
+        "Status": "OW",
+        "Boat Name": "Seawitch III",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "53",
+        "Owners/Helmsmen": "Temya Ooishi",
+        "Status": "OW",
+        "Boat Name": "Kumano V",
+        "Location": "Japan",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "54",
+        "Owners/Helmsmen": "Martin Lloyd Evans",
+        "Status": "OW",
+        "Boat Name": "Bigfoot",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "55",
+        "Owners/Helmsmen": "Mark Sweeney",
+        "Status": "OW",
+        "Boat Name": "Kobayashi Maru",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "55",
+        "Owners/Helmsmen": "Todd Hiller",
+        "Status": "AM",
+        "Boat Name": "Kobayashi Maru",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "56",
+        "Owners/Helmsmen": "Joel Scott",
+        "Status": "OW",
+        "Boat Name": "Good Company 2.0",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "57",
+        "Owners/Helmsmen": "John Dye",
+        "Status": "OW",
+        "Boat Name": "Resolution",
+        "Location": "Michigan",
+        "Fleet": "25",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "59",
+        "Owners/Helmsmen": "Bill Pollett",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "60",
+        "Owners/Helmsmen": "Rob Freas",
+        "Status": "OW",
+        "Boat Name": "Striking",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "61",
+        "Owners/Helmsmen": "Sonke Stein",
+        "Status": "OW",
+        "Boat Name": "ex Oh Jee!!",
+        "Location": "The Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "63",
+        "Owners/Helmsmen": "Peter Becker",
+        "Status": "OW",
+        "Boat Name": "Young American Sailing Academy",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "64",
+        "Owners/Helmsmen": "David McKee",
+        "Status": "OW",
+        "Boat Name": "Relentless",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "64",
+        "Owners/Helmsmen": "Roger Kagan",
+        "Status": "AM",
+        "Boat Name": "Relentless",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "65",
+        "Owners/Helmsmen": "David Willis",
+        "Status": "OW",
+        "Boat Name": "Solution",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "66",
+        "Owners/Helmsmen": "Seishiro Iijima",
+        "Status": "OW",
+        "Boat Name": "Salmon Four",
+        "Location": "Japan",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "67",
+        "Owners/Helmsmen": "Doug Stryker",
+        "Status": "OW",
+        "Boat Name": "MAYHEM",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "67",
+        "Owners/Helmsmen": "Amy Stryker",
+        "Status": "CO",
+        "Boat Name": "MAYHEM",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "67",
+        "Owners/Helmsmen": "Jesse McKnight",
+        "Status": "AM",
+        "Boat Name": "MAYHEM",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "68",
+        "Owners/Helmsmen": "Paul & Sue Mikulski",
+        "Status": "OW",
+        "Boat Name": "Levitation",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "69",
+        "Owners/Helmsmen": "John Moore",
+        "Status": "CO",
+        "Boat Name": "Eau La La",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "69",
+        "Owners/Helmsmen": "Mark Smith",
+        "Status": "OW",
+        "Boat Name": "Eau La La",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "69",
+        "Owners/Helmsmen": "Timothy Johnson",
+        "Status": "AM",
+        "Boat Name": "Eau La La",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "69",
+        "Owners/Helmsmen": "Mark Hatten",
+        "Status": "CO",
+        "Boat Name": "Eau La La",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "70",
+        "Owners/Helmsmen": "Kevin Ryman",
+        "Status": "OW",
+        "Boat Name": "Seasaw",
+        "Location": "Virginia",
+        "Fleet": "3",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "71",
+        "Owners/Helmsmen": "James Isbester",
+        "Status": "OW",
+        "Boat Name": "Energy",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "72",
@@ -27,6 +747,42 @@
         "Class Membership": "Member 2023"
     },
     {
+        "Hull": "73",
+        "Owners/Helmsmen": "David Shaver",
+        "Status": "OW",
+        "Boat Name": "ReTern",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "74",
+        "Owners/Helmsmen": "Edwin Faries",
+        "Status": "OW",
+        "Boat Name": "Back in Black",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "75",
+        "Owners/Helmsmen": "Roger Helman",
+        "Status": "OW",
+        "Boat Name": "ex Passage",
+        "Location": "Michigan",
+        "Fleet": "25",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "76",
+        "Owners/Helmsmen": "George & Anne Cussins",
+        "Status": "OW",
+        "Boat Name": "Fire & Ice",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2008"
+    },
+    {
         "Hull": "77",
         "Owners/Helmsmen": "Ronald Carson",
         "Status": "OW",
@@ -34,6 +790,168 @@
         "Location": "Ohio",
         "Fleet": "22",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "78",
+        "Owners/Helmsmen": "Peter Ophof",
+        "Status": "OW",
+        "Boat Name": "Yukon",
+        "Location": "Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "79",
+        "Owners/Helmsmen": "Paul Coladonato",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "80",
+        "Owners/Helmsmen": "John Zannos",
+        "Status": "CO",
+        "Boat Name": "Chaos",
+        "Location": "New Hampshire",
+        "Fleet": "2",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "80",
+        "Owners/Helmsmen": "Chip Crotty",
+        "Status": "CO",
+        "Boat Name": "Chaos",
+        "Location": "New Hampshire",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "81",
+        "Owners/Helmsmen": "Mark Dunn",
+        "Status": "OW",
+        "Boat Name": "Mad Dog",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "82",
+        "Owners/Helmsmen": "Curtis",
+        "Status": "OW",
+        "Boat Name": "ex Jump the Gun",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "83",
+        "Owners/Helmsmen": "Terry McLaughlin",
+        "Status": "CO",
+        "Boat Name": "Mandate",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "83",
+        "Owners/Helmsmen": "Rod Wilmer",
+        "Status": "CO",
+        "Boat Name": "Mandate",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "84",
+        "Owners/Helmsmen": "Pat Benedict",
+        "Status": "OW",
+        "Boat Name": "Advantage3",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "84",
+        "Owners/Helmsmen": "Will Benedict",
+        "Status": "CO",
+        "Boat Name": "Advantage3",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "85",
+        "Owners/Helmsmen": "Sergey Lubarsky",
+        "Status": "OW",
+        "Boat Name": "Roulette",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "85",
+        "Owners/Helmsmen": "William Woodruff",
+        "Status": "CO",
+        "Boat Name": "Roulette",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "86",
+        "Owners/Helmsmen": "Joaquin Brockman",
+        "Status": "OW",
+        "Boat Name": "Hura-Kan",
+        "Location": "Mexico",
+        "Fleet": "7",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "87",
+        "Owners/Helmsmen": "Hugh Westermeyer",
+        "Status": "OW",
+        "Boat Name": "Twelve Bar Blues",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "88",
+        "Owners/Helmsmen": "Rick Goebel",
+        "Status": "OW",
+        "Boat Name": "Sanity",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "88",
+        "Owners/Helmsmen": "Donica Ryder",
+        "Status": "OW",
+        "Boat Name": "Sanity",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "89",
+        "Owners/Helmsmen": "John Aitchison",
+        "Status": "OW",
+        "Boat Name": "Moose Unknown",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "90",
+        "Owners/Helmsmen": "Patricia Schulze",
+        "Status": "OW",
+        "Boat Name": "Max Power",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2020"
     },
     {
         "Hull": "91",
@@ -81,6 +999,627 @@
         "Class Membership": "Associate 2024"
     },
     {
+        "Hull": "92",
+        "Owners/Helmsmen": "Peter Rugg",
+        "Status": "CO",
+        "Boat Name": "JADED",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "92",
+        "Owners/Helmsmen": "Dudley Nostrand",
+        "Status": "CO",
+        "Boat Name": "JADED",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "92",
+        "Owners/Helmsmen": "Jennifer Parsons",
+        "Status": "CO",
+        "Boat Name": "JADED",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "93",
+        "Owners/Helmsmen": "Stephen Mitcham",
+        "Status": "OW",
+        "Boat Name": "Breezin Bayou",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "94",
+        "Owners/Helmsmen": "David Fish",
+        "Status": "OW",
+        "Boat Name": "Finest Kind",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "95",
+        "Owners/Helmsmen": "Julio Reguero",
+        "Status": "OW",
+        "Boat Name": "Umakua",
+        "Location": "Puerto Rico",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "96",
+        "Owners/Helmsmen": "Peter Bowe",
+        "Status": "OW",
+        "Boat Name": "Good Trade",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "96",
+        "Owners/Helmsmen": "Michael McNamara",
+        "Status": "AM",
+        "Boat Name": "Good Trade",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "97",
+        "Owners/Helmsmen": "Maarten Zonjee",
+        "Status": "OW",
+        "Boat Name": "Joyride",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "98",
+        "Owners/Helmsmen": "Bruce Stone",
+        "Status": "OW",
+        "Boat Name": "Arbitrade",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "99",
+        "Owners/Helmsmen": "Nick Iliff",
+        "Status": "OW",
+        "Boat Name": "Muskrat",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "100",
+        "Owners/Helmsmen": "David Gorney",
+        "Status": "OW",
+        "Boat Name": "No Compromise",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "101",
+        "Owners/Helmsmen": "Judith McLean",
+        "Status": "CO",
+        "Boat Name": "Esprit d\\'Ecosse",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "101",
+        "Owners/Helmsmen": "Ross McLean",
+        "Status": "CO",
+        "Boat Name": "Esprit d\\'Ecosse",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "102",
+        "Owners/Helmsmen": "Kevin Ward",
+        "Status": "OW",
+        "Boat Name": "Syndicate",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "102",
+        "Owners/Helmsmen": "Michael Brown",
+        "Status": "CO",
+        "Boat Name": "Syndicate",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "102",
+        "Owners/Helmsmen": "Claire Ward",
+        "Status": "CO",
+        "Boat Name": "Syndicate",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "103",
+        "Owners/Helmsmen": "Brad Pennington",
+        "Status": "CO",
+        "Boat Name": "Aquavit",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "103",
+        "Owners/Helmsmen": "Donald Olgado",
+        "Status": "OW",
+        "Boat Name": "Aquavit",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "103",
+        "Owners/Helmsmen": "Richard Haiduck",
+        "Status": "CO",
+        "Boat Name": "Aquavit",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "104",
+        "Owners/Helmsmen": "Keith Krause",
+        "Status": "CO",
+        "Boat Name": "Vytis",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "104",
+        "Owners/Helmsmen": "Michael Collins",
+        "Status": "CO",
+        "Boat Name": "Vytis",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "104",
+        "Owners/Helmsmen": "William Mathis",
+        "Status": "CO",
+        "Boat Name": "Vytis",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "105",
+        "Owners/Helmsmen": "Simon Payne",
+        "Status": "OW",
+        "Boat Name": "Triple Play",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "106",
+        "Owners/Helmsmen": "Chessie Jr. Racing",
+        "Status": "OW",
+        "Boat Name": "Team Storm Trysail",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "107",
+        "Owners/Helmsmen": "Ed Dailey",
+        "Status": "OW",
+        "Boat Name": "Arieto",
+        "Location": "Unknown",
+        "Fleet": "12",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "108",
+        "Owners/Helmsmen": "Donald Bird",
+        "Status": "OW",
+        "Boat Name": "Atalanta",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "109",
+        "Owners/Helmsmen": "Ilse Bastmeijer",
+        "Status": "OW",
+        "Boat Name": "First Choice",
+        "Location": "The Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "110",
+        "Owners/Helmsmen": "James Rathbun",
+        "Status": "OW",
+        "Boat Name": "Hey Jude",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "111",
+        "Owners/Helmsmen": "Tom Coates",
+        "Status": "OW",
+        "Boat Name": "Masquerade",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "112",
+        "Owners/Helmsmen": "David Anderson",
+        "Status": "OW",
+        "Boat Name": "Zippy",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "113",
+        "Owners/Helmsmen": "David Vieregg",
+        "Status": "AM",
+        "Boat Name": "Perseverance",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "113",
+        "Owners/Helmsmen": "Bennet Greenwald",
+        "Status": "OW",
+        "Boat Name": "Perseverance",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "114",
+        "Owners/Helmsmen": "Erik Kristen",
+        "Status": "OW",
+        "Boat Name": "More Jubilee",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "115",
+        "Owners/Helmsmen": "Stephen Summers",
+        "Status": "AM",
+        "Boat Name": "Puff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "115",
+        "Owners/Helmsmen": "Steve Neidhardt Seattle Sailing Club",
+        "Status": "OW",
+        "Boat Name": "Puff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "116",
+        "Owners/Helmsmen": "Bruce J. Stone",
+        "Status": "OW",
+        "Boat Name": "Arbitrage",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "116",
+        "Owners/Helmsmen": "Nicole Breault",
+        "Status": "CO",
+        "Boat Name": "Arbitrage",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "118",
+        "Owners/Helmsmen": "Kevin Horrigan",
+        "Status": "OW",
+        "Boat Name": "Relentless",
+        "Location": "Connecticut",
+        "Fleet": "24",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "119",
+        "Owners/Helmsmen": "John Case",
+        "Status": "CO",
+        "Boat Name": "Mojo",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "119",
+        "Owners/Helmsmen": "Jeff Littfin",
+        "Status": "OW",
+        "Boat Name": "Mojo",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "120",
+        "Owners/Helmsmen": "Richard Miller",
+        "Status": "CO",
+        "Boat Name": "Breeze",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "120",
+        "Owners/Helmsmen": "Franci Fridell",
+        "Status": "OW",
+        "Boat Name": "Breeze",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "121",
+        "Owners/Helmsmen": "David Hommel",
+        "Status": "OW",
+        "Boat Name": "Cape Doctor",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "121",
+        "Owners/Helmsmen": "Karoline Johann-Hommel",
+        "Status": "CO",
+        "Boat Name": "Cape Doctor",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "122",
+        "Owners/Helmsmen": "Evan Noyes",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Indiana",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "123",
+        "Owners/Helmsmen": "Mark DenUyl",
+        "Status": "OW",
+        "Boat Name": "Good Lookin\\'",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "124",
+        "Owners/Helmsmen": "Barry Brown",
+        "Status": "OW",
+        "Boat Name": "Blue Flash",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "124",
+        "Owners/Helmsmen": "Matthew Arno",
+        "Status": "OW",
+        "Boat Name": "Blue Flash",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "125",
+        "Owners/Helmsmen": "Joerg Esdorn",
+        "Status": "OW",
+        "Boat Name": "Kinsem IV",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "126",
+        "Owners/Helmsmen": "Alan Bell",
+        "Status": "OW",
+        "Boat Name": "Moontiger",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "127",
+        "Owners/Helmsmen": "Luis Altolaguirre",
+        "Status": "OW",
+        "Boat Name": "Pegasus",
+        "Location": "Mexico",
+        "Fleet": "7",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "129",
+        "Owners/Helmsmen": "Mark Fruin",
+        "Status": "OW",
+        "Boat Name": "Nyctosaur",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "130",
+        "Owners/Helmsmen": "Jake Scott",
+        "Status": "AM",
+        "Boat Name": "Deja Voodoo",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "130",
+        "Owners/Helmsmen": "William Zartler",
+        "Status": "OW",
+        "Boat Name": "Deja Voodoo",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "132",
+        "Owners/Helmsmen": "Ivar Tuominen",
+        "Status": "OW",
+        "Boat Name": "Indigo",
+        "Location": "Finland",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "133",
+        "Owners/Helmsmen": "Jay Hoppenstein",
+        "Status": "OW",
+        "Boat Name": "Cyrano",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "134",
+        "Owners/Helmsmen": "Jim Gulseth",
+        "Status": "OW",
+        "Boat Name": "JGPC",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "134",
+        "Owners/Helmsmen": "Paolo Calafiura",
+        "Status": "CO",
+        "Boat Name": "JGPC",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "135",
+        "Owners/Helmsmen": "Mario Wijtman",
+        "Status": "OW",
+        "Boat Name": "J-Tripper",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "135",
+        "Owners/Helmsmen": "Eric Raff",
+        "Status": "OW",
+        "Boat Name": "J-Tripper",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "136",
+        "Owners/Helmsmen": "Robert Marsh",
+        "Status": "OW",
+        "Boat Name": "Blow Boat!!",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "137",
+        "Owners/Helmsmen": "Lee Smith",
+        "Status": "OW",
+        "Boat Name": "Joker",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "138",
+        "Owners/Helmsmen": "Patricio Sanchez",
+        "Status": "OW",
+        "Boat Name": "Make Make III",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "139",
+        "Owners/Helmsmen": "Damian Emery",
+        "Status": "OW",
+        "Boat Name": "Warlock",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "140",
+        "Owners/Helmsmen": "Nissan Motor Co.",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Japan",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "141",
+        "Owners/Helmsmen": "Jorg Sigg",
+        "Status": "OW",
+        "Boat Name": "Lallekonig",
+        "Location": "Liechtenstein",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "142",
+        "Owners/Helmsmen": "Robert Simons",
+        "Status": "OW",
+        "Boat Name": "Rolling Thunder",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "143",
+        "Owners/Helmsmen": "Thomas Accardo",
+        "Status": "OW",
+        "Boat Name": "Sottovento",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2015"
+    },
+    {
         "Hull": "144",
         "Owners/Helmsmen": "Chip Schaffner",
         "Status": "OW",
@@ -117,6 +1656,33 @@
         "Class Membership": "Member 2023"
     },
     {
+        "Hull": "146",
+        "Owners/Helmsmen": "Peter Becker",
+        "Status": "OW",
+        "Boat Name": "Young American-146",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "147",
+        "Owners/Helmsmen": "Eric Stang",
+        "Status": "CO",
+        "Boat Name": "JuJu",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "147",
+        "Owners/Helmsmen": "Tim Sullivan",
+        "Status": "CO",
+        "Boat Name": "JuJu",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
         "Hull": "148",
         "Owners/Helmsmen": "Colin Mills",
         "Status": "OW",
@@ -124,6 +1690,321 @@
         "Location": "Ohio",
         "Fleet": "22",
         "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "149",
+        "Owners/Helmsmen": "Brent Vaughan",
+        "Status": "OW",
+        "Boat Name": "Jabberwocky",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "149",
+        "Owners/Helmsmen": "Paul Reyff",
+        "Status": "CO",
+        "Boat Name": "Jabberwocky",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "150",
+        "Owners/Helmsmen": "Sergio Baeza",
+        "Status": "OW",
+        "Boat Name": "Good Hope",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "151",
+        "Owners/Helmsmen": "Sean Bisceglia",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "152",
+        "Owners/Helmsmen": "Brad Stump",
+        "Status": "OW",
+        "Boat Name": "Gray Area",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "153",
+        "Owners/Helmsmen": "Artem Savinov",
+        "Status": "OW",
+        "Boat Name": "Prima",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "154",
+        "Owners/Helmsmen": "R.I.P. 8/28/05 (Katrina)",
+        "Status": "OW",
+        "Boat Name": "Synapse",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "155",
+        "Owners/Helmsmen": "Charles Clack",
+        "Status": "OW",
+        "Boat Name": "Raptor",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "156",
+        "Owners/Helmsmen": "Alan Bates",
+        "Status": "OW",
+        "Boat Name": "Zippity",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "157",
+        "Owners/Helmsmen": "Russell Long",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "158",
+        "Owners/Helmsmen": "Alan Heisey",
+        "Status": "OW",
+        "Boat Name": "The Kernel",
+        "Location": "Canada",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "159",
+        "Owners/Helmsmen": "Angelo Guarino",
+        "Status": "OW",
+        "Boat Name": "Crescendo",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "160",
+        "Owners/Helmsmen": "Nouel",
+        "Status": "OW",
+        "Boat Name": "Joely",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "161",
+        "Owners/Helmsmen": "Tom Rolfes",
+        "Status": "OW",
+        "Boat Name": "Sidewinder",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "162",
+        "Owners/Helmsmen": "David Edwards",
+        "Status": "OW",
+        "Boat Name": "but luckily...",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "163",
+        "Owners/Helmsmen": "Charles James",
+        "Status": "OW",
+        "Boat Name": "Roxanne",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "164",
+        "Owners/Helmsmen": "Dan Bullard",
+        "Status": "OW",
+        "Boat Name": "Madcap",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "165",
+        "Owners/Helmsmen": "Ed Sisk",
+        "Status": "CO",
+        "Boat Name": "If Only ...",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "165",
+        "Owners/Helmsmen": "Harvey Howalt",
+        "Status": "CO",
+        "Boat Name": "If Only ...",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "166",
+        "Owners/Helmsmen": "Jerome Hinzelin",
+        "Status": "OW",
+        "Boat Name": "Ulysse",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "167",
+        "Owners/Helmsmen": "Joshua Burack",
+        "Status": "OW",
+        "Boat Name": "Peregrina",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "168",
+        "Owners/Helmsmen": "Paul Iacono",
+        "Status": "OW",
+        "Boat Name": "EnGarde",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "169",
+        "Owners/Helmsmen": "George Ellis",
+        "Status": "OW",
+        "Boat Name": "Little Texas",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "170",
+        "Owners/Helmsmen": "Jeremy Henderson",
+        "Status": "CO",
+        "Boat Name": "Conundrum",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "170",
+        "Owners/Helmsmen": "Harald Edegran",
+        "Status": "CO",
+        "Boat Name": "Conundrum",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "171",
+        "Owners/Helmsmen": "George Ferguson",
+        "Status": "OW",
+        "Boat Name": "Bigamy",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "172",
+        "Owners/Helmsmen": "Martin Peacey",
+        "Status": "OW",
+        "Boat Name": "SkyFall",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "173",
+        "Owners/Helmsmen": "Dennis Deisinger",
+        "Status": "CO",
+        "Boat Name": "Natural Blonde",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "173",
+        "Owners/Helmsmen": "Robert Cooper",
+        "Status": "CO",
+        "Boat Name": "Natural Blonde",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "173",
+        "Owners/Helmsmen": "Lambert Thom",
+        "Status": "CO",
+        "Boat Name": "Natural Blonde",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "174",
+        "Owners/Helmsmen": "Danae Hollowed",
+        "Status": "OW",
+        "Boat Name": "Dulcinea",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "175",
+        "Owners/Helmsmen": "Randy Bourne",
+        "Status": "OW",
+        "Boat Name": "Strange Brew",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "175",
+        "Owners/Helmsmen": "Dean Allen",
+        "Status": "CO",
+        "Boat Name": "Strange Brew",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "175",
+        "Owners/Helmsmen": "Eben Walker",
+        "Status": "CO",
+        "Boat Name": "Strange Brew",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "176",
+        "Owners/Helmsmen": "Sailing Center",
+        "Status": "OW",
+        "Boat Name": "Andiamo",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
     },
     {
         "Hull": "177",
@@ -135,6 +2016,375 @@
         "Class Membership": "Member 2021"
     },
     {
+        "Hull": "178",
+        "Owners/Helmsmen": "Mark Cloutier",
+        "Status": "OW",
+        "Boat Name": "Back in Black",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "179",
+        "Owners/Helmsmen": "William Kelly",
+        "Status": "OW",
+        "Boat Name": "Swordfish",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2002"
+    },
+    {
+        "Hull": "180",
+        "Owners/Helmsmen": "Peter Molnar",
+        "Status": "OW",
+        "Boat Name": "Joust",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "181",
+        "Owners/Helmsmen": "Chris Kim",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "182",
+        "Owners/Helmsmen": "Bob Wickman",
+        "Status": "OW",
+        "Boat Name": "Habanero",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "183",
+        "Owners/Helmsmen": "Rick Hurt",
+        "Status": "OW",
+        "Boat Name": "Scarlett",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "183",
+        "Owners/Helmsmen": "D\u2019Milo Hallerberg",
+        "Status": "AM",
+        "Boat Name": "Scarlett",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "184",
+        "Owners/Helmsmen": "Uzi Ozeri",
+        "Status": "OW",
+        "Boat Name": "Bon Bon",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "185",
+        "Owners/Helmsmen": "Albert Shannon",
+        "Status": "OW",
+        "Boat Name": "Wiki Wiki V",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "186",
+        "Owners/Helmsmen": "Jack Wallace",
+        "Status": "OW",
+        "Boat Name": "Pearl",
+        "Location": "Vermont",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "187",
+        "Owners/Helmsmen": "Clive Daem",
+        "Status": "OW",
+        "Boat Name": "True Balance",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2003"
+    },
+    {
+        "Hull": "188",
+        "Owners/Helmsmen": "Jeff Euscher",
+        "Status": "OW",
+        "Boat Name": "Attitude",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "189",
+        "Owners/Helmsmen": "Christopher White",
+        "Status": "CO",
+        "Boat Name": "Cerberus",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "189",
+        "Owners/Helmsmen": "Ken Dieselman",
+        "Status": "CO",
+        "Boat Name": "Cerberus",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "190",
+        "Owners/Helmsmen": "Brian & Betsey Dougherty",
+        "Status": "OW",
+        "Boat Name": "Legacy",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "191",
+        "Owners/Helmsmen": "Malcolm Jaques",
+        "Status": "OW",
+        "Boat Name": "J-Spot",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "191",
+        "Owners/Helmsmen": "Mark Scott",
+        "Status": "CO",
+        "Boat Name": "J-Spot",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "191",
+        "Owners/Helmsmen": "John Twiggs",
+        "Status": "CO",
+        "Boat Name": "J-Spot",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "192",
+        "Owners/Helmsmen": "Kevin Pask",
+        "Status": "OW",
+        "Boat Name": "Full Tilt",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "193",
+        "Owners/Helmsmen": "Edward Nunes",
+        "Status": "OW",
+        "Boat Name": "Ce\u00f2l na Mara",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "194",
+        "Owners/Helmsmen": "Gary Myer",
+        "Status": "OW",
+        "Boat Name": "Magic",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "194",
+        "Owners/Helmsmen": "Ann Myer",
+        "Status": "OW",
+        "Boat Name": "Magic",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "195",
+        "Owners/Helmsmen": "Hans Boman",
+        "Status": "OW",
+        "Boat Name": "All Set",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "196",
+        "Owners/Helmsmen": "Jason Woodley",
+        "Status": "OW",
+        "Boat Name": "Risk",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "196",
+        "Owners/Helmsmen": "Jon Titchener",
+        "Status": "CO",
+        "Boat Name": "Risk",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "196",
+        "Owners/Helmsmen": "Scott Whitney",
+        "Status": "CO",
+        "Boat Name": "Risk",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "197",
+        "Owners/Helmsmen": "Robert Savage",
+        "Status": "OW",
+        "Boat Name": "Predator",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "198",
+        "Owners/Helmsmen": "David Clark",
+        "Status": "OW",
+        "Boat Name": "Corryvreckan",
+        "Location": "Virginia",
+        "Fleet": "15",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "199",
+        "Owners/Helmsmen": "David Cordell",
+        "Status": "OW",
+        "Boat Name": "Eagle",
+        "Location": "Oklahoma",
+        "Fleet": "12",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "199",
+        "Owners/Helmsmen": "Pete Furze",
+        "Status": "AM",
+        "Boat Name": "Eagle",
+        "Location": "Oklahoma",
+        "Fleet": "12",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "200",
+        "Owners/Helmsmen": "Michael Kontonotas",
+        "Status": "OW",
+        "Boat Name": "Apollo",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "201",
+        "Owners/Helmsmen": "John Wrangle",
+        "Status": "OW",
+        "Boat Name": "Paladin",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "202",
+        "Owners/Helmsmen": "John Bremer",
+        "Status": "CO",
+        "Boat Name": "Dog House",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "202",
+        "Owners/Helmsmen": "Arthur Libby",
+        "Status": "OW",
+        "Boat Name": "Dog House",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "202",
+        "Owners/Helmsmen": "Tom Carter",
+        "Status": "CO",
+        "Boat Name": "Dog House",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "202",
+        "Owners/Helmsmen": "AJ Libby",
+        "Status": "AM",
+        "Boat Name": "Dog House",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "203",
+        "Owners/Helmsmen": "Richard Levitt",
+        "Status": "OW",
+        "Boat Name": "Maccabee",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "204",
+        "Owners/Helmsmen": "Dennis Zuidam",
+        "Status": "OW",
+        "Boat Name": "Jam Session",
+        "Location": "Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "205",
+        "Owners/Helmsmen": "Mel Volmert",
+        "Status": "OW",
+        "Boat Name": "Sassy",
+        "Location": "Missouri",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "206",
+        "Owners/Helmsmen": "F. Richard Stark",
+        "Status": "OW",
+        "Boat Name": "Impromptu",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "207",
+        "Owners/Helmsmen": "Justin Pelham-Webb",
+        "Status": "OW",
+        "Boat Name": "Valkyrie",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2020"
+    },
+    {
         "Hull": "208",
         "Owners/Helmsmen": "Doug Kohler",
         "Status": "CO",
@@ -144,6 +2394,465 @@
         "Class Membership": "Member 2022"
     },
     {
+        "Hull": "209",
+        "Owners/Helmsmen": "Barry Eisener",
+        "Status": "OW",
+        "Boat Name": "Buzz",
+        "Location": "Canada",
+        "Fleet": "0",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "210",
+        "Owners/Helmsmen": "Daniel Mathias",
+        "Status": "CO",
+        "Boat Name": "Key Players",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "210",
+        "Owners/Helmsmen": "Andy Adler",
+        "Status": "CO",
+        "Boat Name": "Key Players",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "210",
+        "Owners/Helmsmen": "Kevin Elion",
+        "Status": "OW",
+        "Boat Name": "Key Players",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "211",
+        "Owners/Helmsmen": "Jonah Israelit",
+        "Status": "CO",
+        "Boat Name": "Pieces of Eight",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "212",
+        "Owners/Helmsmen": "Lenny Rezabek",
+        "Status": "OW",
+        "Boat Name": "insubordination",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "212",
+        "Owners/Helmsmen": "Garey Harr",
+        "Status": "AM",
+        "Boat Name": "insubordination",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "214",
+        "Owners/Helmsmen": "David Ogryzlo",
+        "Status": "OW",
+        "Boat Name": "True Blue",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "215",
+        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Status": "OW",
+        "Boat Name": "Constellation",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "215",
+        "Owners/Helmsmen": "David Brown",
+        "Status": "CO",
+        "Boat Name": "Constellation",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "215",
+        "Owners/Helmsmen": "Henry Brown",
+        "Status": "CO",
+        "Boat Name": "Constellation",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "216",
+        "Owners/Helmsmen": "Alex Mutricy",
+        "Status": "CO",
+        "Boat Name": "Perseverance",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "216",
+        "Owners/Helmsmen": "Alain Mutricy",
+        "Status": "OW",
+        "Boat Name": "Perseverance",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "217",
+        "Owners/Helmsmen": "David Potter",
+        "Status": "OW",
+        "Boat Name": "",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "218",
+        "Owners/Helmsmen": "Bill Quealy",
+        "Status": "OW",
+        "Boat Name": "J Rabbit Slim",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "219",
+        "Owners/Helmsmen": "Rob Fisher",
+        "Status": "OW",
+        "Boat Name": "Fast Forward",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "220",
+        "Owners/Helmsmen": "Charles Elmer",
+        "Status": "OW",
+        "Boat Name": "Lagniappe",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "220",
+        "Owners/Helmsmen": "Julie Elmer",
+        "Status": "CO",
+        "Boat Name": "Lagniappe",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "220",
+        "Owners/Helmsmen": "Shane Kilberg",
+        "Status": "AM",
+        "Boat Name": "Lagniappe",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "221",
+        "Owners/Helmsmen": "Eric Cooper",
+        "Status": "OW",
+        "Boat Name": "Nagadragon",
+        "Location": "Canada",
+        "Fleet": "4",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "222",
+        "Owners/Helmsmen": "Mike & Laura Eagan",
+        "Status": "OW",
+        "Boat Name": "Sabertooth",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "223",
+        "Owners/Helmsmen": "Luke Salditt",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "225",
+        "Owners/Helmsmen": "Jason Swan",
+        "Status": "OW",
+        "Boat Name": "Flatline",
+        "Location": "Connecticut",
+        "Fleet": "2",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "226",
+        "Owners/Helmsmen": "Bob Betensky",
+        "Status": "OW",
+        "Boat Name": "Horny Toad",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "227",
+        "Owners/Helmsmen": "Ed Lobo",
+        "Status": "OW",
+        "Boat Name": "Waterwolf",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "228",
+        "Owners/Helmsmen": "Gebel Seese",
+        "Status": "OW",
+        "Boat Name": "High Visibility",
+        "Location": "United States",
+        "Fleet": "11",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "229",
+        "Owners/Helmsmen": "Denis Batalov",
+        "Status": "OW",
+        "Boat Name": "Bluelight",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "230",
+        "Owners/Helmsmen": "Bill Metzdorff",
+        "Status": "OW",
+        "Boat Name": "de novo",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "230",
+        "Owners/Helmsmen": "Mark Phelps",
+        "Status": "CO",
+        "Boat Name": "de novo",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2001"
+    },
+    {
+        "Hull": "230",
+        "Owners/Helmsmen": "Peter Middleton",
+        "Status": "CO",
+        "Boat Name": "de novo",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2001"
+    },
+    {
+        "Hull": "231",
+        "Owners/Helmsmen": "William Smith",
+        "Status": "OW",
+        "Boat Name": "Maid Of Time",
+        "Location": "United States",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "232",
+        "Owners/Helmsmen": "JPort Annapolis",
+        "Status": "OW",
+        "Boat Name": "Windtrip",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "233",
+        "Owners/Helmsmen": "Nancy Glover",
+        "Status": "OW",
+        "Boat Name": "Tempest",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "234",
+        "Owners/Helmsmen": "Rob Rowland",
+        "Status": "OW",
+        "Boat Name": "Lift Ticket",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "235",
+        "Owners/Helmsmen": "Paul Viola",
+        "Status": "CO",
+        "Boat Name": "Peer Gynt",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "235",
+        "Owners/Helmsmen": "Sara Billey",
+        "Status": "CO",
+        "Boat Name": "Peer Gynt",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "236",
+        "Owners/Helmsmen": "Steve Brumit",
+        "Status": "OW",
+        "Boat Name": "Foilstruck",
+        "Location": "Tennessee",
+        "Fleet": "0",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "237",
+        "Owners/Helmsmen": "Glenn Darden",
+        "Status": "CO",
+        "Boat Name": "Hoss",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "237",
+        "Owners/Helmsmen": "Reese Hillard",
+        "Status": "CO",
+        "Boat Name": "Hoss",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "237",
+        "Owners/Helmsmen": "Philip Williamson",
+        "Status": "CO",
+        "Boat Name": "Hoss",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "238",
+        "Owners/Helmsmen": "Nicholas Hirst",
+        "Status": "OW",
+        "Boat Name": "Millicent",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "238",
+        "Owners/Helmsmen": "Simon Hirst",
+        "Status": "CO",
+        "Boat Name": "Millicent",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "239",
+        "Owners/Helmsmen": "Paul Jacques",
+        "Status": "OW",
+        "Boat Name": "Ruckus",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "239",
+        "Owners/Helmsmen": "Matthew Seif",
+        "Status": "CO",
+        "Boat Name": "Ruckus",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "239",
+        "Owners/Helmsmen": "Patrick Chisum",
+        "Status": "CO",
+        "Boat Name": "Ruckus",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "240",
+        "Owners/Helmsmen": "Donald Logan",
+        "Status": "OW",
+        "Boat Name": "Keemah",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "241",
+        "Owners/Helmsmen": "Thomas Paron",
+        "Status": "OW",
+        "Boat Name": "Cricket",
+        "Location": "Vermont",
+        "Fleet": "2",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "242",
+        "Owners/Helmsmen": "Ray Wulff",
+        "Status": "OW",
+        "Boat Name": "Freedom",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "243",
+        "Owners/Helmsmen": "Peter Schwarzbach",
+        "Status": "OW",
+        "Boat Name": "Phantom",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "244",
+        "Owners/Helmsmen": "Jason Rolf",
+        "Status": "OW",
+        "Boat Name": "Wild Child",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "245",
+        "Owners/Helmsmen": "Richard Beebe",
+        "Status": "OW",
+        "Boat Name": "Balance",
+        "Location": "Delaware",
+        "Fleet": "3",
+        "Class Membership": "Member 2016"
+    },
+    {
         "Hull": "246",
         "Owners/Helmsmen": "Paul Schiavoni",
         "Status": "OW",
@@ -151,6 +2860,168 @@
         "Location": "New York",
         "Fleet": "22",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "247",
+        "Owners/Helmsmen": "Stephen Blaisdell",
+        "Status": "OW",
+        "Boat Name": "Atlantic Ave",
+        "Location": "United States",
+        "Fleet": "23",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "248",
+        "Owners/Helmsmen": "Lennart Anderson",
+        "Status": "OW",
+        "Boat Name": "ex Norrsken",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "249",
+        "Owners/Helmsmen": "Max Kalehoff",
+        "Status": "OW",
+        "Boat Name": "LauraBea",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "250",
+        "Owners/Helmsmen": "David Scheidt",
+        "Status": "OW",
+        "Boat Name": "Smoke and Oakum",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "250",
+        "Owners/Helmsmen": "Beth Scheidt",
+        "Status": "CO",
+        "Boat Name": "Smoke and Oakum",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "250",
+        "Owners/Helmsmen": "RJ Bay",
+        "Status": "AM",
+        "Boat Name": "Smoke and Oakum",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "250",
+        "Owners/Helmsmen": "John Fowlkes",
+        "Status": "AM",
+        "Boat Name": "Smoke and Oakum",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "251",
+        "Owners/Helmsmen": "Richard Hinds",
+        "Status": "OW",
+        "Boat Name": "Breakaway",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "251",
+        "Owners/Helmsmen": "Amy Harris",
+        "Status": "AM",
+        "Boat Name": "Breakaway",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "252",
+        "Owners/Helmsmen": "William Carruth",
+        "Status": "OW",
+        "Boat Name": "Peregrine",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "252",
+        "Owners/Helmsmen": "Linsley Carruth",
+        "Status": "CO",
+        "Boat Name": "Peregrine",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "255",
+        "Owners/Helmsmen": "Rod & Barb McKenzie",
+        "Status": "OW",
+        "Boat Name": "Rodster",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "256",
+        "Owners/Helmsmen": "Mac Baird",
+        "Status": "OW",
+        "Boat Name": "X-Tuxedo",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "257",
+        "Owners/Helmsmen": "Robert Stout",
+        "Status": "OW",
+        "Boat Name": "Swallow",
+        "Location": "United States",
+        "Fleet": "19",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "257",
+        "Owners/Helmsmen": "Robert Stout",
+        "Status": "OW",
+        "Boat Name": "Swallow",
+        "Location": "United States",
+        "Fleet": "19",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "258",
+        "Owners/Helmsmen": "Michel Bolo",
+        "Status": "OW",
+        "Boat Name": "Jaldi",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "259",
+        "Owners/Helmsmen": "Robin Verhoef",
+        "Status": "OW",
+        "Boat Name": "J-Action",
+        "Location": "The Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "260",
+        "Owners/Helmsmen": "Marty Galligan",
+        "Status": "OW",
+        "Boat Name": "Atalanta",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
     },
     {
         "Hull": "261",
@@ -171,6 +3042,591 @@
         "Class Membership": "Associate 2024"
     },
     {
+        "Hull": "262",
+        "Owners/Helmsmen": "Doug Livermore",
+        "Status": "OW",
+        "Boat Name": "Venom",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "263",
+        "Owners/Helmsmen": "Jay Vander Wall",
+        "Status": "OW",
+        "Boat Name": "Manitou",
+        "Location": "Michigan",
+        "Fleet": "25",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "264",
+        "Owners/Helmsmen": "Tony Lamb",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Vermont",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "265",
+        "Owners/Helmsmen": "Scott Lamson Sr.",
+        "Status": "CO",
+        "Boat Name": "Mamaluc",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "265",
+        "Owners/Helmsmen": "Scott Lamson Jr",
+        "Status": "OW",
+        "Boat Name": "Mamaluc",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "266",
+        "Owners/Helmsmen": "Tom Kennelly",
+        "Status": "OW",
+        "Boat Name": "Wonder",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "267",
+        "Owners/Helmsmen": "Michael Mountford",
+        "Status": "OW",
+        "Boat Name": "Live Edge",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "267",
+        "Owners/Helmsmen": "Todd Irving",
+        "Status": "AM",
+        "Boat Name": "Live Edge",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "268",
+        "Owners/Helmsmen": "John Rivlin",
+        "Status": "OW",
+        "Boat Name": "Peaches",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "269",
+        "Owners/Helmsmen": "Todd Rickard",
+        "Status": "OW",
+        "Boat Name": "Sea Mist",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "270",
+        "Owners/Helmsmen": "Marco Graziano",
+        "Status": "OW",
+        "Boat Name": "Twister",
+        "Location": "UAE",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "271",
+        "Owners/Helmsmen": "Thomas O'Grady",
+        "Status": "OW",
+        "Boat Name": "Trinity",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "272",
+        "Owners/Helmsmen": "Adrien Felon",
+        "Status": "CO",
+        "Boat Name": "Double Trouble",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "272",
+        "Owners/Helmsmen": "David Gudgel",
+        "Status": "OW",
+        "Boat Name": "Double Trouble",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "273",
+        "Owners/Helmsmen": "Paul Rice",
+        "Status": "OW",
+        "Boat Name": "Riot",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "274",
+        "Owners/Helmsmen": "Thomas Hering",
+        "Status": "CO",
+        "Boat Name": "Trifecta",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "274",
+        "Owners/Helmsmen": "Joseph Scarpulla",
+        "Status": "CO",
+        "Boat Name": "Trifecta",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "274",
+        "Owners/Helmsmen": "Brian Simkins",
+        "Status": "OW",
+        "Boat Name": "Trifecta",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "275",
+        "Owners/Helmsmen": "Walter Sanford",
+        "Status": "OW",
+        "Boat Name": "Alchemy",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "275",
+        "Owners/Helmsmen": "John E. Sanford",
+        "Status": "CO",
+        "Boat Name": "Alchemy",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "276",
+        "Owners/Helmsmen": "Eric Hall",
+        "Status": "OW",
+        "Boat Name": "ex Andiamo",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "277",
+        "Owners/Helmsmen": "L. White",
+        "Status": "CO",
+        "Boat Name": "Back in Black",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "277",
+        "Owners/Helmsmen": "Buddy Rego",
+        "Status": "CO",
+        "Boat Name": "Back in Black",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "278",
+        "Owners/Helmsmen": "Schley & Teri Knight",
+        "Status": "OW",
+        "Boat Name": "Geechee Grace",
+        "Location": "Georgia",
+        "Fleet": "11",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "279",
+        "Owners/Helmsmen": "Stephen Alexander",
+        "Status": "OW",
+        "Boat Name": "ex Rare Breed",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "280",
+        "Owners/Helmsmen": "Vince Herrera",
+        "Status": "OW",
+        "Boat Name": "Ineluctable Modality",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "280",
+        "Owners/Helmsmen": "Shane Ward",
+        "Status": "OW",
+        "Boat Name": "Ineluctable Modality",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "281",
+        "Owners/Helmsmen": "Jim Doane Jr.",
+        "Status": "OW",
+        "Boat Name": "Flame",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "282",
+        "Owners/Helmsmen": "John McElroy",
+        "Status": "OW",
+        "Boat Name": "ex Repete",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "283",
+        "Owners/Helmsmen": "George Mezo",
+        "Status": "OW",
+        "Boat Name": "Forro",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "283",
+        "Owners/Helmsmen": "Greg Mezo",
+        "Status": "CO",
+        "Boat Name": "Forro",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "284",
+        "Owners/Helmsmen": "Michael Donohue",
+        "Status": "OW",
+        "Boat Name": "Zuni Bear",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "285",
+        "Owners/Helmsmen": "Dwight Horton",
+        "Status": "OW",
+        "Boat Name": "Beauty",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "287",
+        "Owners/Helmsmen": "Wolfgang Bauchinger",
+        "Status": "CO",
+        "Boat Name": "Intangible",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "287",
+        "Owners/Helmsmen": "Lynn Tukey",
+        "Status": "CO",
+        "Boat Name": "Intangible",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "288",
+        "Owners/Helmsmen": "Dimitry Braznichenko",
+        "Status": "OW",
+        "Boat Name": "Sivka",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "289",
+        "Owners/Helmsmen": "Warwick Crew",
+        "Status": "OW",
+        "Boat Name": "Jumanji",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "290",
+        "Owners/Helmsmen": "Stuart Boekeloo",
+        "Status": "OW",
+        "Boat Name": "Attitude",
+        "Location": "Michigan",
+        "Fleet": "5",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "291",
+        "Owners/Helmsmen": "Peter Collins",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "292",
+        "Owners/Helmsmen": "Daniel Hurtubise",
+        "Status": "OW",
+        "Boat Name": "Jeu d'enfant",
+        "Location": "Quebec",
+        "Fleet": "0",
+        "Class Membership": "Member 2003"
+    },
+    {
+        "Hull": "293",
+        "Owners/Helmsmen": "Terry Michaelson",
+        "Status": "CO",
+        "Boat Name": "Usual Suspects",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "293",
+        "Owners/Helmsmen": "John Trumpener",
+        "Status": "CO",
+        "Boat Name": "Usual Suspects",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "293",
+        "Owners/Helmsmen": "George Chernev",
+        "Status": "CO",
+        "Boat Name": "Usual Suspects",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "294",
+        "Owners/Helmsmen": "Brad Robbins",
+        "Status": "OW",
+        "Boat Name": "Rumpus",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "294",
+        "Owners/Helmsmen": "Matt Robbins",
+        "Status": "CO",
+        "Boat Name": "Rumpus",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "294",
+        "Owners/Helmsmen": "Ben Robbins",
+        "Status": "CO",
+        "Boat Name": "Rumpus",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "294",
+        "Owners/Helmsmen": "Nicholas Robbins",
+        "Status": "AM",
+        "Boat Name": "Rumpus",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "295",
+        "Owners/Helmsmen": "Josh Lutton",
+        "Status": "OW",
+        "Boat Name": "Kinship",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "295",
+        "Owners/Helmsmen": "Laura Lutton",
+        "Status": "CO",
+        "Boat Name": "Kinship",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "296",
+        "Owners/Helmsmen": "Bee Bednar",
+        "Status": "OW",
+        "Boat Name": "Stinger",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "297",
+        "Owners/Helmsmen": "John Blair",
+        "Status": "OW",
+        "Boat Name": "Pendragon",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "298",
+        "Owners/Helmsmen": "Tim Merrill",
+        "Status": "OW",
+        "Boat Name": "Chilaxn",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "299",
+        "Owners/Helmsmen": "Chris Phoenix",
+        "Status": "OW",
+        "Boat Name": "Jaded",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "299",
+        "Owners/Helmsmen": "Rod Hearne",
+        "Status": "AM",
+        "Boat Name": "Jaded",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "301",
+        "Owners/Helmsmen": "Pat Mullins",
+        "Status": "OW",
+        "Boat Name": "Archelon",
+        "Location": "Michigan",
+        "Fleet": "5",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "301",
+        "Owners/Helmsmen": "Patrick Sage",
+        "Status": "CO",
+        "Boat Name": "Archelon",
+        "Location": "Michigan",
+        "Fleet": "5",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "302",
+        "Owners/Helmsmen": "Robert Ryan",
+        "Status": "OW",
+        "Boat Name": "Honi Kai",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "303",
+        "Owners/Helmsmen": "Kristen Robinson",
+        "Status": "OW",
+        "Boat Name": "Velvet Hammer",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "303",
+        "Owners/Helmsmen": "Brian Robinson",
+        "Status": "CO",
+        "Boat Name": "Velvet Hammer",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "304",
+        "Owners/Helmsmen": "Gregory Ryan",
+        "Status": "OW",
+        "Boat Name": "Breakthrough",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "305",
+        "Owners/Helmsmen": "Clint Marshall",
+        "Status": "CO",
+        "Boat Name": "Orion",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "306",
+        "Owners/Helmsmen": "Bill McKenzie",
+        "Status": "CO",
+        "Boat Name": "RumFront",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "306",
+        "Owners/Helmsmen": "Fred Martschink",
+        "Status": "CO",
+        "Boat Name": "RumFront",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "306",
+        "Owners/Helmsmen": "William McKenzie, Jr.",
+        "Status": "AM",
+        "Boat Name": "RumFront",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "307",
+        "Owners/Helmsmen": "North East Keelboat Alliance",
+        "Status": "OW",
+        "Boat Name": "Inevitable",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
         "Hull": "308",
         "Owners/Helmsmen": "Steven Robinson",
         "Status": "OW",
@@ -180,6 +3636,726 @@
         "Class Membership": "Member 2024"
     },
     {
+        "Hull": "309",
+        "Owners/Helmsmen": "David Greenhouse",
+        "Status": "OW",
+        "Boat Name": "Skipperdee",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "309",
+        "Owners/Helmsmen": "Dwight Greenhouse",
+        "Status": "AM",
+        "Boat Name": "Skipperdee",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "310",
+        "Owners/Helmsmen": "Lars Schonander",
+        "Status": "OW",
+        "Boat Name": "Red Sky",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "311",
+        "Owners/Helmsmen": "Nantucket Community Sailing",
+        "Status": "OW",
+        "Boat Name": "ex Prima",
+        "Location": "Massachusetts",
+        "Fleet": "15",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "312",
+        "Owners/Helmsmen": "Eric Patterson",
+        "Status": "OW",
+        "Boat Name": "Kestrel",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "313",
+        "Owners/Helmsmen": "Miles Martschink",
+        "Status": "OW",
+        "Boat Name": "A Train",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "314",
+        "Owners/Helmsmen": "Richard Marshall",
+        "Status": "OW",
+        "Boat Name": "26 Adams",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "315",
+        "Owners/Helmsmen": "Steven Alexander",
+        "Status": "OW",
+        "Boat Name": "Concept vs. Reality",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "316",
+        "Owners/Helmsmen": "Christopher Stavrou",
+        "Status": "OW",
+        "Boat Name": "Maestro",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "317",
+        "Owners/Helmsmen": "Brian Denker",
+        "Status": "OW",
+        "Boat Name": "Idaho",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "318",
+        "Owners/Helmsmen": "Hank Sesselberg",
+        "Status": "OW",
+        "Boat Name": "Ubuntu",
+        "Location": "Maine",
+        "Fleet": "2",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "319",
+        "Owners/Helmsmen": "Simon James",
+        "Status": "OW",
+        "Boat Name": "Lightwave",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "321",
+        "Owners/Helmsmen": "Kevin Fitzgerald",
+        "Status": "OW",
+        "Boat Name": "Rum Puppy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "321",
+        "Owners/Helmsmen": "Bill Clary",
+        "Status": "AM",
+        "Boat Name": "Rum Puppy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "322",
+        "Owners/Helmsmen": "Kyle Bollhorst",
+        "Status": "OW",
+        "Boat Name": "Juggernaut",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "322",
+        "Owners/Helmsmen": "Lee Bollhorst",
+        "Status": "CO",
+        "Boat Name": "Juggernaut",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "323",
+        "Owners/Helmsmen": "Trist Coffin",
+        "Status": "CO",
+        "Boat Name": "Stratos",
+        "Location": "Vermont",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "323",
+        "Owners/Helmsmen": "Tom Moody",
+        "Status": "CO",
+        "Boat Name": "Stratos",
+        "Location": "Vermont",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "324",
+        "Owners/Helmsmen": "Peter Becker",
+        "Status": "OW",
+        "Boat Name": "Young American",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "325",
+        "Owners/Helmsmen": "Michael Hettel",
+        "Status": "OW",
+        "Boat Name": "Global Nomads",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "326",
+        "Owners/Helmsmen": "Webb Institute",
+        "Status": "CO",
+        "Boat Name": "Hoonigan",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "326",
+        "Owners/Helmsmen": "Bruce Lebens",
+        "Status": "CO",
+        "Boat Name": "Hoonigan",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "327",
+        "Owners/Helmsmen": "Russell Hopper",
+        "Status": "OW",
+        "Boat Name": "H-Bomb",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "328",
+        "Owners/Helmsmen": "Fredrik Salvesen",
+        "Status": "AM",
+        "Boat Name": "Mirage",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "328",
+        "Owners/Helmsmen": "Cedric Lewis",
+        "Status": "OW",
+        "Boat Name": "Mirage",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "329",
+        "Owners/Helmsmen": "Dwight Merriam",
+        "Status": "OW",
+        "Boat Name": "Oriana",
+        "Location": "Connecticut",
+        "Fleet": "14",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "330",
+        "Owners/Helmsmen": "Dennis McCloud",
+        "Status": "OW",
+        "Boat Name": "At-Tack",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "331",
+        "Owners/Helmsmen": "John Koten",
+        "Status": "OW",
+        "Boat Name": "Gray Matter",
+        "Location": "New York",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "332",
+        "Owners/Helmsmen": "Kimball Woodward",
+        "Status": "OW",
+        "Boat Name": "Puff Adder II",
+        "Location": "United States",
+        "Fleet": "6",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "333",
+        "Owners/Helmsmen": "Christopher Lund",
+        "Status": "OW",
+        "Boat Name": "Whomper",
+        "Location": "United States",
+        "Fleet": "2",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "334",
+        "Owners/Helmsmen": "Paul Beaudin",
+        "Status": "OW",
+        "Boat Name": "Loulou",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "335",
+        "Owners/Helmsmen": "Claudine DiSario",
+        "Status": "OW",
+        "Boat Name": "Phoenix",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "335",
+        "Owners/Helmsmen": "Scott Marino",
+        "Status": "CO",
+        "Boat Name": "Phoenix",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "336",
+        "Owners/Helmsmen": "Dennis Driscoll",
+        "Status": "OW",
+        "Boat Name": "Hornet",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "337",
+        "Owners/Helmsmen": "Tom Struttman",
+        "Status": "OW",
+        "Boat Name": "Arrived!",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "338",
+        "Owners/Helmsmen": "John Weil",
+        "Status": "CO",
+        "Boat Name": "the Ruckus",
+        "Location": "Oregon",
+        "Fleet": "20",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "339",
+        "Owners/Helmsmen": "Peter Wolniak",
+        "Status": "OW",
+        "Boat Name": "Another Hazard",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "340",
+        "Owners/Helmsmen": "Eric Bicknese",
+        "Status": "OW",
+        "Boat Name": "Big E.Z.",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "341",
+        "Owners/Helmsmen": "Bill Maher",
+        "Status": "OW",
+        "Boat Name": "Rift",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "341",
+        "Owners/Helmsmen": "David Largey",
+        "Status": "CO",
+        "Boat Name": "Rift",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "341",
+        "Owners/Helmsmen": "Barry Lamb",
+        "Status": "AM",
+        "Boat Name": "Rift",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "342",
+        "Owners/Helmsmen": "Robyn Heilbrun",
+        "Status": "CO",
+        "Boat Name": "Nirvana",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "342",
+        "Owners/Helmsmen": "David Gross",
+        "Status": "OW",
+        "Boat Name": "Nirvana",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "343",
+        "Owners/Helmsmen": "John Sutherland",
+        "Status": "OW",
+        "Boat Name": "London Calling",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "343",
+        "Owners/Helmsmen": "Peter Boland",
+        "Status": "OW",
+        "Boat Name": "London Calling",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "344",
+        "Owners/Helmsmen": "Greg Turman",
+        "Status": "OW",
+        "Boat Name": "TNT",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "344",
+        "Owners/Helmsmen": "Bradly Tindall",
+        "Status": "CO",
+        "Boat Name": "TNT",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "345",
+        "Owners/Helmsmen": "Ric Dexter",
+        "Status": "OW",
+        "Boat Name": "Brouhaha",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "345",
+        "Owners/Helmsmen": "Jason Maher",
+        "Status": "AM",
+        "Boat Name": "Brouhaha",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "346",
+        "Owners/Helmsmen": "Santiago Saide",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "347",
+        "Owners/Helmsmen": "Randy Paul",
+        "Status": "CO",
+        "Boat Name": "Bald Eagles",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "348",
+        "Owners/Helmsmen": "Rufino Meleno",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "349",
+        "Owners/Helmsmen": "Clark Pellett",
+        "Status": "OW",
+        "Boat Name": "Sealark",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "350",
+        "Owners/Helmsmen": "Douglas Riggs",
+        "Status": "OW",
+        "Boat Name": "Rigadoon",
+        "Location": "Rhode Island",
+        "Fleet": "2",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "351",
+        "Owners/Helmsmen": "Jim Konigsberg",
+        "Status": "OW",
+        "Boat Name": "Inigo",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "352",
+        "Owners/Helmsmen": "Gerry Lorusso",
+        "Status": "OW",
+        "Boat Name": "Lyric",
+        "Location": "Connecticut",
+        "Fleet": "24",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "353",
+        "Owners/Helmsmen": "Peter Busschbach",
+        "Status": "OW",
+        "Boat Name": "Alegr\u00eda",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "354",
+        "Owners/Helmsmen": "Tim Tsao",
+        "Status": "OW",
+        "Boat Name": "Spiritus",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "356",
+        "Owners/Helmsmen": "Geoffrey Bourne",
+        "Status": "OW",
+        "Boat Name": "Noa",
+        "Location": "Hawaii",
+        "Fleet": "0",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "357",
+        "Owners/Helmsmen": "Dick Maclay",
+        "Status": "OW",
+        "Boat Name": "Yellowfin",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "358",
+        "Owners/Helmsmen": "Andrew Moor",
+        "Status": "OW",
+        "Boat Name": "Thunderstruck",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "359",
+        "Owners/Helmsmen": "Dave Pierce",
+        "Status": "OW",
+        "Boat Name": "Caught in Traffic",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "360",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "361",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "362",
+        "Owners/Helmsmen": "Kay Bohlmann",
+        "Status": "OW",
+        "Boat Name": "Jalape\u00f1o (GER 6560)",
+        "Location": "Germany",
+        "Fleet": "0",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "363",
+        "Owners/Helmsmen": "Georges-Christian Chazot",
+        "Status": "OW",
+        "Boat Name": "Jet Dream",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "364",
+        "Owners/Helmsmen": "Krisztina Ruzsovics",
+        "Status": "OW",
+        "Boat Name": "Yankee",
+        "Location": "Hungary",
+        "Fleet": "0",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "365",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "367",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Spain",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "368",
+        "Owners/Helmsmen": "Michael Tucker",
+        "Status": "OW",
+        "Boat Name": "Joji",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "369",
+        "Owners/Helmsmen": "Pascal Loison",
+        "Status": "OW",
+        "Boat Name": "Night and Day",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "370",
+        "Owners/Helmsmen": "Carter Williams",
+        "Status": "OW",
+        "Boat Name": "Creative Destruction",
+        "Location": "Missouri",
+        "Fleet": "25",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "371",
+        "Owners/Helmsmen": "Ruth Ann Penny",
+        "Status": "CO",
+        "Boat Name": "Starcross",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "371",
+        "Owners/Helmsmen": "Frank McLaughlin",
+        "Status": "OW",
+        "Boat Name": "Starcross",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "372",
+        "Owners/Helmsmen": "Dick & Laura Peyton Roberts",
+        "Status": "OW",
+        "Boat Name": "Escape Artist",
+        "Location": "Oregon",
+        "Fleet": "20",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "372",
+        "Owners/Helmsmen": "Dana Sibilla",
+        "Status": "OW",
+        "Boat Name": "Escape Artist",
+        "Location": "Oregon",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "374",
+        "Owners/Helmsmen": "Paw Andersen",
+        "Status": "OW",
+        "Boat Name": "Strangelove",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "374",
+        "Owners/Helmsmen": "Peter Yolles",
+        "Status": "CO",
+        "Boat Name": "Strangelove",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "374",
+        "Owners/Helmsmen": "Csilla Andersen",
+        "Status": "CO",
+        "Boat Name": "Strangelove",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "375",
+        "Owners/Helmsmen": "Richard Pipkin",
+        "Status": "OW",
+        "Boat Name": "Racer X",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2015"
+    },
+    {
         "Hull": "376",
         "Owners/Helmsmen": "William Taylor",
         "Status": "OW",
@@ -187,6 +4363,213 @@
         "Location": "Michigan",
         "Fleet": "22",
         "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "377",
+        "Owners/Helmsmen": "George Masson",
+        "Status": "OW",
+        "Boat Name": "Temeraire",
+        "Location": "South Carolina",
+        "Fleet": "8",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "378",
+        "Owners/Helmsmen": "Chris Chandler",
+        "Status": "OW",
+        "Boat Name": "Rocky",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "379",
+        "Owners/Helmsmen": "Jaime Riesco",
+        "Status": "OW",
+        "Boat Name": "Atenea IV",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "380",
+        "Owners/Helmsmen": "Dixon Green",
+        "Status": "OW",
+        "Boat Name": "Stellar J",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "381",
+        "Owners/Helmsmen": "Mark Stoll",
+        "Status": "OW",
+        "Boat Name": "Peregrine",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "382",
+        "Owners/Helmsmen": "Paolo Juvara",
+        "Status": "OW",
+        "Boat Name": "Chao Pescao",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "383",
+        "Owners/Helmsmen": "Juan Pumpin",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "384",
+        "Owners/Helmsmen": "Michael Newman",
+        "Status": "OW",
+        "Boat Name": "Valhalla",
+        "Location": "Indiana",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "384",
+        "Owners/Helmsmen": "Kathleen Newman",
+        "Status": "CO",
+        "Boat Name": "Valhalla",
+        "Location": "Indiana",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "384",
+        "Owners/Helmsmen": "Edward Newman",
+        "Status": "CO",
+        "Boat Name": "Valhalla",
+        "Location": "Indiana",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "385",
+        "Owners/Helmsmen": "Ian Charles",
+        "Status": "OW",
+        "Boat Name": "Maverick",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "386",
+        "Owners/Helmsmen": "Gerhard Zinserling",
+        "Status": "OW",
+        "Boat Name": "Y-not",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "387",
+        "Owners/Helmsmen": "Bill Jestel",
+        "Status": "OW",
+        "Boat Name": "CRUSH!",
+        "Location": "Georgia",
+        "Fleet": "11",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "388",
+        "Owners/Helmsmen": "Dana Sack",
+        "Status": "CO",
+        "Boat Name": "Hazardous Waste",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "388",
+        "Owners/Helmsmen": "Glenn Youngling",
+        "Status": "CO",
+        "Boat Name": "Hazardous Waste",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "388",
+        "Owners/Helmsmen": "Chuck Cihak",
+        "Status": "OW",
+        "Boat Name": "Hazardous Waste",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "389",
+        "Owners/Helmsmen": "Daniel Griffin",
+        "Status": "OW",
+        "Boat Name": "Privateer",
+        "Location": "New York",
+        "Fleet": "10",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "390",
+        "Owners/Helmsmen": "Mark Nichols",
+        "Status": "CO",
+        "Boat Name": "Certare",
+        "Location": "Minnesota",
+        "Fleet": "5",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "390",
+        "Owners/Helmsmen": "Arthur Wong",
+        "Status": "CO",
+        "Boat Name": "Certare",
+        "Location": "Minnesota",
+        "Fleet": "5",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "390",
+        "Owners/Helmsmen": "Philip W. Nieman",
+        "Status": "CO",
+        "Boat Name": "Certare",
+        "Location": "Minnesota",
+        "Fleet": "5",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "391",
+        "Owners/Helmsmen": "New Owner",
+        "Status": "OW",
+        "Boat Name": "ex Frantic",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "392",
+        "Owners/Helmsmen": "Trevor Boyce",
+        "Status": "OW",
+        "Boat Name": "YABSTA",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "392",
+        "Owners/Helmsmen": "Michael Neff",
+        "Status": "CO",
+        "Boat Name": "YABSTA",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2016"
     },
     {
         "Hull": "393",
@@ -207,12 +4590,2361 @@
         "Class Membership": "Member 2022"
     },
     {
+        "Hull": "394",
+        "Owners/Helmsmen": "Charles Abraham",
+        "Status": "OW",
+        "Boat Name": "Javelin",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "394",
+        "Owners/Helmsmen": "Sergei Podshivalov",
+        "Status": "CO",
+        "Boat Name": "Javelin",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "394",
+        "Owners/Helmsmen": "Robert Goosey",
+        "Status": "CO",
+        "Boat Name": "Javelin",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "395",
+        "Owners/Helmsmen": "Scott McDaniel",
+        "Status": "OW",
+        "Boat Name": "Off the Porch",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "396",
+        "Owners/Helmsmen": "Kenneth Horne",
+        "Status": "OW",
+        "Boat Name": "Final Final",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "397",
+        "Owners/Helmsmen": "Boat totaled",
+        "Status": "OW",
+        "Boat Name": "Tenacious",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "398",
+        "Owners/Helmsmen": "Don Peloquin",
+        "Status": "OW",
+        "Boat Name": "Usual Suspects",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "399",
+        "Owners/Helmsmen": "Richard VanLeeuwen",
+        "Status": "OW",
+        "Boat Name": "Dream Machine",
+        "Location": "Netherlands",
+        "Fleet": "0",
+        "Class Membership": "Member 2002"
+    },
+    {
+        "Hull": "400",
+        "Owners/Helmsmen": "Steven Hill",
+        "Status": "OW",
+        "Boat Name": "Lulu",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "401",
+        "Owners/Helmsmen": "John Bennett",
+        "Status": "OW",
+        "Boat Name": "Boss Lady",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "401",
+        "Owners/Helmsmen": "Elena Bennett",
+        "Status": "CO",
+        "Boat Name": "Boss Lady",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "402",
+        "Owners/Helmsmen": "Frank Conway",
+        "Status": "OW",
+        "Boat Name": "Raptor",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "403",
+        "Owners/Helmsmen": "Jeffrey Pace",
+        "Status": "CO",
+        "Boat Name": "Liftoff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "403",
+        "Owners/Helmsmen": "Karin Stevens",
+        "Status": "AM",
+        "Boat Name": "Liftoff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "404",
+        "Owners/Helmsmen": "Joe Pitcavage",
+        "Status": "OW",
+        "Boat Name": "",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "405",
+        "Owners/Helmsmen": "David Mace",
+        "Status": "OW",
+        "Boat Name": "Moonshine",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "406",
+        "Owners/Helmsmen": "Andrew Wilson",
+        "Status": "OW",
+        "Boat Name": "Saltire",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "407",
+        "Owners/Helmsmen": "John Kircher",
+        "Status": "OW",
+        "Boat Name": "Chessie",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "407",
+        "Owners/Helmsmen": "Barry Moss",
+        "Status": "AM",
+        "Boat Name": "Chessie",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "409",
+        "Owners/Helmsmen": "Eric Greene",
+        "Status": "CO",
+        "Boat Name": "Dove",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "409",
+        "Owners/Helmsmen": "Stewart Greene",
+        "Status": "CO",
+        "Boat Name": "Dove",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "410",
+        "Owners/Helmsmen": "David Morris",
+        "Status": "OW",
+        "Boat Name": "Resolute",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "411",
+        "Owners/Helmsmen": "Lucas Van Praag",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "None",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "412",
+        "Owners/Helmsmen": "Ghislain Devouton",
+        "Status": "OW",
+        "Boat Name": "Paladin",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "412",
+        "Owners/Helmsmen": "Nathalie Lodewyckx",
+        "Status": "CO",
+        "Boat Name": "Paladin",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "413",
+        "Owners/Helmsmen": "Eric Wagner",
+        "Status": "CO",
+        "Boat Name": "Dark 'n Stormy",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "413",
+        "Owners/Helmsmen": "Andrew Reservitz",
+        "Status": "CO",
+        "Boat Name": "Dark 'n Stormy",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "413",
+        "Owners/Helmsmen": "Ned Joyce",
+        "Status": "CO",
+        "Boat Name": "Dark 'n Stormy",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "414",
+        "Owners/Helmsmen": "Alex Tchick",
+        "Status": "OW",
+        "Boat Name": "Nantucket Sleighride",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "414",
+        "Owners/Helmsmen": "Richard Deane",
+        "Status": "OW",
+        "Boat Name": "Nantucket Sleighride",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "415",
+        "Owners/Helmsmen": "John Carty",
+        "Status": "OW",
+        "Boat Name": "Blackthorn",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "415",
+        "Owners/Helmsmen": "Laura Carty",
+        "Status": "AM",
+        "Boat Name": "Blackthorn",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "415",
+        "Owners/Helmsmen": "Arthur Edwards",
+        "Status": "AM",
+        "Boat Name": "Blackthorn",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "416",
+        "Owners/Helmsmen": "Jim Murphy",
+        "Status": "OW",
+        "Boat Name": "Windshadow",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "417",
+        "Owners/Helmsmen": "Doug Weisz",
+        "Status": "OW",
+        "Boat Name": "M GO BLUE",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "418",
+        "Owners/Helmsmen": "Greth Lester",
+        "Status": "OW",
+        "Boat Name": "Echo",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "419",
+        "Owners/Helmsmen": "Andy Cherner",
+        "Status": "OW",
+        "Boat Name": "Crash",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "419",
+        "Owners/Helmsmen": "Sara Morgan Watters",
+        "Status": "AM",
+        "Boat Name": "Crash",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "420",
+        "Owners/Helmsmen": "Zak Bowdish",
+        "Status": "OW",
+        "Boat Name": "Two Hearted",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "421",
+        "Owners/Helmsmen": "Peter Chinetti",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "421",
+        "Owners/Helmsmen": "Daniel Fallon",
+        "Status": "CO",
+        "Boat Name": "Knot Known",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "422",
+        "Owners/Helmsmen": "Al Hughes",
+        "Status": "OW",
+        "Boat Name": "Creative",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "422",
+        "Owners/Helmsmen": "Shauna Walgren",
+        "Status": "AM",
+        "Boat Name": "Creative",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2024"
+    },
+    {
         "Hull": "423",
         "Owners/Helmsmen": "Lease Schock",
         "Status": "OW",
         "Boat Name": "Southbound",
         "Location": "Ohio",
         "Fleet": "22",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "424",
+        "Owners/Helmsmen": "Mike Sheppard",
+        "Status": "OW",
+        "Boat Name": "Flying Pig",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "425",
+        "Owners/Helmsmen": "Daniel Sheenan",
+        "Status": "OW",
+        "Boat Name": "Magi",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "426",
+        "Owners/Helmsmen": "Bruno Pitot",
+        "Status": "OW",
+        "Boat Name": "Xiphos",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "427",
+        "Owners/Helmsmen": "Harold Cornier",
+        "Status": "OW",
+        "Boat Name": "Groove Armada",
+        "Location": "gb0",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "428",
+        "Owners/Helmsmen": "Paul Henshall",
+        "Status": "OW",
+        "Boat Name": "Jumpin Jack Flash",
+        "Location": "Australia",
+        "Fleet": "0",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "429",
+        "Owners/Helmsmen": "Global Investment",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Israel",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "430",
+        "Owners/Helmsmen": "John Bell",
+        "Status": "OW",
+        "Boat Name": "Kinderspel2",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "431",
+        "Owners/Helmsmen": "Pat Doyle",
+        "Status": "OW",
+        "Boat Name": "Spartan",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "432",
+        "Owners/Helmsmen": "J.T. (Jeff) Hansen",
+        "Status": "OW",
+        "Boat Name": "Frisky",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "433",
+        "Owners/Helmsmen": "Joseph Highsmith",
+        "Status": "OW",
+        "Boat Name": "Dead on Arrival",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "433",
+        "Owners/Helmsmen": "Lewis J.H. Gunn",
+        "Status": "CO",
+        "Boat Name": "Dead on Arrival",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "433",
+        "Owners/Helmsmen": "Paul R. Miller",
+        "Status": "CO",
+        "Boat Name": "Dead on Arrival",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "434",
+        "Owners/Helmsmen": "Scott Sellers",
+        "Status": "OW",
+        "Boat Name": "Beast of Burden",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "434",
+        "Owners/Helmsmen": "Harrison Turner",
+        "Status": "CO",
+        "Boat Name": "Beast of Burden",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "435",
+        "Owners/Helmsmen": "Steve Howell",
+        "Status": "OW",
+        "Boat Name": "Blink!",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "435",
+        "Owners/Helmsmen": "Sasha Rodic",
+        "Status": "AM",
+        "Boat Name": "Blink!",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "435",
+        "Owners/Helmsmen": "Eric Axford",
+        "Status": "AM",
+        "Boat Name": "Blink!",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "436",
+        "Owners/Helmsmen": "Daniel Gonzalez",
+        "Status": "OW",
+        "Boat Name": "J Teez",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "437",
+        "Owners/Helmsmen": "Barry Hoeffner",
+        "Status": "OW",
+        "Boat Name": "Amor Azul",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "437",
+        "Owners/Helmsmen": "Matt Talton",
+        "Status": "OW",
+        "Boat Name": "Amor Azul",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "438",
+        "Owners/Helmsmen": "Larry Speidell",
+        "Status": "OW",
+        "Boat Name": "Ondine",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "439",
+        "Owners/Helmsmen": "Bruce Tait",
+        "Status": "OW",
+        "Boat Name": "Buckaroo",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "439",
+        "Owners/Helmsmen": "Michael Tait",
+        "Status": "OW",
+        "Boat Name": "Buckaroo",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "440",
+        "Owners/Helmsmen": "Bob Hayward",
+        "Status": "OW",
+        "Boat Name": "Kinetic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "441",
+        "Owners/Helmsmen": "Steve Hollis",
+        "Status": "OW",
+        "Boat Name": "Sirocco",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "442",
+        "Owners/Helmsmen": "Bill Full",
+        "Status": "OW",
+        "Boat Name": "Persistence 2",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "443",
+        "Owners/Helmsmen": "Thomas Johnson",
+        "Status": "OW",
+        "Boat Name": "Vuja de",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "444",
+        "Owners/Helmsmen": "Max Hafen",
+        "Status": "OW",
+        "Boat Name": "Phantom",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "445",
+        "Owners/Helmsmen": "Bart AJ Smit",
+        "Status": "OW",
+        "Boat Name": "Sinfonia Nautica",
+        "Location": "Mexico",
+        "Fleet": "0",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "446",
+        "Owners/Helmsmen": "Jon Weil",
+        "Status": "OW",
+        "Boat Name": "Sambal",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "447",
+        "Owners/Helmsmen": "Miguel Perez",
+        "Status": "OW",
+        "Boat Name": "Eagles Wings",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "448",
+        "Owners/Helmsmen": "John Horan",
+        "Status": "OW",
+        "Boat Name": "Cush",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "449",
+        "Owners/Helmsmen": "Eric Stang",
+        "Status": "CO",
+        "Boat Name": "Peregrine",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "449",
+        "Owners/Helmsmen": "Tim Sullivan",
+        "Status": "CO",
+        "Boat Name": "Peregrine",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "450",
+        "Owners/Helmsmen": "Sue Hoeschler Melanson",
+        "Status": "CO",
+        "Boat Name": "Yikes",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "450",
+        "Owners/Helmsmen": "Peter Stonebreaker",
+        "Status": "CO",
+        "Boat Name": "Yikes",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "451",
+        "Owners/Helmsmen": "Benkt Skarne",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "452",
+        "Owners/Helmsmen": "Sebastian Larsson",
+        "Status": "OW",
+        "Boat Name": "Jehu",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "453",
+        "Owners/Helmsmen": "Paolo Rossini",
+        "Status": "CO",
+        "Boat Name": "Anda Ya",
+        "Location": "Italy",
+        "Fleet": "0",
+        "Class Membership": "Member 2003"
+    },
+    {
+        "Hull": "453",
+        "Owners/Helmsmen": "Lorenzo Libe'",
+        "Status": "OW",
+        "Boat Name": "Anda Ya",
+        "Location": "Italy",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "454",
+        "Owners/Helmsmen": "Trevor Southey",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "gb0",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "455",
+        "Owners/Helmsmen": "Yves Branger",
+        "Status": "OW",
+        "Boat Name": "Narhval",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "456",
+        "Owners/Helmsmen": "Alan Whitehurst",
+        "Status": "OW",
+        "Boat Name": "Sterling",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "457",
+        "Owners/Helmsmen": "Nate Merrell",
+        "Status": "OW",
+        "Boat Name": "Cleo",
+        "Location": "United States",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "458",
+        "Owners/Helmsmen": "Herman Callender",
+        "Status": "OW",
+        "Boat Name": "Aquila",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "459",
+        "Owners/Helmsmen": "Doug Pihlaja",
+        "Status": "OW",
+        "Boat Name": "Abstract",
+        "Location": "Oregon",
+        "Fleet": "20",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "460",
+        "Owners/Helmsmen": "",
+        "Status": "OW",
+        "Boat Name": "Pugilist",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "461",
+        "Owners/Helmsmen": "",
+        "Status": "OW",
+        "Boat Name": "JATO",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "463",
+        "Owners/Helmsmen": "Mitch Cihomsky",
+        "Status": "OW",
+        "Boat Name": "Farkle",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "465",
+        "Owners/Helmsmen": "Little Traverse Yacht Club Junior Racing Program",
+        "Status": "OW",
+        "Boat Name": "Exit Strategy",
+        "Location": "Michigan",
+        "Fleet": "25",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "466",
+        "Owners/Helmsmen": "Don Prince",
+        "Status": "OW",
+        "Boat Name": "ex Papermoon",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "467",
+        "Owners/Helmsmen": "John Sancho",
+        "Status": "OW",
+        "Boat Name": "Sundance",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2004"
+    },
+    {
+        "Hull": "468",
+        "Owners/Helmsmen": "Shane Palmer",
+        "Status": "OW",
+        "Boat Name": "Sharkey",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "469",
+        "Owners/Helmsmen": "Greg Arkus",
+        "Status": "OW",
+        "Boat Name": "Streaker",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "470",
+        "Owners/Helmsmen": "Annette Matthies",
+        "Status": "OW",
+        "Boat Name": "Hibiscus",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "471",
+        "Owners/Helmsmen": "Brian Ebner",
+        "Status": "OW",
+        "Boat Name": "Pinnacle",
+        "Location": "Michigan",
+        "Fleet": "18",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "472",
+        "Owners/Helmsmen": "Arthur Topilow",
+        "Status": "OW",
+        "Boat Name": "Doctor Jazz",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "472",
+        "Owners/Helmsmen": "Roy Carley",
+        "Status": "AM",
+        "Boat Name": "Doctor Jazz",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "473",
+        "Owners/Helmsmen": "Dick Starita",
+        "Status": "OW",
+        "Boat Name": "Haze III",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "474",
+        "Owners/Helmsmen": "Alex Rasmussen",
+        "Status": "OW",
+        "Boat Name": "Free Enterprise",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "475",
+        "Owners/Helmsmen": "Tom Kerr",
+        "Status": "OW",
+        "Boat Name": "Corvo105",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "476",
+        "Owners/Helmsmen": "Dennis Bartley",
+        "Status": "AM",
+        "Boat Name": "Trident",
+        "Location": "Canada",
+        "Fleet": "4",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "476",
+        "Owners/Helmsmen": "Andrew Lennox",
+        "Status": "OW",
+        "Boat Name": "Trident",
+        "Location": "Canada",
+        "Fleet": "4",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "477",
+        "Owners/Helmsmen": "Byron Callan",
+        "Status": "OW",
+        "Boat Name": "Corsair",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2009"
+    },
+    {
+        "Hull": "478",
+        "Owners/Helmsmen": "Thomas Wacker",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "United States",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "479",
+        "Owners/Helmsmen": "Branwell Lepp",
+        "Status": "OW",
+        "Boat Name": "It Wasn\\'t Me",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "480",
+        "Owners/Helmsmen": "Mark Gannon",
+        "Status": "OW",
+        "Boat Name": "Gangbusters",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "482",
+        "Owners/Helmsmen": "Chuck Stephens",
+        "Status": "CO",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "482",
+        "Owners/Helmsmen": "Mark Prentice",
+        "Status": "AM",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "482",
+        "Owners/Helmsmen": "Mike Cain",
+        "Status": "CO",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "483",
+        "Owners/Helmsmen": "Vern Polidoro",
+        "Status": "OW",
+        "Boat Name": "Vigilante",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "484",
+        "Owners/Helmsmen": "Jeffrey Hill",
+        "Status": "OW",
+        "Boat Name": "Redcoat",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "485",
+        "Owners/Helmsmen": "Steven Goldberg",
+        "Status": "OW",
+        "Boat Name": "Air Express",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "486",
+        "Owners/Helmsmen": "Scott Bender",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "487",
+        "Owners/Helmsmen": "Peter DeGalan",
+        "Status": "OW",
+        "Boat Name": "Saluki",
+        "Location": "Michigan",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "488",
+        "Owners/Helmsmen": "Jordan Mindich",
+        "Status": "OW",
+        "Boat Name": "Shakedown",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "489",
+        "Owners/Helmsmen": "Ted Johnson",
+        "Status": "CO",
+        "Boat Name": "No Quarter",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "489",
+        "Owners/Helmsmen": "Matthew Herbster",
+        "Status": "OW",
+        "Boat Name": "No Quarter",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "490",
+        "Owners/Helmsmen": "Miguel Martinez",
+        "Status": "OW",
+        "Boat Name": "Taino",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "491",
+        "Owners/Helmsmen": "Michael Winfrey",
+        "Status": "OW",
+        "Boat Name": "Desperado",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "491",
+        "Owners/Helmsmen": "Randy Winfrey",
+        "Status": "CO",
+        "Boat Name": "Desperado",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "492",
+        "Owners/Helmsmen": "Brian Crabb",
+        "Status": "OW",
+        "Boat Name": "Sea-U",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "493",
+        "Owners/Helmsmen": "Fred Darlington",
+        "Status": "OW",
+        "Boat Name": "Tonto",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "494",
+        "Owners/Helmsmen": "Scott Morris",
+        "Status": "OW",
+        "Boat Name": "Kemosabe",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "495",
+        "Owners/Helmsmen": "Jeremy Boynes",
+        "Status": "CO",
+        "Boat Name": "Avalanche",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "496",
+        "Owners/Helmsmen": "Jim Feuille",
+        "Status": "OW",
+        "Boat Name": "The Four Cs",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "498",
+        "Owners/Helmsmen": "T.J. Buckley",
+        "Status": "OW",
+        "Boat Name": "Snow Bird",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "498",
+        "Owners/Helmsmen": "Paul von Maffei",
+        "Status": "CO",
+        "Boat Name": "Snow Bird",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "499",
+        "Owners/Helmsmen": "Ola Johansson",
+        "Status": "OW",
+        "Boat Name": "Garbo",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "500",
+        "Owners/Helmsmen": "Stephen Guyer",
+        "Status": "OW",
+        "Boat Name": "Alliance",
+        "Location": "New York",
+        "Fleet": "24",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "501",
+        "Owners/Helmsmen": "Carl Gitchell",
+        "Status": "OW",
+        "Boat Name": "Tenacious",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "501",
+        "Owners/Helmsmen": "Scott Gitchell",
+        "Status": "AM",
+        "Boat Name": "Tenacious",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "502",
+        "Owners/Helmsmen": "Theresa Brandner",
+        "Status": "OW",
+        "Boat Name": "Black Flag",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "502",
+        "Owners/Helmsmen": "Traci Thomas",
+        "Status": "CO",
+        "Boat Name": "Black Flag",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "503",
+        "Owners/Helmsmen": "Richard Collins",
+        "Status": "OW",
+        "Boat Name": "Lucky Duck",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "503",
+        "Owners/Helmsmen": "Dan Collins",
+        "Status": "AM",
+        "Boat Name": "Lucky Duck",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "504",
+        "Owners/Helmsmen": "Larry & Becky Harteck",
+        "Status": "OW",
+        "Boat Name": "Repeat Offender",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "505",
+        "Owners/Helmsmen": "Duncan Samo",
+        "Status": "OW",
+        "Boat Name": "Wa Wa Zat",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "505",
+        "Owners/Helmsmen": "Rick Bell",
+        "Status": "OW",
+        "Boat Name": "Wa Wa Zat",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "506",
+        "Owners/Helmsmen": "Ted Miller",
+        "Status": "OW",
+        "Boat Name": "Joy Ride",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "507",
+        "Owners/Helmsmen": "Gene Cloutier",
+        "Status": "CO",
+        "Boat Name": "Rogue",
+        "Location": "Vermont",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "507",
+        "Owners/Helmsmen": "Gene Cloutier",
+        "Status": "CO",
+        "Boat Name": "Rogue",
+        "Location": "Vermont",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "507",
+        "Owners/Helmsmen": "Walt Marti",
+        "Status": "OW",
+        "Boat Name": "Rogue",
+        "Location": "Vermont",
+        "Fleet": "2",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "509",
+        "Owners/Helmsmen": "Bill/Christie Aronson/Campbell",
+        "Status": "OW",
+        "Boat Name": "TBD",
+        "Location": "Maine",
+        "Fleet": "23",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "510",
+        "Owners/Helmsmen": "Scott Mathis",
+        "Status": "OW",
+        "Boat Name": "Forerunner",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "510",
+        "Owners/Helmsmen": "John Mathis",
+        "Status": "CO",
+        "Boat Name": "Forerunner",
+        "Location": "Florida",
+        "Fleet": "19",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "511",
+        "Owners/Helmsmen": "Ryan Fenchel",
+        "Status": "OW",
+        "Boat Name": "Sophia",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "512",
+        "Owners/Helmsmen": "David Carouge",
+        "Status": "OW",
+        "Boat Name": "Bear Spirit",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "513",
+        "Owners/Helmsmen": "Frank Latawiec",
+        "Status": "OW",
+        "Boat Name": "ATARAXIS",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "513",
+        "Owners/Helmsmen": "Dave Kellogg",
+        "Status": "AM",
+        "Boat Name": "ATARAXIS",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "514",
+        "Owners/Helmsmen": "George Scheel",
+        "Status": "OW",
+        "Boat Name": "Sun Puffin",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "514",
+        "Owners/Helmsmen": "Jim Dorsey",
+        "Status": "AM",
+        "Boat Name": "Sun Puffin",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "515",
+        "Owners/Helmsmen": "John Demourkas",
+        "Status": "OW",
+        "Boat Name": "Groovederci",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "516",
+        "Owners/Helmsmen": "Aric Myers",
+        "Status": "OW",
+        "Boat Name": "Helm Yeah",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "517",
+        "Owners/Helmsmen": "Steve Adams",
+        "Status": "OW",
+        "Boat Name": "Rocket J Squirrel",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "517",
+        "Owners/Helmsmen": "John Aras",
+        "Status": "AM",
+        "Boat Name": "Rocket J Squirrel",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "517",
+        "Owners/Helmsmen": "Dotty Holoubek",
+        "Status": "CO",
+        "Boat Name": "Rocket J Squirrel",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "518",
+        "Owners/Helmsmen": "Jeff Staley",
+        "Status": "OW",
+        "Boat Name": "Ostinato",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "519",
+        "Owners/Helmsmen": "Jean-Pierre Boespflug",
+        "Status": "OW",
+        "Boat Name": "Asterix",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "520",
+        "Owners/Helmsmen": "Billy Sprouse",
+        "Status": "OW",
+        "Boat Name": "Jolie",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "521",
+        "Owners/Helmsmen": "James Gignac",
+        "Status": "OW",
+        "Boat Name": "Dos Aguilas",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "522",
+        "Owners/Helmsmen": "David Morris",
+        "Status": "OW",
+        "Boat Name": "Days of Miracle and Wonder",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "523",
+        "Owners/Helmsmen": "Donald Santa",
+        "Status": "OW",
+        "Boat Name": "Santas Reign, Dear",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "523",
+        "Owners/Helmsmen": "William York",
+        "Status": "AM",
+        "Boat Name": "Santas Reign, Dear",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "524",
+        "Owners/Helmsmen": "John Glanville",
+        "Status": "OW",
+        "Boat Name": "Escapade",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "525",
+        "Owners/Helmsmen": "Steve Neidhardt Seattle Sailing Club",
+        "Status": "OW",
+        "Boat Name": "Moonglow",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "525",
+        "Owners/Helmsmen": "Praem Phulwani",
+        "Status": "AM",
+        "Boat Name": "Moonglow",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "526",
+        "Owners/Helmsmen": "Jose Manuel Ugarte",
+        "Status": "OW",
+        "Boat Name": "Scimitar",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "527",
+        "Owners/Helmsmen": "Jon Slabaugh",
+        "Status": "OW",
+        "Boat Name": "Firebrand",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "527",
+        "Owners/Helmsmen": "Claire Slabaugh",
+        "Status": "CO",
+        "Boat Name": "Firebrand",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "527",
+        "Owners/Helmsmen": "Katy Zimmerman",
+        "Status": "AM",
+        "Boat Name": "Firebrand",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "528",
+        "Owners/Helmsmen": "Tom Cairns",
+        "Status": "OW",
+        "Boat Name": "Bedazzled",
+        "Location": "Wisconsin",
+        "Fleet": "5",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "529",
+        "Owners/Helmsmen": "Sail a Race AB",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "530",
+        "Owners/Helmsmen": "Oscar Ekelund",
+        "Status": "OW",
+        "Boat Name": "Almaviva",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "531",
+        "Owners/Helmsmen": "Magnus Groth",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "532",
+        "Owners/Helmsmen": "Van Der Heide",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "533",
+        "Owners/Helmsmen": "Vincent Taupin",
+        "Status": "OW",
+        "Boat Name": "Largo Winch",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "534",
+        "Owners/Helmsmen": "Peter Antonsson",
+        "Status": "OW",
+        "Boat Name": "Hellwood",
+        "Location": "Sweden",
+        "Fleet": "0",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "535",
+        "Owners/Helmsmen": "Keith Chiappa",
+        "Status": "OW",
+        "Boat Name": "Windfire",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "536",
+        "Owners/Helmsmen": "Jorge Parada",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "538",
+        "Owners/Helmsmen": "Colin Calder",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Monaco",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "540",
+        "Owners/Helmsmen": "Patricio Lopez",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "541",
+        "Owners/Helmsmen": "James MacDonald",
+        "Status": "OW",
+        "Boat Name": "Passion",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "542",
+        "Owners/Helmsmen": "Regis Debarale",
+        "Status": "OW",
+        "Boat Name": "Solero/Accenture",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "543",
+        "Owners/Helmsmen": "Vernon Roberts",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "544",
+        "Owners/Helmsmen": "W. de Vries",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Netherlands",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "545",
+        "Owners/Helmsmen": "Roger Williams",
+        "Status": "OW",
+        "Boat Name": "Jos",
+        "Location": "gb0",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "546",
+        "Owners/Helmsmen": "Jean-Yves Richard",
+        "Status": "OW",
+        "Boat Name": "Eleonore IV",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "547",
+        "Owners/Helmsmen": "Thierry Mercier",
+        "Status": "OW",
+        "Boat Name": "Yameh",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "548",
+        "Owners/Helmsmen": "Bertrand Dalibot",
+        "Status": "OW",
+        "Boat Name": "Garzette",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "549",
+        "Owners/Helmsmen": "Alain Friedti",
+        "Status": "OW",
+        "Boat Name": "Jo Bar Team",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "550",
+        "Owners/Helmsmen": "Stephane Blanchard",
+        "Status": "OW",
+        "Boat Name": "J'adore",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "551",
+        "Owners/Helmsmen": "Van Muis Winkel",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Luxembourg",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "552",
+        "Owners/Helmsmen": "Massimo Migliuolo",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "gb0",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "553",
+        "Owners/Helmsmen": "Vincent Taupin",
+        "Status": "OW",
+        "Boat Name": "Largo Winch",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "554",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "555",
+        "Owners/Helmsmen": "Rolland Tancrede",
+        "Status": "OW",
+        "Boat Name": "Just a J",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "557",
+        "Owners/Helmsmen": "Thomas Sneed",
+        "Status": "OW",
+        "Boat Name": "Wharf Rat",
+        "Location": "Spain",
+        "Fleet": "0",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "558",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "559",
+        "Owners/Helmsmen": "Rex Carr",
+        "Status": "OW",
+        "Boat Name": "Patriot",
+        "Location": "Illinois",
+        "Fleet": "0",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "560",
+        "Owners/Helmsmen": "Mike Chapman",
+        "Status": "OW",
+        "Boat Name": "Sentient",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "561",
+        "Owners/Helmsmen": "Unknown",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "562",
+        "Owners/Helmsmen": "Larry Levitt",
+        "Status": "OW",
+        "Boat Name": "Archimedes",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "562",
+        "Owners/Helmsmen": "Larry Levit",
+        "Status": "OW",
+        "Boat Name": "Archimedes",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "563",
+        "Owners/Helmsmen": "Matthew Schmitt",
+        "Status": "OW",
+        "Boat Name": "Hardtack",
+        "Location": "Massachusetts",
+        "Fleet": "14",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "564",
+        "Owners/Helmsmen": "David Adelhardt",
+        "Status": "OW",
+        "Boat Name": "Scrapio",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "565",
+        "Owners/Helmsmen": "John Sledge",
+        "Status": "CO",
+        "Boat Name": "VMax",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2011"
+    },
+    {
+        "Hull": "565",
+        "Owners/Helmsmen": "John Ready",
+        "Status": "OW",
+        "Boat Name": "VMax",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "566",
+        "Owners/Helmsmen": "Gonzalo Tejero",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "567",
+        "Owners/Helmsmen": "Wyllys Baird",
+        "Status": "OW",
+        "Boat Name": "We Be Jammin\u2019",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "568",
+        "Owners/Helmsmen": "Brian Nelson",
+        "Status": "OW",
+        "Boat Name": "Honey Badger",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "569",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "570",
+        "Owners/Helmsmen": "R. Bultena",
+        "Status": "OW",
+        "Boat Name": "No Face 2 Face",
+        "Location": "Antigua And Barbuda",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "571",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "572",
+        "Owners/Helmsmen": "James Owen",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "573",
+        "Owners/Helmsmen": "Nigel Guenier",
+        "Status": "OW",
+        "Boat Name": "Jubilee",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "574",
+        "Owners/Helmsmen": "Carl Bauer",
+        "Status": "OW",
+        "Boat Name": "Dragon Fly",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "575",
+        "Owners/Helmsmen": "Eric Harle",
+        "Status": "OW",
+        "Boat Name": "Jam Session",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "576",
+        "Owners/Helmsmen": "Nick Martin",
+        "Status": "OW",
+        "Boat Name": "Diablo-J",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "577",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "578",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "579",
+        "Owners/Helmsmen": "Ken Bowden",
+        "Status": "OW",
+        "Boat Name": "Knotless",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "580",
+        "Owners/Helmsmen": "Chilean Naval Institute",
+        "Status": "OW",
+        "Boat Name": "Speed Racer",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "581",
+        "Owners/Helmsmen": "Dave Wegner",
+        "Status": "OW",
+        "Boat Name": "Crackers",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "582",
+        "Owners/Helmsmen": "Juan Lois",
+        "Status": "OW",
+        "Boat Name": "ROCINANTE",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "583",
+        "Owners/Helmsmen": "Wayne Popham",
+        "Status": "OW",
+        "Boat Name": "Calypso's Spell",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "584",
+        "Owners/Helmsmen": "Scott Lowry",
+        "Status": "OW",
+        "Boat Name": "Ohana",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "585",
+        "Owners/Helmsmen": "Stuart Van Winkle",
+        "Status": "OW",
+        "Boat Name": "ARETE",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "586",
+        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Status": "OW",
+        "Boat Name": "Dreadnought",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "587",
+        "Owners/Helmsmen": "Eric Mais",
+        "Status": "OW",
+        "Boat Name": "Vamoose",
+        "Location": "Hawaii",
+        "Fleet": "0",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "588",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Europe",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "589",
+        "Owners/Helmsmen": "Claus Hansen",
+        "Status": "OW",
+        "Boat Name": "Eclipse",
+        "Location": "Denmark",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "590",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "591",
+        "Owners/Helmsmen": "Dwayne Assis",
+        "Status": "OW",
+        "Boat Name": "Pants on Fire",
+        "Location": "South Africa",
+        "Fleet": "0",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "592",
+        "Owners/Helmsmen": "Carsten Barlebo",
+        "Status": "CO",
+        "Boat Name": "Raske RAPIDA",
+        "Location": "Denmark",
+        "Fleet": "0",
+        "Class Membership": "Member 2007"
+    },
+    {
+        "Hull": "592",
+        "Owners/Helmsmen": "Birgitte Sogaard",
+        "Status": "OW",
+        "Boat Name": "Raske RAPIDA",
+        "Location": "Denmark",
+        "Fleet": "0",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "593",
+        "Owners/Helmsmen": "Xavier Pagnier",
+        "Status": "OW",
+        "Boat Name": "Magic Potion",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "594",
+        "Owners/Helmsmen": "Andrew Bird",
+        "Status": "OW",
+        "Boat Name": "Jambalaya",
+        "Location": "United Kingdom",
+        "Fleet": "13",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "595",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "596",
+        "Owners/Helmsmen": "Piero Santi",
+        "Status": "OW",
+        "Boat Name": "Lady J Violet",
+        "Location": "Italy",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "597",
+        "Owners/Helmsmen": "Vernon Bradley",
+        "Status": "OW",
+        "Boat Name": "Jackpot",
+        "Location": "gb0",
+        "Fleet": "13",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "598",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "599",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "600",
+        "Owners/Helmsmen": "Jim Goldman",
+        "Status": "OW",
+        "Boat Name": "GHOST",
+        "Location": "Connecticut",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "601",
+        "Owners/Helmsmen": "Daniel Murphy",
+        "Status": "OW",
+        "Boat Name": "Cuchulainn",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2020"
+    },
+    {
+        "Hull": "601",
+        "Owners/Helmsmen": "Robert Dekker",
+        "Status": "OW",
+        "Boat Name": "Cuchulainn",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "602",
+        "Owners/Helmsmen": "Steve Willits",
+        "Status": "OW",
+        "Boat Name": "Synapse",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "603",
+        "Owners/Helmsmen": "Francois Telemague",
+        "Status": "OW",
+        "Boat Name": "Rum at Six",
+        "Location": "North Carolina",
+        "Fleet": "11",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "604",
+        "Owners/Helmsmen": "Jennifer MaGee",
+        "Status": "OW",
+        "Boat Name": "Troublemaker",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "605",
+        "Owners/Helmsmen": "Paul Bell",
+        "Status": "OW",
+        "Boat Name": "I.T.Sails",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "608",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "609",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "610",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "611",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "612",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "614",
+        "Owners/Helmsmen": "FRENCH BUILT BOAT",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Europe",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "615",
+        "Owners/Helmsmen": "Gerard Golay",
+        "Status": "OW",
+        "Boat Name": "Tabig IV",
+        "Location": "France",
+        "Fleet": "0",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "617",
+        "Owners/Helmsmen": "Lawrence Yanowitch",
+        "Status": "OW",
+        "Boat Name": "Blizzard",
+        "Location": "Maryland",
+        "Fleet": "3",
         "Class Membership": "Member 2024"
     },
     {
@@ -225,6 +6957,204 @@
         "Class Membership": "Member 2023"
     },
     {
+        "Hull": "619",
+        "Owners/Helmsmen": "James Reichel",
+        "Status": "OW",
+        "Boat Name": "Scapegoat",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "620",
+        "Owners/Helmsmen": "Chris Tate",
+        "Status": "OW",
+        "Boat Name": "Blitz",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "621",
+        "Owners/Helmsmen": "Michael Hamilton",
+        "Status": "OW",
+        "Boat Name": "Amidala",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "622",
+        "Owners/Helmsmen": "Sam Kovalak",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Michigan",
+        "Fleet": "5",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "623",
+        "Owners/Helmsmen": "Chris Bardwell-Jones",
+        "Status": "OW",
+        "Boat Name": "Dragon",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2019"
+    },
+    {
+        "Hull": "624",
+        "Owners/Helmsmen": "Chuck Wielchowsky",
+        "Status": "OW",
+        "Boat Name": "Texas Ranger IV",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "625",
+        "Owners/Helmsmen": "Robin Durrschmidt",
+        "Status": "OW",
+        "Boat Name": "Reckless",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "626",
+        "Owners/Helmsmen": "Gareth Gaston",
+        "Status": "OW",
+        "Boat Name": "FAIRHOPE",
+        "Location": "New York",
+        "Fleet": "10",
+        "Class Membership": "Member 2017"
+    },
+    {
+        "Hull": "627",
+        "Owners/Helmsmen": "Richie Palmer",
+        "Status": "OW",
+        "Boat Name": "Tolo",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "628",
+        "Owners/Helmsmen": "Rick Schaffer",
+        "Status": "CO",
+        "Boat Name": "Double Dare",
+        "Location": "Texas",
+        "Fleet": "16",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "629",
+        "Owners/Helmsmen": "Ryan Glaze",
+        "Status": "AM",
+        "Boat Name": "Kestrel",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "629",
+        "Owners/Helmsmen": "Chuck McCarthy",
+        "Status": "OW",
+        "Boat Name": "Kestrel",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "630",
+        "Owners/Helmsmen": "Jason Barron",
+        "Status": "OW",
+        "Boat Name": "Raven",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "630",
+        "Owners/Helmsmen": "Robert Waltz",
+        "Status": "AM",
+        "Boat Name": "Raven",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "631",
+        "Owners/Helmsmen": "Cristobal Fiori",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "631",
+        "Owners/Helmsmen": "Felipe Larrain",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "632",
+        "Owners/Helmsmen": "Jack Colby",
+        "Status": "OW",
+        "Boat Name": "Civil Action",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2012"
+    },
+    {
+        "Hull": "633",
+        "Owners/Helmsmen": "Harald Schilling",
+        "Status": "OW",
+        "Boat Name": "Thira",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": "Member 2013"
+    },
+    {
+        "Hull": "634",
+        "Owners/Helmsmen": "Thomas Bollay",
+        "Status": "OW",
+        "Boat Name": "Armida",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Member 2014"
+    },
+    {
+        "Hull": "635",
+        "Owners/Helmsmen": "Charlie Garrard",
+        "Status": "OW",
+        "Boat Name": "Merlin",
+        "Location": "Massachusetts",
+        "Fleet": "2",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "636",
+        "Owners/Helmsmen": "Matthew Richter",
+        "Status": "OW",
+        "Boat Name": "Epic",
+        "Location": "New York",
+        "Fleet": "4",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "637",
+        "Owners/Helmsmen": "Marc Epstein",
+        "Status": "OW",
+        "Boat Name": "Vision",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2007"
+    },
+    {
         "Hull": "638",
         "Owners/Helmsmen": "Michael Seitz",
         "Status": "OW",
@@ -234,6 +7164,132 @@
         "Class Membership": "Member 2024"
     },
     {
+        "Hull": "639",
+        "Owners/Helmsmen": "Jim Duffy",
+        "Status": "OW",
+        "Boat Name": "Chinook",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "640",
+        "Owners/Helmsmen": "Gene Cloutier",
+        "Status": "CO",
+        "Boat Name": "Hawke",
+        "Location": "Tennessee",
+        "Fleet": "0",
+        "Class Membership": "Member 2005"
+    },
+    {
+        "Hull": "640",
+        "Owners/Helmsmen": "Michael Higgins",
+        "Status": "OW",
+        "Boat Name": "Hawke",
+        "Location": "Tennessee",
+        "Fleet": "0",
+        "Class Membership": "Member 2006"
+    },
+    {
+        "Hull": "641",
+        "Owners/Helmsmen": "Bill Bevan",
+        "Status": "OW",
+        "Boat Name": "Endeavour",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "642",
+        "Owners/Helmsmen": "Carlos Perez",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "643",
+        "Owners/Helmsmen": "Mike Ludtke",
+        "Status": "OW",
+        "Boat Name": "Smokin' J",
+        "Location": "Wisconsin",
+        "Fleet": "5",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "644",
+        "Owners/Helmsmen": "Phillip Laby",
+        "Status": "OW",
+        "Boat Name": "Godot 2.0",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "644",
+        "Owners/Helmsmen": "Cooper Waldron",
+        "Status": "OW",
+        "Boat Name": "Godot 2.0",
+        "Location": "California",
+        "Fleet": "1",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "645",
+        "Owners/Helmsmen": "UNKNOWN",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "646",
+        "Owners/Helmsmen": "Sail California Newport",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "California",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "647",
+        "Owners/Helmsmen": "Fred Darling",
+        "Status": "OW",
+        "Boat Name": "Bombadier",
+        "Location": "Nevada",
+        "Fleet": "0",
+        "Class Membership": "Member 2008"
+    },
+    {
+        "Hull": "648",
+        "Owners/Helmsmen": "Anton Devcic",
+        "Status": "OW",
+        "Boat Name": "ADRIA",
+        "Location": "Wisconsin",
+        "Fleet": "5",
+        "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "649",
+        "Owners/Helmsmen": "Bill Lakenmacher",
+        "Status": "OW",
+        "Boat Name": "Radiance",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "650",
+        "Owners/Helmsmen": "Jason Abernathy",
+        "Status": "OW",
+        "Boat Name": "Loose Cannon",
+        "Location": "Virginia",
+        "Fleet": "15",
+        "Class Membership": "Member 2023"
+    },
+    {
         "Hull": "656",
         "Owners/Helmsmen": "Sara Creenan",
         "Status": "OW",
@@ -241,5 +7297,194 @@
         "Location": "United States",
         "Fleet": "22",
         "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "657",
+        "Owners/Helmsmen": "Christopher Beane",
+        "Status": "OW",
+        "Boat Name": "Vixen",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "658",
+        "Owners/Helmsmen": "Miguel Salas",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "None",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "662",
+        "Owners/Helmsmen": "unknown",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "665",
+        "Owners/Helmsmen": "Bjug Borgundvaag",
+        "Status": "OW",
+        "Boat Name": "Voodoo Magic",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "672",
+        "Owners/Helmsmen": "Rodrigo Gumucio",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "673",
+        "Owners/Helmsmen": "Jon Weglarz",
+        "Status": "OW",
+        "Boat Name": "The Asylum",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "676",
+        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Status": "OW",
+        "Boat Name": "Avenger",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "677",
+        "Owners/Helmsmen": "Paul Johnson",
+        "Status": "OW",
+        "Boat Name": "Myouri II",
+        "Location": "New York",
+        "Fleet": "6",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "678",
+        "Owners/Helmsmen": "Don Brackey",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "United States",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "679",
+        "Owners/Helmsmen": "Stephen Weissenberger",
+        "Status": "OW",
+        "Boat Name": "Aquabella",
+        "Location": "Montana",
+        "Fleet": "8",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "680",
+        "Owners/Helmsmen": "Perry Moy",
+        "Status": "CO",
+        "Boat Name": "Synergy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2016"
+    },
+    {
+        "Hull": "680",
+        "Owners/Helmsmen": "Henrik Pedersen",
+        "Status": "CO",
+        "Boat Name": "Synergy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "680",
+        "Owners/Helmsmen": "David Lewis",
+        "Status": "CO",
+        "Boat Name": "Synergy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "680",
+        "Owners/Helmsmen": "David Spence",
+        "Status": "CO",
+        "Boat Name": "Synergy",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "681",
+        "Owners/Helmsmen": "Patricio Seguel Bunster",
+        "Status": "OW",
+        "Boat Name": "Grand Slam",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "682",
+        "Owners/Helmsmen": "Jorge Gonzalez",
+        "Status": "OW",
+        "Boat Name": "Extravagancia",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "683",
+        "Owners/Helmsmen": "Jose Luis Rosales Munoz",
+        "Status": "OW",
+        "Boat Name": "Miura",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "684",
+        "Owners/Helmsmen": "Jose Tomas Errazuriz",
+        "Status": "OW",
+        "Boat Name": "Wichita",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": "Member 2018"
+    },
+    {
+        "Hull": "685",
+        "Owners/Helmsmen": "Ramon Eluchans",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Chile",
+        "Fleet": "0",
+        "Class Membership": ""
+    },
+    {
+        "Hull": "999",
+        "Owners/Helmsmen": "Pershing Gervais",
+        "Status": "AM",
+        "Boat Name": "Knot Known",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2023"
+    },
+    {
+        "Hull": "999",
+        "Owners/Helmsmen": "Frank Sheeder",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2024"
     }
 ]

@@ -68,8 +68,9 @@ if table:
             # Update the problematic field with sanitized text
             row_data["Class Membership"] = class_membership_text
             # Check if the 'Fleet' column matches '22'
-            if row_data.get("Fleet") == "22":
-                data_list.append(row_data)
+            # if row_data.get("Fleet") == "22":
+            #     data_list.append(row_data)
+            data_list.append(row_data)
 
         else:
             logging.warning(f'Skipping row with unexpected number of columns: {len(cols)} expected: {len(headers)}')
@@ -94,3 +95,4 @@ if table:
     logging.info(f'Data has been extracted and saved as {json_file_path}.')
 else:
     logging.warning('Table not found. Check the CSS selector.')
+
