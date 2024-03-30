@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Dues Status</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .paid {
+            background-color: #c3e6cb; /* light green for paid */
+        }
+        .not-paid {
+            background-color: #f5c6cb; /* light red for not paid */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Fleet Dues Status</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Hull Number</th>
+                    <th>Boat Name</th>
+                    <th>Yacht Club</th>
+                    <th>Fleet Dues</th>
+                    <th>Class Dues</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script type="text/javascript" src="./data/boats_fleet22.json"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to dynamically fill the table with fleet data
+        function fillTable(data) {
+            const tbody = document.querySelector('table tbody');
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item["Hull Number"]}</td>
+                    <td>${item["Boat Name"]}</td>
+                    <td>${item["Yacht Club"]}</td>
+                    <td class="${item["Fleet Dues"] === 'Paid' ? 'paid' : 'not-paid'}">${item["Fleet Dues"]}</td>
+                    <td class="${item["Class Dues"] === 'Paid' ? 'paid' : 'not-paid'}">${item["Class Dues"]}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        fetch('https://api.github.com/repos/dailypush/Fleet22/contents/data/boats_fleet22.json')
+  .then(response => response.json())
+  .then(data => {
+    // Decode the base64 content
+    const fileContent = atob(data.content.replace(/\s/g, '')); // Remove potential whitespace
+    const json = JSON.parse(fileContent);
+    fillTable(json); // Make sure to call fillTable with the parsed JSON data
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Optionally, update the UI to inform the user that an error occurred.
+  });
+
+    </script>
+</body>
+</html>
