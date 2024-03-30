@@ -61,6 +61,30 @@ body::before {
     border-bottom: 1px solid #e5e5e5;
 } */
 
+.feature-icon {
+    font-size: 1.75em;
+    transition: transform 0.2s ease-in-out;
+}
+.feature-icon:hover, .feature-title:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.feature-item {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+.feature-item:hover {
+    background-color: #f0f0f0;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 #event-details h5 {
     color: #D32F2F; /* Using the red color from the logo */
 }
