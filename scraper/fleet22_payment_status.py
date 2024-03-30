@@ -9,37 +9,36 @@ logging.basicConfig(level=logging.INFO, filename='../data/scraping.log', filemod
 with open('../data/boats_fleet22.json', 'r') as file:
     boats_fleet22 = json.load(file)
 
+# Extract hull numbers from boats_fleet22 to create a set of hull numbers for quick lookup
+boats_fleet22_hull_numbers = {boat["Hull Number"] for boat in boats_fleet22}
+
 with open('../data/j105_members_status.json', 'r') as file:
     members_status = json.load(file)
 
-# Initialize a dictionary to track the highest membership year for each hull
-highest_membership_year = {}
+# Prepare a dictionary to hold the latest membership status for each hull
+latest_membership_status = {}
 
-# Populate the dictionary with the highest membership year found for each hull
 for member in members_status:
     hull_number = member["Hull"]
-    parts = member["Class Membership"].split()
-    if parts and parts[-1].isdigit():  # Check if there is a year and it is numeric
-        year = parts[-1]
-        if hull_number in highest_membership_year:
-            if year > highest_membership_year[hull_number]:
-                highest_membership_year[hull_number] = year
-        else:
-            highest_membership_year[hull_number] = year
-    else:
-        logging.warning(f"Invalid or missing year in Class Membership for hull {hull_number}: '{member['Class Membership']}'")
+    if hull_number in boats_fleet22_hull_numbers:
+        membership_parts = member["Class Membership"].split()
+        if membership_parts and membership_parts[-1].isdigit():
+            year = int(membership_parts[-1])
+            if hull_number not in latest_membership_status or year > latest_membership_status[hull_number]["year"]:
+                latest_membership_status[hull_number] = {"year": year, "status": member["Class Membership"]}
 
-# Update the "Class Dues" status in boats_fleet22 based on highest_membership_year
+# Now iterate through boats in boats_fleet22, updating "Class Dues" based on the latest membership status
 for boat in boats_fleet22:
     hull_number = boat["Hull Number"]
-    boat_name = boat.get("Boat Name", "Unknown")  # Use a default value if "Boat Name" is missing
-    # Default status to "Not Paid"
-    boat["Class Dues"] = "Not Paid"
-    if hull_number in highest_membership_year and highest_membership_year[hull_number] == "2024":
+    member_info = latest_membership_status.get(hull_number)
+
+    boat["Class Dues"] = "Not Paid"  # Default to "Not Paid"
+    if member_info and member_info["year"] == 2024:
         boat["Class Dues"] = "Paid"
-        logging.info(f"Hull Number {hull_number} ({boat_name}) is marked as Paid for 2024.")
-    elif hull_number in highest_membership_year:
-        logging.info(f"Hull Number {hull_number} ({boat_name}) has not paid for 2024, highest year paid: {highest_membership_year[hull_number]}.")
+        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) is marked as Paid for 2024.")
+    elif member_info:
+        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) has not paid for 2024, highest year paid: {member_info['year']}.")
+        print(f"Hull Number {hull_number}({boat.get('Boat Name', 'Unknown')}) has not paid Class Dues for 2024, highest year paid: {member_info['year']}.")
 
 # Save the updated boats list back to the original file
 updated_boats_file_path = '../data/boats_fleet22.json'
