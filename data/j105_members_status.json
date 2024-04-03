@@ -486,15 +486,6 @@
         "Class Membership": ""
     },
     {
-        "Hull": "50",
-        "Owners/Helmsmen": "Daniel Neff",
-        "Status": "AM",
-        "Boat Name": "Eclipse",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "51",
         "Owners/Helmsmen": "Art Guerrera",
         "Status": "OW",
@@ -657,15 +648,6 @@
         "Class Membership": "Member 2023"
     },
     {
-        "Hull": "67",
-        "Owners/Helmsmen": "Jesse McKnight",
-        "Status": "AM",
-        "Boat Name": "MAYHEM",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "68",
         "Owners/Helmsmen": "Paul & Sue Mikulski",
         "Status": "OW",
@@ -691,15 +673,6 @@
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "69",
-        "Owners/Helmsmen": "Timothy Johnson",
-        "Status": "AM",
-        "Boat Name": "Eau La La",
-        "Location": "Texas",
-        "Fleet": "17",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "69",
@@ -1477,15 +1450,6 @@
     },
     {
         "Hull": "130",
-        "Owners/Helmsmen": "Jake Scott",
-        "Status": "AM",
-        "Boat Name": "Deja Voodoo",
-        "Location": "Texas",
-        "Fleet": "17",
-        "Class Membership": "Associate 2023"
-    },
-    {
-        "Hull": "130",
         "Owners/Helmsmen": "William Zartler",
         "Status": "OW",
         "Boat Name": "Deja Voodoo",
@@ -1629,15 +1593,6 @@
         "Class Membership": "Member 2024"
     },
     {
-        "Hull": "144",
-        "Owners/Helmsmen": "John Bodie",
-        "Status": "AM",
-        "Boat Name": "Fall Line",
-        "Location": "Ohio",
-        "Fleet": "22",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "145",
         "Owners/Helmsmen": "Paul Hickman",
         "Status": "OW",
@@ -1653,7 +1608,7 @@
         "Boat Name": "Kashmir",
         "Location": "Michigan",
         "Fleet": "22",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "146",
@@ -2070,15 +2025,6 @@
         "Class Membership": "Member 2023"
     },
     {
-        "Hull": "183",
-        "Owners/Helmsmen": "D\u2019Milo Hallerberg",
-        "Status": "AM",
-        "Boat Name": "Scarlett",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "184",
         "Owners/Helmsmen": "Uzi Ozeri",
         "Status": "OW",
@@ -2446,15 +2392,6 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "212",
-        "Owners/Helmsmen": "Garey Harr",
-        "Status": "AM",
-        "Boat Name": "insubordination",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "214",
@@ -3105,15 +3042,6 @@
         "Class Membership": "Member 2021"
     },
     {
-        "Hull": "267",
-        "Owners/Helmsmen": "Todd Irving",
-        "Status": "AM",
-        "Boat Name": "Live Edge",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "268",
         "Owners/Helmsmen": "John Rivlin",
         "Status": "OW",
@@ -3456,15 +3384,6 @@
         "Class Membership": "Member 2018"
     },
     {
-        "Hull": "294",
-        "Owners/Helmsmen": "Nicholas Robbins",
-        "Status": "AM",
-        "Boat Name": "Rumpus",
-        "Location": "Texas",
-        "Fleet": "17",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "295",
         "Owners/Helmsmen": "Josh Lutton",
         "Status": "OW",
@@ -3609,15 +3528,6 @@
         "Class Membership": ""
     },
     {
-        "Hull": "306",
-        "Owners/Helmsmen": "William McKenzie, Jr.",
-        "Status": "AM",
-        "Boat Name": "RumFront",
-        "Location": "South Carolina",
-        "Fleet": "11",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "307",
         "Owners/Helmsmen": "North East Keelboat Alliance",
         "Status": "OW",
@@ -3643,15 +3553,6 @@
         "Location": "New York",
         "Fleet": "6",
         "Class Membership": "Member 2019"
-    },
-    {
-        "Hull": "309",
-        "Owners/Helmsmen": "Dwight Greenhouse",
-        "Status": "AM",
-        "Boat Name": "Skipperdee",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "310",
@@ -4066,15 +3967,6 @@
         "Location": "Massachusetts",
         "Fleet": "2",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "345",
-        "Owners/Helmsmen": "Jason Maher",
-        "Status": "AM",
-        "Boat Name": "Brouhaha",
-        "Location": "Massachusetts",
-        "Fleet": "2",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "346",
@@ -4707,15 +4599,6 @@
         "Class Membership": "Member 2024"
     },
     {
-        "Hull": "403",
-        "Owners/Helmsmen": "Karin Stevens",
-        "Status": "AM",
-        "Boat Name": "Liftoff",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "404",
         "Owners/Helmsmen": "Joe Pitcavage",
         "Status": "OW",
@@ -5122,15 +5005,6 @@
     },
     {
         "Hull": "435",
-        "Owners/Helmsmen": "Sasha Rodic",
-        "Status": "AM",
-        "Boat Name": "Blink!",
-        "Location": "California",
-        "Fleet": "8",
-        "Class Membership": "Associate 2023"
-    },
-    {
-        "Hull": "435",
         "Owners/Helmsmen": "Eric Axford",
         "Status": "AM",
         "Boat Name": "Blink!",
@@ -5497,15 +5371,6 @@
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2023"
-    },
-    {
-        "Hull": "472",
-        "Owners/Helmsmen": "Roy Carley",
-        "Status": "AM",
-        "Boat Name": "Doctor Jazz",
-        "Location": "New Jersey",
-        "Fleet": "10",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "473",
@@ -5967,15 +5832,6 @@
         "Class Membership": "Member 2023"
     },
     {
-        "Hull": "513",
-        "Owners/Helmsmen": "Dave Kellogg",
-        "Status": "AM",
-        "Boat Name": "ATARAXIS",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2023"
-    },
-    {
         "Hull": "514",
         "Owners/Helmsmen": "George Scheel",
         "Status": "OW",
@@ -6019,15 +5875,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "517",
-        "Owners/Helmsmen": "John Aras",
-        "Status": "AM",
-        "Boat Name": "Rocket J Squirrel",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "517",
@@ -7048,15 +6895,6 @@
     },
     {
         "Hull": "629",
-        "Owners/Helmsmen": "Ryan Glaze",
-        "Status": "AM",
-        "Boat Name": "Kestrel",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2023"
-    },
-    {
-        "Hull": "629",
         "Owners/Helmsmen": "Chuck McCarthy",
         "Status": "OW",
         "Boat Name": "Kestrel",
@@ -7072,15 +6910,6 @@
         "Location": "New York",
         "Fleet": "6",
         "Class Membership": "Member 2022"
-    },
-    {
-        "Hull": "630",
-        "Owners/Helmsmen": "Robert Waltz",
-        "Status": "AM",
-        "Boat Name": "Raven",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "631",
@@ -7368,7 +7197,7 @@
         "Boat Name": "Myouri II",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "678",
@@ -7468,15 +7297,6 @@
         "Location": "Chile",
         "Fleet": "0",
         "Class Membership": ""
-    },
-    {
-        "Hull": "999",
-        "Owners/Helmsmen": "Pershing Gervais",
-        "Status": "AM",
-        "Boat Name": "Knot Known",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2023"
     },
     {
         "Hull": "999",
