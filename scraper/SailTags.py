@@ -53,11 +53,21 @@ if table:
 
     data_list = []
     
-    # Using tqdm to show progress
-    for row in tqdm(table.find_all('tr')[1:], desc="Processing Rows"):
-        cols = row.find_all('td')
-        row_data = {headers[i]: cols[i].text.strip() for i in range(min(len(cols), len(headers)))}
-        data_list.append(row_data)
+# Using tqdm to show progress
+for row in tqdm(table.find_all('tr')[1:], desc="Processing Rows"):
+    cols = row.find_all('td')
+    # Ensure we only iterate up to the number of headers to avoid index errors
+    num_cols_to_process = min(len(cols), len(headers))
+    
+    # Construct row_data with error checking
+    row_data = {}
+    for i in range(num_cols_to_process):
+        header = headers[i] if i < len(headers) else f"Unknown_{i}"
+        row_data[header] = clean_text(cols[i].text) if i < len(cols) else ""
+    
+    # Append each row's data to data_list inside the loop
+    data_list.append(row_data)
+
 
     json_data = json.dumps(data_list, indent=4)
     folder_path = '../data'
