@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heatmap Example</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .heatmap {
+            font-family: Sans-Serif;
+            margin-bottom: 20px;
+        }
+
+        .heatmap rect {
+            stroke-width: 1;
+            stroke: #E6E6E6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heatmaps-container"></div>
+
+    <script>
+        fetch('sail_tags.json')
+            .then(response => response.json())
+            .then(data => {
+                const groupedData = groupByHull(data);
+                createMultipleHeatmaps(groupedData);
+            })
+            .catch(error => console.error('Error loading the JSON data:', error));
+
+        function groupByHull(data) {
+            const hullGroups = {};
+
+            // Group data by Hull
+            data.forEach(item => {
+                const hull = item.Hull;
+                if (!hullGroups[hull]) {
+                    hullGroups[hull] = [];
+                }
+                hullGroups[hull].push(item);
+            });
+
+            // Process each group for heatmap data
+            Object.keys(hullGroups).forEach(hull => {
+                hullGroups[hull] = processData(hullGroups[hull]);
+            });
+
+            return hullGroups;
+        }
+
+        function processData(hullData) {
+            // This function should process the data for a single hull and
+            // transform it into a format suitable for the heatmap.
+            const summary = {};
+            hullData.forEach(({ 'Sail Type': sailType, 'Sailmaker': sailmaker, 'Delivery Date': date }) => {
+                const year = new Date(date).getFullYear().toString();
+                const key = `${sailType} ${sailmaker}`;
+
+                if (!summary[key]) {
+                    summary[key] = {};
+                }
+
+                if (!summary[key][year]) {
+                    summary[key][year] = 0;
+                }
+
+                summary[key][year] += 1;
+            });
+
+            return Object.entries(summary).flatMap(([key, years]) => {
+                return Object.entries(years).map(([year, count]) => ({
+                    key, year, count
+                }));
+            });
+        }
+        function createMultipleHeatmaps(groupedData) {
+    const heatmapsContainer = document.getElementById('heatmaps-container');
+    heatmapsContainer.innerHTML = ''; // Clear previous heatmaps if any
+
+    // Determine the size of each heatmap dynamically based on the container's width
+    const containerWidth = heatmapsContainer.clientWidth;
+    const heatmapWidth = containerWidth; // Set width for each heatmap
+    const heatmapHeight = 150; // Set a fixed height for each heatmap
+
+    Object.keys(groupedData).slice(0, 10).forEach((hull, index) => { 
+        const heatmapData = groupedData[hull];
+        const heatmapId = `heatmap-${hull}`;
+
+        // Create a div for each heatmap
+        const heatmapDiv = document.createElement('div');
+        heatmapDiv.id = heatmapId;
+        heatmapDiv.className = 'heatmap';
+        heatmapDiv.style.width = `${heatmapWidth}px`;
+        heatmapDiv.style.height = `${heatmapHeight}px`;
+        heatmapsContainer.appendChild(heatmapDiv);
+
+        // Call the heatmap creation function
+        createHeatmap(heatmapData, `#${heatmapId}`, heatmapWidth, heatmapHeight);
+    });
+}
+function createHeatmap(data, containerSelector, totalWidth, totalHeight) {
+    const margin = { top: 30, right: 20, bottom: 30, left: 60 },
+          width = totalWidth - margin.left - margin.right,
+          height = totalHeight - margin.top - margin.bottom;
+
+    // Select the correct container based on the passed in ID
+    const svg = d3.select(containerSelector)
+        .append('svg')
+        .attr('width', totalWidth)
+        .attr('height', totalHeight)
+        .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Prepare the scales with the correct domain
+    const xScale = d3.scaleBand()
+        .rangeRound([0, width])
+        .padding(0.05)
+        .domain([...new Set(data.map(d => d.year))].sort()); // Unique years sorted
+
+    const yScale = d3.scaleBand()
+        .rangeRound([height, 0])
+        .padding(0.05)
+        .domain([...new Set(data.map(d => d.key))]); // Unique keys
+
+    const colorScale = d3.scaleSequential(d3.interpolateBuPu)
+        .domain([0, d3.max(data, d => d.count)]);
+
+    // Create the cells
+    svg.selectAll('.cell')
+        .data(data)
+        .enter().append('rect')
+        .attr('class', 'cell')
+        .attr('width', xScale.bandwidth())
+        .attr('height', yScale.bandwidth())
+        .attr('y', d => yScale(d.key))
+        .attr('x', d => xScale(d.year))
+        .attr('fill', d => colorScale(d.count));
+
+    // Add cell labels
+    svg.selectAll('.cell-label')
+        .data(data)
+        .enter().append('text')
+        .attr('class', 'cell-label')
+        .attr('x', d => xScale(d.year) + xScale.bandwidth() / 2)
+        .attr('y', d => yScale(d.key) + yScale.bandwidth() / 2)
+        .attr('text-anchor', 'middle')
+        .text(d => d.count);
+
+    // Add an x-axis
+    svg.append('g')
+        .attr('class', 'x axis')
+        .attr('transform', `translate(0,${height})`)
+        .call(d3.axisBottom(xScale))
+        .selectAll('text')
+        .style('text-anchor', 'middle')
+        .attr('dx', '-.8em')
+        .attr('dy', '.15em')
+        .attr('transform', 'rotate(-65)');
+
+    // Add a y-axis
+    svg.append('g')
+        .attr('class', 'y axis')
+        .call(d3.axisLeft(yScale));
+}
+
+
+    </script>
+</body>
+
+</html>
