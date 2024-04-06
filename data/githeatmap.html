@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Style Heatmap Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cal-heatmap/cal-heatmap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cal-heatmap/cal-heatmap.min.js"></script>
+</head>
+<body>
+    <div id="cal-heatmap"></div>
+
+    <script>
+        fetch('sail_tags.json')
+            .then(response => response.json())
+            .then(data => {
+                const transformedData = transformData(data);
+                const cal = new CalHeatMap();
+                cal.init({
+                    itemSelector: "#cal-heatmap",
+                    domain: "year",
+                    subDomain: "day",
+                    data: transformedData,
+                    start: new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate()), // Starting from one year ago
+                    cellSize: 10,
+                    range: 12, // Display 12 months
+                    legend: [1, 2, 4, 8, 16], // Customize legend thresholds
+                    tooltip: true
+                });
+            })
+            .catch(error => console.error('Error loading the JSON data:', error));
+            function transformData(data) {
+    const transformedData = {};
+    data.forEach(item => {
+        if (item['Delivery Date']) {
+            // Convert the date to a UNIX timestamp and round to the nearest day
+            const date = new Date(item['Delivery Date']);
+            if (!isNaN(date.getTime())) { // Check if the date is valid
+                const timestamp = Math.floor(date.getTime() / 1000);
+                // Count the number of occurrences per day
+                transformedData[timestamp] = (transformedData[timestamp] || 0) + 1;
+            }
+        }
+    });
+    return transformedData;
+}
+
+    </script>
+</body>
+</html>
