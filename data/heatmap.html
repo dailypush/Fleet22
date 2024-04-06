@@ -75,95 +75,100 @@
             });
         }
         function createMultipleHeatmaps(groupedData) {
-    const heatmapsContainer = document.getElementById('heatmaps-container');
-    heatmapsContainer.innerHTML = ''; // Clear previous heatmaps if any
+            const heatmapsContainer = document.getElementById('heatmaps-container');
+            heatmapsContainer.innerHTML = ''; // Clear previous heatmaps if any
 
-    // Determine the size of each heatmap dynamically based on the container's width
-    const containerWidth = heatmapsContainer.clientWidth;
-    const heatmapWidth = containerWidth; // Set width for each heatmap
-    const heatmapHeight = 150; // Set a fixed height for each heatmap
+            // Assuming the width and height are for the heatmap itself, not including margins
+            const heatmapWidth = 800;
+            const heatmapHeight = 150;
 
-    Object.keys(groupedData).slice(0, 10).forEach((hull, index) => { 
-        const heatmapData = groupedData[hull];
-        const heatmapId = `heatmap-${hull}`;
+            Object.keys(groupedData).slice(0, 10).forEach((hull, index) => {
+                const heatmapData = groupedData[hull];
+                const heatmapId = `heatmap-${hull}`;
 
-        // Create a div for each heatmap
-        const heatmapDiv = document.createElement('div');
-        heatmapDiv.id = heatmapId;
-        heatmapDiv.className = 'heatmap';
-        heatmapDiv.style.width = `${heatmapWidth}px`;
-        heatmapDiv.style.height = `${heatmapHeight}px`;
-        heatmapsContainer.appendChild(heatmapDiv);
+                // Create a div for each heatmap
+                const heatmapDiv = document.createElement('div');
+                heatmapDiv.id = heatmapId;
+                heatmapDiv.className = 'heatmap';
+                heatmapDiv.style.width = `${heatmapWidth}px`;
+                heatmapDiv.style.height = `${heatmapHeight}px`;
+                heatmapsContainer.appendChild(heatmapDiv);
 
-        // Call the heatmap creation function
-        createHeatmap(heatmapData, `#${heatmapId}`, heatmapWidth, heatmapHeight);
-    });
-}
-function createHeatmap(data, containerSelector, totalWidth, totalHeight) {
-    const margin = { top: 30, right: 20, bottom: 30, left: 60 },
-          width = totalWidth - margin.left - margin.right,
-          height = totalHeight - margin.top - margin.bottom;
+                // Call the heatmap creation function
+                createHeatmap(heatmapData, `#${heatmapId}`, heatmapWidth, heatmapHeight, hull);
+            });
+        }
 
-    // Select the correct container based on the passed in ID
-    const svg = d3.select(containerSelector)
-        .append('svg')
-        .attr('width', totalWidth)
-        .attr('height', totalHeight)
-        .append('g')
-        .attr('transform', `translate(${margin.left},${margin.top})`);
+        function createHeatmap(data, containerSelector, totalWidth, totalHeight, hull) {
+            const margin = { top: 50, right: 20, bottom: 50, left: 80 },
+                  width = totalWidth - margin.left - margin.right,
+                  height = totalHeight - margin.top - margin.bottom;
 
-    // Prepare the scales with the correct domain
-    const xScale = d3.scaleBand()
-        .rangeRound([0, width])
-        .padding(0.05)
-        .domain([...new Set(data.map(d => d.year))].sort()); // Unique years sorted
+            const svg = d3.select(containerSelector)
+                .append('svg')
+                .attr('width', totalWidth)
+                .attr('height', totalHeight)
+                .append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    const yScale = d3.scaleBand()
-        .rangeRound([height, 0])
-        .padding(0.05)
-        .domain([...new Set(data.map(d => d.key))]); // Unique keys
+            svg.append("text")
+                .attr("x", (width / 2))
+                .attr("y", 0 - (margin.top / 2))
+                .attr("text-anchor", "middle")
+                .style("font-size", "16px")
+                .style("text-decoration", "underline")
+                .text("Hull Number: " + hull);
 
-    const colorScale = d3.scaleSequential(d3.interpolateBuPu)
-        .domain([0, d3.max(data, d => d.count)]);
+            const xScale = d3.scaleBand()
+                .rangeRound([0, width])
+                .padding(0.05)
+                .domain([...new Set(data.map(d => d.year))].sort());
 
-    // Create the cells
-    svg.selectAll('.cell')
-        .data(data)
-        .enter().append('rect')
-        .attr('class', 'cell')
-        .attr('width', xScale.bandwidth())
-        .attr('height', yScale.bandwidth())
-        .attr('y', d => yScale(d.key))
-        .attr('x', d => xScale(d.year))
-        .attr('fill', d => colorScale(d.count));
+            const yScale = d3.scaleBand()
+                .rangeRound([height, 0])
+                .padding(0.05)
+                .domain([...new Set(data.map(d => d.key))]);
 
-    // Add cell labels
-    svg.selectAll('.cell-label')
-        .data(data)
-        .enter().append('text')
-        .attr('class', 'cell-label')
-        .attr('x', d => xScale(d.year) + xScale.bandwidth() / 2)
-        .attr('y', d => yScale(d.key) + yScale.bandwidth() / 2)
-        .attr('text-anchor', 'middle')
-        .text(d => d.count);
+            const colorScale = d3.scaleSequential(d3.interpolateBuPu)
+                .domain([0, d3.max(data, d => d.count)]);
 
-    // Add an x-axis
-    svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', `translate(0,${height})`)
-        .call(d3.axisBottom(xScale))
-        .selectAll('text')
-        .style('text-anchor', 'middle')
-        .attr('dx', '-.8em')
-        .attr('dy', '.15em')
-        .attr('transform', 'rotate(-65)');
+            svg.selectAll('.cell')
+                .data(data)
+                .enter().append('rect')
+                .attr('class', 'cell')
+                .attr('width', xScale.bandwidth())
+                .attr('height', yScale.bandwidth())
+                .attr('y', d => yScale(d.key))
+                .attr('x', d => xScale(d.year))
+                .attr('fill', d => colorScale(d.count));
 
-    // Add a y-axis
-    svg.append('g')
-        .attr('class', 'y axis')
-        .call(d3.axisLeft(yScale));
-}
+            const xAxis = d3.axisBottom(xScale);
+            const yAxis = d3.axisLeft(yScale);
 
+            svg.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis)
+                .selectAll('text')
+                .style('text-anchor', 'end')
+                .attr('dx', '-.8em')
+                .attr('dy', '.15em')
+                .attr('transform', 'rotate(-65)');
+
+            svg.append('g')
+                .attr('class', 'y axis')
+                .call(yAxis);
+
+            // Conditional rendering of labels to avoid overcrowding
+            const years = [...new Set(data.map(d => d.year))].sort();
+            const numYears = years.length;
+            const skip = Math.round(numYears / (width / 50)); // Adjust based on your data and width
+
+            svg.selectAll('.x.axis text')
+                .style('opacity', function(d, i) {
+                    return i % skip === 0 ? 1 : 0;
+                });
+        }
 
     </script>
 </body>
