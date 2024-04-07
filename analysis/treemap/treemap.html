@@ -63,35 +63,52 @@
                 .attr("height", height)
                 .style("font", "10px sans-serif");
 
-            // Give the data to this cluster layout:
-            const root = d3.hierarchy(data).sum(d => d.value); // Here the size of each leaf is given in the 'value' field in input data
+            // Define color scale
+            const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-            // Then d3.treemap computes the position of each element of the hierarchy
-            d3.treemap()
+            // Create a treemap layout
+            const treemap = d3.treemap()
                 .size([width, height])
-                .padding(1)
-                (root);
+                .padding(1);
 
-            // Use this information to add rectangles:
+            // Create root node for D3 hierarchy
+            const root = d3.hierarchy(data)
+                .sum(d => d.value) // Define how to compute the 'value' of each node
+                .sort((a, b) => b.height - a.height || b.value - a.value);
+
+            // Compute the treemap layout
+            treemap(root);
+
+            // Select all leaf nodes and enter data
             const leaf = svg.selectAll("g")
                 .data(root.leaves())
                 .join("g")
                 .attr("transform", d => `translate(${d.x0},${d.y0})`);
 
+            // Append rectangles for each leaf node
             leaf.append("rect")
                 .attr("id", d => (d.leafUid = "leaf" + d.data.name))
                 .attr("width", d => d.x1 - d.x0)
                 .attr("height", d => d.y1 - d.y0)
-                .attr("fill-opacity", 0.6)
-                .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); });
+                .attr("fill", d => color(d.parent.data.name)) // Color based on parent node
+                .attr("stroke", "white"); // Add stroke for contrast
 
-            // and to add the text labels
+            // Add text labels for each leaf node
             leaf.append("text")
+                .attr("fill", "black") // Text color for legibility
                 .selectAll("tspan")
-                .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g).concat(d.value))
+                .data(d => {
+                    // Only add text if rectangle is big enough
+                    const nameSplit = d.data.name.split(/(?=[A-Z][^A-Z])/g);
+                    const rectWidth = d.x1 - d.x0;
+                    const rectHeight = d.y1 - d.y0;
+                    const textData = rectWidth > 50 && rectHeight > 20 ? nameSplit.concat(d.value) : [];
+                    return textData;
+                })
                 .join("tspan")
                 .attr("x", 3)
-                .attr("y", (d, i) => `${i + 1}em`)
+                .attr("y", (d, i) => `${i + 1.1}em`)
+                .attr("font-weight", (d, i, nodes) => nodes.length > 1 && i === 0 ? "bold" : "normal")
                 .text(d => d);
 
             // Add title for the top level
@@ -103,11 +120,14 @@
                 .attr("y", d => d.y0)
                 .text(d => d.data.name)
                 .attr("font-size", "19px")
-                .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); });
+                .attr("fill", d => color(d.data.name));
         }
 
         // Color scale
         var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+
 
         // Assume the processData function and the rest of your script are as previously outlined
 
