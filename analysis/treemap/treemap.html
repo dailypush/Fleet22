@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tree Map Example</title>
+    <style>
+        .node {
+            border: 1px solid white;
+            font: 10px sans-serif;
+            line-height: 12px;
+            overflow: hidden;
+            position: absolute;
+            text-indent: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="treeMap"></div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // Fetch the JSON data
+        fetch('sail_tags.json')
+            .then(response => response.json())
+            .then(data => {
+                const processedData = processData(data);
+                drawTreeMap(processedData);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+
+        // Process the JSON data to fit the tree map structure
+        function processData(data) {
+            let hierarchy = { "name": "Sailmakers", "children": [] };
+
+            // Example processing
+            data.forEach(item => {
+                let sailmaker = hierarchy.children.find(d => d.name === item.Sailmaker);
+                if (!sailmaker) {
+                    sailmaker = { "name": item.Sailmaker, "children": [] };
+                    hierarchy.children.push(sailmaker);
+                }
+                let sailType = sailmaker.children.find(d => d.name === item["Sail Type"]);
+                if (!sailType) {
+                    sailType = { "name": item["Sail Type"], "value": 1 };
+                    sailmaker.children.push(sailType);
+                } else {
+                    sailType.value++;
+                }
+            });
+
+            return hierarchy;
+        }
+
+        // Function to draw the tree map
+        function drawTreeMap(data) {
+            const width = 960, height = 500;
+
+            // Append the svg object to the body of the page
+            const svg = d3.select("#treeMap")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .style("font", "10px sans-serif");
+
+            // Give the data to this cluster layout:
+            const root = d3.hierarchy(data).sum(d => d.value); // Here the size of each leaf is given in the 'value' field in input data
+
+            // Then d3.treemap computes the position of each element of the hierarchy
+            d3.treemap()
+                .size([width, height])
+                .padding(1)
+                (root);
+
+            // Use this information to add rectangles:
+            const leaf = svg.selectAll("g")
+                .data(root.leaves())
+                .join("g")
+                .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+            leaf.append("rect")
+                .attr("id", d => (d.leafUid = "leaf" + d.data.name))
+                .attr("width", d => d.x1 - d.x0)
+                .attr("height", d => d.y1 - d.y0)
+                .attr("fill-opacity", 0.6)
+                .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); });
+
+            // and to add the text labels
+            leaf.append("text")
+                .selectAll("tspan")
+                .data(d => d.data.name.split(/(?=[A-Z][^A-Z])/g).concat(d.value))
+                .join("tspan")
+                .attr("x", 3)
+                .attr("y", (d, i) => `${i + 1}em`)
+                .text(d => d);
+
+            // Add title for the top level
+            svg.selectAll("titles")
+                .data(root.descendants().filter(d => d.depth === 1))
+                .enter()
+                .append("text")
+                .attr("x", d => d.x0)
+                .attr("y", d => d.y0)
+                .text(d => d.data.name)
+                .attr("font-size", "19px")
+                .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); });
+        }
+
+        // Color scale
+        var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        // Assume the processData function and the rest of your script are as previously outlined
+
+
+    </script>
+</body>
+
+</html>

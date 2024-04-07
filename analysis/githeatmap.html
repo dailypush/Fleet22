@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GitHub Style Heatmap Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cal-heatmap/cal-heatmap.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cal-heatmap/cal-heatmap.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row justify-content-center mb-2">
+            <div class="col-auto">
+                <button id="prev-year" class="btn btn-secondary">Previous Year</button>
+            </div>
+            <div class="col-auto">
+                <span id="current-year" class="h4"></span>
+            </div>
+            <div class="col-auto">
+                <button id="next-year" class="btn btn-secondary">Next Year</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="cal-heatmap"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentYear = new Date().getFullYear() - 1;
+        let globalData;
+        let cal = new CalHeatMap();
+
+        //  Modify the transformData function to set the title attribute
+        function transformData(data) {
+            const transformedData = {};
+            data.forEach(item => {
+                if (item['Delivery Date']) {
+                    const date = new Date(item['Delivery Date']);
+                    if (!isNaN(date.getTime())) {
+                        const timestamp = Math.floor(date.getTime() / 1000);
+                        // Ensure each timestamp key points to an array of details
+                        if (!transformedData[timestamp]) {
+                            transformedData[timestamp] = { value: 1, details: [item] }; // Initialize with an array containing the first item
+                        } else {
+                            transformedData[timestamp].value += 1;
+                            transformedData[timestamp].details.push(item); // Append item to details array
+                        }
+                    }
+                }
+            });
+            return transformedData;
+        }
+
+
+        function filterDataByYear(data, year) {
+            const startOfYear = new Date(year, 0, 1).getTime() / 1000;
+            const endOfYear = new Date(year + 1, 0, 1).getTime() / 1000 - 1;
+            const yearData = Object.keys(data)
+                .filter(key => parseInt(key, 10) >= startOfYear && parseInt(key, 10) <= endOfYear)
+                .reduce((obj, key) => {
+                    obj[key] = data[key];
+                    return obj;
+                }, {});
+            return yearData;
+        }
+
+        function updateHeatmapDisplay(year, data) {
+            document.getElementById('current-year').textContent = year;
+            document.getElementById('cal-heatmap').innerHTML = '';
+            cal = new CalHeatMap();
+            cal.init({
+                itemSelector: "#cal-heatmap",
+                domain: "year",
+                subDomain: "day",
+                data: data,
+                start: new Date(year, 0),
+                cellSize: 10,
+                range: 12,
+                legend: [1, 2, 4, 8, 16],
+                tooltip: true,
+                itemName: ["entry", "entries"],
+                onClick: function(date, nb) {
+    if (nb === 0) return;
+    const timestamp = Math.floor(date.getTime() / 1000);
+    // Access the detailed information for the clicked date
+    const items = globalData[timestamp] ? globalData[timestamp].details : [];
+    const details = items.map(item => `Hull: ${item.Hull}, Purchaser: ${item.Purchaser}`).join("\n");
+    alert(details || "No details available");
+}
+            });
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            document.getElementById('prev-year').disabled = currentYear <= (new Date().getFullYear() - 20); // Assuming data starts from 20 years ago
+            document.getElementById('next-year').disabled = currentYear >= new Date().getFullYear();
+        }
+
+        fetch('sail_tags.json')
+            .then(response => response.json())
+            .then(data => {
+                globalData = transformData(data);
+                updateHeatmapDisplay(currentYear, filterDataByYear(globalData, currentYear));
+            })
+            .catch(error => console.error('Error loading the JSON data:', error));
+
+        document.getElementById('prev-year').addEventListener('click', () => {
+            currentYear--;
+            updateHeatmapDisplay(currentYear, filterDataByYear(globalData, currentYear));
+        });
+
+        document.getElementById('next-year').addEventListener('click', () => {
+            currentYear++;
+            updateHeatmapDisplay(currentYear, filterDataByYear(globalData, currentYear));
+        });
+    </script>
+
+    <!-- Include jQuery and Bootstrap JS at the end of your document -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
