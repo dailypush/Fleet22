@@ -43020,6 +43020,16 @@
         "Notes": ""
     },
     {
+        "Hull": "210",
+        "Purchaser": "Daniel Mathias",
+        "Certificate No.": "2402022Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-04-16",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "295",
         "Purchaser": "Bill Mathis",
         "Certificate No.": "0708325K",
@@ -67677,7 +67687,7 @@
         "Delivery Date": "2024-03-28",
         "Sail Type": "J",
         "Fleet": "3",
-        "Notes": ""
+        "Notes": "D. Stryker cancelled order; NS will use tag for another customer per S. Gruver e-mail 4/11/24"
     },
     {
         "Hull": "98",
@@ -69156,6 +69166,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-12-02",
         "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": ""
+    },
+    {
+        "Hull": "603",
+        "Purchaser": "Francois Telemague",
+        "Certificate No.": "2402025Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-04-15",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": ""
     },
