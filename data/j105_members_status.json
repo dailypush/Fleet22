@@ -636,7 +636,7 @@
         "Boat Name": "MAYHEM",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "67",
@@ -646,6 +646,15 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "67",
+        "Owners/Helmsmen": "Jesse McKnight",
+        "Status": "AM",
+        "Boat Name": "MAYHEM",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "68",
@@ -2355,7 +2364,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "210",
@@ -2364,7 +2373,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "210",
@@ -2373,7 +2382,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "211",
@@ -2760,7 +2769,7 @@
         "Boat Name": "Freedom",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "243",
@@ -3480,7 +3489,7 @@
         "Boat Name": "Velvet Hammer",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "303",
@@ -4780,12 +4789,12 @@
     },
     {
         "Hull": "417",
-        "Owners/Helmsmen": "Doug Weisz",
+        "Owners/Helmsmen": "Adam Hinz",
         "Status": "OW",
-        "Boat Name": "M GO BLUE",
-        "Location": "Massachusetts",
-        "Fleet": "2",
-        "Class Membership": ""
+        "Boat Name": "Wolverine",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "418",
@@ -5082,7 +5091,7 @@
         "Boat Name": "Sirocco",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "442",
@@ -6342,7 +6351,7 @@
         "Boat Name": "VMax",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "566",
@@ -6468,7 +6477,7 @@
         "Boat Name": "Knotless",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "580",
@@ -7116,7 +7125,7 @@
         "Boat Name": "Loose Cannon",
         "Location": "Virginia",
         "Fleet": "15",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "656",
