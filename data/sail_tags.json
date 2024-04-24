@@ -40,6 +40,26 @@
         "Notes": ""
     },
     {
+        "Hull": "650",
+        "Purchaser": "Jason Abernathy",
+        "Certificate No.": "1704133Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2017-05-12",
+        "Sail Type": "J",
+        "Fleet": "15",
+        "Notes": "Sail purchased used per J. Abernathy e-mail 4/21/24"
+    },
+    {
+        "Hull": "650",
+        "Purchaser": "Jason Abernathy",
+        "Certificate No.": "1709284N",
+        "Sailmaker": "North",
+        "Delivery Date": "2017-12-06",
+        "Sail Type": "S89",
+        "Fleet": "15",
+        "Notes": "Sail purchased used per J. Abernathy e-mail 4/22/24"
+    },
+    {
         "Hull": "394",
         "Purchaser": "Charles Abraham",
         "Certificate No.": "0911327N",
@@ -10986,16 +11006,6 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-12-06",
         "Sail Type": "M",
-        "Fleet": "1",
-        "Notes": ""
-    },
-    {
-        "Hull": "385",
-        "Purchaser": "Ian Charles",
-        "Certificate No.": "1709284N",
-        "Sailmaker": "North",
-        "Delivery Date": "2017-12-06",
-        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
@@ -73657,16 +73667,6 @@
         "Delivery Date": "2010-06-10",
         "Sail Type": "M",
         "Fleet": "18",
-        "Notes": ""
-    },
-    {
-        "Hull": "624",
-        "Purchaser": "Chuck Wielchowsky",
-        "Certificate No.": "1704133Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2017-05-12",
-        "Sail Type": "J",
-        "Fleet": "17",
         "Notes": ""
     },
     {
