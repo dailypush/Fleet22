@@ -26637,7 +26637,17 @@
         "Delivery Date": "2024-02-23",
         "Sail Type": "M",
         "Fleet": "3",
-        "Notes": ""
+        "Notes": "Sail returned per J. Phillips e-mail 4/24/24"
+    },
+    {
+        "Hull": "159",
+        "Purchaser": "Angelo Guarino",
+        "Certificate No.": "2402029Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-04-30",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": "Replaces returned sail 2401007Q, per J. Phillips e-mail 4/24/24"
     },
     {
         "Hull": "272",
@@ -32415,6 +32425,16 @@
         "Certificate No.": "0401003Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2004-02-19",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "71",
+        "Purchaser": "James Isbester",
+        "Certificate No.": "2312162Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-04-26",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
@@ -56260,6 +56280,16 @@
         "Notes": ""
     },
     {
+        "Hull": "565",
+        "Purchaser": "John Ready",
+        "Certificate No.": "2402012D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-04-23",
+        "Sail Type": "J",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
         "Hull": "377",
         "Purchaser": "Edward Reagan",
         "Certificate No.": "0204255N",
@@ -56970,6 +57000,16 @@
         "Notes": ""
     },
     {
+        "Hull": "350",
+        "Purchaser": "Douglas Riggs",
+        "Certificate No.": "2402015D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-04-23",
+        "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
         "Hull": "535",
         "Purchaser": "Bill Riker",
         "Certificate No.": "0104373N",
@@ -57506,6 +57546,26 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2023-09-26",
         "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "303",
+        "Purchaser": "Kristen Robinson",
+        "Certificate No.": "2402013D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-04-23",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "303",
+        "Purchaser": "Kristen Robinson",
+        "Certificate No.": "2402014D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-04-23",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
@@ -67740,6 +67800,16 @@
         "Notes": "D. Stryker cancelled order; NS will use tag for another customer per S. Gruver e-mail 4/11/24"
     },
     {
+        "Hull": "67",
+        "Purchaser": "Doug Stryker",
+        "Certificate No.": "2402028Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-01",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "98",
         "Purchaser": "Doug Stryker",
         "Certificate No.": "1702059N",
@@ -70366,6 +70436,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-03-22",
         "Sail Type": "M",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
+        "Hull": "585",
+        "Purchaser": "Stuart Van Winkle",
+        "Certificate No.": "2402016D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-04-23",
+        "Sail Type": "J",
         "Fleet": "10",
         "Notes": ""
     },
