@@ -3342,28 +3342,28 @@
         "Hull": "293",
         "Owners/Helmsmen": "Terry Michaelson",
         "Status": "CO",
-        "Boat Name": "Usual Suspects",
+        "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2021"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "293",
         "Owners/Helmsmen": "John Trumpener",
         "Status": "CO",
-        "Boat Name": "Usual Suspects",
+        "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "293",
         "Owners/Helmsmen": "George Chernev",
         "Status": "CO",
-        "Boat Name": "Usual Suspects",
+        "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "294",
@@ -4833,6 +4833,15 @@
         "Class Membership": "Associate 2024"
     },
     {
+        "Hull": "419",
+        "Owners/Helmsmen": "Jacob Doyle",
+        "Status": "AM",
+        "Boat Name": "Crash",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
+    },
+    {
         "Hull": "420",
         "Owners/Helmsmen": "Zak Bowdish",
         "Status": "OW",
@@ -5649,7 +5658,7 @@
         "Boat Name": "Snow Bird",
         "Location": "Connecticut",
         "Fleet": "6",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "498",
