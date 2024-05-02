@@ -6782,6 +6782,16 @@
     {
         "Hull": "420",
         "Purchaser": "Zak Bowdish",
+        "Certificate No.": "2005135D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2019-12-15",
+        "Sail Type": "J",
+        "Fleet": "18",
+        "Notes": "Sail purchased used per J. Lutton e-mail 4/30/24"
+    },
+    {
+        "Hull": "420",
+        "Purchaser": "Zak Bowdish",
         "Certificate No.": "2201064N",
         "Sailmaker": "North",
         "Delivery Date": "2023-10-18",
@@ -16356,6 +16366,26 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-12-12",
         "Sail Type": "M",
+        "Fleet": "18",
+        "Notes": ""
+    },
+    {
+        "Hull": "123",
+        "Purchaser": "Mark DenUyl",
+        "Certificate No.": "2203175N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-01",
+        "Sail Type": "S89",
+        "Fleet": "18",
+        "Notes": ""
+    },
+    {
+        "Hull": "123",
+        "Purchaser": "Mark DenUyl",
+        "Certificate No.": "2203193N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-01",
+        "Sail Type": "J",
         "Fleet": "18",
         "Notes": ""
     },
@@ -40746,16 +40776,6 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2019-12-15",
         "Sail Type": "S89",
-        "Fleet": "5",
-        "Notes": ""
-    },
-    {
-        "Hull": "295",
-        "Purchaser": "Josh Lutton",
-        "Certificate No.": "2005135D",
-        "Sailmaker": "Doyle",
-        "Delivery Date": "2019-12-15",
-        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },
@@ -66506,6 +66526,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2023-06-06",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "98",
+        "Purchaser": "Bruce Stone",
+        "Certificate No.": "2203190N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-01",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
