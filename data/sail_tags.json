@@ -8312,6 +8312,56 @@
     {
         "Hull": "498",
         "Purchaser": "T.J. Buckley",
+        "Certificate No.": "1403088N",
+        "Sailmaker": "North",
+        "Delivery Date": "2014-05-31",
+        "Sail Type": "S89",
+        "Fleet": "6",
+        "Notes": "Sail purchased from M. Elert per R. Taylor e-mail 4/22/21, sail purchased with boat purchase 12/21 per T. Buckley e-mail 5/3/24"
+    },
+    {
+        "Hull": "498",
+        "Purchaser": "T.J. Buckley",
+        "Certificate No.": "1709262N",
+        "Sailmaker": "North",
+        "Delivery Date": "2019-05-01",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": "Sail returned to North Sails by Mark Masur per T. Healy e-mail 4/12/19, sail purchased from M. Taylor per R. Taylor e-mail 4/22/21, sail purchased with boat purchase 12/21 per T. Buckley e-mail 5/3/24"
+    },
+    {
+        "Hull": "498",
+        "Purchaser": "T.J. Buckley",
+        "Certificate No.": "1803097N",
+        "Sailmaker": "North",
+        "Delivery Date": "2018-12-20",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": "Sail purchased from M. Elert per R. Taylor e-mail 4/22/21, sail purchased with boat purchase 12/21 per T. Buckley e-mail 5/3/24"
+    },
+    {
+        "Hull": "498",
+        "Purchaser": "T.J. Buckley",
+        "Certificate No.": "1804111N",
+        "Sailmaker": "North",
+        "Delivery Date": "2019-05-31",
+        "Sail Type": "M",
+        "Fleet": "6",
+        "Notes": "Sail purchased from M. Taylor per R. Taylor e-mail 4/22/21, sail purchased with boat purchase 12/21 per T. Buckley e-mail 5/3/24"
+    },
+    {
+        "Hull": "498",
+        "Purchaser": "T.J. Buckley",
+        "Certificate No.": "1804125N",
+        "Sailmaker": "North",
+        "Delivery Date": "2019-04-08",
+        "Sail Type": "S89",
+        "Fleet": "6",
+        "Notes": "Sail purchased from R. Taylor per R. Taylor e-mail of 4/22/21, sail purchased with boat purchase 12/21 per T. Buckley e-mail 5/3/24"
+    },
+    {
+        "Hull": "498",
+        "Purchaser": "T.J. Buckley",
         "Certificate No.": "2206293D",
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-08-09",
@@ -27000,6 +27050,16 @@
         "Notes": ""
     },
     {
+        "Hull": "444",
+        "Purchaser": "Max Hafen",
+        "Certificate No.": "2404043Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-15",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
         "Hull": "47",
         "Purchaser": "Shaun Hagerman",
         "Certificate No.": "1005108Q",
@@ -32706,6 +32766,26 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2021-12-21",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "163",
+        "Purchaser": "Charles James",
+        "Certificate No.": "2402030Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-07",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "163",
+        "Purchaser": "Charles James",
+        "Certificate No.": "2402031Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-09",
+        "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
     },
@@ -51640,6 +51720,16 @@
         "Notes": ""
     },
     {
+        "Hull": "468",
+        "Purchaser": "Shane Palmer",
+        "Certificate No.": "2312163Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-06",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "627",
         "Purchaser": "Richie Palmer",
         "Certificate No.": "1804105D",
@@ -68252,62 +68342,12 @@
     {
         "Hull": "498",
         "Purchaser": "William Sutton",
-        "Certificate No.": "1403088N",
-        "Sailmaker": "North",
-        "Delivery Date": "2014-05-31",
-        "Sail Type": "S89",
-        "Fleet": "6",
-        "Notes": "Sail purchased from M. Elert, per R. Taylor e-mail of 4/22/21"
-    },
-    {
-        "Hull": "498",
-        "Purchaser": "William Sutton",
         "Certificate No.": "1409246N",
         "Sailmaker": "North",
         "Delivery Date": "2015-05-11",
         "Sail Type": "M",
         "Fleet": "6",
         "Notes": "Sail purchased from M. Elert, per R. Taylor e-mail of 4/22/21; Donated to USNA or sold by previous owners prior to purchase, per T.J. Buckley e-mail 11/13/22"
-    },
-    {
-        "Hull": "498",
-        "Purchaser": "William Sutton",
-        "Certificate No.": "1709262N",
-        "Sailmaker": "North",
-        "Delivery Date": "2019-05-01",
-        "Sail Type": "J",
-        "Fleet": "6",
-        "Notes": "Sail returned to North Sails by Mark Masur per T. Healy e-mail of 4/12/19; Sail purchased from M. Taylor, per R. Taylor e-mail of 4/22/21"
-    },
-    {
-        "Hull": "498",
-        "Purchaser": "William Sutton",
-        "Certificate No.": "1803097N",
-        "Sailmaker": "North",
-        "Delivery Date": "2018-12-20",
-        "Sail Type": "J",
-        "Fleet": "6",
-        "Notes": "Sail purchased from M. Elert, per R. Taylor e-mail of 4/22/21"
-    },
-    {
-        "Hull": "498",
-        "Purchaser": "William Sutton",
-        "Certificate No.": "1804111N",
-        "Sailmaker": "North",
-        "Delivery Date": "2019-05-31",
-        "Sail Type": "M",
-        "Fleet": "6",
-        "Notes": "Sail purchased from M. Taylor, per R. Taylor e-mail of 4/22/21"
-    },
-    {
-        "Hull": "498",
-        "Purchaser": "William Sutton",
-        "Certificate No.": "1804125N",
-        "Sailmaker": "North",
-        "Delivery Date": "2019-04-08",
-        "Sail Type": "S89",
-        "Fleet": "6",
-        "Notes": "Sail purchased from R. Taylor, per R. Taylor e-mail of 4/22/21"
     },
     {
         "Hull": "55",

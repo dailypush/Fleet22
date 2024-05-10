@@ -901,21 +901,12 @@
     },
     {
         "Hull": "88",
-        "Owners/Helmsmen": "Rick Goebel",
+        "Owners/Helmsmen": "Michael Hatch",
         "Status": "OW",
-        "Boat Name": "Sanity",
+        "Boat Name": "J Almighty",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2023"
-    },
-    {
-        "Hull": "88",
-        "Owners/Helmsmen": "Donica Ryder",
-        "Status": "OW",
-        "Boat Name": "Sanity",
-        "Location": "California",
-        "Fleet": "8",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "89",
@@ -1837,12 +1828,21 @@
     },
     {
         "Hull": "167",
-        "Owners/Helmsmen": "Joshua Burack",
+        "Owners/Helmsmen": "Ines Purcell",
+        "Status": "CO",
+        "Boat Name": "Peregrina",
+        "Location": "Connecticut",
+        "Fleet": "6",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "167",
+        "Owners/Helmsmen": "Barry Purcell",
         "Status": "OW",
         "Boat Name": "Peregrina",
-        "Location": "New York",
+        "Location": "Connecticut",
         "Fleet": "6",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "168",
@@ -3498,7 +3498,7 @@
         "Boat Name": "Velvet Hammer",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "304",
