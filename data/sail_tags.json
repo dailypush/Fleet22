@@ -22560,6 +22560,16 @@
         "Notes": ""
     },
     {
+        "Hull": "480",
+        "Purchaser": "Mark Gannon",
+        "Certificate No.": "2201062N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-17",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "174",
         "Purchaser": "Matthew Gardner-Brown",
         "Certificate No.": "0601012E",
@@ -50186,7 +50196,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-04-01",
         "Sail Type": "M",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -50196,7 +50206,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-04-12",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -50206,7 +50216,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-03-31",
         "Sail Type": "S89",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -50216,7 +50226,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-07-01",
         "Sail Type": "S89",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60426,7 +60436,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2013-10-22",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60436,7 +60446,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-03-03",
         "Sail Type": "M",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60446,7 +60456,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-04-01",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60456,7 +60466,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-09-08",
         "Sail Type": "S89",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60466,7 +60476,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-09-14",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60476,7 +60486,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-09-21",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60486,7 +60496,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2018-12-19",
         "Sail Type": "M",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60496,7 +60506,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2018-12-19",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -60506,7 +60516,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2019-01-01",
         "Sail Type": "S89",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -62576,7 +62586,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-01-14",
         "Sail Type": "M",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -62586,7 +62596,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-01-13",
         "Sail Type": "J",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -62596,7 +62606,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-02-03",
         "Sail Type": "S89",
-        "Fleet": "16",
+        "Fleet": "17",
         "Notes": ""
     },
     {
@@ -66627,7 +66637,7 @@
         "Delivery Date": "2024-05-01",
         "Sail Type": "S89",
         "Fleet": "3",
-        "Notes": ""
+        "Notes": "Sail not issued to B. Stone, per S. Gruver e-mail 5/15/24"
     },
     {
         "Hull": "98",
@@ -66638,6 +66648,16 @@
         "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
+    },
+    {
+        "Hull": "98",
+        "Purchaser": "Bruce Stone",
+        "Certificate No.": "2405068N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-15",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": "Cancels 2203190N, S. Gruver e-mail 5/15/24"
     },
     {
         "Hull": "116",
@@ -67908,16 +67928,6 @@
         "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
-    },
-    {
-        "Hull": "67",
-        "Purchaser": "Doug Stryker",
-        "Certificate No.": "2201062N",
-        "Sailmaker": "North",
-        "Delivery Date": "2024-03-28",
-        "Sail Type": "J",
-        "Fleet": "3",
-        "Notes": "D. Stryker cancelled order; NS will use tag for another customer per S. Gruver e-mail 4/11/24"
     },
     {
         "Hull": "67",
