@@ -18646,7 +18646,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2009-07-15",
         "Sail Type": "S89",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -18656,7 +18656,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2009-07-15",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -18666,7 +18666,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2009-10-02",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -22176,6 +22176,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2023-06-08",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "129",
+        "Purchaser": "Mark Fruin",
+        "Certificate No.": "2402036K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-25",
+        "Sail Type": "M",
         "Fleet": "5",
         "Notes": ""
     },
@@ -29016,7 +29026,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2012-04-17",
         "Sail Type": "S89",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29026,7 +29036,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2012-04-18",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29036,7 +29046,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2012-02-01",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": "Sail tag on sail returned to Class Office by Kerry Klingler"
     },
     {
@@ -29046,7 +29056,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2012-09-19",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29056,7 +29066,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-07-02",
         "Sail Type": "S89",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29066,7 +29076,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2014-04-01",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29076,7 +29086,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-11-21",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29086,7 +29096,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-03-10",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -29096,7 +29106,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-09-19",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -35486,6 +35496,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-12-31",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "407",
+        "Purchaser": "John Kircher",
+        "Certificate No.": "2404044Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-23",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
@@ -49290,6 +49310,16 @@
         "Notes": ""
     },
     {
+        "Hull": "384",
+        "Purchaser": "Michael Newman",
+        "Certificate No.": "2402033K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-25",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "633",
         "Purchaser": "Malcolm Nicholls",
         "Certificate No.": "0311623N",
@@ -54040,6 +54070,16 @@
         "Notes": ""
     },
     {
+        "Hull": "299",
+        "Purchaser": "Chris Phoenix",
+        "Certificate No.": "2203187N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-05-23",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "46",
         "Purchaser": "Charlie Pick",
         "Certificate No.": "1612310Q",
@@ -55416,7 +55456,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2002-12-02",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -55426,7 +55466,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2002-12-02",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -55436,7 +55476,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2004-03-15",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -55446,7 +55486,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-09-22",
         "Sail Type": "M",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -55456,7 +55496,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-09-22",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -61760,6 +61800,16 @@
         "Notes": ""
     },
     {
+        "Hull": "243",
+        "Purchaser": "Peter Schwarzbach",
+        "Certificate No.": "2402032K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-24",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "517",
         "Purchaser": "Struther Scott",
         "Certificate No.": "0104418N",
@@ -63006,6 +63056,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2021-05-10",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "424",
+        "Purchaser": "Mike Sheppard",
+        "Certificate No.": "2112311K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-25",
+        "Sail Type": "M",
         "Fleet": "5",
         "Notes": ""
     },
@@ -72656,6 +72716,36 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2021-08-12",
         "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "673",
+        "Purchaser": "Jon Weglarz",
+        "Certificate No.": "2402034K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-31",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "673",
+        "Purchaser": "Jon Weglarz",
+        "Certificate No.": "2402035K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-31",
+        "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "673",
+        "Purchaser": "Jon Weglarz",
+        "Certificate No.": "2402038K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-05-31",
+        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },

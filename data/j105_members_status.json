@@ -159,7 +159,7 @@
         "Boat Name": "sk\u00e5l",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "19",
@@ -1864,21 +1864,12 @@
     },
     {
         "Hull": "170",
-        "Owners/Helmsmen": "Jeremy Henderson",
-        "Status": "CO",
-        "Boat Name": "Conundrum",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Member 2019"
-    },
-    {
-        "Hull": "170",
-        "Owners/Helmsmen": "Harald Edegran",
-        "Status": "CO",
-        "Boat Name": "Conundrum",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Member 2019"
+        "Owners/Helmsmen": "Jerry Orabona",
+        "Status": "OW",
+        "Boat Name": "Orca",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "171",
@@ -3292,6 +3283,15 @@
         "Location": "Maine",
         "Fleet": "23",
         "Class Membership": ""
+    },
+    {
+        "Hull": "288",
+        "Owners/Helmsmen": "James Elvart",
+        "Status": "AM",
+        "Boat Name": "Sivka",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "288",
@@ -5398,6 +5398,15 @@
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "472",
+        "Owners/Helmsmen": "Roy Carley",
+        "Status": "AM",
+        "Boat Name": "Doctor Jazz",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "473",
