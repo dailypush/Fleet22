@@ -12,8 +12,6 @@ from tqdm import tqdm
 logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-
-
 # URL of the website to scrape and headers to mimic a browser visit
 url = 'https://archive.j105.org/members/owners.php'
 headers = {
@@ -26,7 +24,8 @@ try:
     
     # Send a GET request to the website with headers
     logging.info(f'Requesting {url}')
-    response = requests.get(url, headers=headers)
+    # Disable SSL certificate verification
+    response = requests.get(url, headers=headers, verify=False)
     response.raise_for_status()
 
 except requests.exceptions.HTTPError as e:
@@ -42,7 +41,6 @@ soup = BeautifulSoup(response.text, 'html.parser')
 # Specific CSS selector for the table, ensure it correctly points to the table you're interested in
 selector = 'table[width="98%"]'
 table = soup.select_one(selector)
-
 
 if table:
     # Extract headers from the first row's <td> elements
@@ -95,4 +93,3 @@ if table:
     logging.info(f'Data has been extracted and saved as {json_file_path}.')
 else:
     logging.warning('Table not found. Check the CSS selector.')
-

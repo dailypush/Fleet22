@@ -24,7 +24,8 @@ def fetch_url(url, headers):
         # Throttle requests to be polite to the server
         time.sleep(1)
         logging.info(f'Requesting {url}')
-        response = requests.get(url, headers=headers)
+        # Disable SSL certificate verification
+        response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()
         return response.text
     except requests.exceptions.HTTPError as e:
