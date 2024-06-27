@@ -220,6 +220,26 @@
         "Notes": ""
     },
     {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
+        "Certificate No.": "2001039N",
+        "Sailmaker": "North",
+        "Delivery Date": "2021-03-19",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": "Sail purchased used from D. Stryker, per e-mail 6/19/24"
+    },
+    {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
+        "Certificate No.": "2001097N",
+        "Sailmaker": "North",
+        "Delivery Date": "2021-03-19",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": "Sail purchased used from D. Stryker, per e-mail 6/19/24"
+    },
+    {
         "Hull": "403",
         "Purchaser": "Lynn Adkins",
         "Certificate No.": "0408373Q",
@@ -15386,7 +15406,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-06-01",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15396,7 +15416,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-01-28",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15406,7 +15426,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-02-21",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15416,7 +15436,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-01-18",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15426,7 +15446,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-04-27",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15436,7 +15456,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2012-12-21",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15446,7 +15466,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-03-18",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15456,7 +15476,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-04-03",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15466,7 +15486,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-12-22",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15476,7 +15496,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-12-22",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15486,7 +15506,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-12-22",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15496,7 +15516,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-12-16",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15506,7 +15526,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-12-16",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -15516,7 +15536,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-12-16",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -35616,7 +35636,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2001-08-31",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -35626,7 +35646,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2001-08-31",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -35636,7 +35656,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2001-09-01",
         "Sail Type": "S77",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -37366,6 +37386,16 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2024-06-10",
         "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "264",
+        "Purchaser": "Tony Lamb",
+        "Certificate No.": "2406071D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-06-20",
+        "Sail Type": "M",
         "Fleet": "0",
         "Notes": ""
     },
@@ -40266,7 +40296,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-07-02",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40276,7 +40306,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-06-21",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40286,7 +40316,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-12-01",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40296,7 +40326,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-05-30",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40306,7 +40336,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-05-30",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40316,7 +40346,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-07-28",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40326,7 +40356,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-07-28",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40336,7 +40366,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-07-28",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40346,7 +40376,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-03-30",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40356,7 +40386,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-08-31",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40366,7 +40396,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2006-03-12",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40376,7 +40406,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2006-04-10",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40386,7 +40416,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-03-01",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40396,7 +40426,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2007-03-13",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": "Destroyed beyond repair per EW 5/1/08, tag returned 5/6/08"
     },
     {
@@ -40406,7 +40436,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-06-01",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40416,7 +40446,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-06-16",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40426,7 +40456,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-05-20",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": "Replacing destroyed main 0608307N"
     },
     {
@@ -40436,7 +40466,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-06-16",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -40446,7 +40476,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-06-21",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -43517,6 +43547,16 @@
         "Delivery Date": "2010-07-03",
         "Sail Type": "S89",
         "Fleet": "14",
+        "Notes": ""
+    },
+    {
+        "Hull": "629",
+        "Purchaser": "Chuck McCarthy",
+        "Certificate No.": "2406072D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-06-20",
+        "Sail Type": "J",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -68106,26 +68146,6 @@
         "Sailmaker": "North",
         "Delivery Date": "2021-03-19",
         "Sail Type": "M",
-        "Fleet": "3",
-        "Notes": ""
-    },
-    {
-        "Hull": "67",
-        "Purchaser": "Doug Stryker",
-        "Certificate No.": "2001039N",
-        "Sailmaker": "North",
-        "Delivery Date": "2021-03-19",
-        "Sail Type": "J",
-        "Fleet": "3",
-        "Notes": ""
-    },
-    {
-        "Hull": "67",
-        "Purchaser": "Doug Stryker",
-        "Certificate No.": "2001097N",
-        "Sailmaker": "North",
-        "Delivery Date": "2021-03-19",
-        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
