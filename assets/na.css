@@ -171,3 +171,37 @@ footer {
 .get-involved-btn-secondary {
     border-radius: 5px;
 }
+/* Teaser Section Styling */
+#race-week-teaser {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#race-week-teaser:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#race-week-teaser h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+#race-week-teaser p {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+#race-week-teaser .btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-size: 1.1rem;
+}
+
+#race-week-teaser .btn-primary:hover {
+    background-color: #0056b3;
+}
