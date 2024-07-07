@@ -199,9 +199,9 @@
     },
     {
         "Hull": "23",
-        "Owners/Helmsmen": "Scott Spurlin",
+        "Owners/Helmsmen": "Tom Collier",
         "Status": "OW",
-        "Boat Name": "YOLO!",
+        "Boat Name": "Infinity",
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2024"
@@ -367,6 +367,15 @@
         "Location": "New York",
         "Fleet": "22",
         "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "37",
+        "Owners/Helmsmen": "Thomas Ferrara",
+        "Status": "AM",
+        "Boat Name": "Windependence",
+        "Location": "New York",
+        "Fleet": "22",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "38",
