@@ -13610,6 +13610,16 @@
         "Notes": ""
     },
     {
+        "Hull": "402",
+        "Purchaser": "Frank Conway",
+        "Certificate No.": "2406074D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-07-10",
+        "Sail Type": "S89",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
         "Hull": "173",
         "Purchaser": "Robert Cooper",
         "Certificate No.": "0102114Q",
@@ -33587,6 +33597,16 @@
         "Delivery Date": "2004-02-17",
         "Sail Type": "J",
         "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "163",
+        "Purchaser": "John Kalanik",
+        "Certificate No.": "2402039K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-07-10",
+        "Sail Type": "S77",
+        "Fleet": "5",
         "Notes": ""
     },
     {
@@ -60365,6 +60385,26 @@
         "Certificate No.": "2307095Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-07-25",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "153",
+        "Purchaser": "Artem Savinov",
+        "Certificate No.": "2312164Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-10",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "153",
+        "Purchaser": "Artem Savinov",
+        "Certificate No.": "2312165Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-10",
         "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
