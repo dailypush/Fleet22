@@ -1810,21 +1810,12 @@
     },
     {
         "Hull": "165",
-        "Owners/Helmsmen": "Ed Sisk",
-        "Status": "CO",
-        "Boat Name": "If Only ...",
+        "Owners/Helmsmen": "Fred Darlington",
+        "Status": "OW",
+        "Boat Name": "Rapscallion",
         "Location": "Rhode Island",
         "Fleet": "14",
-        "Class Membership": "Member 2008"
-    },
-    {
-        "Hull": "165",
-        "Owners/Helmsmen": "Harvey Howalt",
-        "Status": "CO",
-        "Boat Name": "If Only ...",
-        "Location": "Rhode Island",
-        "Fleet": "14",
-        "Class Membership": "Member 2007"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "166",
@@ -5550,7 +5541,7 @@
         "Boat Name": "Air Express",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "486",
@@ -5595,7 +5586,7 @@
         "Boat Name": "No Quarter",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "490",
@@ -5604,7 +5595,7 @@
         "Boat Name": "Taino",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "491",
@@ -6729,7 +6720,7 @@
         "Boat Name": "Cuchulainn",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "602",

@@ -25202,6 +25202,16 @@
     {
         "Hull": "485",
         "Purchaser": "Steven Goldberg",
+        "Certificate No.": "2203211N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-07-23",
+        "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "485",
+        "Purchaser": "Steven Goldberg",
         "Certificate No.": "2205275D",
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-06-14",
@@ -26025,6 +26035,16 @@
         "Certificate No.": "2203251N",
         "Sailmaker": "North",
         "Delivery Date": "2023-04-19",
+        "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
+        "Hull": "113",
+        "Purchaser": "Bennet Greenwald",
+        "Certificate No.": "2404045Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-21",
         "Sail Type": "J",
         "Fleet": "8",
         "Notes": ""
@@ -38342,6 +38362,16 @@
     {
         "Hull": "479",
         "Purchaser": "Branwell Lepp",
+        "Certificate No.": "2201132N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-07-16",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "479",
+        "Purchaser": "Branwell Lepp",
         "Certificate No.": "2203195N",
         "Sailmaker": "North",
         "Delivery Date": "2022-12-31",
@@ -40995,6 +41025,16 @@
         "Certificate No.": "2111278N",
         "Sailmaker": "North",
         "Delivery Date": "2022-12-16",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "295",
+        "Purchaser": "Josh Lutton",
+        "Certificate No.": "2201100N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-07-23",
         "Sail Type": "M",
         "Fleet": "5",
         "Notes": ""
@@ -55980,6 +56020,16 @@
         "Notes": ""
     },
     {
+        "Hull": "135",
+        "Purchaser": "Eric Raff",
+        "Certificate No.": "2312168Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "277",
         "Purchaser": "Pete Ramsdale",
         "Certificate No.": "1011308N",
@@ -57570,6 +57620,16 @@
         "Notes": ""
     },
     {
+        "Hull": "268",
+        "Purchaser": "John Rivlin",
+        "Certificate No.": "2312171Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "567",
         "Purchaser": "Trevor Roach",
         "Certificate No.": "1009212Z",
@@ -58945,6 +59005,26 @@
         "Certificate No.": "2207328Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-09-12",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "3",
+        "Purchaser": "Timothy Russell",
+        "Certificate No.": "2312166Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "3",
+        "Purchaser": "Timothy Russell",
+        "Certificate No.": "2312170Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
@@ -64055,6 +64135,16 @@
         "Certificate No.": "2307080Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-08-24",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "40",
+        "Purchaser": "Ryan Simmons",
+        "Certificate No.": "2312167Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
         "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
@@ -71235,6 +71325,16 @@
         "Certificate No.": "2307082Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-08-30",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "149",
+        "Purchaser": "Brent Vaughan",
+        "Certificate No.": "2312169Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-18",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
