@@ -1918,8 +1918,17 @@
     },
     {
         "Hull": "174",
-        "Owners/Helmsmen": "Danae Hollowed",
-        "Status": "OW",
+        "Owners/Helmsmen": "Irene Tang",
+        "Status": "CO",
+        "Boat Name": "Dulcinea",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "174",
+        "Owners/Helmsmen": "Nicholas Wilkerson",
+        "Status": "CO",
         "Boat Name": "Dulcinea",
         "Location": "Washington",
         "Fleet": "20",

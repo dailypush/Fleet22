@@ -25202,6 +25202,16 @@
     {
         "Hull": "485",
         "Purchaser": "Steven Goldberg",
+        "Certificate No.": "2203177N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-07-29",
+        "Sail Type": "J",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "485",
+        "Purchaser": "Steven Goldberg",
         "Certificate No.": "2203211N",
         "Sailmaker": "North",
         "Delivery Date": "2024-07-23",
@@ -45880,6 +45890,16 @@
         "Notes": ""
     },
     {
+        "Hull": "293",
+        "Purchaser": "Terry Michaelson",
+        "Certificate No.": "2404048Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-07-28",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
         "Hull": "56",
         "Purchaser": "Dorothy Mietz",
         "Certificate No.": "0908176N",
@@ -62570,6 +62590,16 @@
         "Notes": ""
     },
     {
+        "Hull": "434",
+        "Purchaser": "Scott Sellers",
+        "Certificate No.": "2404049Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-07",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "77",
         "Purchaser": "David Semonite",
         "Certificate No.": "0104378N",
@@ -62625,6 +62655,16 @@
         "Certificate No.": "2405067F",
         "Sailmaker": "Schurr Sails",
         "Delivery Date": "2024-05-31",
+        "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "225",
+        "Purchaser": "Cristiano Serrao",
+        "Certificate No.": "2406075D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-07-25",
         "Sail Type": "S89",
         "Fleet": "2",
         "Notes": ""
