@@ -6030,6 +6030,16 @@
         "Notes": ""
     },
     {
+        "Hull": "343",
+        "Purchaser": "Peter Boland",
+        "Certificate No.": "2404050Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-11",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "218",
         "Purchaser": "Larry Boline",
         "Certificate No.": "0303181N",
@@ -11225,6 +11235,16 @@
         "Certificate No.": "2307067Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-07-25",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "385",
+        "Purchaser": "Ian Charles",
+        "Certificate No.": "2404051Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-12",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
@@ -33285,6 +33305,16 @@
         "Certificate No.": "2201090N",
         "Sailmaker": "North",
         "Delivery Date": "2023-12-13",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "677",
+        "Purchaser": "Paul Johnson",
+        "Certificate No.": "2201101N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-08-08",
         "Sail Type": "J",
         "Fleet": "6",
         "Notes": ""
@@ -63430,6 +63460,16 @@
         "Notes": ""
     },
     {
+        "Hull": "424",
+        "Purchaser": "Mike Sheppard",
+        "Certificate No.": "2402040K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-08-09",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "175",
         "Purchaser": "Sherman",
         "Certificate No.": "0402040K",
@@ -66236,6 +66276,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-07-01",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "147",
+        "Purchaser": "Eric Stang",
+        "Certificate No.": "2201085N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-08-08",
+        "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
     },
