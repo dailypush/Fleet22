@@ -15,6 +15,33 @@
     <link rel="icon" type="image/png" href="./assets/favicon_io/favicon-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="./assets/na.css">
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
         .card-img-top {
             padding: 20px;
             /* Adds space around the image */
@@ -26,7 +53,18 @@
             display: block;
             /* Makes each button take its own line */
         }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
     </style>
+    <!-- SEO and Social Media Meta Tags -->
+    <meta property="og:title" content="J105 North Americans 2024 | Media Kit">
+    <meta property="og:description"
+        content="Access logos, banners, and other promotional materials for the J105 North Americans 2024 in Cleveland.">
+    <meta property="og:image" content="https://yourdomain.com/assets/na_logos/j105NA2024_logo1_forlightbkgrnd.png">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="body-background">
@@ -65,17 +103,22 @@
             <div class="col-md-4">
                 <div class="card">
                     <img src="./assets/na_logos/j105NA2024_logo1_forlightbkgrnd.png" class="card-img-top"
-                        alt="Event Logo 1 Light Background">
+                        alt="Event Logo 1 Light Background" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">2024 NA Red and Blue Spinnaker</h5>
-                        <p class="card-text"> This logo is ideal for event branding, promotional materials, and as a digital identifier for the regatta.</p>
+                        <p class="card-text"> This logo is ideal for event branding, promotional materials, and as a
+                            digital identifier for the regatta.</p>
                         <a href="./assets/na_logos/j105NA2024_logo1_forlightbkgrnd.eps"
-                            class="btn btn-primary btn-sm download-btn">Download
+                            class="btn btn-primary btn-sm download-btn"
+                            aria-label="Download 2024 NA Red and Blue Spinnaker logo in EPS format">Download
                             EPS (1.8MB)</a>
                         <a href="./assets/na_logos/j105NA2024_logo1_forlightbkgrnd.pdf"
-                            class="btn btn-secondary btn-sm download-btn">Download PDF (435KB)</a>
+                            class="btn btn-secondary btn-sm download-btn"
+                            aria-label="Download 2024 NA Red and Blue Spinnaker logo in PDF format">Download PDF
+                            (435KB)</a>
                         <a href="./assets/na_logos/j105NA2024_logo1_forlightbkgrnd.png"
-                            class="btn btn-success btn-sm download-btn">Download
+                            class="btn btn-success btn-sm download-btn"
+                            aria-label="Download 2024 NA Red and Blue Spinnaker logo in PNG format">Download
                             PNG (68KB)</a>
                     </div>
                 </div>
@@ -84,16 +127,35 @@
             <div class="col-md-4">
                 <div class="card">
                     <img src="./assets/na_logos/j105NA2024_logo2.png" class="card-img-top" alt="2024 North
-                    Americans Event Logo 2">
+                    Americans Event Logo 2" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">2024 NA Cleveland Skyline</h5>
-                        <p class="card-text">This logo is suited for merchandise, official documentation, and marketing collateral for the event..</p>
-                        <a href="./assets/na_logos/j105NA2024_logo2.eps"
-                            class="btn btn-primary btn-sm download-btn">Download EPS (2.9MB)</a>
-                        <a href="./assets/na_logos/j105NA2024_logo2.pdf"
-                            class="btn btn-secondary btn-sm download-btn">Download PDF (1.1MB)</a>
-                        <a href="./assets/na_logos/j105NA2024_logo2.png"
-                            class="btn btn-success btn-sm download-btn">Download PNG (121KB)</a>
+                        <p class="card-text">This logo is suited for merchandise, official documentation, and marketing
+                            collateral for the event.</p>
+                        <a href="./assets/na_logos/j105NA2024_logo2.eps" class="btn btn-primary btn-sm download-btn"
+                            aria-label="Download 2024 NA Cleveland Skyline logo in EPS format">Download EPS (2.9MB)</a>
+                        <a href="./assets/na_logos/j105NA2024_logo2.pdf" class="btn btn-secondary btn-sm download-btn"
+                            aria-label="Download 2024 NA Cleveland Skyline logo in PDF format">Download PDF (1.1MB)</a>
+                        <a href="./assets/na_logos/j105NA2024_logo2.png" class="btn btn-success btn-sm download-btn"
+                            aria-label="Download 2024 NA Cleveland Skyline logo in PNG format">Download PNG (121KB)</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Example Card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./assets/na_sponsors/bvitb-logo-high-res.png" class="card-img-top"
+                        alt="BVI Tourism Board, Diamond Sponsor for the 2024 North Americans" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">2024 NA Diamond Sponsor</h5>
+                        <p class="card-text">This logo is suited for merchandise, banners, and marketing collateral for
+                            the event.</p>
+                        <a href="./assets/na_sponsors/BVI_LOGO_NO_Tagline_CMYK[4] - Red.pdf"
+                            class="btn btn-secondary btn-sm download-btn"
+                            aria-label="Download BVI Diamond Sponsor logo in PDF format">Download PDF (70KB)</a>
+                        <a href="./assets/na_sponsors/bvitb-logo-high-res.png"
+                            class="btn btn-success btn-sm download-btn"
+                            aria-label="Download BVI Diamond Sponsor logo in PNG format">Download PNG (69KB)</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +169,9 @@
     </footer>
 
     <script>
-        document.getElementById("lastUpdated").textContent = document.lastModified;
+        const lastUpdated = new Date(document.lastModified);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("lastUpdated").textContent = lastUpdated.toLocaleDateString(undefined, options);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
