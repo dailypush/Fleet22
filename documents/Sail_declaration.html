@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sail Declaration Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container-custom {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .table-custom th, .table-custom td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .table-custom {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-dashed td {
+            border: none;
+            padding: 8px;
+        }
+
+        /* Screen styles for interactive form controls */
+        .print-hide {
+            display: none;
+        }
+
+        .print-show {
+            display: block;
+        }
+
+        @media print {
+            /* Reduce margin and padding for print */
+            body {
+                margin: 0;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            /* Hide form controls during print */
+            .form-control, .btn {
+                display: none;
+            }
+
+            /* Show placeholders or styled content */
+            .print-hide {
+                display: block;
+            }
+            .print-show {
+                display: none;
+            }
+
+            /* Adjust table styles for print */
+            .table-custom th, .table-custom td {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .table-dashed td {
+                padding: 6px;
+                border-bottom: none; /* Remove bottom border */
+            }
+
+            .container-custom {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            header, h1, h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            h3 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-custom my-3">
+        <header class="text-center my-2">
+            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
+            <h1>2024 J/105 North American Championship</h1>
+            <h2>Sail Declaration</h2>
+        </header>
+        <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
+
+        <div class="mb-3">
+            <table class="table table-dashed">
+                <tbody>
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td>___________________________________</td>
+                        <td><strong>E-mail:</strong></td>
+                        <td>___________________________________</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boat Name:</strong></td>
+                        <td>___________________________________</td>
+                        <td><strong>Sail Number:</strong></td>
+                        <td>___________________________________</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Number:</strong></td>
+                        <td>___________________________________</td>
+                        <td><strong>Note (for organizer):</strong></td>
+                        <td>___________________________________</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="mt-4">Sail Information</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-custom">
+                <thead>
+                    <tr>
+                        <th scope="col">Sail</th>
+                        <th scope="col">Sailmaker</th>
+                        <th scope="col">Royalty Tag number</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Notes (for organizer)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Main</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Jib</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Jib</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Spinnaker</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Spinnaker</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4">
+            <p>By signing this form I declare that my sails will be in compliance with the J/105 Class Rules at all times.</p>
+            <table class="table table-dashed">
+                <tbody>
+                    <tr>
+                        <td><strong>Owner/Charterer Name:</strong></td>
+                        <td>___________________________________</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Signature:</strong></td>
+                        <td>___________________________________</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="btn btn-primary mt-3" onclick="window.print()">Print</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
