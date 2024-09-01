@@ -1752,7 +1752,7 @@
         "Boat Name": "The Kernel",
         "Location": "Canada",
         "Fleet": "4",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "159",
@@ -4498,6 +4498,15 @@
         "Location": "Ohio",
         "Fleet": "22",
         "Class Membership": "Member 2022"
+    },
+    {
+        "Hull": "393",
+        "Owners/Helmsmen": "Susan McIntyre",
+        "Status": "AM",
+        "Boat Name": "Ovation",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "394",

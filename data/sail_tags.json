@@ -4810,6 +4810,16 @@
         "Notes": ""
     },
     {
+        "Hull": "226",
+        "Purchaser": "Bob Betensky",
+        "Certificate No.": "2406076D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-08-29",
+        "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "43",
         "Purchaser": "Hugh Bethel",
         "Certificate No.": "1406161N",
@@ -33690,6 +33700,16 @@
         "Notes": ""
     },
     {
+        "Hull": "26",
+        "Purchaser": "Rolf Kaiser",
+        "Certificate No.": "2408097Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-29",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "382",
         "Purchaser": "Dave Kaiser",
         "Certificate No.": "0212695Q",
@@ -51170,6 +51190,16 @@
         "Notes": ""
     },
     {
+        "Hull": "103",
+        "Purchaser": "Donald Olgado",
+        "Certificate No.": "2408096Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-29",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "210",
         "Purchaser": "Steve Olinger",
         "Certificate No.": "0204208U",
@@ -58066,6 +58096,16 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2021-10-01",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "303",
+        "Purchaser": "Kristen Robinson",
+        "Certificate No.": "2201105N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-08-28",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
@@ -77310,6 +77350,16 @@
         "Notes": ""
     },
     {
+        "Hull": "130",
+        "Purchaser": "William Zartler",
+        "Certificate No.": "2408100Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-08-27",
+        "Sail Type": "S89",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "286",
         "Purchaser": "Bill Zartler",
         "Certificate No.": "0306363N",
@@ -77536,6 +77586,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2021-09-08",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "386",
+        "Purchaser": "Gerhard Zinserling",
+        "Certificate No.": "2402041K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-08-29",
+        "Sail Type": "M",
         "Fleet": "5",
         "Notes": ""
     },
