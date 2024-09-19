@@ -45072,6 +45072,26 @@
     {
         "Hull": "83",
         "Purchaser": "Terry McLaughlin",
+        "Certificate No.": "1709325N",
+        "Sailmaker": "North",
+        "Delivery Date": "2018-06-19",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "83",
+        "Purchaser": "Terry McLaughlin",
+        "Certificate No.": "2001024N",
+        "Sailmaker": "North",
+        "Delivery Date": "2021-03-26",
+        "Sail Type": "S89",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "83",
+        "Purchaser": "Terry McLaughlin",
         "Certificate No.": "2201050N",
         "Sailmaker": "North",
         "Delivery Date": "2023-12-15",
@@ -47955,6 +47975,16 @@
         "Certificate No.": "2001077N",
         "Sailmaker": "North",
         "Delivery Date": "2020-09-11",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "358",
+        "Purchaser": "Andrew Moor",
+        "Certificate No.": "2203164N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-09-18",
         "Sail Type": "J",
         "Fleet": "4",
         "Notes": ""

@@ -2349,6 +2349,15 @@
         "Class Membership": "Member 2024"
     },
     {
+        "Hull": "208",
+        "Owners/Helmsmen": "Robert Hollingsworth",
+        "Status": "AM",
+        "Boat Name": "Slingshot",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Associate 2024"
+    },
+    {
         "Hull": "209",
         "Owners/Helmsmen": "Barry Eisener",
         "Status": "OW",
@@ -2733,7 +2742,7 @@
         "Boat Name": "Ruckus",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2018"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "239",
@@ -4672,21 +4681,30 @@
     },
     {
         "Hull": "409",
-        "Owners/Helmsmen": "Eric Greene",
-        "Status": "CO",
+        "Owners/Helmsmen": "Eric Green",
+        "Status": "OW",
         "Boat Name": "Dove",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2010"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "409",
-        "Owners/Helmsmen": "Stewart Greene",
-        "Status": "CO",
+        "Owners/Helmsmen": "Jaimie Martin",
+        "Status": "AM",
         "Boat Name": "Dove",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2007"
+        "Class Membership": "Associate 2024"
+    },
+    {
+        "Hull": "409",
+        "Owners/Helmsmen": "Kai Johnston",
+        "Status": "AM",
+        "Boat Name": "Dove",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
     },
     {
         "Hull": "410",
