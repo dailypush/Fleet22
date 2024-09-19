@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User ID Validator and Reporter</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Include DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+
+    <!-- Custom CSS for loading spinner -->
+    <style>
+        #loadingSpinner {
+            display: none;
+            text-align: center;
+        }
+        #loadingSpinner .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body style="padding-top:50px;">
+    <div class="container">
+        <h2>User ID Validator and Reporter</h2>
+
+        <div class="form-group">
+            <label for="userIds">Enter User IDs (separated by commas or new lines):</label>
+            <textarea class="form-control" id="userIds" rows="5" placeholder="Enter user IDs"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="userIdFile">Or upload a file containing User IDs:</label>
+            <input type="file" class="form-control-file" id="userIdFile">
+        </div>
+
+        <button id="validateBtn" class="btn btn-primary" aria-label="Generate Report">Generate Report</button>
+        <button id="exportBtn" class="btn btn-success" style="display:none;">Export to Excel</button>
+
+        <div id="loadingSpinner">
+            <br>
+            <span class="spinner-border" role="status"></span>
+            <span>Loading...</span>
+        </div>
+
+        <br>
+        <div id="results"></div>
+    </div>
+
+    <!-- Include jQuery, Bootstrap JS, DataTables JS, Moment.js, FileSaver.js, XLSX.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Include DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <!-- Include Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- Include FileSaver.js and XLSX.js for exporting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            const apiCache = {};
+
+            // Handle file upload
+            $('#userIdFile').change(function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#userIds').val(e.target.result);
+                    };
+                    reader.readAsText(file);
+                }
+            });
+
+            $('#validateBtn').click(function() {
+                let userIdsText = $('#userIds').val();
+                const rawUserIds = userIdsText.split(/[\s,]+/)
+                    .map(id => id.trim())
+                    .filter(id => id !== '');
+
+                // Remove duplicates
+                const userIdsSet = new Set(rawUserIds);
+                const userIds = Array.from(userIdsSet);
+
+                // Validate User ID format (alphanumeric)
+                const invalidIds = [];
+                const validUserIds = userIds.filter(id => {
+                    const isValid = /^[a-zA-Z0-9]+$/.test(id);
+                    if (!isValid) invalidIds.push(id);
+                    return isValid;
+                });
+
+                $('#results').empty();
+                $('#exportBtn').hide();
+
+                if (userIds.length === 0) {
+                    $('#results').append('<div class="alert alert-warning">Please enter at least one valid User ID.</div>');
+                    return;
+                }
+
+                if (invalidIds.length > 0) {
+                    $('#results').append('<div class="alert alert-warning">Invalid User ID format: ' + escapeHtml(invalidIds.join(', ')) + '</div>');
+                }
+
+                // Initialize the table
+                const table = $('<table class="table table-bordered table-striped table-hover"><thead><tr>' +
+                    '<th>User ID</th><th>Name</th><th>Gender</th><th>Nationality</th>' +
+                    '<th>Status</th><th>Expiration Date</th><th>Categorization</th></tr></thead><tbody></tbody></table>');
+                const tableResponsive = $('<div class="table-responsive"></div>').append(table);
+                $('#results').append(tableResponsive);
+
+                $('#loadingSpinner').show();
+
+                let totalRequests = validUserIds.length;
+                let completedRequests = 0;
+                const resultsArray = [];
+                let validCount = 0;
+                let expiredCount = 0;
+                let expiringSoonCount = 0;
+
+                validUserIds.forEach((userId, index) => {
+                    validateUserId(userId, index);
+                });
+
+                function validateUserId(userId, index) {
+                    if (apiCache[userId]) {
+                        // Use cached data
+                        processData(apiCache[userId], index, userId);
+                        checkCompletion();
+                    } else {
+                        const url = 'https://datafeed.sailing.org/query?type=Person&IFPersonID=' + encodeURIComponent(userId);
+                        $.ajax({
+                            url: url,
+                            type: 'GET',
+                            dataType: 'xml',
+                            success: function(data) {
+                                apiCache[userId] = data;
+                                processData(data, index, userId);
+                                checkCompletion();
+                            },
+                            error: function(xhr, status, error) {
+                                const errorMessage = xhr.status ? `Error ${xhr.status}: ${xhr.statusText}` : 'Network Error';
+                                const errorRow = `<tr><td>${escapeHtml(userId)}</td><td colspan="6" class="text-danger">${escapeHtml(errorMessage)}</td></tr>`;
+                                resultsArray[index] = errorRow;
+                                checkCompletion();
+                            }
+                        });
+                    }
+                }
+
+                // Modified function to include userId as a parameter
+                function processData(data, index, userId) {
+                    const person = $(data).find('Person');
+                    if (person.length > 0) {
+                        const givenName = person.attr('GivenName');
+                        const familyName = person.attr('FamilyName');
+                        const fullName = `${givenName} ${familyName}`;
+                        const classificationExpiry = person.attr('ClassificationExpiry');
+                        const classificationGroup = person.attr('ClassificationGroup');
+                        const gender = person.attr('Gender');
+                        const nationality = person.attr('NOC');
+
+                        const expiryDate = moment(classificationExpiry);
+                        const formattedDate = expiryDate.format('MMM Do, YYYY');
+                        const daysUntilExpiry = expiryDate.diff(moment(), 'days');
+
+                        let statusClass = '';
+                        let statusText = '';
+
+                        if (daysUntilExpiry < 0) {
+                            statusClass = 'danger';
+                            statusText = '<span class="label label-danger">Expired</span>';
+                            expiredCount++;
+                        } else if (daysUntilExpiry <= 30) {
+                            statusClass = 'warning';
+                            statusText = '<span class="label label-warning">Expiring Soon</span>';
+                            expiringSoonCount++;
+                        } else {
+                            statusClass = 'success';
+                            statusText = '<span class="label label-success">Valid</span>';
+                            validCount++;
+                        }
+
+                        const row = `<tr class="${statusClass}"><td>${escapeHtml(userId)}</td><td>${escapeHtml(fullName)}</td>` +
+                            `<td>${escapeHtml(gender)}</td><td>${escapeHtml(nationality)}</td><td>${statusText}</td>` +
+                            `<td>${escapeHtml(formattedDate)}</td><td>${escapeHtml(classificationGroup)}</td></tr>`;
+                        resultsArray[index] = row;
+                    } else {
+                        const errorRow = `<tr><td>${escapeHtml(userId)}</td><td colspan="6" class="text-danger">Invalid User ID</td></tr>`;
+                        resultsArray[index] = errorRow;
+                    }
+                }
+
+                function checkCompletion() {
+                    completedRequests++;
+                    if (completedRequests === totalRequests) {
+                        $('#loadingSpinner').hide();
+                        // Build table using resultsArray
+                        resultsArray.forEach(row => {
+                            table.find('tbody').append(row);
+                        });
+                        $('#exportBtn').show();
+
+                        // Initialize DataTables
+                        table.DataTable();
+
+                        // Display summary
+                        const summary = `<p>Valid IDs: ${validCount}</p>` +
+                                        `<p>Expired IDs: ${expiredCount}</p>` +
+                                        `<p>Expiring Soon: ${expiringSoonCount}</p>`;
+                        $('#results').append(summary);
+                    }
+                }
+
+                // Export to Excel functionality
+                $('#exportBtn').off('click').on('click', function() {
+                    const wb = XLSX.utils.table_to_book(table[0], {sheet: "User Report"});
+                    XLSX.writeFile(wb, 'User_Report.xlsx');
+                });
+            });
+
+            // Escape HTML to prevent XSS attacks
+            function escapeHtml(text) {
+                return $('<div>').text(text).html();
+            }
+        });
+    </script>
+</body>
+</html>
