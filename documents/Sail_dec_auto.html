@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sail List by Tag Number</title>
     <!-- Bootstrap CSS -->
@@ -9,6 +10,7 @@
         body {
             padding-top: 20px;
         }
+
         .container {
             max-width: 800px;
         }
@@ -19,18 +21,18 @@
 
         // Load the JSON file using fetch
         fetch('https://raw.githubusercontent.com/dailypush/Fleet22/main/data/sail_tags.json')
-        .then(response => response.json())
-        .then(data => {
-            sailsData = data; // Assign data to global variable
+            .then(response => response.json())
+            .then(data => {
+                sailsData = data; // Assign data to global variable
 
-            // Attach the event listener after data is fetched
-            document.getElementById('hullNumber').addEventListener('input', function () {
-                updateForm();
+                // Attach the event listener after data is fetched
+                document.getElementById('hullNumber').addEventListener('input', function () {
+                    updateForm();
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the sail data:', error);
             });
-        })
-        .catch(error => {
-            console.error('Error loading the sail data:', error);
-        });
 
         // Function to update the form based on hull number
         function updateForm() {
@@ -110,7 +112,7 @@
             const dropdownIds = ['jib1', 'jib2', 'spinnaker1', 'spinnaker2', 'main'];
             dropdownIds.forEach(id => {
                 const dropdown = document.getElementById(id);
-                dropdown.onchange = function() {
+                dropdown.onchange = function () {
                     updateDropdowns(id);
                 };
             });
@@ -134,7 +136,7 @@
 
         // Helper function to get sail type by dropdown ID
         function getSailTypeByDropdownId(dropdownId) {
-            switch(dropdownId) {
+            switch (dropdownId) {
                 case 'jib1':
                 case 'jib2':
                     return 'J';
@@ -183,7 +185,13 @@
             var spinnaker2Sail = getSailByCertificate(spinnaker2Cert);
 
             var printContent = `
-                <h2>Sail List for Hull ${hullNumber}</h2>
+            <header class="text-center my-2">
+            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
+            <h1>2024 J/105 North American Championship</h1>
+            <h2>Sail Declaration</h2>
+              <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
+                </header>
+                <h3>Sail List for Hull ${hullNumber}</h3>
                 <p><strong>Boat Name:</strong> ${boatName || 'Not Provided'}</p>
                 <p><strong>Owner:</strong> ${owner}</p>
                 <p><strong>Email:</strong> ${email || 'Not Provided'}</p>
@@ -236,6 +244,21 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="mt-4">
+                <p>By signing this form I declare that my sails will be in compliance with the J/105 Class Rules at all times.</p>
+                <table class="table table-dashed">
+                    <tbody>
+                        <tr>
+                            <td><strong>Owner/Charterer Name:</strong></td>
+                            <td>___________________________________</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Signature:</strong></td>
+                            <td>___________________________________</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             `;
 
             var printWindow = window.open('', '', 'height=600,width=800');
@@ -252,7 +275,7 @@
 
         // Helper function to retrieve sail by certificate number
         function getSailByCertificate(certNo) {
-            return sailsData.find(function(sail) {
+            return sailsData.find(function (sail) {
                 return sail["Certificate No."] === certNo;
             });
         }
@@ -266,83 +289,95 @@
         }
     </script>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="mb-4">Sail List by Tag Number</h1>
-        <form>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="hullNumber">Enter Hull Number:</label>
-                    <input type="text" class="form-control" id="hullNumber" name="hullNumber" placeholder="Enter hull number">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="owner">Owner:</label>
-                    <input type="text" class="form-control" id="owner" name="owner">
-                </div>
-            </div>
+    <div class="container container-custom my-3">
+        <header class="text-center my-2">
+            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2"
+                style="max-width: 200px;">
+            <h1>2024 J/105 North American Championship</h1>
+            <h2>Sail Declaration</h2>
+        </header>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="boatName">Boat Name:</label>
-                    <input type="text" class="form-control" id="boatName" name="boatName">
+        <div class="container">
+            <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="hullNumber">Enter Hull Number:</label>
+                        <input type="text" class="form-control" id="hullNumber" name="hullNumber"
+                            placeholder="Enter hull number">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="owner">Owner:</label>
+                        <input type="text" class="form-control" id="owner" name="owner">
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="email">Email Address:</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="boatName">Boat Name:</label>
+                        <input type="text" class="form-control" id="boatName" name="boatName">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email Address:</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="Enter email address">
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="mobile">Mobile Number:</label>
-                <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter mobile number">
-            </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter mobile number">
+                </div>
 
-            <h3>Select Sails</h3>
+                <h3>Select Sails</h3>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="jib1">Jib 1:</label>
-                    <select class="form-control" id="jib1" name="jib1">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="jib1">Jib 1:</label>
+                        <select class="form-control" id="jib1" name="jib1">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="jib2">Jib 2:</label>
+                        <select class="form-control" id="jib2" name="jib2">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="spinnaker1">Spinnaker 1:</label>
+                        <select class="form-control" id="spinnaker1" name="spinnaker1">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="spinnaker2">Spinnaker 2:</label>
+                        <select class="form-control" id="spinnaker2" name="spinnaker2">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="main">Main:</label>
+                    <select class="form-control" id="main" name="main">
                         <option value="">Select</option>
                     </select>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="jib2">Jib 2:</label>
-                    <select class="form-control" id="jib2" name="jib2">
-                        <option value="">Select</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="spinnaker1">Spinnaker 1:</label>
-                    <select class="form-control" id="spinnaker1" name="spinnaker1">
-                        <option value="">Select</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="spinnaker2">Spinnaker 2:</label>
-                    <select class="form-control" id="spinnaker2" name="spinnaker2">
-                        <option value="">Select</option>
-                    </select>
-                </div>
-            </div>
+                <button type="button" class="btn btn-success" onclick="printSails()">Print</button>
+            </form>
+        </div>
 
-            <div class="form-group">
-                <label for="main">Main:</label>
-                <select class="form-control" id="main" name="main">
-                    <option value="">Select</option>
-                </select>
-            </div>
-
-            <button type="button" class="btn btn-success" onclick="printSails()">Print</button>
-        </form>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
