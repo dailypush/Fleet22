@@ -15,85 +15,70 @@
     </style>
 
     <script>
-        // The JSON data
-        var sailsData = [
-            {"Hull": "431", "Purchaser": "Pat Doyle", "Certificate No.": "0204288Q", "Sailmaker": "Quantum", "Delivery Date": "2002-06-05", "Sail Type": "J", "Fleet": "1", "Notes": ""},
-            {"Hull": "431", "Purchaser": "Pat Doyle", "Certificate No.": "0204299Q", "Sailmaker": "Quantum", "Delivery Date": "2002-06-05", "Sail Type": "M", "Fleet": "1", "Notes": ""},
-            {"Hull": "431", "Purchaser": "Pat Doyle", "Certificate No.": "0212659Q", "Sailmaker": "Quantum", "Delivery Date": "2002-12-30", "Sail Type": "S89", "Fleet": "1", "Notes": ""},
-            // Include all other sail entries here...
-            {"Hull": "431", "Purchaser": "Pat Doyle", "Certificate No.": "1505069Q", "Sailmaker": "Quantum", "Delivery Date": "2015-07-04", "Sail Type": "S89", "Fleet": "1", "Notes": ""}
-        ];
+        let sailsData = []; // Declare sailsData globally
 
-        // Mapping of Hull Numbers to Boat Names (sample data)
-        var boatNames = {
-            "431": "Sea Breeze",
-            // Add other hull numbers and boat names here
-        };
+        // Load the JSON file using fetch
+        fetch('https://raw.githubusercontent.com/dailypush/Fleet22/main/data/sail_tags.json')
+        .then(response => response.json())
+        .then(data => {
+            sailsData = data; // Assign data to global variable
 
-        function findSailsByHull(hullNumber) {
-            return sailsData.filter(function(sail) {
-                return sail["Hull"] === hullNumber;
+            // Attach the event listener after data is fetched
+            document.getElementById('hullNumber').addEventListener('input', function () {
+                updateForm();
             });
-        }
+        })
+        .catch(error => {
+            console.error('Error loading the sail data:', error);
+        });
 
+        // Function to update the form based on hull number
         function updateForm() {
-            var hullNumber = document.getElementById("hullNumber").value.trim();
+            const hullNumber = document.getElementById('hullNumber').value.trim();
+            const filteredData = sailsData.filter(sail => sail.Hull === hullNumber);
 
-            if (!hullNumber) {
-                alert("Please enter a hull number.");
-                return;
+            if (filteredData.length > 0) {
+                // Autofill owner and boat name (editable)
+                document.getElementById('owner').value = filteredData[0].Purchaser;
+                document.getElementById('boatName').value = filteredData[0].BoatName || 'Unknown Boat Name';
+
+                // Populate dropdowns for Jibs, Spinnaker, and Main
+                populateSailDropdown('jib1', filteredData, 'J');
+                populateSailDropdown('jib2', filteredData, 'J');
+                populateSailDropdown('spinnaker', filteredData, 'S89');
+                populateSailDropdown('main', filteredData, 'M');
+            } else {
+                clearFields();
             }
-
-            var sails = findSailsByHull(hullNumber);
-
-            if (sails.length === 0) {
-                alert("No sails found for this hull number.");
-                return;
-            }
-
-            // Assuming 'Purchaser' is the owner
-            var owner = sails[0]["Purchaser"];
-            document.getElementById("owner").value = owner;
-
-            // Auto-fill boat name if available
-            var boatName = boatNames[hullNumber] || "";
-            document.getElementById("boatName").value = boatName;
-
-            // Update the dropdowns
-            var jibs = sails.filter(function(sail) {
-                return sail["Sail Type"] === "J";
-            });
-            var mains = sails.filter(function(sail) {
-                return sail["Sail Type"] === "M";
-            });
-            var spinnakers = sails.filter(function(sail) {
-                return sail["Sail Type"] === "S89";
-            });
-
-            updateDropdown(document.getElementById("jib1"), jibs);
-            updateDropdown(document.getElementById("jib2"), jibs);
-            updateDropdown(document.getElementById("main"), mains);
-            updateDropdown(document.getElementById("spinnaker"), spinnakers);
         }
 
-        function updateDropdown(selectElement, sails) {
-            // Clear existing options
-            selectElement.innerHTML = '<option value="">Select</option>';
-
-            sails.forEach(function(sail) {
-                var option = document.createElement('option');
-                option.value = sail["Certificate No."];
-                option.text = sail["Certificate No."] + " (" + sail["Delivery Date"] + ", " + sail["Sailmaker"] + ")";
-                selectElement.appendChild(option);
+        // Helper function to populate sail dropdowns
+        function populateSailDropdown(dropdownId, sails, sailType) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.innerHTML = '<option value="">Select</option>'; // Reset options
+            sails.forEach(sail => {
+                if (sail['Sail Type'] === sailType) {
+                    const option = document.createElement('option');
+                    option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']}`;
+                    option.value = sail['Certificate No.'];
+                    dropdown.add(option);
+                }
             });
         }
 
-        function getSailByCertificate(certNo) {
-            return sailsData.find(function(sail) {
-                return sail["Certificate No."] === certNo;
-            });
+        // Function to clear fields when no hull number is found
+        function clearFields() {
+            document.getElementById('owner').value = '';
+            document.getElementById('boatName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mobile').value = '';
+            document.getElementById('jib1').innerHTML = '<option value="">Select</option>';
+            document.getElementById('jib2').innerHTML = '<option value="">Select</option>';
+            document.getElementById('spinnaker').innerHTML = '<option value="">Select</option>';
+            document.getElementById('main').innerHTML = '<option value="">Select</option>';
         }
 
+        // Function to print sails
         function printSails() {
             var hullNumber = document.getElementById("hullNumber").value;
             var owner = document.getElementById("owner").value;
@@ -138,6 +123,14 @@
             printWindow.print();
         }
 
+        // Helper function to retrieve sail by certificate number
+        function getSailByCertificate(certNo) {
+            return sailsData.find(function(sail) {
+                return sail["Certificate No."] === certNo;
+            });
+        }
+
+        // Helper function to format sail information
         function formatSailInfo(sail) {
             if (!sail) {
                 return 'Not Selected';
@@ -154,7 +147,6 @@
                 <label for="hullNumber">Enter Hull Number:</label>
                 <input type="text" class="form-control" id="hullNumber" name="hullNumber" placeholder="Enter hull number">
             </div>
-            <button type="button" class="btn btn-primary mb-3" onclick="updateForm()">Submit</button>
 
             <div class="form-group">
                 <label for="owner">Owner:</label>
