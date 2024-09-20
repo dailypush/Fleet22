@@ -10,7 +10,7 @@
             padding-top: 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
         }
     </style>
 
@@ -41,33 +41,111 @@
                 // Sort the filtered data by 'Delivery Date' in descending order
                 filteredData.sort((a, b) => new Date(b['Delivery Date']) - new Date(a['Delivery Date']));
 
-                // Use the most recent entry for owner and boat name
+                // Use the most recent entry for owner
                 document.getElementById('owner').value = filteredData[0].Purchaser;
-                document.getElementById('boatName').value = filteredData[0].BoatName || 'Unknown Boat Name';
+                // Do not auto-fill boat name as per request
+                document.getElementById('boatName').value = '';
 
-                // Populate dropdowns for Jibs, Spinnaker, and Main
-                populateSailDropdown('jib1', filteredData, 'J');
-                populateSailDropdown('jib2', filteredData, 'J');
-                populateSailDropdown('spinnaker', filteredData, 'S89');
-                populateSailDropdown('main', filteredData, 'M');
+                // Initialize selected tags
+                initializeDropdowns(filteredData);
             } else {
                 clearFields();
             }
         }
 
-        // Helper function to populate sail dropdowns
-        function populateSailDropdown(dropdownId, sails, sailType) {
-            const dropdown = document.getElementById(dropdownId);
-            dropdown.innerHTML = '<option value="">Select</option>'; // Reset options
-            sails.forEach(sail => {
-                if (sail['Sail Type'] === sailType) {
-                    const option = document.createElement('option');
-                    // Include the delivery date in the option text
-                    option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']} - Date: ${sail['Delivery Date']}`;
-                    option.value = sail['Certificate No.'];
-                    dropdown.add(option);
+        // Function to initialize dropdowns and add event listeners
+        function initializeDropdowns(filteredData) {
+            // Populate dropdowns for Jibs, Spinnakers, and Main
+            populateSailDropdown('jib1', filteredData, 'J');
+            populateSailDropdown('jib2', filteredData, 'J');
+            populateSailDropdown('spinnaker1', filteredData, 'S89');
+            populateSailDropdown('spinnaker2', filteredData, 'S89');
+            populateSailDropdown('main', filteredData, 'M');
+
+            // Add event listeners to sail dropdowns
+            addDropdownEventListeners();
+        }
+
+        // Helper function to get currently selected tags
+        function getSelectedTags() {
+            const selectedTags = [];
+            const dropdownIds = ['jib1', 'jib2', 'spinnaker1', 'spinnaker2', 'main'];
+            dropdownIds.forEach(id => {
+                const value = document.getElementById(id).value;
+                if (value) {
+                    selectedTags.push(value);
                 }
             });
+            return selectedTags;
+        }
+
+        // Helper function to populate sail dropdowns, excluding selected tags
+        function populateSailDropdown(dropdownId, sails, sailType) {
+            const dropdown = document.getElementById(dropdownId);
+            const selectedTags = getSelectedTags();
+            const currentValue = dropdown.value;
+
+            dropdown.innerHTML = '<option value="">Select</option>'; // Reset options
+
+            sails.forEach(sail => {
+                if (sail['Sail Type'] === sailType) {
+                    // Exclude already selected tags, except the current one
+                    if (!selectedTags.includes(sail['Certificate No.']) || sail['Certificate No.'] === currentValue) {
+                        const option = document.createElement('option');
+                        // Include the delivery date in the option text
+                        option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']} - Date: ${sail['Delivery Date']}`;
+                        option.value = sail['Certificate No.'];
+                        // If the option is the current value, mark it as selected
+                        if (sail['Certificate No.'] === currentValue) {
+                            option.selected = true;
+                        }
+                        dropdown.add(option);
+                    }
+                }
+            });
+        }
+
+        // Function to add event listeners to dropdowns
+        function addDropdownEventListeners() {
+            const dropdownIds = ['jib1', 'jib2', 'spinnaker1', 'spinnaker2', 'main'];
+            dropdownIds.forEach(id => {
+                const dropdown = document.getElementById(id);
+                dropdown.onchange = function() {
+                    updateDropdowns(id);
+                };
+            });
+        }
+
+        // Function to update dropdowns when a selection changes
+        function updateDropdowns(changedDropdownId) {
+            const hullNumber = document.getElementById('hullNumber').value.trim();
+            const filteredData = sailsData.filter(sail => sail.Hull === hullNumber);
+
+            if (filteredData.length > 0) {
+                // For each dropdown, re-populate options excluding selected tags
+                ['jib1', 'jib2', 'spinnaker1', 'spinnaker2', 'main'].forEach(id => {
+                    if (id !== changedDropdownId) {
+                        const sailType = getSailTypeByDropdownId(id);
+                        populateSailDropdown(id, filteredData, sailType);
+                    }
+                });
+            }
+        }
+
+        // Helper function to get sail type by dropdown ID
+        function getSailTypeByDropdownId(dropdownId) {
+            switch(dropdownId) {
+                case 'jib1':
+                case 'jib2':
+                    return 'J';
+                case 'spinnaker1':
+                case 'spinnaker2':
+                    return 'S89';
+                case 'main':
+                    return 'M';
+                default:
+                    return '';
+            }
         }
 
         // Function to clear fields when no hull number is found
@@ -78,7 +156,8 @@
             document.getElementById('mobile').value = '';
             document.getElementById('jib1').innerHTML = '<option value="">Select</option>';
             document.getElementById('jib2').innerHTML = '<option value="">Select</option>';
-            document.getElementById('spinnaker').innerHTML = '<option value="">Select</option>';
+            document.getElementById('spinnaker1').innerHTML = '<option value="">Select</option>';
+            document.getElementById('spinnaker2').innerHTML = '<option value="">Select</option>';
             document.getElementById('main').innerHTML = '<option value="">Select</option>';
         }
 
@@ -93,13 +172,15 @@
             var jib1Cert = document.getElementById("jib1").value;
             var jib2Cert = document.getElementById("jib2").value;
             var mainCert = document.getElementById("main").value;
-            var spinnakerCert = document.getElementById("spinnaker").value;
+            var spinnaker1Cert = document.getElementById("spinnaker1").value;
+            var spinnaker2Cert = document.getElementById("spinnaker2").value;
 
             // Retrieve sail details including sailmaker
             var jib1Sail = getSailByCertificate(jib1Cert);
             var jib2Sail = getSailByCertificate(jib2Cert);
             var mainSail = getSailByCertificate(mainCert);
-            var spinnakerSail = getSailByCertificate(spinnakerCert);
+            var spinnaker1Sail = getSailByCertificate(spinnaker1Cert);
+            var spinnaker2Sail = getSailByCertificate(spinnaker2Cert);
 
             var printContent = `
                 <h2>Sail List for Hull ${hullNumber}</h2>
@@ -107,12 +188,54 @@
                 <p><strong>Owner:</strong> ${owner}</p>
                 <p><strong>Email:</strong> ${email || 'Not Provided'}</p>
                 <p><strong>Mobile:</strong> ${mobile || 'Not Provided'}</p>
-                <ul>
-                    <li><strong>Jib 1:</strong> ${formatSailInfo(jib1Sail)}</li>
-                    <li><strong>Jib 2:</strong> ${formatSailInfo(jib2Sail)}</li>
-                    <li><strong>Main:</strong> ${formatSailInfo(mainSail)}</li>
-                    <li><strong>Spinnaker:</strong> ${formatSailInfo(spinnakerSail)}</li>
-                </ul>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sail Type</th>
+                            <th>Certificate No.</th>
+                            <th>Delivery Date</th>
+                            <th>Sailmaker</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jib 1</td>
+                            <td>${formatSailInfoCell(jib1Sail, 'Certificate No.')}</td>
+                            <td>${formatSailInfoCell(jib1Sail, 'Delivery Date')}</td>
+                            <td>${formatSailInfoCell(jib1Sail, 'Sailmaker')}</td>
+                            <td></td> <!-- Empty cell for notes -->
+                        </tr>
+                        <tr>
+                            <td>Jib 2</td>
+                            <td>${formatSailInfoCell(jib2Sail, 'Certificate No.')}</td>
+                            <td>${formatSailInfoCell(jib2Sail, 'Delivery Date')}</td>
+                            <td>${formatSailInfoCell(jib2Sail, 'Sailmaker')}</td>
+                            <td></td> <!-- Empty cell for notes -->
+                        </tr>
+                        <tr>
+                            <td>Main</td>
+                            <td>${formatSailInfoCell(mainSail, 'Certificate No.')}</td>
+                            <td>${formatSailInfoCell(mainSail, 'Delivery Date')}</td>
+                            <td>${formatSailInfoCell(mainSail, 'Sailmaker')}</td>
+                            <td></td> <!-- Empty cell for notes -->
+                        </tr>
+                        <tr>
+                            <td>Spinnaker 1</td>
+                            <td>${formatSailInfoCell(spinnaker1Sail, 'Certificate No.')}</td>
+                            <td>${formatSailInfoCell(spinnaker1Sail, 'Delivery Date')}</td>
+                            <td>${formatSailInfoCell(spinnaker1Sail, 'Sailmaker')}</td>
+                            <td></td> <!-- Empty cell for notes -->
+                        </tr>
+                        <tr>
+                            <td>Spinnaker 2</td>
+                            <td>${formatSailInfoCell(spinnaker2Sail, 'Certificate No.')}</td>
+                            <td>${formatSailInfoCell(spinnaker2Sail, 'Delivery Date')}</td>
+                            <td>${formatSailInfoCell(spinnaker2Sail, 'Sailmaker')}</td>
+                            <td></td> <!-- Empty cell for notes -->
+                        </tr>
+                    </tbody>
+                </table>
             `;
 
             var printWindow = window.open('', '', 'height=600,width=800');
@@ -134,12 +257,12 @@
             });
         }
 
-        // Helper function to format sail information
-        function formatSailInfo(sail) {
+        // Helper function to format sail information for table cells
+        function formatSailInfoCell(sail, property) {
             if (!sail) {
                 return 'Not Selected';
             }
-            return sail["Certificate No."] + " (" + sail["Delivery Date"] + ", " + sail["Sailmaker"] + ")";
+            return sail[property] || 'N/A';
         }
     </script>
 </head>
@@ -147,24 +270,26 @@
     <div class="container">
         <h1 class="mb-4">Sail List by Tag Number</h1>
         <form>
-            <div class="form-group">
-                <label for="hullNumber">Enter Hull Number:</label>
-                <input type="text" class="form-control" id="hullNumber" name="hullNumber" placeholder="Enter hull number">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="hullNumber">Enter Hull Number:</label>
+                    <input type="text" class="form-control" id="hullNumber" name="hullNumber" placeholder="Enter hull number">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="owner">Owner:</label>
+                    <input type="text" class="form-control" id="owner" name="owner">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="owner">Owner:</label>
-                <input type="text" class="form-control" id="owner" name="owner">
-            </div>
-
-            <div class="form-group">
-                <label for="boatName">Boat Name:</label>
-                <input type="text" class="form-control" id="boatName" name="boatName">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="boatName">Boat Name:</label>
+                    <input type="text" class="form-control" id="boatName" name="boatName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                </div>
             </div>
 
             <div class="form-group">
@@ -174,30 +299,39 @@
 
             <h3>Select Sails</h3>
 
-            <div class="form-group">
-                <label for="jib1">Jib 1:</label>
-                <select class="form-control" id="jib1" name="jib1">
-                    <option value="">Select</option>
-                </select>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="jib1">Jib 1:</label>
+                    <select class="form-control" id="jib1" name="jib1">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="jib2">Jib 2:</label>
+                    <select class="form-control" id="jib2" name="jib2">
+                        <option value="">Select</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="jib2">Jib 2:</label>
-                <select class="form-control" id="jib2" name="jib2">
-                    <option value="">Select</option>
-                </select>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="spinnaker1">Spinnaker 1:</label>
+                    <select class="form-control" id="spinnaker1" name="spinnaker1">
+                        <option value="">Select</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="spinnaker2">Spinnaker 2:</label>
+                    <select class="form-control" id="spinnaker2" name="spinnaker2">
+                        <option value="">Select</option>
+                    </select>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="main">Main:</label>
                 <select class="form-control" id="main" name="main">
-                    <option value="">Select</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="spinnaker">Spinnaker:</label>
-                <select class="form-control" id="spinnaker" name="spinnaker">
                     <option value="">Select</option>
                 </select>
             </div>
