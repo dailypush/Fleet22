@@ -38,7 +38,10 @@
             const filteredData = sailsData.filter(sail => sail.Hull === hullNumber);
 
             if (filteredData.length > 0) {
-                // Autofill owner and boat name (editable)
+                // Sort the filtered data by 'Delivery Date' in descending order
+                filteredData.sort((a, b) => new Date(b['Delivery Date']) - new Date(a['Delivery Date']));
+
+                // Use the most recent entry for owner and boat name
                 document.getElementById('owner').value = filteredData[0].Purchaser;
                 document.getElementById('boatName').value = filteredData[0].BoatName || 'Unknown Boat Name';
 
@@ -59,7 +62,8 @@
             sails.forEach(sail => {
                 if (sail['Sail Type'] === sailType) {
                     const option = document.createElement('option');
-                    option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']}`;
+                    // Include the delivery date in the option text
+                    option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']} - Date: ${sail['Delivery Date']}`;
                     option.value = sail['Certificate No.'];
                     dropdown.add(option);
                 }
