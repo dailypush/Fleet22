@@ -184,67 +184,71 @@
             var spinnaker1Sail = getSailByCertificate(spinnaker1Cert);
             var spinnaker2Sail = getSailByCertificate(spinnaker2Cert);
 
+            // Retrieve spinnaker colors
+            var spinnaker1Color = document.getElementById("spinnaker1Color").value;
+            var spinnaker2Color = document.getElementById("spinnaker2Color").value;
+
             var printContent = `
             <header class="text-center my-2">
-            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
-            <h1>2024 J/105 North American Championship</h1>
-            <h2>Sail Declaration</h2>
-              <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
-                </header>
-                <h3>Sail List for Hull ${hullNumber}</h3>
-                <p><strong>Boat Name:</strong> ${boatName || 'Not Provided'}</p>
-                <p><strong>Owner:</strong> ${owner}</p>
-                <p><strong>Email:</strong> ${email || 'Not Provided'}</p>
-                <p><strong>Mobile:</strong> ${mobile || 'Not Provided'}</p>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Sail Type</th>
-                            <th>Certificate No.</th>
-                            <th>Delivery Date</th>
-                            <th>Sailmaker</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jib 1</td>
-                            <td>${formatSailInfoCell(jib1Sail, 'Certificate No.')}</td>
-                            <td>${formatSailInfoCell(jib1Sail, 'Delivery Date')}</td>
-                            <td>${formatSailInfoCell(jib1Sail, 'Sailmaker')}</td>
-                            <td></td> <!-- Empty cell for notes -->
-                        </tr>
-                        <tr>
-                            <td>Jib 2</td>
-                            <td>${formatSailInfoCell(jib2Sail, 'Certificate No.')}</td>
-                            <td>${formatSailInfoCell(jib2Sail, 'Delivery Date')}</td>
-                            <td>${formatSailInfoCell(jib2Sail, 'Sailmaker')}</td>
-                            <td></td> <!-- Empty cell for notes -->
-                        </tr>
-                        <tr>
-                            <td>Main</td>
-                            <td>${formatSailInfoCell(mainSail, 'Certificate No.')}</td>
-                            <td>${formatSailInfoCell(mainSail, 'Delivery Date')}</td>
-                            <td>${formatSailInfoCell(mainSail, 'Sailmaker')}</td>
-                            <td></td> <!-- Empty cell for notes -->
-                        </tr>
-                        <tr>
-                            <td>Spinnaker 1</td>
-                            <td>${formatSailInfoCell(spinnaker1Sail, 'Certificate No.')}</td>
-                            <td>${formatSailInfoCell(spinnaker1Sail, 'Delivery Date')}</td>
-                            <td>${formatSailInfoCell(spinnaker1Sail, 'Sailmaker')}</td>
-                            <td></td> <!-- Empty cell for notes -->
-                        </tr>
-                        <tr>
-                            <td>Spinnaker 2</td>
-                            <td>${formatSailInfoCell(spinnaker2Sail, 'Certificate No.')}</td>
-                            <td>${formatSailInfoCell(spinnaker2Sail, 'Delivery Date')}</td>
-                            <td>${formatSailInfoCell(spinnaker2Sail, 'Sailmaker')}</td>
-                            <td></td> <!-- Empty cell for notes -->
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="mt-4">
+                <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
+                <h1>2024 J/105 North American Championship</h1>
+                <h2>Sail Declaration</h2>
+                <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
+            </header>
+            <h3>Sail List for Hull ${hullNumber}</h3>
+            <p><strong>Boat Name:</strong> ${boatName || 'Not Provided'}</p>
+            <p><strong>Owner:</strong> ${owner}</p>
+            <p><strong>Email:</strong> ${email || 'Not Provided'}</p>
+            <p><strong>Mobile:</strong> ${mobile || 'Not Provided'}</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sail Type</th>
+                        <th>Sailmaker</th>
+                        <th>Royalty Tag Number</th>
+                        <th>Color</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jib 1</td>
+                        <td>${formatSailInfoCell(jib1Sail, 'Sailmaker')}</td>
+                        <td>${formatSailInfoCell(jib1Sail, 'Certificate No.')}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Jib 2</td>
+                        <td>${formatSailInfoCell(jib2Sail, 'Sailmaker')}</td>
+                        <td>${formatSailInfoCell(jib2Sail, 'Certificate No.')}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Main</td>
+                        <td>${formatSailInfoCell(mainSail, 'Sailmaker')}</td>
+                        <td>${formatSailInfoCell(mainSail, 'Certificate No.')}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Spinnaker 1</td>
+                        <td>${formatSailInfoCell(spinnaker1Sail, 'Sailmaker')}</td>
+                        <td>${formatSailInfoCell(spinnaker1Sail, 'Certificate No.')}</td>
+                        <td>${spinnaker1Color || 'Not Provided'}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Spinnaker 2</td>
+                        <td>${formatSailInfoCell(spinnaker2Sail, 'Sailmaker')}</td>
+                        <td>${formatSailInfoCell(spinnaker2Sail, 'Certificate No.')}</td>
+                        <td>${spinnaker2Color || 'Not Provided'}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-4">
                 <p>By signing this form I declare that my sails will be in compliance with the J/105 Class Rules at all times.</p>
                 <table class="table table-dashed">
                     <tbody>
@@ -293,8 +297,7 @@
 <body>
     <div class="container container-custom my-3">
         <header class="text-center my-2">
-            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2"
-                style="max-width: 200px;">
+            <img src="../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
             <h1>2024 J/105 North American Championship</h1>
             <h2>Sail Declaration</h2>
         </header>
@@ -305,8 +308,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="hullNumber">Enter Hull Number:</label>
-                        <input type="text" class="form-control" id="hullNumber" name="hullNumber"
-                            placeholder="Enter hull number">
+                        <input type="text" class="form-control" id="hullNumber" name="hullNumber" placeholder="Enter hull number">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="owner">Owner:</label>
@@ -321,8 +323,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email Address:</label>
-                        <input type="email" class="form-control" id="email" name="email"
-                            placeholder="Enter email address">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
                     </div>
                 </div>
 
@@ -349,6 +350,7 @@
                 </div>
 
                 <div class="form-row">
+                    <!-- Spinnaker 1 and Color -->
                     <div class="form-group col-md-6">
                         <label for="spinnaker1">Spinnaker 1:</label>
                         <select class="form-control" id="spinnaker1" name="spinnaker1">
@@ -356,10 +358,22 @@
                         </select>
                     </div>
                     <div class="form-group col-md-6">
+                        <label for="spinnaker1Color">Spinnaker 1 Color:</label>
+                        <input type="text" class="form-control" id="spinnaker1Color" name="spinnaker1Color" placeholder="Enter Spinnaker 1 Color">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Spinnaker 2 and Color -->
+                    <div class="form-group col-md-6">
                         <label for="spinnaker2">Spinnaker 2:</label>
                         <select class="form-control" id="spinnaker2" name="spinnaker2">
                             <option value="">Select</option>
                         </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="spinnaker2Color">Spinnaker 2 Color:</label>
+                        <input type="text" class="form-control" id="spinnaker2Color" name="spinnaker2Color" placeholder="Enter Spinnaker 2 Color">
                     </div>
                 </div>
 
@@ -378,6 +392,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
 </body>
 
 </html>
