@@ -29122,6 +29122,26 @@
     {
         "Hull": "158",
         "Purchaser": "Alan Heisey",
+        "Certificate No.": "2201103N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-09-05",
+        "Sail Type": "S89",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "158",
+        "Purchaser": "Alan Heisey",
+        "Certificate No.": "2203174N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-12-15",
+        "Sail Type": "M",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "158",
+        "Purchaser": "Alan Heisey",
         "Certificate No.": "2203258N",
         "Sailmaker": "North",
         "Delivery Date": "2023-06-30",
@@ -38522,6 +38542,26 @@
     {
         "Hull": "476",
         "Purchaser": "Andrew Lennox",
+        "Certificate No.": "2001082N",
+        "Sailmaker": "North",
+        "Delivery Date": "2022-09-10",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "476",
+        "Purchaser": "Andrew Lennox",
+        "Certificate No.": "2111174N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-07-20",
+        "Sail Type": "S89",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "476",
+        "Purchaser": "Andrew Lennox",
         "Certificate No.": "2111210N",
         "Sailmaker": "North",
         "Delivery Date": "2022-07-15",
@@ -38532,10 +38572,40 @@
     {
         "Hull": "476",
         "Purchaser": "Andrew Lennox",
+        "Certificate No.": "2111226N",
+        "Sailmaker": "North",
+        "Delivery Date": "2022-08-10",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "476",
+        "Purchaser": "Andrew Lennox",
         "Certificate No.": "2203184N",
         "Sailmaker": "North",
         "Delivery Date": "2024-08-18",
         "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "476",
+        "Purchaser": "Andrew Lennox",
+        "Certificate No.": "2203206N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-08-21",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "476",
+        "Purchaser": "Andrew Lennox",
+        "Certificate No.": "2203207N",
+        "Sailmaker": "North",
+        "Delivery Date": "2022-06-15",
+        "Sail Type": "S89",
         "Fleet": "4",
         "Notes": ""
     },
@@ -47560,6 +47630,16 @@
         "Notes": ""
     },
     {
+        "Hull": "261",
+        "Purchaser": "Robert Mock",
+        "Certificate No.": "2408095Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-09-10",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "500",
         "Purchaser": "Charlie Modica",
         "Certificate No.": "0509262N",
@@ -47982,9 +48062,39 @@
     {
         "Hull": "358",
         "Purchaser": "Andrew Moor",
+        "Certificate No.": "2201048N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-12-15",
+        "Sail Type": "M",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "358",
+        "Purchaser": "Andrew Moor",
+        "Certificate No.": "2203163N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-12-15",
+        "Sail Type": "S89",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "358",
+        "Purchaser": "Andrew Moor",
         "Certificate No.": "2203164N",
         "Sailmaker": "North",
         "Delivery Date": "2024-09-18",
+        "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "358",
+        "Purchaser": "Andrew Moor",
+        "Certificate No.": "2203188N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-12-15",
         "Sail Type": "J",
         "Fleet": "4",
         "Notes": ""
@@ -59395,6 +59505,16 @@
         "Certificate No.": "2312170Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-07-18",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "3",
+        "Purchaser": "Tim Russell",
+        "Certificate No.": "2408098Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-09-10",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
