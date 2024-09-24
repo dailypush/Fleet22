@@ -19021,6 +19021,16 @@
     },
     {
         "Hull": "393",
+        "Purchaser": "Tom Einhouse",
+        "Certificate No.": "1904089U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2020-04-30",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "393",
         "Purchaser": "Cindy Einhouse",
         "Certificate No.": "2001042N",
         "Sailmaker": "North",
@@ -30710,6 +30720,16 @@
         "Notes": ""
     },
     {
+        "Hull": "417",
+        "Purchaser": "Adam Hinz",
+        "Certificate No.": "2408103Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-09-27",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "299",
         "Purchaser": "Gerald Hirschler",
         "Certificate No.": "0207432Q",
@@ -36128,6 +36148,36 @@
         "Sail Type": "S89",
         "Fleet": "22",
         "Notes": "Sail purchased used from Paul Uhlir, per PU e-mail of 6/1/18"
+    },
+    {
+        "Hull": "208",
+        "Purchaser": "Doug Kohler",
+        "Certificate No.": "2303037U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2024-07-12",
+        "Sail Type": "M",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "208",
+        "Purchaser": "Doug Kohler",
+        "Certificate No.": "2409119U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2024-07-12",
+        "Sail Type": "S89",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "208",
+        "Purchaser": "Doug Kohler",
+        "Certificate No.": "2409120U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2023-10-18",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
     },
     {
         "Hull": "41",
