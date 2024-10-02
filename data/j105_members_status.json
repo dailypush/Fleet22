@@ -1554,7 +1554,7 @@
         "Boat Name": "Warlock",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "140",
@@ -1963,12 +1963,12 @@
     },
     {
         "Hull": "176",
-        "Owners/Helmsmen": "Sailing Center",
+        "Owners/Helmsmen": "Chris Robertson",
         "Status": "OW",
-        "Boat Name": "Andiamo",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": ""
+        "Boat Name": "True North",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "177",
@@ -4006,12 +4006,12 @@
     },
     {
         "Hull": "347",
-        "Owners/Helmsmen": "Randy Paul",
-        "Status": "CO",
+        "Owners/Helmsmen": "Chris Raab",
+        "Status": "OW",
         "Boat Name": "Bald Eagles",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2008"
+        "Class Membership": ""
     },
     {
         "Hull": "348",
@@ -7048,12 +7048,12 @@
     },
     {
         "Hull": "637",
-        "Owners/Helmsmen": "Marc Epstein",
+        "Owners/Helmsmen": "Jason Swan",
         "Status": "OW",
-        "Boat Name": "Vision",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Member 2007"
+        "Boat Name": "Flatline",
+        "Location": "Connecticut",
+        "Fleet": "5",
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "638",
