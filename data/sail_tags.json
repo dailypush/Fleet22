@@ -9200,6 +9200,16 @@
         "Notes": ""
     },
     {
+        "Hull": "482",
+        "Purchaser": "Mike Cain",
+        "Certificate No.": "2409130Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-08",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "477",
         "Purchaser": "Byron Callan",
         "Certificate No.": "0605186U",
@@ -27567,7 +27577,7 @@
         "Delivery Date": "2012-08-21",
         "Sail Type": "M",
         "Fleet": "4",
-        "Notes": ""
+        "Notes": "Sail destroyed during dismasting, per A. Heisey e-mail 10/3/24"
     },
     {
         "Hull": "158",
@@ -29137,7 +29147,7 @@
         "Delivery Date": "2023-06-23",
         "Sail Type": "J",
         "Fleet": "4",
-        "Notes": ""
+        "Notes": "Sail destroyed during dismasting, per A. Heisey e-mail 10/3/24"
     },
     {
         "Hull": "158",
@@ -29167,7 +29177,7 @@
         "Delivery Date": "2023-06-30",
         "Sail Type": "J",
         "Fleet": "4",
-        "Notes": ""
+        "Notes": "Sail destroyed during dismasting, per A. Heisey e-mail 10/3/24"
     },
     {
         "Hull": "404",
@@ -35818,6 +35828,16 @@
         "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
+    },
+    {
+        "Hull": "407",
+        "Purchaser": "John Kircher",
+        "Certificate No.": "2402028Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-05-01",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": "Sail purchased used from D. Stryker, per DS e-mail 10/7/24"
     },
     {
         "Hull": "407",
@@ -51960,6 +51980,16 @@
         "Notes": ""
     },
     {
+        "Hull": "170",
+        "Purchaser": "Jerry Orabona",
+        "Certificate No.": "2408102Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-09-14",
+        "Sail Type": "S89",
+        "Fleet": "10",
+        "Notes": "Sail purchased used from T. Russell, per D. Stryker e-mail 10/3/24"
+    },
+    {
         "Hull": "656",
         "Purchaser": "Preben Ostberg",
         "Certificate No.": "0604155N",
@@ -58450,6 +58480,16 @@
         "Notes": ""
     },
     {
+        "Hull": "176",
+        "Purchaser": "Chris Robertson",
+        "Certificate No.": "2409131Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-11",
+        "Sail Type": "J",
+        "Fleet": "14",
+        "Notes": ""
+    },
+    {
         "Hull": "303",
         "Purchaser": "Kristin Robinson",
         "Certificate No.": "1609249D",
@@ -59602,16 +59642,6 @@
     {
         "Hull": "3",
         "Purchaser": "Tim Russell",
-        "Certificate No.": "2206292Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2022-07-12",
-        "Sail Type": "M",
-        "Fleet": "1",
-        "Notes": ""
-    },
-    {
-        "Hull": "3",
-        "Purchaser": "Tim Russell",
         "Certificate No.": "2207328Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-09-12",
@@ -59636,26 +59666,6 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-07-18",
         "Sail Type": "J",
-        "Fleet": "1",
-        "Notes": ""
-    },
-    {
-        "Hull": "3",
-        "Purchaser": "Tim Russell",
-        "Certificate No.": "2408098Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2024-09-10",
-        "Sail Type": "J",
-        "Fleet": "1",
-        "Notes": ""
-    },
-    {
-        "Hull": "3",
-        "Purchaser": "Tim Russell",
-        "Certificate No.": "2408102Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2024-09-14",
-        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
@@ -69022,12 +69032,22 @@
     {
         "Hull": "67",
         "Purchaser": "Doug Stryker",
-        "Certificate No.": "2402028Q",
+        "Certificate No.": "2206292Q",
         "Sailmaker": "Quantum",
-        "Delivery Date": "2024-05-01",
+        "Delivery Date": "2022-07-12",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": "Sail purchased used from T. Russell, per D. Stryker e-mail 10/7/24"
+    },
+    {
+        "Hull": "67",
+        "Purchaser": "Doug Stryker",
+        "Certificate No.": "2408098Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-09-10",
         "Sail Type": "J",
         "Fleet": "3",
-        "Notes": ""
+        "Notes": "Sail purchased used from T. Russell, per D. Stryker e-mail 10/3/24"
     },
     {
         "Hull": "98",
