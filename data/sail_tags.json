@@ -9202,6 +9202,16 @@
     {
         "Hull": "482",
         "Purchaser": "Mike Cain",
+        "Certificate No.": "2212444Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-17",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "482",
+        "Purchaser": "Mike Cain",
         "Certificate No.": "2409130Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-10-08",
@@ -24550,6 +24560,16 @@
         "Notes": ""
     },
     {
+        "Hull": "501",
+        "Purchaser": "Carl Gitchell",
+        "Certificate No.": "2203236N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-11",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "524",
         "Purchaser": "John Glanville",
         "Certificate No.": "1509155N",
@@ -26958,16 +26978,6 @@
         "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
-    },
-    {
-        "Hull": "159",
-        "Purchaser": "Angelo Guarino",
-        "Certificate No.": "2401007Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2024-02-23",
-        "Sail Type": "M",
-        "Fleet": "3",
-        "Notes": "Sail returned per J. Phillips e-mail 4/24/24"
     },
     {
         "Hull": "159",
@@ -30760,6 +30770,16 @@
         "Notes": ""
     },
     {
+        "Hull": "417",
+        "Purchaser": "Adam Hinz",
+        "Certificate No.": "2409132Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-13",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "299",
         "Purchaser": "Gerald Hirschler",
         "Certificate No.": "0207432Q",
@@ -31856,6 +31876,36 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-09-08",
         "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "285",
+        "Purchaser": "Dwight Horton",
+        "Certificate No.": "2408105Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-07",
+        "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "285",
+        "Purchaser": "Dwight Horton",
+        "Certificate No.": "2408106Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-07",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "285",
+        "Purchaser": "Dwight Horton",
+        "Certificate No.": "2408107Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-07",
+        "Sail Type": "S89",
         "Fleet": "17",
         "Notes": ""
     },
@@ -44920,6 +44970,16 @@
         "Notes": ""
     },
     {
+        "Hull": "64",
+        "Purchaser": "David McKee",
+        "Certificate No.": "2409134Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-17",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "490",
         "Purchaser": "Douglas McKeige",
         "Certificate No.": "0304256K",
@@ -56516,6 +56576,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-09-30",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "347",
+        "Purchaser": "Chris Raab",
+        "Certificate No.": "2409133Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-19",
+        "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
     },
@@ -74672,16 +74742,6 @@
     {
         "Hull": "87",
         "Purchaser": "Hugh Westermeyer",
-        "Certificate No.": "2212444Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2023-01-15",
-        "Sail Type": "S89",
-        "Fleet": "1",
-        "Notes": "Tag not assigned to Westmeyer #87, per J. Thorpe e-mail 9/8/23, tag awaiting reassignment"
-    },
-    {
-        "Hull": "87",
-        "Purchaser": "Hugh Westermeyer",
         "Certificate No.": "2307084Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-08-29",
@@ -77866,6 +77926,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-06-05",
         "Sail Type": "S89",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "130",
+        "Purchaser": "William Zartler",
+        "Certificate No.": "2401007Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-04-30",
+        "Sail Type": "M",
         "Fleet": "17",
         "Notes": ""
     },
