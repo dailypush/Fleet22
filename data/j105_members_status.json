@@ -1920,7 +1920,7 @@
         "Hull": "174",
         "Owners/Helmsmen": "Irene Tang",
         "Status": "CO",
-        "Boat Name": "Dulcinea",
+        "Boat Name": "Mazu",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2024"
@@ -1929,7 +1929,7 @@
         "Hull": "174",
         "Owners/Helmsmen": "Nicholas Wilkerson",
         "Status": "CO",
-        "Boat Name": "Dulcinea",
+        "Boat Name": "Mazu",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2024"
@@ -3768,7 +3768,7 @@
         "Boat Name": "H-Bomb",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "328",
@@ -4281,7 +4281,7 @@
         "Boat Name": "Whistler",
         "Location": "Michigan",
         "Fleet": "22",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2024"
     },
     {
         "Hull": "377",
@@ -7387,5 +7387,14 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "999",
+        "Owners/Helmsmen": "Trace Dittenhofer",
+        "Status": "AM",
+        "Boat Name": "Knot Known",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2024"
     }
 ]

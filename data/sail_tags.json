@@ -16870,6 +16870,16 @@
         "Notes": ""
     },
     {
+        "Hull": "345",
+        "Purchaser": "Ric Dexter",
+        "Certificate No.": "2407080D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-10-29",
+        "Sail Type": "J",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
         "Hull": "624",
         "Purchaser": "Steve Diamond",
         "Certificate No.": "0211578N",
@@ -18945,6 +18955,16 @@
         "Certificate No.": "2110159N",
         "Sailmaker": "North",
         "Delivery Date": "2022-02-18",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "37",
+        "Purchaser": "John Lloyd Egan",
+        "Certificate No.": "2201055N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-23",
         "Sail Type": "J",
         "Fleet": "22",
         "Notes": ""
@@ -23036,6 +23056,36 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-11-18",
         "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "635",
+        "Purchaser": "Charlie Garrard",
+        "Certificate No.": "2201053N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-30",
+        "Sail Type": "J",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "635",
+        "Purchaser": "Charlie Garrard",
+        "Certificate No.": "2201087N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-30",
+        "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "635",
+        "Purchaser": "Charlie Garrard",
+        "Certificate No.": "2211405N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-30",
+        "Sail Type": "S89",
         "Fleet": "2",
         "Notes": ""
     },
@@ -49730,6 +49780,26 @@
         "Notes": ""
     },
     {
+        "Hull": "194",
+        "Purchaser": "Ann Myer",
+        "Certificate No.": "2407081D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-10-29",
+        "Sail Type": "M",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
+        "Hull": "194",
+        "Purchaser": "Ann Myer",
+        "Certificate No.": "2407082D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-10-29",
+        "Sail Type": "J",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
         "Hull": "335",
         "Purchaser": "Dan Nash",
         "Certificate No.": "1403077D",
@@ -52345,6 +52415,16 @@
         "Certificate No.": "1803095N",
         "Sailmaker": "North",
         "Delivery Date": "2019-03-19",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2201054N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-10-22",
         "Sail Type": "J",
         "Fleet": "20",
         "Notes": ""
@@ -61840,6 +61920,16 @@
         "Notes": ""
     },
     {
+        "Hull": "250",
+        "Purchaser": "David Scheidt",
+        "Certificate No.": "2409135Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-07",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "242",
         "Purchaser": "Peter Schellie",
         "Certificate No.": "0107542N",
@@ -68972,6 +69062,16 @@
     {
         "Hull": "67",
         "Purchaser": "Doug Stryker",
+        "Certificate No.": "0104403N",
+        "Sailmaker": "North",
+        "Delivery Date": "2001-05-12",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": "Sail purchased used"
+    },
+    {
+        "Hull": "67",
+        "Purchaser": "Doug Stryker",
         "Certificate No.": "0303209U",
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-08-18",
@@ -75742,16 +75842,6 @@
     {
         "Hull": "402",
         "Purchaser": "Bill Wilkinson",
-        "Certificate No.": "0104403N",
-        "Sailmaker": "North",
-        "Delivery Date": "2001-05-12",
-        "Sail Type": "M",
-        "Fleet": "10",
-        "Notes": ""
-    },
-    {
-        "Hull": "402",
-        "Purchaser": "Bill Wilkinson",
         "Certificate No.": "0601001M",
         "Sailmaker": "Maine Sailing Partners",
         "Delivery Date": "2005-12-01",
@@ -77455,6 +77545,16 @@
         "Certificate No.": "2409128Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-10-07",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "617",
+        "Purchaser": "Lawrence Yanowitch",
+        "Certificate No.": "2409137Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-10-27",
         "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
