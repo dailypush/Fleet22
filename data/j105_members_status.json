@@ -3318,7 +3318,7 @@
         "Boat Name": "Sivka",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "289",
@@ -4326,7 +4326,7 @@
         "Boat Name": "Peregrine",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "382",
@@ -4635,6 +4635,15 @@
         "Class Membership": "Member 2024"
     },
     {
+        "Hull": "403",
+        "Owners/Helmsmen": "Karin Stevens",
+        "Status": "AM",
+        "Boat Name": "Liftoff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2025"
+    },
+    {
         "Hull": "404",
         "Owners/Helmsmen": "Joe Pitcavage",
         "Status": "OW",
@@ -4893,7 +4902,7 @@
         "Boat Name": "Knot Known",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "421",
@@ -5365,12 +5374,12 @@
     },
     {
         "Hull": "465",
-        "Owners/Helmsmen": "Little Traverse Yacht Club Junior Racing Program",
+        "Owners/Helmsmen": "John Woods",
         "Status": "OW",
         "Boat Name": "Exit Strategy",
-        "Location": "Michigan",
-        "Fleet": "25",
-        "Class Membership": ""
+        "Location": "Florida",
+        "Fleet": "17",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "466",
