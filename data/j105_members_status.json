@@ -594,6 +594,15 @@
         "Class Membership": ""
     },
     {
+        "Hull": "62",
+        "Owners/Helmsmen": "Evan Oulahen",
+        "Status": "OW",
+        "Boat Name": "Bear",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
+    },
+    {
         "Hull": "63",
         "Owners/Helmsmen": "Peter Becker",
         "Status": "OW",
@@ -2395,12 +2404,12 @@
     },
     {
         "Hull": "211",
-        "Owners/Helmsmen": "Jonah Israelit",
-        "Status": "CO",
-        "Boat Name": "Pieces of Eight",
-        "Location": "Rhode Island",
-        "Fleet": "14",
-        "Class Membership": "Member 2018"
+        "Owners/Helmsmen": "Robert Merchant",
+        "Status": "OW",
+        "Boat Name": "Auster II",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "212",
@@ -3709,21 +3718,12 @@
     },
     {
         "Hull": "323",
-        "Owners/Helmsmen": "Trist Coffin",
-        "Status": "CO",
-        "Boat Name": "Stratos",
-        "Location": "Vermont",
-        "Fleet": "0",
-        "Class Membership": ""
-    },
-    {
-        "Hull": "323",
-        "Owners/Helmsmen": "Tom Moody",
-        "Status": "CO",
-        "Boat Name": "Stratos",
-        "Location": "Vermont",
-        "Fleet": "0",
-        "Class Membership": ""
+        "Owners/Helmsmen": "Scott Christie",
+        "Status": "OW",
+        "Boat Name": "Colmonell",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "324",
@@ -4389,7 +4389,7 @@
         "Boat Name": "Y-not",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "387",
@@ -5520,10 +5520,10 @@
         "Hull": "479",
         "Owners/Helmsmen": "Branwell Lepp",
         "Status": "OW",
-        "Boat Name": "It Wasn\\'t Me",
+        "Boat Name": "It Wasn\\\\\\'t Me",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "480",
@@ -5824,12 +5824,12 @@
     },
     {
         "Hull": "506",
-        "Owners/Helmsmen": "Ted Miller",
-        "Status": "OW",
-        "Boat Name": "Joy Ride",
-        "Location": "California",
-        "Fleet": "8",
-        "Class Membership": "Member 2023"
+        "Owners/Helmsmen": "Sean McDermott",
+        "Status": "CO",
+        "Boat Name": "McMac",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "507",
@@ -6909,7 +6909,7 @@
         "Boat Name": "Amidala",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "622",

@@ -540,6 +540,16 @@
         "Notes": ""
     },
     {
+        "Hull": "374",
+        "Purchaser": "Paw Andersen",
+        "Certificate No.": "2411156Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-21",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "241",
         "Purchaser": "Michael Anderson",
         "Certificate No.": "0109612Q",
@@ -5540,6 +5550,16 @@
         "Notes": ""
     },
     {
+        "Hull": "235",
+        "Purchaser": "Sara Billey",
+        "Certificate No.": "2411153Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-14",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "621",
         "Purchaser": "Scott Birnberg",
         "Certificate No.": "0301021U",
@@ -8927,6 +8947,16 @@
         "Delivery Date": "2006-07-01",
         "Sail Type": "J",
         "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "353",
+        "Purchaser": "Peter Busschbach",
+        "Certificate No.": "2407083D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "J",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -12886,7 +12916,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-06-07",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -12896,7 +12926,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2023-02-01",
         "Sail Type": "S89",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -21040,6 +21070,16 @@
         "Notes": ""
     },
     {
+        "Hull": "171",
+        "Purchaser": "George Ferguson",
+        "Certificate No.": "2410145Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-13",
+        "Sail Type": "J",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
         "Hull": "496",
         "Purchaser": "Jim Feuille",
         "Certificate No.": "0212627N",
@@ -27796,7 +27836,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-02-21",
         "Sail Type": "S89",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -27806,7 +27846,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-02-18",
         "Sail Type": "M",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -27816,7 +27856,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-04-05",
         "Sail Type": "J",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -32986,7 +33026,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-02-02",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -32996,7 +33036,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-05-12",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -33006,7 +33046,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2017-05-15",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -33890,6 +33930,26 @@
         "Notes": ""
     },
     {
+        "Hull": "382",
+        "Purchaser": "Paolo Juvara",
+        "Certificate No.": "2410144Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-11",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "382",
+        "Purchaser": "Paolo Juvara",
+        "Certificate No.": "2411157Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "26",
         "Purchaser": "Rolf Kaiser",
         "Certificate No.": "1005107Q",
@@ -34586,7 +34646,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2010-11-10",
         "Sail Type": "J",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -34956,7 +35016,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-06-06",
         "Sail Type": "M",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -37560,6 +37620,26 @@
         "Notes": ""
     },
     {
+        "Hull": "644",
+        "Purchaser": "Phillip Laby",
+        "Certificate No.": "2411160Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "644",
+        "Purchaser": "Phillip Laby",
+        "Certificate No.": "2411162Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "77",
         "Purchaser": "Michael LaChance",
         "Certificate No.": "0408351U",
@@ -37616,7 +37696,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2002-02-02",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -37626,7 +37706,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2002-02-02",
         "Sail Type": "S89",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -37636,7 +37716,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2004-08-04",
         "Sail Type": "M",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -40330,6 +40410,26 @@
         "Notes": ""
     },
     {
+        "Hull": "119",
+        "Purchaser": "Jeff Littfin",
+        "Certificate No.": "2411155Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-21",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "119",
+        "Purchaser": "Jeff Littfin",
+        "Certificate No.": "2411159Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "262",
         "Purchaser": "Doug Livermore",
         "Certificate No.": "0112716K",
@@ -41756,7 +41856,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2013-12-28",
         "Sail Type": "J",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -41766,7 +41866,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2013-11-18",
         "Sail Type": "S89",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -44396,7 +44496,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-09-06",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -44406,7 +44506,7 @@
         "Sailmaker": "Block Island Sails & Canvas",
         "Delivery Date": "2001-04-01",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -44416,7 +44516,7 @@
         "Sailmaker": "Block Island Sails & Canvas",
         "Delivery Date": "2003-06-10",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45106,7 +45206,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2002-07-29",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45116,7 +45216,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2002-12-27",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45126,7 +45226,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2002-12-20",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45136,7 +45236,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-12-09",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45146,7 +45246,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2004-08-10",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45156,7 +45256,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2005-05-19",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45166,7 +45266,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2006-08-15",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45176,7 +45276,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2006-12-29",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45186,7 +45286,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2007-07-31",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45196,7 +45296,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2008-04-15",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45206,7 +45306,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2008-07-28",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45216,7 +45316,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2009-08-16",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -45676,6 +45776,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-01-13",
         "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "101",
+        "Purchaser": "Ross McLean",
+        "Certificate No.": "2410147Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-19",
+        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },
@@ -55200,6 +55310,26 @@
         "Notes": ""
     },
     {
+        "Hull": "46",
+        "Purchaser": "Charlie Pick",
+        "Certificate No.": "2411158Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "46",
+        "Purchaser": "Charlie Pick",
+        "Certificate No.": "2411161Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "359",
         "Purchaser": "Dave Pierce",
         "Certificate No.": "1312359N",
@@ -58440,6 +58570,16 @@
         "Notes": ""
     },
     {
+        "Hull": "268",
+        "Purchaser": "John Rivlin",
+        "Certificate No.": "2410148Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "567",
         "Purchaser": "Trevor Roach",
         "Certificate No.": "1009212Z",
@@ -58996,6 +59136,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-11-08",
         "Sail Type": "M",
+        "Fleet": "23",
+        "Notes": ""
+    },
+    {
+        "Hull": "161",
+        "Purchaser": "Tom Rolfes",
+        "Certificate No.": "2410141Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-12",
+        "Sail Type": "J",
         "Fleet": "23",
         "Notes": ""
     },
@@ -65400,6 +65550,16 @@
         "Notes": ""
     },
     {
+        "Hull": "527",
+        "Purchaser": "Jon Slabaugh",
+        "Certificate No.": "2410142Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2024-11-22",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "565",
         "Purchaser": "John Sledge",
         "Certificate No.": "0903046U",
@@ -65556,7 +65716,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-04-11",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -66096,7 +66256,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-11-15",
         "Sail Type": "M",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -66106,7 +66266,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-10-30",
         "Sail Type": "J",
-        "Fleet": "8",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -67266,6 +67426,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2019-03-06",
         "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "5",
+        "Purchaser": "Richard Stearns",
+        "Certificate No.": "2201125N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-05",
+        "Sail Type": "S89",
         "Fleet": "5",
         "Notes": ""
     },
@@ -69300,6 +69470,16 @@
         "Notes": ""
     },
     {
+        "Hull": "152",
+        "Purchaser": "Brad Stump",
+        "Certificate No.": "2211406N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-04",
+        "Sail Type": "S89",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
         "Hull": "181",
         "Purchaser": "John Sullivan",
         "Certificate No.": "0105481N",
@@ -70125,6 +70305,16 @@
         "Certificate No.": "2308121D",
         "Sailmaker": "Doyle",
         "Delivery Date": "2023-09-26",
+        "Sail Type": "S89",
+        "Fleet": "14",
+        "Notes": ""
+    },
+    {
+        "Hull": "620",
+        "Purchaser": "Chris Tate",
+        "Certificate No.": "2407084D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2024-11-22",
         "Sail Type": "S89",
         "Fleet": "14",
         "Notes": ""
@@ -77406,7 +77596,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-04-10",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": "Sail purchased with boat per MW 8/10/11; Sail tag reads 0410503K"
     },
     {
@@ -77416,7 +77606,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2008-08-15",
         "Sail Type": "S89",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77426,7 +77616,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2008-08-15",
         "Sail Type": "M",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77436,7 +77626,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2008-08-15",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77446,7 +77636,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2009-12-11",
         "Sail Type": "S89",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77456,7 +77646,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2010-02-27",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": "Sail purchased used by Marcus Wunderlich per 6/13/13 e-mail"
     },
     {
@@ -77466,7 +77656,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2011-05-11",
         "Sail Type": "M",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77476,7 +77666,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2011-09-23",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77486,7 +77676,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-12-10",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77496,7 +77686,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-12-11",
         "Sail Type": "M",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77506,7 +77696,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-12-11",
         "Sail Type": "S89",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
@@ -77516,7 +77706,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-05-01",
         "Sail Type": "J",
-        "Fleet": "0",
+        "Fleet": "9",
         "Notes": ""
     },
     {
