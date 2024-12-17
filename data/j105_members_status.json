@@ -2485,12 +2485,12 @@
     },
     {
         "Hull": "218",
-        "Owners/Helmsmen": "Bill Quealy",
+        "Owners/Helmsmen": "George Roland",
         "Status": "OW",
-        "Boat Name": "J Rabbit Slim",
+        "Boat Name": "Jalopy",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "219",
@@ -4398,7 +4398,7 @@
         "Boat Name": "CRUSH!",
         "Location": "Georgia",
         "Fleet": "11",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "388",
@@ -6802,6 +6802,15 @@
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "606",
+        "Owners/Helmsmen": "James Mosher",
+        "Status": "OW",
+        "Boat Name": "Mojo",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "608",
