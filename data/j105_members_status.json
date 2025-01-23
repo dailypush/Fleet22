@@ -933,7 +933,7 @@
         "Boat Name": "Moose Unknown",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "90",
@@ -1428,7 +1428,7 @@
         "Boat Name": "Blue Flash",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "125",
@@ -1609,6 +1609,15 @@
         "Location": "Ohio",
         "Fleet": "22",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "144",
+        "Owners/Helmsmen": "John Bodie",
+        "Status": "AM",
+        "Boat Name": "Fall Line",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "145",
@@ -2418,7 +2427,7 @@
         "Boat Name": "insubordination",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "214",
@@ -3012,7 +3021,7 @@
         "Boat Name": "Unbridled",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Associate 2024"
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "262",
@@ -3480,7 +3489,7 @@
         "Boat Name": "Jaded",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "299",
@@ -3489,7 +3498,7 @@
         "Boat Name": "Jaded",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2024"
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "301",
@@ -3750,7 +3759,7 @@
         "Boat Name": "Global Nomads",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "326",
@@ -4614,7 +4623,7 @@
         "Boat Name": "Boss Lady",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "401",
@@ -4623,7 +4632,7 @@
         "Boat Name": "Boss Lady",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "402",
@@ -5572,12 +5581,12 @@
     },
     {
         "Hull": "483",
-        "Owners/Helmsmen": "Vern Polidoro",
+        "Owners/Helmsmen": "John Sapp",
         "Status": "OW",
-        "Boat Name": "Vigilante",
-        "Location": "Massachusetts",
-        "Fleet": "2",
-        "Class Membership": "Member 2019"
+        "Boat Name": "VTack",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "484",
@@ -6918,7 +6927,7 @@
         "Boat Name": "Blitz",
         "Location": "Rhode Island",
         "Fleet": "14",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "621",
@@ -7003,12 +7012,12 @@
     },
     {
         "Hull": "630",
-        "Owners/Helmsmen": "Jason Barron",
+        "Owners/Helmsmen": "Justin Walling",
         "Status": "OW",
-        "Boat Name": "Raven",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Member 2022"
+        "Boat Name": "Knot Known",
+        "Location": "South Carolina",
+        "Fleet": "15",
+        "Class Membership": ""
     },
     {
         "Hull": "631",
@@ -7090,15 +7099,6 @@
         "Location": "New York",
         "Fleet": "22",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "639",
-        "Owners/Helmsmen": "Jim Duffy",
-        "Status": "OW",
-        "Boat Name": "Chinook",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": ""
     },
     {
         "Hull": "639",

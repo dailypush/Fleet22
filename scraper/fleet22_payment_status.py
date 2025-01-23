@@ -33,7 +33,7 @@ for boat in boats_fleet22:
     member_info = latest_membership_status.get(hull_number)
 
     boat["Class Dues"] = "Not Paid"  # Default to "Not Paid"
-    if member_info and member_info["year"] == 2024:
+    if member_info and member_info["year"] == 2025:
         boat["Class Dues"] = "Paid"
         logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) is marked as Paid for 2024.")
     elif member_info:
