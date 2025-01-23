@@ -10,7 +10,7 @@
         "Hull Number": "656",
         "Boat Name": "Aurora",
         "Yacht Club": "BYC",
-        "Fleet Dues": "Paid",
+        "Fleet Dues": "Not Paid",
         "Class Dues": "Not Paid"
     },
     {
@@ -24,7 +24,7 @@
         "Hull Number": "618",
         "Boat Name": "Wrecking Crew",
         "Yacht Club": "BHSC",
-        "Fleet Dues": "Paid",
+        "Fleet Dues": "Not Paid",
         "Class Dues": "Not Paid"
     },
     {
@@ -122,7 +122,7 @@
         "Hull Number": "91",
         "Boat Name": "Trio",
         "Yacht Club": "EYC",
-        "Fleet Dues": "Paid",
+        "Fleet Dues": "Not Paid",
         "Class Dues": "Paid"
     },
     {
