@@ -4,21 +4,21 @@
         "Boat Name": "MYOURI II",
         "Yacht Club": "BYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "656",
         "Boat Name": "Aurora",
         "Yacht Club": "BYC",
         "Fleet Dues": "Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "638",
         "Boat Name": "Osprey",
         "Yacht Club": "BHSC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "618",
@@ -32,35 +32,35 @@
         "Boat Name": "Mr. Krabs",
         "Yacht Club": "BHSC",
         "Fleet Dues": "Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "37",
         "Boat Name": "Windependence",
         "Yacht Club": "BHSC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "423",
         "Boat Name": "Southbound",
         "Yacht Club": "SSC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "376",
         "Boat Name": "Whistler",
         "Yacht Club": "NCYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "145",
         "Boat Name": "Kashmir",
         "Yacht Club": "NCYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "118",
@@ -81,7 +81,7 @@
         "Boat Name": "Good Lookin",
         "Yacht Club": "",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "10",
@@ -95,7 +95,7 @@
         "Boat Name": "Ovation",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "261",
@@ -109,7 +109,7 @@
         "Boat Name": "Sling Shot",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "144",
@@ -123,27 +123,27 @@
         "Boat Name": "Trio",
         "Yacht Club": "EYC",
         "Fleet Dues": "Paid",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "77",
         "Boat Name": "Dark N Stormy",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "72",
         "Boat Name": "Highlander",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     },
     {
         "Hull Number": "493",
         "Boat Name": "Rapscallion",
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
-        "Class Dues": "Paid"
+        "Class Dues": "Not Paid"
     }
 ]
