@@ -936,6 +936,15 @@
         "Class Membership": "Member 2025"
     },
     {
+        "Hull": "89",
+        "Owners/Helmsmen": "Jack Aitchison",
+        "Status": "AM",
+        "Boat Name": "Moose Unknown",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2025"
+    },
+    {
         "Hull": "90",
         "Owners/Helmsmen": "Patricia Schulze",
         "Status": "OW",
@@ -1068,7 +1077,7 @@
         "Boat Name": "Joyride",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "98",
@@ -2175,7 +2184,7 @@
         "Boat Name": "Magic",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "194",
@@ -3570,7 +3579,7 @@
         "Boat Name": "RumFront",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2021"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "306",
@@ -3993,7 +4002,7 @@
         "Boat Name": "TNT",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "344",
@@ -4065,7 +4074,7 @@
         "Boat Name": "Inigo",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "352",
@@ -4665,10 +4674,10 @@
         "Hull": "404",
         "Owners/Helmsmen": "Joe Pitcavage",
         "Status": "OW",
-        "Boat Name": "",
+        "Boat Name": "Knot Known",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2019"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "405",
@@ -4938,7 +4947,7 @@
         "Boat Name": "Creative",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "422",
@@ -4947,7 +4956,7 @@
         "Boat Name": "Creative",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2024"
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "423",
@@ -7014,10 +7023,10 @@
         "Hull": "630",
         "Owners/Helmsmen": "Justin Walling",
         "Status": "OW",
-        "Boat Name": "Knot Known",
+        "Boat Name": "Madame",
         "Location": "South Carolina",
         "Fleet": "15",
-        "Class Membership": ""
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "631",

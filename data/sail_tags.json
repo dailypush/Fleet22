@@ -11040,6 +11040,16 @@
         "Notes": ""
     },
     {
+        "Hull": "514",
+        "Purchaser": "Ed Chambers",
+        "Certificate No.": "2408114K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2025-01-22",
+        "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
         "Hull": "378",
         "Purchaser": "Chris Chandler",
         "Certificate No.": "2307106Q",
@@ -13657,6 +13667,36 @@
         "Delivery Date": "2002-04-28",
         "Sail Type": "J",
         "Fleet": "14",
+        "Notes": ""
+    },
+    {
+        "Hull": "104",
+        "Purchaser": "Michael Collins",
+        "Certificate No.": "2201106N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-31",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "104",
+        "Purchaser": "Michael Collins",
+        "Certificate No.": "2203183N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-31",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "104",
+        "Purchaser": "Michael Collins",
+        "Certificate No.": "2211426N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-31",
+        "Sail Type": "S89",
+        "Fleet": "5",
         "Notes": ""
     },
     {
@@ -29405,6 +29445,16 @@
         "Certificate No.": "2412190Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-01-10",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "27",
+        "Purchaser": "Randy Hecht",
+        "Certificate No.": "2412200Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-02-01",
         "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
@@ -45616,6 +45666,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-04-11",
         "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": ""
+    },
+    {
+        "Hull": "306",
+        "Purchaser": "Bill McKenzie",
+        "Certificate No.": "2201074N",
+        "Sailmaker": "North",
+        "Delivery Date": "2024-12-31",
+        "Sail Type": "M",
         "Fleet": "11",
         "Notes": ""
     },
