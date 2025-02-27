@@ -35,10 +35,10 @@ for boat in boats_fleet22:
     boat["Class Dues"] = "Not Paid"  # Default to "Not Paid"
     if member_info and member_info["year"] == 2025:
         boat["Class Dues"] = "Paid"
-        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) is marked as Paid for 2024.")
+        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) is marked as Paid for 2025.")
     elif member_info:
-        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) has not paid for 2024, highest year paid: {member_info['year']}.")
-        print(f"Hull Number {hull_number}({boat.get('Boat Name', 'Unknown')}) has not paid Class Dues for 2024, highest year paid: {member_info['year']}.")
+        logging.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) has not paid for 2025, highest year paid: {member_info['year']}.")
+        print(f"Hull Number {hull_number}({boat.get('Boat Name', 'Unknown')}) has not paid Class Dues for 2025, highest year paid: {member_info['year']}.")
 
 # Save the updated boats list back to the original file
 updated_boats_file_path = '../data/boats_fleet22.json'

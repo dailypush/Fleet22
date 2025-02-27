@@ -5,6 +5,7 @@
     <title>Sail List by Tag Number</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <style>
         body {
@@ -88,8 +89,13 @@
             const currentValue = dropdown.value;
 
             dropdown.innerHTML = '<option value="">Select</option>'; // Reset options
+            
+            // Sort sails by delivery date (newest first)
+            const sortedSails = [...sails].sort((a, b) => 
+                new Date(b['Delivery Date']) - new Date(a['Delivery Date'])
+            );
 
-            sails.forEach(sail => {
+            sortedSails.forEach(sail => {
                 if (sail['Sail Type'] === sailType) {
                     // Exclude already selected tags, except the current one
                     if (!selectedTags.includes(sail['Certificate No.']) || sail['Certificate No.'] === currentValue) {
@@ -97,6 +103,7 @@
                         // Include the delivery date in the option text
                         option.text = `Tag: ${sail['Certificate No.']} - Sailmaker: ${sail['Sailmaker']} - Date: ${sail['Delivery Date']}`;
                         option.value = sail['Certificate No.'];
+                        
                         // If the option is the current value, mark it as selected
                         if (sail['Certificate No.'] === currentValue) {
                             option.selected = true;
@@ -163,8 +170,44 @@
             document.getElementById('main').innerHTML = '<option value="">Select</option>';
         }
 
+        // Function to validate the form
+        function validateForm() {
+            const hullNumber = document.getElementById("hullNumber").value.trim();
+            const owner = document.getElementById("owner").value.trim();
+            
+            if (!hullNumber) {
+                alert("Please enter a hull number.");
+                return false;
+            }
+            
+            if (!owner) {
+                alert("Please enter the owner's name.");
+                return false;
+            }
+            
+            // Ensure at least one sail is selected
+            const sails = [
+                document.getElementById("jib1").value,
+                document.getElementById("jib2").value,
+                document.getElementById("main").value,
+                document.getElementById("spinnaker1").value,
+                document.getElementById("spinnaker2").value
+            ];
+            
+            if (!sails.some(sail => sail !== "")) {
+                alert("Please select at least one sail.");
+                return false;
+            }
+            
+            return true;
+        }
+
         // Function to print sails
         function printSails() {
+            if (!validateForm()) {
+                return;
+            }
+
             var hullNumber = document.getElementById("hullNumber").value;
             var owner = document.getElementById("owner").value;
             var boatName = document.getElementById("boatName").value;
@@ -291,6 +334,67 @@
             }
             return sail[property] || 'N/A';
         }
+
+        // Add these functions to your script
+        function saveDeclaration() {
+            const formData = {
+                hullNumber: document.getElementById("hullNumber").value,
+                owner: document.getElementById("owner").value,
+                boatName: document.getElementById("boatName").value,
+                email: document.getElementById("email").value,
+                mobile: document.getElementById("mobile").value,
+                jib1: document.getElementById("jib1").value,
+                jib2: document.getElementById("jib2").value,
+                main: document.getElementById("main").value,
+                spinnaker1: document.getElementById("spinnaker1").value,
+                spinnaker2: document.getElementById("spinnaker2").value,
+                spinnaker1Color: document.getElementById("spinnaker1Color").value,
+                spinnaker2Color: document.getElementById("spinnaker2Color").value
+            };
+            
+            localStorage.setItem('sailDeclaration_' + formData.hullNumber, JSON.stringify(formData));
+            alert(`Declaration for Hull ${formData.hullNumber} saved locally.`);
+        }
+
+        function loadDeclaration() {
+            const hullNumber = document.getElementById("hullNumber").value;
+            if (!hullNumber) {
+                alert("Please enter a hull number to load data.");
+                return;
+            }
+            
+            const savedData = localStorage.getItem('sailDeclaration_' + hullNumber);
+            if (savedData) {
+                const formData = JSON.parse(savedData);
+                
+                // Fill in the form fields
+                document.getElementById("owner").value = formData.owner || '';
+                document.getElementById("boatName").value = formData.boatName || '';
+                document.getElementById("email").value = formData.email || '';
+                document.getElementById("mobile").value = formData.mobile || '';
+                document.getElementById("spinnaker1Color").value = formData.spinnaker1Color || '';
+                document.getElementById("spinnaker2Color").value = formData.spinnaker2Color || '';
+                
+                // Update the form with the sail data
+                updateForm();
+                
+                // Set sail selections (after dropdowns are populated)
+                setTimeout(() => {
+                    document.getElementById("jib1").value = formData.jib1 || '';
+                    document.getElementById("jib2").value = formData.jib2 || '';
+                    document.getElementById("main").value = formData.main || '';
+                    document.getElementById("spinnaker1").value = formData.spinnaker1 || '';
+                    document.getElementById("spinnaker2").value = formData.spinnaker2 || '';
+                    
+                    // Update dropdowns after setting values
+                    updateDropdowns();
+                }, 100);
+                
+                alert(`Declaration for Hull ${hullNumber} loaded.`);
+            } else {
+                alert(`No saved declaration found for Hull ${hullNumber}.`);
+            }
+        }
     </script>
 </head>
 
@@ -385,6 +489,8 @@
                 </div>
 
                 <button type="button" class="btn btn-success" onclick="printSails()">Print</button>
+                <button type="button" class="btn btn-primary" onclick="saveDeclaration()">Save</button>
+                <button type="button" class="btn btn-secondary" onclick="loadDeclaration()">Load</button>
             </form>
         </div>
 
