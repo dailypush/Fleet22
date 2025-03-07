@@ -113,6 +113,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Fetch all files in the repository
+          fetch-depth: 0
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -124,17 +127,29 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r scraper/requirements.txt
+          
+      - name: List workspace files
+        run: |
+          echo "Checking if members.html exists..."
+          ls -la
+          if [ -f "members.html" ]; then
+            echo "members.html exists"
+          else
+            echo "members.html does not exist"
+            echo "Contents of the workspace:"
+            ls -la
+          fi
       
-      - name: Run fleetBoats.py
+      - name: Run fleet boats script
         id: fleet-boats
         run: |
-          echo "Running fleetBoats.py..."
-          python scraper/fleetBoats.py
+          echo "Running fleetBoats_github_actions.py..."
+          python scraper/fleetBoats_github_actions.py
           if [ -f "data/boats_fleet22.json" ]; then
-            echo "fleetBoats.py completed successfully!"
+            echo "Fleet boats script completed successfully!"
             echo "success=true" >> $GITHUB_OUTPUT
           else
-            echo "fleetBoats.py failed to generate output file!"
+            echo "Fleet boats script failed to generate output file!"
             echo "success=false" >> $GITHUB_OUTPUT
             exit 1
           fi
