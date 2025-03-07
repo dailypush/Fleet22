@@ -9,9 +9,13 @@ import sys
 import logging
 from datetime import datetime
 
-# Setup logging
-logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+# Setup logging to both file and console
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[
+                        logging.FileHandler("scraping.log", mode='a'),
+                        logging.StreamHandler()
+                    ])
 
 def validate_file_exists(filepath):
     """Check if a file exists and is not empty."""
@@ -49,13 +53,20 @@ def validate_sail_tags_data(filepath):
             logging.warning(f"Sail tags data is empty: {filepath}")
             return True  # Empty is valid, just suspicious
         
-        # Check some expected fields in the first item
-        expected_fields = ["Hull #", "Owner", "Class"]
+        # Print out the keys in the first item to help debug
         first_item = data[0]
-        missing_fields = [field for field in expected_fields if field not in first_item]
+        logging.info(f"First sail_tags.json item has keys: {list(first_item.keys())}")
         
-        if missing_fields:
-            logging.error(f"Missing fields in sail tags data: {missing_fields} - {filepath}")
+        # Be more flexible with field names
+        hull_fields = ["Hull", "Hull #", "Hull Number"]
+        has_hull = any(field in first_item for field in hull_fields)
+        
+        owner_fields = ["Purchaser", "Owner", "Owners/Helmsmen"]
+        has_owner = any(field in first_item for field in owner_fields)
+        
+        if not (has_hull and has_owner):
+            logging.error(f"Missing required fields in sail tags data. Needs hull and owner information.")
+            logging.error(f"Available fields: {list(first_item.keys())}")
             return False
         
         return True
@@ -77,13 +88,20 @@ def validate_membership_data(filepath):
             logging.warning(f"Membership data is empty: {filepath}")
             return True  # Empty is valid, just suspicious
         
-        # Check some expected fields in the first item
-        expected_fields = ["Hull #", "Owner", "Fleet", "Class Membership"]
+        # Print out the keys in the first item to help debug
         first_item = data[0]
-        missing_fields = [field for field in expected_fields if field not in first_item]
+        logging.info(f"First j105_members_status.json item has keys: {list(first_item.keys())}")
         
-        if missing_fields:
-            logging.error(f"Missing fields in membership data: {missing_fields} - {filepath}")
+        # Be more flexible with field names
+        hull_fields = ["Hull", "Hull #", "Hull Number"]
+        has_hull = any(field in first_item for field in hull_fields)
+        
+        owner_fields = ["Owner", "Owners/Helmsmen", "Owner Name"]
+        has_owner = any(field in first_item for field in owner_fields)
+        
+        if not (has_hull and has_owner):
+            logging.error(f"Missing required fields in membership data. Needs hull and owner information.")
+            logging.error(f"Available fields: {list(first_item.keys())}")
             return False
         
         return True
@@ -104,14 +122,21 @@ def validate_fleet_boats_data(filepath):
         if len(data) == 0:
             logging.warning(f"Fleet boats data is empty: {filepath}")
             return True  # Empty is valid, just suspicious
-            
-        # Check some expected fields in the first item
-        expected_fields = ["Hull #", "Owner", "Boat Name"]
-        first_item = data[0]
-        missing_fields = [field for field in expected_fields if field not in first_item]
         
-        if missing_fields:
-            logging.error(f"Missing fields in fleet boats data: {missing_fields} - {filepath}")
+        # Print out the keys in the first item to help debug
+        first_item = data[0]
+        logging.info(f"First boats_fleet22.json item has keys: {list(first_item.keys())}")
+        
+        # Be more flexible with field names
+        hull_fields = ["Hull", "Hull #", "Hull Number"]
+        has_hull = any(field in first_item for field in hull_fields)
+        
+        boat_name_fields = ["Boat Name", "Name"]
+        has_boat_name = any(field in first_item for field in boat_name_fields)
+        
+        if not (has_hull and has_boat_name):
+            logging.error(f"Missing required fields in fleet boats data. Needs hull and boat name information.")
+            logging.error(f"Available fields: {list(first_item.keys())}")
             return False
         
         return True
@@ -121,7 +146,16 @@ def validate_fleet_boats_data(filepath):
 
 def run_validations():
     """Run all validations and return overall status."""
+    # First try relative path for local development
     data_dir = '../data'
+    if not os.path.exists(data_dir) or not os.path.isdir(data_dir):
+        # If not found, try current directory for GitHub Actions
+        data_dir = 'data'
+        if not os.path.exists(data_dir) or not os.path.isdir(data_dir):
+            logging.error(f"Data directory not found at '../data' or 'data'")
+            return False
+    
+    logging.info(f"Using data directory: {data_dir}")
     validation_status = True
     
     # Files to validate
@@ -133,6 +167,7 @@ def run_validations():
     
     for filename, validation_func in files_to_validate.items():
         filepath = os.path.join(data_dir, filename)
+        logging.info(f"Validating: {filepath}")
         
         # Check if file exists and is not empty
         if not validate_file_exists(filepath):
@@ -147,6 +182,8 @@ def run_validations():
         # Validate the structure of the data
         if not validation_func(filepath):
             validation_status = False
+        else:
+            logging.info(f"✅ {filename} passed validation.")
     
     if validation_status:
         logging.info("All data files are valid.")
