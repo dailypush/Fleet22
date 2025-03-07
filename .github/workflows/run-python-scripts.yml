@@ -20,236 +20,317 @@ on:
         default: false
 
 jobs:
-  run-scripts:
+  # Job to fetch sail tags data
+  fetch-sail-tags:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
+    timeout-minutes: 5
+    outputs:
+      success: ${{ steps.sail-tags.outputs.success }}
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-        cache: 'pip'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r scraper/requirements.txt
+      - name: Checkout repository
+        uses: actions/checkout@v4
       
-    - name: Verify required files exist
-      run: |
-        if [ ! -f "scraper/SailTags.py" ] || [ ! -f "scraper/getOwnersStatus.py" ]; then
-          echo "Required scripts are missing. Aborting."
-          exit 1
-        fi
-
-    - name: Run SailTags.py
-      id: sail-tags
-      continue-on-error: true
-      run: |
-        echo "Running SailTags.py..."
-        python scraper/SailTags.py
-        if [ -f "data/sail_tags.json" ]; then
-          echo "SailTags.py completed successfully!"
-          echo "sail_tags_success=true" >> $GITHUB_OUTPUT
-        else
-          echo "SailTags.py failed to generate output file!"
-          echo "sail_tags_success=false" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Run getOwnersStatus.py
-      id: owners-status
-      continue-on-error: true
-      run: |
-        echo "Running getOwnersStatus.py..."
-        python scraper/getOwnersStatus.py
-        if [ -f "data/j105_members_status.json" ]; then
-          echo "getOwnersStatus.py completed successfully!"
-          echo "owners_status_success=true" >> $GITHUB_OUTPUT
-        else
-          echo "getOwnersStatus.py failed to generate output file!"
-          echo "owners_status_success=false" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Run fleetBoats.py
-      id: fleet-boats
-      continue-on-error: true
-      run: |
-        echo "Running fleetBoats.py..."
-        python scraper/fleetBoats.py
-        if [ -f "data/boats_fleet22.json" ]; then
-          echo "fleetBoats.py completed successfully!"
-          echo "fleet_boats_success=true" >> $GITHUB_OUTPUT
-        else
-          echo "fleetBoats.py failed to generate output file!"
-          echo "fleet_boats_success=false" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Check script execution status
-      if: steps.sail-tags.outputs.sail_tags_success != 'true' || steps.owners-status.outputs.owners_status_success != 'true' || steps.fleet-boats.outputs.fleet_boats_success != 'true'
-      run: |
-        echo "One or more scripts failed to execute properly."
-        if [ "${{ steps.sail-tags.outputs.sail_tags_success }}" != "true" ]; then
-          echo "SailTags.py failed"
-        fi
-        if [ "${{ steps.owners-status.outputs.owners_status_success }}" != "true" ]; then
-          echo "getOwnersStatus.py failed"
-        fi
-        if [ "${{ steps.fleet-boats.outputs.fleet_boats_success }}" != "true" ]; then
-          echo "fleetBoats.py failed"
-        fi
-        exit 1
-
-    - name: Validate data
-      id: validate-data
-      run: |
-        echo "Validating generated data..."
-        python scraper/validate_data.py
-        if [ $? -eq 0 ]; then
-          echo "data_valid=true" >> $GITHUB_OUTPUT
-        else
-          echo "data_valid=false" >> $GITHUB_OUTPUT
-          echo "Data validation failed. Check logs for details."
-          exit 1
-        fi
-    
-    - name: Run data processor
-      id: data-processor
-      if: steps.validate-data.outputs.data_valid == 'true'
-      run: |
-        echo "Running combined data processor..."
-        python scraper/combineFleetSailOwner.py
-        if [ -f "data/combined_fleet_data.json" ] && [ -f "data/fleet_statistics.json" ]; then
-          echo "Combined data processor completed successfully!"
-          echo "data_processor_success=true" >> $GITHUB_OUTPUT
-        else
-          echo "Combined data processor failed to generate output files!"
-          echo "data_processor_success=false" >> $GITHUB_OUTPUT
-          exit 1
-        fi
-
-    - name: Check for changes
-      id: check-changes
-      if: steps.validate-data.outputs.data_valid == 'true'
-      run: |
-        git diff --quiet data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json || echo "changes_detected=true" >> $GITHUB_OUTPUT
-        # If force update is enabled, always indicate changes detected
-        if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
-          echo "Force update enabled, changes will be committed regardless."
-          echo "changes_detected=true" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Commit and push changes
-      if: steps.check-changes.outputs.changes_detected == 'true'
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # Add timestamp to commit message
-        TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-        
-        # Add detailed information about what changed
-        echo "Data updated on $TIMESTAMP" > commit_message.txt
-        echo "" >> commit_message.txt
-        echo "Changes:" >> commit_message.txt
-        
-        # Check each file individually
-        if git diff --quiet data/boats_fleet22.json; then
-          echo "- No changes to boats_fleet22.json" >> commit_message.txt
-        else
-          echo "- Updated boats_fleet22.json" >> commit_message.txt
-          git add data/boats_fleet22.json
-        fi
-        
-        if git diff --quiet data/j105_members_status.json; then
-          echo "- No changes to j105_members_status.json" >> commit_message.txt
-        else
-          echo "- Updated j105_members_status.json" >> commit_message.txt
-          git add data/j105_members_status.json
-        fi
-        
-        if git diff --quiet data/sail_tags.json; then
-          echo "- No changes to sail_tags.json" >> commit_message.txt
-        else
-          echo "- Updated sail_tags.json" >> commit_message.txt
-          git add data/sail_tags.json
-        fi
-        
-        if git diff --quiet data/combined_fleet_data.json; then
-          echo "- No changes to combined_fleet_data.json" >> commit_message.txt
-        else
-          echo "- Updated combined_fleet_data.json" >> commit_message.txt
-          git add data/combined_fleet_data.json
-        fi
-        
-        if git diff --quiet data/fleet_statistics.json; then
-          echo "- No changes to fleet_statistics.json" >> commit_message.txt
-        else
-          echo "- Updated fleet_statistics.json" >> commit_message.txt
-          git add data/fleet_statistics.json
-        fi
-        
-        # If force update was used, mention it in commit message
-        if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scraper/requirements.txt
+      
+      - name: Run SailTags.py
+        id: sail-tags
+        run: |
+          echo "Running SailTags.py..."
+          python scraper/SailTags.py
+          if [ -f "data/sail_tags.json" ]; then
+            echo "SailTags.py completed successfully!"
+            echo "success=true" >> $GITHUB_OUTPUT
+          else
+            echo "SailTags.py failed to generate output file!"
+            echo "success=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+      
+      - name: Upload sail tags data
+        uses: actions/upload-artifact@v4
+        with:
+          name: sail-tags-data
+          path: data/sail_tags.json
+          retention-days: 1
+  
+  # Job to fetch owners status data
+  fetch-owners-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      success: ${{ steps.owners-status.outputs.success }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scraper/requirements.txt
+      
+      - name: Run getOwnersStatus.py
+        id: owners-status
+        run: |
+          echo "Running getOwnersStatus.py..."
+          python scraper/getOwnersStatus.py
+          if [ -f "data/j105_members_status.json" ]; then
+            echo "getOwnersStatus.py completed successfully!"
+            echo "success=true" >> $GITHUB_OUTPUT
+          else
+            echo "getOwnersStatus.py failed to generate output file!"
+            echo "success=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+      
+      - name: Upload owners status data
+        uses: actions/upload-artifact@v4
+        with:
+          name: owners-status-data
+          path: data/j105_members_status.json
+          retention-days: 1
+  
+  # Job to fetch fleet boats data
+  fetch-fleet-boats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      success: ${{ steps.fleet-boats.outputs.success }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scraper/requirements.txt
+      
+      - name: Run fleetBoats.py
+        id: fleet-boats
+        run: |
+          echo "Running fleetBoats.py..."
+          python scraper/fleetBoats.py
+          if [ -f "data/boats_fleet22.json" ]; then
+            echo "fleetBoats.py completed successfully!"
+            echo "success=true" >> $GITHUB_OUTPUT
+          else
+            echo "fleetBoats.py failed to generate output file!"
+            echo "success=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+      
+      - name: Upload fleet boats data
+        uses: actions/upload-artifact@v4
+        with:
+          name: fleet-boats-data
+          path: data/boats_fleet22.json
+          retention-days: 1
+  
+  # Process and validate data, then commit changes
+  process-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [fetch-sail-tags, fetch-owners-status, fetch-fleet-boats]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scraper/requirements.txt
+      
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: .downloaded-artifacts/
+      
+      - name: Move downloaded files to data directory
+        run: |
+          mkdir -p data/
+          cp .downloaded-artifacts/sail-tags-data/sail_tags.json data/
+          cp .downloaded-artifacts/owners-status-data/j105_members_status.json data/
+          cp .downloaded-artifacts/fleet-boats-data/boats_fleet22.json data/
+      
+      - name: Validate data
+        id: validate-data
+        run: |
+          echo "Validating generated data..."
+          python scraper/validate_data.py
+          if [ $? -eq 0 ]; then
+            echo "data_valid=true" >> $GITHUB_OUTPUT
+          else
+            echo "data_valid=false" >> $GITHUB_OUTPUT
+            echo "Data validation failed. Check logs for details."
+            exit 1
+          fi
+      
+      - name: Run data processor
+        id: data-processor
+        if: steps.validate-data.outputs.data_valid == 'true'
+        run: |
+          echo "Running combined data processor..."
+          python scraper/combineFleetSailOwner.py
+          if [ -f "data/combined_fleet_data.json" ] && [ -f "data/fleet_statistics.json" ]; then
+            echo "Combined data processor completed successfully!"
+            echo "data_processor_success=true" >> $GITHUB_OUTPUT
+          else
+            echo "Combined data processor failed to generate output files!"
+            echo "data_processor_success=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+      
+      - name: Check for changes
+        id: check-changes
+        run: |
+          git diff --quiet data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json || echo "changes_detected=true" >> $GITHUB_OUTPUT
+          # If force update is enabled, always indicate changes detected
+          if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
+            echo "Force update enabled, changes will be committed regardless."
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.changes_detected == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Add timestamp to commit message
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          
+          # Add detailed information about what changed
+          echo "Data updated on $TIMESTAMP" > commit_message.txt
           echo "" >> commit_message.txt
-          echo "Note: This update was manually forced." >> commit_message.txt
-        fi
-        
-        git commit -F commit_message.txt
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: No changes needed
-      if: steps.check-changes.outputs.changes_detected != 'true'
-      run: echo "No changes detected in JSON files. Skipping commit."
-
-    - name: Generate data report
-      if: success() && steps.data-processor.outputs.data_processor_success == 'true'
-      run: |
-        echo "# Data Update Report" > report.md
-        echo "" >> report.md
-        echo "Generated on: $(date -u)" >> report.md
-        echo "" >> report.md
-        echo "## Statistics" >> report.md
-        echo "- Sail Tags: $(jq length data/sail_tags.json) entries" >> report.md
-        echo "- Membership Status: $(jq length data/j105_members_status.json) entries" >> report.md
-        echo "- Fleet Boats: $(jq length data/boats_fleet22.json) entries" >> report.md
-        echo "- Combined Data: $(jq length data/combined_fleet_data.json) entries" >> report.md
-        echo "" >> report.md
-        echo "## Fleet Statistics" >> report.md
-        echo "- Total boats: $(jq '.total_boats' data/fleet_statistics.json)" >> report.md
-        echo "- Fleet 22 boats: $(jq '.fleet_22_boats' data/fleet_statistics.json)" >> report.md
-        echo "- Active memberships: $(jq '.active_membership' data/fleet_statistics.json)" >> report.md
-        echo "- Total sail tags: $(jq '.total_sail_tags' data/fleet_statistics.json)" >> report.md
-
-    - name: Upload artifacts
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: scraper-data
-        path: |
-          scraper/scraping.log
-          report.md
-          data/fleet_statistics.json
-        retention-days: 14
-
-    - name: Notify on failure
-      if: failure()
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const issue_number = context.issue.number;
-          if (issue_number) {  // Only for PRs
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-              body: '❌ Python script execution failed. Please check the workflow logs for details.'
-            });
-          }
+          echo "Changes:" >> commit_message.txt
+          
+          # Check each file individually
+          if git diff --quiet data/boats_fleet22.json; then
+            echo "- No changes to boats_fleet22.json" >> commit_message.txt
+          else
+            echo "- Updated boats_fleet22.json" >> commit_message.txt
+            git add data/boats_fleet22.json
+          fi
+          
+          if git diff --quiet data/j105_members_status.json; then
+            echo "- No changes to j105_members_status.json" >> commit_message.txt
+          else
+            echo "- Updated j105_members_status.json" >> commit_message.txt
+            git add data/j105_members_status.json
+          fi
+          
+          if git diff --quiet data/sail_tags.json; then
+            echo "- No changes to sail_tags.json" >> commit_message.txt
+          else
+            echo "- Updated sail_tags.json" >> commit_message.txt
+            git add data/sail_tags.json
+          fi
+          
+          if git diff --quiet data/combined_fleet_data.json; then
+            echo "- No changes to combined_fleet_data.json" >> commit_message.txt
+          else
+            echo "- Updated combined_fleet_data.json" >> commit_message.txt
+            git add data/combined_fleet_data.json
+          fi
+          
+          if git diff --quiet data/fleet_statistics.json; then
+            echo "- No changes to fleet_statistics.json" >> commit_message.txt
+          else
+            echo "- Updated fleet_statistics.json" >> commit_message.txt
+            git add data/fleet_statistics.json
+          fi
+          
+          # If force update was used, mention it in commit message
+          if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
+            echo "" >> commit_message.txt
+            echo "Note: This update was manually forced." >> commit_message.txt
+          fi
+          
+          git commit -F commit_message.txt
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: No changes needed
+        if: steps.check-changes.outputs.changes_detected != 'true'
+        run: echo "No changes detected in JSON files. Skipping commit."
+      
+      - name: Generate data report
+        id: generate-report
+        if: success() && steps.data-processor.outputs.data_processor_success == 'true'
+        run: |
+          echo "# Data Update Report" > report.md
+          echo "" >> report.md
+          echo "Generated on: $(date -u)" >> report.md
+          echo "" >> report.md
+          echo "## Statistics" >> report.md
+          echo "- Sail Tags: $(jq length data/sail_tags.json) entries" >> report.md
+          echo "- Membership Status: $(jq length data/j105_members_status.json) entries" >> report.md
+          echo "- Fleet Boats: $(jq length data/boats_fleet22.json) entries" >> report.md
+          echo "- Combined Data: $(jq length data/combined_fleet_data.json) entries" >> report.md
+          echo "" >> report.md
+          echo "## Fleet Statistics" >> report.md
+          echo "- Total boats: $(jq '.total_boats' data/fleet_statistics.json)" >> report.md
+          echo "- Fleet 22 boats: $(jq '.fleet_22_boats' data/fleet_statistics.json)" >> report.md
+          echo "- Active memberships: $(jq '.active_membership' data/fleet_statistics.json)" >> report.md
+          echo "- Total sail tags: $(jq '.total_sail_tags' data/fleet_statistics.json)" >> report.md
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scraper-results
+          path: |
+            scraper/scraping.log
+            report.md
+            data/fleet_statistics.json
+            data/combined_fleet_data.json
+          retention-days: 14
+  
+  # Notify on job failures
+  notify-on-failure:
+    runs-on: ubuntu-latest
+    needs: [fetch-sail-tags, fetch-owners-status, fetch-fleet-boats, process-and-commit]
+    if: failure()
+    steps:
+      - name: Notify failure
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.issue.number;
+            if (issue_number) {  // Only for PRs
+              github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue_number,
+                body: '❌ Python script execution failed. Please check the workflow logs for details.'
+              });
+            }
