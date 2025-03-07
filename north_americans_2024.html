@@ -62,14 +62,34 @@
 
         <!-- Event Conclusion Section -->
         <div class="container mt-5 text-center" id="event-conclusion">
-            <h2 class="text-center mt-3">Thank You for a Great Event!</h2>
-            <p class="text-center">We had an amazing time at the J105 North Americans 2024 in Cleveland, Ohio. The event was held from
-                September 26 - 29, 2024. Thank you to all participants, sponsors, and volunteers who made it a success.</p>
-            <p class="text-center">We will be wrapping up this page shortly.</p>
-            <p class="text-center">
-                To view the race results, please visit the <a href="https://yachtscoring.com/event_results_cumulative.cfm?eID=16342" target="_blank">Official Race Results</a>.
-            </p>
-            <p class="text-center">Next year's event will be held at the <strong>Royal Canadian Yacht Club</strong>. Stay tuned for more information!</p>
+            <div class="card shadow-sm p-4 mb-4 bg-light">
+                <h2 class="text-center mt-3">Thank You for a Great Event!</h2>
+                <p class="text-center">We had an amazing time at the J105 North Americans 2024 in Cleveland, Ohio. The event was held from
+                    September 26 - 29, 2024. Thank you to all participants, sponsors, and volunteers who made it a success.</p>
+                <div class="alert alert-info">
+                    <p class="mb-0">
+                        To view the race results, please visit the <a href="https://yachtscoring.com/event_results_cumulative.cfm?eID=16342" class="btn btn-sm btn-primary" target="_blank">Official Race Results <i class="fas fa-external-link-alt"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Next Year's Event Section -->
+        <div class="container mt-5" id="next-event">
+            <div class="card shadow-sm border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="text-center mb-0">Join Us Next Year!</h3>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title">Royal Canadian Yacht Club</h4>
+                    <p class="card-text mb-1"><i class="far fa-calendar-alt"></i> September 17-20, 2025</p>
+                    <p class="card-text mb-3"><i class="fas fa-map-marker-alt"></i> Toronto, ON, M5J2E7, Canada</p>
+                    <a href="https://theclubspot.com/regatta/h3c7itFOCJ/#entry-list" class="btn btn-primary" target="_blank">
+                        Registration Now Open <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- Media Kit Section -->
@@ -101,16 +121,65 @@
             </div>
         </div>
 
-        <!-- Teaser for 2024 Cleveland Race Week Article remains the same -->
-        <div class="container mt-5" id="race-week-teaser">
-            <h2 class="text-center mt-3">2024 Cleveland Race Week: Thrilling Winds and Exceptional Racing</h2>
-            <p>Experience the thrill of racing on Lake Erie! The 43rd annual Cleveland Race Week brought two weekends of
-                exhilarating sailing with consistent winds and challenging conditions. The first weekend featured light
-                winds, while the final races saw breezes of 20-25 knots and 4-6 foot waves, perfect for competitive
-                sailors looking for excitement...</p>
-            <p class="text-center"><a href="./news/cleveland-race-week-2024-highlights.html"
-                    class="btn btn-primary">Read More</a></p>
+        <!-- Teaser for 2024 Cleveland Race Week Article - Enhanced Version -->
+        <div class="container mt-5 mb-5" id="race-week-teaser">
+            <div class="card shadow hover-card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <div class="img-container">
+                            <img src="https://ik.imagekit.io/fleet22/Cleveland_Raceweek_2024/tr:w-600,h-400,pr-true/crw2024-j105.jpeg" 
+                                class="img-fluid rounded-start w-100" 
+                                alt="Cleveland Race Week 2024" 
+                                onerror="this.src='https://via.placeholder.com/600x400?text=Race+Week+2024'">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="card-title">2024 Cleveland Race Week: Thrilling Winds and Exceptional Racing</h2>
+                                <span class="badge bg-primary">Featured</span>
+                            </div>
+                            <p class="text-muted"><small>Published: July 2024</small></p>
+                            <p class="card-text">Experience the thrill of racing on Lake Erie! The 43rd annual Cleveland Race Week brought two weekends of
+                                exhilarating sailing with consistent winds and challenging conditions. The first weekend featured light
+                                winds, while the final races saw breezes of 20-25 knots and 4-6 foot waves, perfect for competitive
+                                sailors looking for excitement...</p>
+                            <div class="d-flex justify-content-end mt-3">
+                                <a href="./news/cleveland-race-week-2024-highlights.html" class="btn btn-outline-primary">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Add this CSS at the end of the body before closing body tag -->
+        <style>
+            .hover-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .object-fit-cover {
+                object-fit: cover;
+            }
+            .img-container {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .img-container img {
+                object-fit: cover;
+                max-height: 250px;
+            }
+        </style>
 
     </div>
 
