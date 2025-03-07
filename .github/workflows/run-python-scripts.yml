@@ -8,8 +8,8 @@ on:
     branches:
       - main
   schedule:
-    # Run once per day at midnight UTC
-    - cron: '0 0 * * *'
+    # Run once per week on Monday at midnight UTC
+    - cron: '0 0 * * 1'
   workflow_dispatch:
     # Allow manual triggering of the workflow
     inputs:
@@ -18,6 +18,11 @@ on:
         required: false
         type: boolean
         default: false
+
+# Add permissions to allow the workflow to push changes
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   # Job to fetch sail tags data
@@ -289,6 +294,8 @@ jobs:
             echo "Note: This update was manually forced." >> commit_message.txt
           fi
           
+          # Use token with correct permissions
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git commit -F commit_message.txt
           git push
         env:
