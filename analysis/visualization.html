@@ -98,17 +98,40 @@
             <div class="row">
                 <div class="col-md-12 mb-4">
                     <h2 class="text-center my-4">Sail Purchase Heatmaps</h2>
-                    <p class="text-center mb-4">Select a hull number to view its sail purchase history</p>
+                    <p class="text-center mb-4">Select a hull to view its sail purchase history</p>
                     <div class="row justify-content-center mb-4">
                         <div class="col-md-4">
-                            <select id="hullSelector" class="form-select">
-                                <!-- Hull options will be added dynamically -->
-                            </select>
+                            <div class="input-group">
+                                <label class="input-group-text" for="fleetSelector">Fleet</label>
+                                <select id="fleetSelector" class="form-select">
+                                    <option selected value="all">All Fleets</option>
+                                    <option value="22">Fleet 22 Only</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="heatmap-container">
-                        <div id="heatmapLegend" class="mb-3 text-center"></div>
-                        <div id="currentHeatmap" class="table-responsive"></div>
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <label class="input-group-text" for="hullSelector">Hull #</label>
+                                <select id="hullSelector" class="form-select">
+                                    <option selected value="">Choose a hull...</option>
+                                    <!-- Hull options will be added dynamically -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input" type="checkbox" id="showAllHeatmaps">
+                                <label class="form-check-label" for="showAllHeatmaps">Show all hulls</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="selectedHeatmapContainer" class="row justify-content-center">
+                        <!-- Selected hull's heatmap will be displayed here -->
+                    </div>
+                    <div id="allHeatmapsContainer" class="row" style="display: none;">
+                        <!-- All hulls' heatmaps will be displayed here when toggled -->
                     </div>
                 </div>
             </div>
@@ -228,72 +251,267 @@
                     });
                 });
 
-            // Fetch sail tags data and generate heatmaps
-            fetch('../data/sail_tags.json')
-                .then(response => response.json())
-                .then(sailTagsData => {
-                    const hulls = [...new Set(sailTagsData.filter(item => item.Fleet === '22').map(item => item.Hull))];
-                    const hullSelector = document.getElementById('hullSelector');
+            // Fetch both sail tags data and combined fleet data
+            Promise.all([
+                fetch('../data/sail_tags.json').then(response => response.json()),
+                fetch('../data/combined_fleet_data.json').then(response => response.json())
+            ]).then(([sailTagsData, combinedFleetData]) => {
+                // Create a map of hull numbers to boat info from combined_fleet_data
+                const boatInfoMap = new Map();
+                combinedFleetData.forEach(boat => {
+                    boatInfoMap.set(boat.hull_number, {
+                        name: boat.boat_name,
+                        owner: boat.owner,
+                        fleet: boat.fleet
+                    });
+                });
+
+                const fleetSelector = document.getElementById('fleetSelector');
+                const hullSelector = document.getElementById('hullSelector');
+                const showAllHeatmaps = document.getElementById('showAllHeatmaps');
+                const selectedHeatmapContainer = document.getElementById('selectedHeatmapContainer');
+                const allHeatmapsContainer = document.getElementById('allHeatmapsContainer');
+                
+                // Function to populate hull selector based on selected fleet
+                function populateHullSelector(fleetFilter = 'all') {
+                    // Clear existing options
+                    hullSelector.innerHTML = '<option selected value="">Choose a hull...</option>';
+                    
+                    // Get unique hulls, filtered by fleet if needed
+                    let hulls = [...new Set(sailTagsData.map(item => item.Hull))];
+                    
+                    if (fleetFilter !== 'all') {
+                        hulls = hulls.filter(hull => {
+                            const boatInfo = boatInfoMap.get(hull);
+                            return boatInfo && boatInfo.fleet === fleetFilter;
+                        });
+                    }
+                    
+                    // Sort hulls numerically
+                    hulls.sort((a, b) => parseInt(a) - parseInt(b));
+                    
+                    // Add options to the selector
                     hulls.forEach(hull => {
+                        const boatInfo = boatInfoMap.get(hull);
+                        let optionText = `Hull ${hull}`;
+                        
+                        if (boatInfo && boatInfo.name) {
+                            optionText += ` - ${boatInfo.name}`;
+                        }
+                        
+                        if (boatInfo && boatInfo.owner) {
+                            optionText += ` (${boatInfo.owner})`;
+                        }
+                        
                         const option = document.createElement('option');
                         option.value = hull;
-                        option.textContent = `Hull ${hull}`;
+                        option.textContent = optionText;
                         hullSelector.appendChild(option);
                     });
+                }
 
-                    hullSelector.addEventListener('change', function() {
-                        const selectedHull = hullSelector.value;
-                        const hullData = sailTagsData.filter(item => item.Hull === selectedHull);
-                        const years = [...new Set(hullData.map(item => new Date(item['Delivery Date']).getFullYear()))];
-                        const sailTypes = [...new Set(hullData.map(item => item['Sail Type'] + ' ' + item['Sailmaker']))];
+                // Create heatmap for a specific hull
+                function createHeatmap(hull, container) {
+                    // Clear the container first
+                    container.innerHTML = '';
 
-                        const heatmapData = sailTypes.map(sailType => {
-                            return years.map(year => {
-                                return hullData.filter(item => item['Sail Type'] + ' ' + item['Sailmaker'] === sailType && new Date(item['Delivery Date']).getFullYear() === year).length;
-                            });
+                    const hullData = sailTagsData.filter(item => item.Hull === hull);
+                    const boatInfo = boatInfoMap.get(hull);
+                    
+                    if (hullData.length === 0) {
+                        const noDataDiv = document.createElement('div');
+                        noDataDiv.className = 'col-12 text-center alert alert-info';
+                        noDataDiv.textContent = `No sail purchase data available for Hull ${hull}`;
+                        container.appendChild(noDataDiv);
+                        return;
+                    }
+
+                    const years = [...new Set(hullData
+                        .filter(item => item['Delivery Date'])
+                        .map(item => new Date(item['Delivery Date']).getFullYear()))
+                    ].sort();
+                    
+                    const sailTypes = [...new Set(hullData
+                        .filter(item => item['Sail Type'] && item['Sailmaker'])
+                        .map(item => item['Sail Type'] + ' ' + item['Sailmaker']))
+                    ];
+
+                    // Skip hulls with no sail purchase data
+                    if (years.length === 0 || sailTypes.length === 0) {
+                        const noDataDiv = document.createElement('div');
+                        noDataDiv.className = 'col-12 text-center alert alert-info';
+                        noDataDiv.textContent = `No valid sail purchase data available for Hull ${hull}`;
+                        container.appendChild(noDataDiv);
+                        return;
+                    }
+
+                    const heatmapData = sailTypes.map(sailType => {
+                        return years.map(year => {
+                            return hullData.filter(item => 
+                                item['Sail Type'] + ' ' + item['Sailmaker'] === sailType && 
+                                item['Delivery Date'] && new Date(item['Delivery Date']).getFullYear() === year
+                            ).length;
                         });
-
-                        const heatmapContainer = document.getElementById('currentHeatmap');
-                        heatmapContainer.innerHTML = '';
-
-                        const table = document.createElement('table');
-                        table.className = 'table table-bordered table-sm';
-
-                        const thead = document.createElement('thead');
-                        const headerRow = document.createElement('tr');
-                        headerRow.appendChild(document.createElement('th'));
-                        years.forEach(year => {
-                            const th = document.createElement('th');
-                            th.textContent = year;
-                            headerRow.appendChild(th);
-                        });
-                        thead.appendChild(headerRow);
-                        table.appendChild(thead);
-
-                        const tbody = document.createElement('tbody');
-                        sailTypes.forEach((sailType, rowIndex) => {
-                            const row = document.createElement('tr');
-                            const th = document.createElement('th');
-                            th.textContent = sailType;
-                            row.appendChild(th);
-                            heatmapData[rowIndex].forEach(value => {
-                                const td = document.createElement('td');
-                                td.textContent = value;
-                                td.style.backgroundColor = `rgba(0, 123, 255, ${value / Math.max(...heatmapData.flat())})`;
-                                row.appendChild(td);
-                            });
-                            tbody.appendChild(row);
-                        });
-                        table.appendChild(tbody);
-
-                        heatmapContainer.appendChild(table);
-
-                        const heatmapLegend = document.getElementById('heatmapLegend');
-                        heatmapLegend.innerHTML = `Sail Purchase Heatmap for Hull ${selectedHull}`;
                     });
 
-                    hullSelector.dispatchEvent(new Event('change'));
+                    // Create a column for the heatmap
+                    const colDiv = document.createElement('div');
+                    colDiv.className = container === selectedHeatmapContainer ? 'col-md-10' : 'col-md-6 col-lg-4 mb-4';
+                    
+                    // Create a card for the heatmap
+                    const cardDiv = document.createElement('div');
+                    cardDiv.className = 'card';
+                    
+                    // Create a card header for the hull number and boat info
+                    const cardHeader = document.createElement('div');
+                    cardHeader.className = 'card-header';
+                    
+                    let headerText = `Hull ${hull}`;
+                    if (boatInfo) {
+                        if (boatInfo.name) {
+                            headerText += ` - ${boatInfo.name}`;
+                        }
+                        if (boatInfo.owner) {
+                            headerText += ` (${boatInfo.owner})`;
+                        }
+                        if (boatInfo.fleet) {
+                            headerText += ` - Fleet ${boatInfo.fleet}`;
+                        }
+                    }
+                    headerText += " - Sail Purchases";
+                    
+                    cardHeader.textContent = headerText;
+                    cardDiv.appendChild(cardHeader);
+                    
+                    // Create a card body for the heatmap table
+                    const cardBody = document.createElement('div');
+                    cardBody.className = 'card-body';
+                    
+                    // Create the table for the heatmap
+                    const table = document.createElement('table');
+                    table.className = 'table table-bordered table-sm';
+
+                    // Create the table header with years
+                    const thead = document.createElement('thead');
+                    const headerRow = document.createElement('tr');
+                    headerRow.appendChild(document.createElement('th'));
+                    years.forEach(year => {
+                        const th = document.createElement('th');
+                        th.textContent = year;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+
+                    // Create the table body with sail types and counts
+                    const tbody = document.createElement('tbody');
+                    sailTypes.forEach((sailType, rowIndex) => {
+                        const row = document.createElement('tr');
+                        const th = document.createElement('th');
+                        th.textContent = sailType;
+                        row.appendChild(th);
+                        
+                        // Find the maximum value for color scaling
+                        const maxValue = Math.max(...heatmapData.flat());
+                        
+                        heatmapData[rowIndex].forEach(value => {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            
+                            // Color the cell based on the value (0 - white, max - deep blue)
+                            if (value > 0) {
+                                const intensity = Math.max(0.2, value / maxValue); // Min intensity of 0.2 for visibility
+                                td.style.backgroundColor = `rgba(0, 123, 255, ${intensity})`;
+                                td.style.color = intensity > 0.6 ? 'white' : 'black'; // Text color based on background intensity
+                            }
+                            
+                            row.appendChild(td);
+                        });
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+
+                    // Add the table to the card body
+                    cardBody.appendChild(table);
+                    cardDiv.appendChild(cardBody);
+                    
+                    // Add the card to the column
+                    colDiv.appendChild(cardDiv);
+                    
+                    // Add the column to the container
+                    container.appendChild(colDiv);
+                }
+
+                // Initialize the hull selector with all hulls
+                populateHullSelector();
+
+                // Handle fleet selection
+                fleetSelector.addEventListener('change', function() {
+                    populateHullSelector(this.value);
+                    // Clear the selected hull and heatmap
+                    hullSelector.value = '';
+                    selectedHeatmapContainer.innerHTML = '';
+                    selectedHeatmapContainer.style.display = 'none';
+                    // Reset the "show all" checkbox
+                    showAllHeatmaps.checked = false;
+                    allHeatmapsContainer.style.display = 'none';
+                    allHeatmapsContainer.innerHTML = '';
                 });
+
+                // Handle hull selection
+                hullSelector.addEventListener('change', function() {
+                    if (this.value) {
+                        createHeatmap(this.value, selectedHeatmapContainer);
+                        selectedHeatmapContainer.style.display = 'flex';
+                    } else {
+                        selectedHeatmapContainer.innerHTML = '';
+                        selectedHeatmapContainer.style.display = 'none';
+                    }
+                });
+
+                // Handle toggle for showing all heatmaps
+                showAllHeatmaps.addEventListener('change', function() {
+                    if (this.checked) {
+                        // Generate all heatmaps if not already generated
+                        if (allHeatmapsContainer.children.length === 0) {
+                            const fleetFilter = fleetSelector.value;
+                            let hulls = [...new Set(sailTagsData.map(item => item.Hull))];
+                            
+                            if (fleetFilter !== 'all') {
+                                hulls = hulls.filter(hull => {
+                                    const boatInfo = boatInfoMap.get(hull);
+                                    return boatInfo && boatInfo.fleet === fleetFilter;
+                                });
+                            }
+                            
+                            // Sort hulls numerically
+                            hulls.sort((a, b) => parseInt(a) - parseInt(b));
+                            
+                            // Limit to a reasonable number of hulls to avoid browser performance issues
+                            if (hulls.length > 50) {
+                                const limitMsg = document.createElement('div');
+                                limitMsg.className = 'col-12 text-center alert alert-warning mb-4';
+                                limitMsg.textContent = `Showing first 50 hulls of ${hulls.length} total. Please use the hull selector for specific hulls.`;
+                                allHeatmapsContainer.appendChild(limitMsg);
+                                hulls = hulls.slice(0, 50);
+                            }
+                            
+                            hulls.forEach(hull => {
+                                createHeatmap(hull, allHeatmapsContainer);
+                            });
+                        }
+                        allHeatmapsContainer.style.display = 'flex';
+                        selectedHeatmapContainer.style.display = 'none';
+                        hullSelector.disabled = true;
+                    } else {
+                        allHeatmapsContainer.style.display = 'none';
+                        hullSelector.disabled = false;
+                        if (hullSelector.value) {
+                            selectedHeatmapContainer.style.display = 'flex';
+                        }
+                    }
+                });
+            });
         });
     </script>
 </body>
