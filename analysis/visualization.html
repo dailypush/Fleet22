@@ -261,7 +261,6 @@
                 combinedFleetData.forEach(boat => {
                     boatInfoMap.set(boat.hull_number, {
                         name: boat.boat_name,
-                        owner: boat.owner,
                         fleet: boat.fleet
                     });
                 });
@@ -297,10 +296,6 @@
                         
                         if (boatInfo && boatInfo.name) {
                             optionText += ` - ${boatInfo.name}`;
-                        }
-                        
-                        if (boatInfo && boatInfo.owner) {
-                            optionText += ` (${boatInfo.owner})`;
                         }
                         
                         const option = document.createElement('option');
@@ -370,9 +365,6 @@
                     if (boatInfo) {
                         if (boatInfo.name) {
                             headerText += ` - ${boatInfo.name}`;
-                        }
-                        if (boatInfo.owner) {
-                            headerText += ` (${boatInfo.owner})`;
                         }
                         if (boatInfo.fleet) {
                             headerText += ` - Fleet ${boatInfo.fleet}`;
