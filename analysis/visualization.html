@@ -162,6 +162,35 @@
         </ul>
     </div>
 
+    <!-- Fleet Comparison Section -->
+    <div class="container mt-5">
+        <h2>Fleet Comparison</h2>
+        <div class="row">
+            <div class="col-md-6 chart">
+                <canvas id="boatCountComparisonChart"></canvas>
+            </div>
+            <div class="col-md-6 chart">
+                <canvas id="averageSailTagsChart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 chart">
+                <canvas id="membershipStatusChart"></canvas>
+            </div>
+            <div class="col-md-6 chart">
+                <canvas id="sailmakerPreferenceChart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 chart">
+                <canvas id="ageDistributionChart"></canvas>
+            </div>
+            <div class="col-md-6 chart">
+                <div id="geographicDistributionMap" style="height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="container">
@@ -556,6 +585,188 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch data from JSON file
+            fetch('../data/combined_fleet_data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const fleetData = data;
+                    const fleetNames = [...new Set(fleetData.map(boat => boat.fleet))].filter(fleet => fleet !== '0');
+
+                    // Boat count comparison across major fleets
+                    const boatCounts = fleetNames.map(fleet => fleetData.filter(boat => boat.fleet === fleet).length);
+                    const boatCountComparisonCtx = document.getElementById('boatCountComparisonChart').getContext('2d');
+                    new Chart(boatCountComparisonCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: fleetNames,
+                            datasets: [{
+                                label: 'Number of Boats',
+                                data: boatCounts,
+                                backgroundColor: '#28a745',
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Boat Count Comparison Across Fleets'
+                                }
+                            }
+                        }
+                    });
+
+                    // Average sail tags per boat by fleet
+                    const averageSailTags = fleetNames.map(fleet => {
+                        const boatsInFleet = fleetData.filter(boat => boat.fleet === fleet);
+                        const totalSailTags = boatsInFleet.reduce((sum, boat) => sum + boat.sail_tags.length, 0);
+                        return totalSailTags / boatsInFleet.length;
+                    });
+                    const averageSailTagsCtx = document.getElementById('averageSailTagsChart').getContext('2d');
+                    new Chart(averageSailTagsCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: fleetNames,
+                            datasets: [{
+                                label: 'Average Sail Tags per Boat',
+                                data: averageSailTags,
+                                backgroundColor: '#ffc107',
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Average Sail Tags per Boat by Fleet'
+                                }
+                            }
+                        }
+                    });
+
+                    // Membership status comparison between fleets
+                    const membershipStatus = fleetNames.map(fleet => {
+                        const boatsInFleet = fleetData.filter(boat => boat.fleet === fleet);
+                        const activeMembers = boatsInFleet.filter(boat => boat.class_membership.toLowerCase().includes('member')).length;
+                        return activeMembers / boatsInFleet.length * 100;
+                    });
+                    const membershipStatusCtx = document.getElementById('membershipStatusChart').getContext('2d');
+                    new Chart(membershipStatusCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: fleetNames,
+                            datasets: [{
+                                label: 'Active Membership (%)',
+                                data: membershipStatus,
+                                backgroundColor: '#17a2b8',
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Membership Status Comparison Between Fleets'
+                                }
+                            }
+                        }
+                    });
+
+                    // Sailmaker preference analytics by fleet
+                    const sailmakerPreferences = fleetNames.map(fleet => {
+                        const boatsInFleet = fleetData.filter(boat => boat.fleet === fleet);
+                        const sailmakers = {};
+                        boatsInFleet.forEach(boat => {
+                            boat.sail_tags.forEach(tag => {
+                                if (!sailmakers[tag.sailmaker]) sailmakers[tag.sailmaker] = 0;
+                                sailmakers[tag.sailmaker]++;
+                            });
+                        });
+                        return sailmakers;
+                    });
+                    const sailmakerPreferenceCtx = document.getElementById('sailmakerPreferenceChart').getContext('2d');
+                    new Chart(sailmakerPreferenceCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: Object.keys(sailmakerPreferences[0]),
+                            datasets: sailmakerPreferences.map((prefs, index) => ({
+                                label: fleetNames[index],
+                                data: Object.values(prefs),
+                                backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#4bc0c0'],
+                            }))
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Sailmaker Preference Analytics by Fleet'
+                                }
+                            }
+                        }
+                    });
+
+                    // Age distribution of boats by fleet
+                    const ageDistribution = fleetNames.map(fleet => {
+                        const boatsInFleet = fleetData.filter(boat => boat.fleet === fleet);
+                        const currentYear = new Date().getFullYear();
+                        return boatsInFleet.map(boat => currentYear - parseInt(boat.hull_number));
+                    });
+                    const ageDistributionCtx = document.getElementById('ageDistributionChart').getContext('2d');
+                    new Chart(ageDistributionCtx, {
+                        type: 'line',
+                        data: {
+                            labels: fleetNames,
+                            datasets: ageDistribution.map((ages, index) => ({
+                                label: fleetNames[index],
+                                data: ages,
+                                fill: false,
+                                borderColor: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
+                            }))
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Age Distribution of Boats by Fleet'
+                                }
+                            }
+                        }
+                    });
+
+                    // Geographic distribution map of fleets
+                    const map = L.map('geographicDistributionMap').setView([37.8, -96], 4);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                    fleetData.forEach(boat => {
+                        if (boat.latitude && boat.longitude) {
+                            L.marker([boat.latitude, boat.longitude]).addTo(map)
+                                .bindPopup(`<b>${boat.boat_name}</b><br>Fleet: ${boat.fleet}`);
+                        }
+                    });
+                });
         });
     </script>
 </body>
