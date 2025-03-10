@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet 22 Data Visualization</title>
+    <meta name="description" content="Interactive data visualization of Fleet 22 Lake Erie J105 racing sailboat statistics.">
+    <meta name="keywords" content="Fleet 22, Lake Erie, J105, data visualization, sailing statistics">
+    <meta name="author" content="Fleet 22 Lake Erie">
+    <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-32x32.png" sizes="32x32">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fleet 22 Data Visualization">
+    <meta property="og:description" content="Interactive data visualization of Fleet 22 Lake Erie J105 racing sailboat statistics.">
+    <meta property="og:image" content="../images/hero_shot.jpeg">
+    <meta property="og:url" content="https://www.fleet22.us/analysis/visualization.html">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        .chart-container {
+            padding: 60px 0;
+        }
+        .chart {
+            margin-bottom: 30px;
+        }
+        .page-header {
+            background-color: #007bff;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="https://fleet22.us">Fleet 22 Lake Erie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../classifieds.html">Classifieds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../north_americans_2024.html">North Americans 2024</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../news/index.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./visualization.html">Data Visualization</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Fleet 22 Data Visualization</h1>
+            <p class="lead">Interactive charts showcasing our fleet statistics</p>
+        </div>
+    </header>
+
+    <!-- Chart Section -->
+    <section class="chart-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 chart">
+                    <canvas id="fleet22BoatsChart"></canvas>
+                </div>
+                <div class="col-md-6 chart">
+                    <canvas id="sailTagsChart"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 chart">
+                    <canvas id="boatsWithNamesChart"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <h2 class="text-center my-4">Sail Purchase Heatmaps</h2>
+                    <p class="text-center mb-4">Select a hull number to view its sail purchase history</p>
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-4">
+                            <select id="hullSelector" class="form-select">
+                                <!-- Hull options will be added dynamically -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="heatmap-container">
+                        <div id="heatmapLegend" class="mb-3 text-center"></div>
+                        <div id="currentHeatmap" class="table-responsive"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Statistics Section -->
+    <div class="container mt-5">
+        <h2>Fleet 22 Statistics</h2>
+        <ul>
+            <li>Fleet 22 Boats: 26</li>
+            <li>Active Membership: 0</li>
+            <li>Total Sail Tags: 7928</li>
+            <li>Boats with Sail Tags: 531</li>
+            <li>Boats with Names: 638</li>
+            <li>Data Generated On: 2025-03-10 00:29:09 UTC</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@fleet22.us">info@fleet22.us</a></p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fleet 22 Lake Erie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@1.0.0/dist/chartjs-chart-matrix.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch data from JSON file
+            fetch('../data/fleet_statistics.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Fleet 22 Boats Chart
+                    const fleet22BoatsCtx = document.getElementById('fleet22BoatsChart').getContext('2d');
+                    new Chart(fleet22BoatsCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Fleet 22 Boats'],
+                            datasets: [{
+                                label: 'Number of Boats',
+                                data: [data.fleet_22_boats],
+                                backgroundColor: '#28a745',
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Number of Fleet 22 Boats'
+                                }
+                            }
+                        }
+                    });
+
+                    // Sail Tags Chart
+                    const sailTagsCtx = document.getElementById('sailTagsChart').getContext('2d');
+                    new Chart(sailTagsCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Total Sail Tags', 'Boats with Sail Tags'],
+                            datasets: [{
+                                data: [data.total_sail_tags, data.boats_with_sail_tags],
+                                backgroundColor: ['#ffc107', '#17a2b8'],
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Total Sail Tags vs Boats with Sail Tags'
+                                }
+                            }
+                        }
+                    });
+
+                    // Boats with Names Chart
+                    const boatsWithNamesCtx = document.getElementById('boatsWithNamesChart').getContext('2d');
+                    new Chart(boatsWithNamesCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Boats with Names'],
+                            datasets: [{
+                                label: 'Number of Boats',
+                                data: [data.boats_with_names],
+                                backgroundColor: '#dc3545',
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Number of Boats with Names'
+                                }
+                            }
+                        }
+                    });
+                });
+
+            // Fetch sail tags data and generate heatmaps
+            fetch('../data/sail_tags.json')
+                .then(response => response.json())
+                .then(sailTagsData => {
+                    const hulls = [...new Set(sailTagsData.filter(item => item.Fleet === '22').map(item => item.Hull))];
+                    const hullSelector = document.getElementById('hullSelector');
+                    hulls.forEach(hull => {
+                        const option = document.createElement('option');
+                        option.value = hull;
+                        option.textContent = `Hull ${hull}`;
+                        hullSelector.appendChild(option);
+                    });
+
+                    hullSelector.addEventListener('change', function() {
+                        const selectedHull = hullSelector.value;
+                        const hullData = sailTagsData.filter(item => item.Hull === selectedHull);
+                        const years = [...new Set(hullData.map(item => new Date(item['Delivery Date']).getFullYear()))];
+                        const sailTypes = [...new Set(hullData.map(item => item['Sail Type'] + ' ' + item['Sailmaker']))];
+
+                        const heatmapData = sailTypes.map(sailType => {
+                            return years.map(year => {
+                                return hullData.filter(item => item['Sail Type'] + ' ' + item['Sailmaker'] === sailType && new Date(item['Delivery Date']).getFullYear() === year).length;
+                            });
+                        });
+
+                        const heatmapContainer = document.getElementById('currentHeatmap');
+                        heatmapContainer.innerHTML = '';
+
+                        const table = document.createElement('table');
+                        table.className = 'table table-bordered table-sm';
+
+                        const thead = document.createElement('thead');
+                        const headerRow = document.createElement('tr');
+                        headerRow.appendChild(document.createElement('th'));
+                        years.forEach(year => {
+                            const th = document.createElement('th');
+                            th.textContent = year;
+                            headerRow.appendChild(th);
+                        });
+                        thead.appendChild(headerRow);
+                        table.appendChild(thead);
+
+                        const tbody = document.createElement('tbody');
+                        sailTypes.forEach((sailType, rowIndex) => {
+                            const row = document.createElement('tr');
+                            const th = document.createElement('th');
+                            th.textContent = sailType;
+                            row.appendChild(th);
+                            heatmapData[rowIndex].forEach(value => {
+                                const td = document.createElement('td');
+                                td.textContent = value;
+                                td.style.backgroundColor = `rgba(0, 123, 255, ${value / Math.max(...heatmapData.flat())})`;
+                                row.appendChild(td);
+                            });
+                            tbody.appendChild(row);
+                        });
+                        table.appendChild(tbody);
+
+                        heatmapContainer.appendChild(table);
+
+                        const heatmapLegend = document.getElementById('heatmapLegend');
+                        heatmapLegend.innerHTML = `Sail Purchase Heatmap for Hull ${selectedHull}`;
+                    });
+
+                    hullSelector.dispatchEvent(new Event('change'));
+                });
+        });
+    </script>
+</body>
+</html>

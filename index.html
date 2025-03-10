@@ -12,6 +12,8 @@
     <link rel="icon" type="image/png" href="./assets/favicon_io/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./assets/favicon_io/favicon-32x32.png" sizes="32x32">
     <link rel="preload" href="https://ik.imagekit.io/fleet22/tr:w-1920,f-auto,pr-true/2022/hero_shot.jpeg" as="image">
+    <link rel="preconnect" href="https://ik.imagekit.io">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Fleet 22 Lake Erie: J105 Racing Sailboats">
@@ -55,13 +57,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./north_americans_2024.html">North Americans 2024</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news/index.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./analysis/visualization.html">Data Visualization</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="https://ik.imagekit.io/fleet22/tr:w-1920,f-auto,pr-true/2022/hero_shot.jpeg" alt="Sailboats racing on Lake Erie" class="hero-image" style="width:100%; height:auto;">
+        <img src="https://ik.imagekit.io/fleet22/tr:w-1920,f-auto,pr-true/2022/hero_shot.jpeg" alt="Sailboats racing on Lake Erie" class="hero-image" style="width:100%; height:auto;" fetchpriority="high">
         <div class="hero-text">
             <h1>Welcome to J105 Fleet 22 Lake Erie</h1>
             <p class="tagline">Navigating Waters, Charting Friendships</p>
@@ -121,10 +132,13 @@
         <div class="container">
             <h2>Gallery Preview</h2>
             <div class="gallery-grid">
-                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" alt="Sailing photo 1">
-                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" alt="Sailing photo 2">
-                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" alt="Sailing photo 3">
-                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" alt="Sailing photo 4">
+                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" alt="Sailing photo 1" loading="lazy">
+                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" alt="Sailing photo 2" loading="lazy">
+                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" alt="Sailing photo 3" loading="lazy">
+                <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" alt="Sailing photo 4" loading="lazy">
+            </div>
+            <div class="text-center mt-4">
+                <a href="./gallery.html" class="btn btn-primary">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -134,7 +148,7 @@
         <div class="container">
             <h2>Join the Adventure</h2>
             <p>Become a part of Fleet 22 Lake Erie and experience the thrill of J105 racing.</p>
-            <a href="#join" class="join-btn">Join the Fleet</a>
+            <a href="./members.html#join" class="join-btn" aria-label="Learn more about joining Fleet 22">Join the Fleet</a>
         </div>
     </section>
 

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet 22 Gallery | J105 Racing Sailboats</title>
+    <meta name="description" content="Browse through our collection of Fleet 22 Lake Erie J105 racing sailboat images.">
+    <meta name="keywords" content="Fleet 22, Lake Erie, J105, sailing photos, racing images, regatta gallery">
+    <meta name="author" content="Fleet 22 Lake Erie">
+    <link rel="icon" type="image/png" href="./assets/favicon_io/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./assets/favicon_io/favicon-32x32.png" sizes="32x32">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fleet 22 Gallery | J105 Racing Sailboats">
+    <meta property="og:description" content="Browse through our collection of Fleet 22 Lake Erie J105 racing sailboat images.">
+    <meta property="og:image" content="./images/hero_shot.jpeg">
+    <meta property="og:url" content="https://www.fleet22.us/gallery">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+        .gallery-container {
+            padding: 60px 0;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        .page-header {
+            background-color: #007bff;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .gallery-filter {
+            margin-bottom: 30px;
+        }
+        .filter-btn {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .filter-btn.active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="https://fleet22.us">Fleet 22 Lake Erie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./classifieds.html">Classifieds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./north_americans_2024.html">North Americans 2024</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news/index.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Fleet 22 Photo Gallery</h1>
+            <p class="lead">Capturing moments on the water across Lake Erie</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-container">
+        <div class="container">
+            <!-- Gallery Filters -->
+            <div class="gallery-filter text-center">
+                <h4 class="mb-3">Filter Photos</h4>
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="racing">Racing</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="north-americans">North Americans</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="cleveland-race-week">Cleveland Race Week</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="social">Social Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row gallery-grid">
+                <!-- Image 1 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing north-americans">
+                    <a href="https://ik.imagekit.io/fleet22/tr:w-1200,h-800,f-auto,pr-true/2022/hero_shot.jpeg" data-lightbox="fleet-gallery" data-title="J105 Fleet racing at North Americans">
+                        <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-250/2022/hero_shot.jpeg" alt="J105 Fleet racing" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing">
+                    <a href="https://ik.imagekit.io/fleet22/tr:w-1200,h-800,f-auto,pr-true/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" data-lightbox="fleet-gallery" data-title="Close racing between J105s">
+                        <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-250/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" alt="Close racing between J105s" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing cleveland-race-week">
+                    <a href="https://ik.imagekit.io/fleet22/tr:w-1200,h-800,f-auto,pr-true/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" data-lightbox="fleet-gallery" data-title="J105 at Cleveland Race Week">
+                        <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-250/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" alt="J105 at Cleveland Race Week" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing">
+                    <a href="https://ik.imagekit.io/fleet22/tr:w-1200,h-800,f-auto,pr-true/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" data-lightbox="fleet-gallery" data-title="J105 racing under spinnaker">
+                        <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-250/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" alt="J105 racing under spinnaker" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing north-americans">
+                    <a href="https://ik.imagekit.io/fleet22/tr:w-1200,h-800,f-auto,pr-true/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" data-lightbox="fleet-gallery" data-title="North Americans starting line">
+                        <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-250/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" alt="North Americans starting line" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="social">
+                    <a href="./images/gallery1.jpeg" data-lightbox="fleet-gallery" data-title="Fleet 22 social gathering">
+                        <img src="./images/gallery1.jpeg" alt="Fleet 22 social gathering" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <!-- Add more gallery images from your collection -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="racing">
+                    <a href="./images/gallery2.jpeg" data-lightbox="fleet-gallery" data-title="J105 racing on Lake Erie">
+                        <img src="./images/gallery2.jpeg" alt="J105 racing on Lake Erie" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="cleveland-race-week">
+                    <a href="./images/gallery3.JPG" data-lightbox="fleet-gallery" data-title="Cleveland Race Week competition">
+                        <img src="./images/gallery3.JPG" alt="Cleveland Race Week competition" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="north-americans">
+                    <a href="./images/gallery4.JPG" data-lightbox="fleet-gallery" data-title="North Americans 2023">
+                        <img src="./images/gallery4.JPG" alt="North Americans 2023" class="gallery-img" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Submit Photos CTA -->
+            <div class="text-center mt-5">
+                <h3>Have photos to share?</h3>
+                <p class="lead">We welcome contributions from our Fleet 22 community!</p>
+                <a href="mailto:info@fleet22.us?subject=Photo Submission for Gallery" class="btn btn-primary">Submit Your Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@fleet22.us">info@fleet22.us</a></p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fleet 22 Lake Erie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- Gallery Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        const categories = item.getAttribute('data-category');
+                        
+                        if (filter === 'all' || categories.includes(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Lightbox configuration
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': "Image %1 of %2"
+            });
+        });
+    </script>
+</body>
+</html>
