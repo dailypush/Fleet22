@@ -3,40 +3,78 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.fleet22.us/</loc>
-    <lastmod>2023-08-16</lastmod>
+    <lastmod>2024-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-  
-  <!-- About Us Page -->
-  <url>
-    <loc>https://www.fleet22.us/about</loc>
-    <lastmod>2023-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Upcoming Events Page -->
-  <url>
-    <loc>https://www.fleet22.us/events</loc>
-    <lastmod>2023-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   
   <!-- Classifieds Page -->
   <url>
     <loc>https://www.fleet22.us/classifieds.html</loc>
-    <lastmod>2023-08-16</lastmod>
+    <lastmod>2024-07-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Members Page -->
+  <url>
+    <loc>https://www.fleet22.us/members.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- North Americans 2024 Page -->
+  <url>
+    <loc>https://www.fleet22.us/north_americans_2024.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Fleet Dues Page -->
+  <url>
+    <loc>https://www.fleet22.us/fleetdues.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Media Kit Page -->
+  <url>
+    <loc>https://www.fleet22.us/media_kit.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   
-  <!-- Contact Page -->
+  <!-- News Articles -->
   <url>
-    <loc>https://www.fleet22.us/contact</loc>
-    <lastmod>2023-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.fleet22.us/news/cleveland-race-week-2024-highlights.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Analysis Pages -->
+  <url>
+    <loc>https://www.fleet22.us/analysis/githeatmap.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.fleet22.us/analysis/heatmap.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.fleet22.us/analysis/treemap/treemap.html</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -1,16 +1,12 @@
-# Allow all bots
+# Fleet22.us Robots.txt
 User-agent: *
-Disallow: 
+Allow: /
+Disallow: /data/
+Disallow: /scraper/
+Disallow: /scraping.log
 
-# Disallow all bots from certain paths
-# User-agent: *
-# Disallow: /private/
-# Disallow: /restricted/
+# Prevent crawling of any potential duplicate or test content
+Disallow: /test_*.html
 
-# Allow only Googlebot to index everything
-# User-agent: Googlebot
-# Disallow:
-
-# Prevent certain bots from indexing anything
-# User-agent: BadBot
-# Disallow: /
+# Sitemap location
+Sitemap: https://www.fleet22.us/sitemap.xml
