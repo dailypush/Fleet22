@@ -534,7 +534,7 @@
     "owner": "Dennis Conner",
     "boat_name": "Ne Ne",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1208179U",
@@ -918,6 +918,12 @@
         "sailmaker": "Ullman",
         "delivery_date": "2017-02-23",
         "type": "S89"
+      },
+      {
+        "certificate": "2501017N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-18",
+        "type": "J"
       }
     ]
   },
@@ -1393,7 +1399,7 @@
     "owner": "Doug Baiey",
     "boat_name": "Akula",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2312154Q",
@@ -2157,7 +2163,7 @@
     "owner": "Ted Conrads",
     "boat_name": "Donkey Jack",
     "fleet": "1",
-    "class_membership": "Member 2015",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0901005Q",
@@ -2352,7 +2358,7 @@
     "owner": "Randy Hecht",
     "boat_name": "Niuhi",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2112287Q",
@@ -2693,7 +2699,7 @@
     "owner": "William Hoehler",
     "boat_name": "Joyride",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0104357N",
@@ -2772,9 +2778,9 @@
   {
     "hull_number": "32",
     "owner": "Richard Butts",
-    "boat_name": "Melilani",
-    "fleet": "1",
-    "class_membership": "Member 2023",
+    "boat_name": "Counterpoint",
+    "fleet": "20",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1508125D",
@@ -3069,7 +3075,7 @@
     "owner": "Peter Cashman",
     "boat_name": "Windependence",
     "fleet": "22",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2021",
     "sail_tags": [
       {
         "certificate": "0103194N",
@@ -3282,7 +3288,7 @@
     "owner": "Dean Dietrich",
     "boat_name": "Blackhawk",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0203175N",
@@ -4278,7 +4284,7 @@
     "owner": "Doug Brant",
     "boat_name": "Box of Rain",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0512415U",
@@ -5996,7 +6002,7 @@
     "owner": "Pete Carrico",
     "boat_name": "MAYHEM",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2023",
     "sail_tags": [
       {
         "certificate": "0402042K",
@@ -6063,12 +6069,6 @@
         "sailmaker": "North",
         "delivery_date": "2021-03-19",
         "type": "S89"
-      },
-      {
-        "certificate": "2001026N",
-        "sailmaker": "North",
-        "delivery_date": "2021-07-22",
-        "type": "M"
       },
       {
         "certificate": "2001035N",
@@ -6145,7 +6145,7 @@
     "owner": "Mark Hatten",
     "boat_name": "Eau La La",
     "fleet": "17",
-    "class_membership": "",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0808298D",
@@ -7106,7 +7106,7 @@
     "owner": "Sergey Lubarsky",
     "boat_name": "Roulette",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1602035Q",
@@ -7291,7 +7291,7 @@
     "owner": "Chuck Spear",
     "boat_name": "Twelve Bar Blues",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0108581E",
@@ -7448,6 +7448,12 @@
         "sailmaker": "Quantum",
         "delivery_date": "2024-08-15",
         "type": "S89"
+      },
+      {
+        "certificate": "2503096Q",
+        "sailmaker": "Quantum",
+        "delivery_date": "2025-04-17",
+        "type": "M"
       }
     ]
   },
@@ -7999,7 +8005,7 @@
     "owner": "Ed Crist",
     "boat_name": "Trio",
     "fleet": "22",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0602054Q",
@@ -9841,7 +9847,7 @@
   {
     "hull_number": "111",
     "owner": "Thomas Coates",
-    "boat_name": "Masquerade",
+    "boat_name": "Knot Known",
     "fleet": "1",
     "class_membership": "",
     "sail_tags": [
@@ -9951,6 +9957,12 @@
         "certificate": "0803107N",
         "sailmaker": "North",
         "delivery_date": "2008-12-20",
+        "type": "M"
+      },
+      {
+        "certificate": "2503098Q",
+        "sailmaker": "Quantum",
+        "delivery_date": "2025-04-15",
         "type": "M"
       }
     ]
@@ -10392,7 +10404,7 @@
     "owner": "Bruce Stone",
     "boat_name": "Arbitrage",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0107575Q",
@@ -10656,7 +10668,7 @@
     "owner": "Walter Carucci",
     "boat_name": "Mojo",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0109636K",
@@ -11792,7 +11804,7 @@
     "owner": "Eric Raff",
     "boat_name": "J-Tripper",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2101013Q",
@@ -12079,7 +12091,7 @@
     "owner": "Adrian Begley",
     "boat_name": "Warlock",
     "fleet": "6",
-    "class_membership": "Member 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0410437N",
@@ -12389,6 +12401,18 @@
         "type": "J"
       },
       {
+        "certificate": "2201113N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-31",
+        "type": "M"
+      },
+      {
+        "certificate": "2201126N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-31",
+        "type": "J"
+      },
+      {
         "certificate": "0610388D",
         "sailmaker": "Doyle",
         "delivery_date": "2007-06-01",
@@ -12587,7 +12611,7 @@
     "owner": "Eric Stang",
     "boat_name": "JuJu",
     "fleet": "1",
-    "class_membership": "Member 2023",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0604095N",
@@ -12839,7 +12863,7 @@
     "owner": "Brent Vaughan",
     "boat_name": "Jabberwocky",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0212631N",
@@ -13360,7 +13384,7 @@
     "owner": "Vince DiLorenzo",
     "boat_name": "Prima",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0107571Q",
@@ -14492,7 +14516,7 @@
     "owner": "Josh Burack",
     "boat_name": "Peregrina",
     "fleet": "6",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0108597K",
@@ -14802,6 +14826,12 @@
         "sailmaker": "Quantum",
         "delivery_date": "2024-09-14",
         "type": "S89"
+      },
+      {
+        "certificate": "2501012D",
+        "sailmaker": "Doyle",
+        "delivery_date": "2025-04-10",
+        "type": "M"
       },
       {
         "certificate": "0304265K",
@@ -16196,7 +16226,7 @@
     "owner": "Ken Brown",
     "boat_name": "Cerberus",
     "fleet": "2",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0205337D",
@@ -16884,7 +16914,7 @@
     "owner": "Mark Simmons",
     "boat_name": "Eagle",
     "fleet": "12",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0104361N",
@@ -17055,7 +17085,7 @@
     "owner": "Art Libby",
     "boat_name": "Dog House",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0303166N",
@@ -17152,6 +17182,12 @@
         "sailmaker": "North",
         "delivery_date": "2023-08-18",
         "type": "M"
+      },
+      {
+        "certificate": "2211437N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-31",
+        "type": "J"
       },
       {
         "certificate": "0103173Q",
@@ -17322,7 +17358,7 @@
     "owner": "Jaffar Bentchicou",
     "boat_name": "Slingshot",
     "fleet": "22",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0101029N",
@@ -20202,7 +20238,7 @@
     "owner": "Peter Schellie",
     "boat_name": "Patriot",
     "fleet": "3",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0107542N",
@@ -20323,6 +20359,12 @@
         "sailmaker": "North",
         "delivery_date": "2019-03-26",
         "type": "M"
+      },
+      {
+        "certificate": "2201135N",
+        "sailmaker": "North",
+        "delivery_date": "2023-06-30",
+        "type": "S89"
       },
       {
         "certificate": "2202153Q",
@@ -21057,15 +21099,21 @@
         "sailmaker": "North",
         "delivery_date": "2024-04-05",
         "type": "M"
+      },
+      {
+        "certificate": "2211424N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-26",
+        "type": "J"
       }
     ]
   },
   {
     "hull_number": "252",
     "owner": "William Carruth",
-    "boat_name": "Peregrine",
-    "fleet": "3",
-    "class_membership": "Member 2023",
+    "boat_name": "Gambit",
+    "fleet": "6",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1702042N",
@@ -21516,6 +21564,12 @@
         "certificate": "2302025D",
         "sailmaker": "Doyle",
         "delivery_date": "2023-04-04",
+        "type": "S89"
+      },
+      {
+        "certificate": "2501034N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-31",
         "type": "S89"
       },
       {
@@ -22275,7 +22329,7 @@
     "owner": "Mike Mountford",
     "boat_name": "Live Edge",
     "fleet": "4",
-    "class_membership": "Member 2021",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0209513Q",
@@ -22410,7 +22464,7 @@
     "owner": "Ariel Poler",
     "boat_name": "Peaches",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0207415Q",
@@ -23476,7 +23530,7 @@
     "owner": "Shawn Bennett",
     "boat_name": "Zuni Bear",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0104417N",
@@ -26252,7 +26306,7 @@
     "owner": "Heinz Butner",
     "boat_name": "Kestrel",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0202130U",
@@ -28446,7 +28500,7 @@
     "owner": "Paul Beaudin",
     "boat_name": "Loulou",
     "fleet": "6",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0912339D",
@@ -28797,7 +28851,7 @@
     "owner": "Tom Struttman",
     "boat_name": "Arrived!",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1506096N",
@@ -29109,7 +29163,7 @@
     "owner": "Bill Maher",
     "boat_name": "Rift",
     "fleet": "6",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2022",
     "sail_tags": [
       {
         "certificate": "2109141D",
@@ -30513,7 +30567,7 @@
     "owner": "Peter Busschbach",
     "boat_name": "Alegr\u00eda",
     "fleet": "10",
-    "class_membership": "Member 2023",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2407083D",
@@ -31752,7 +31806,7 @@
     "owner": "Paw Andersen",
     "boat_name": "Strangelove",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2411156Q",
@@ -31992,7 +32046,7 @@
     "owner": "Doug Haas",
     "boat_name": "Whistler",
     "fleet": "22",
-    "class_membership": "Member 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0105496Q",
@@ -32495,7 +32549,7 @@
     "owner": "Paul Grossman",
     "boat_name": "Chao Pescao",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0202123N",
@@ -32520,6 +32574,12 @@
         "sailmaker": "Quantum",
         "delivery_date": "2025-03-20",
         "type": "M"
+      },
+      {
+        "certificate": "2503085Q",
+        "sailmaker": "Quantum",
+        "delivery_date": "2025-04-14",
+        "type": "J"
       },
       {
         "certificate": "0212695Q",
@@ -32756,7 +32816,7 @@
     "owner": "Marc Berkowitz",
     "boat_name": "Maverick",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1304138K",
@@ -33022,7 +33082,7 @@
     "owner": "Chuck Cihak",
     "boat_name": "Hazardous Waste",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0103218N",
@@ -33720,7 +33780,7 @@
     "owner": "Cindy Einhouse",
     "boat_name": "Ovation",
     "fleet": "22",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2022",
     "sail_tags": [
       {
         "certificate": "1702075N",
@@ -35433,6 +35493,12 @@
         "type": "M"
       },
       {
+        "certificate": "2001026N",
+        "sailmaker": "North",
+        "delivery_date": "2021-07-22",
+        "type": "M"
+      },
+      {
         "certificate": "2301014Q",
         "sailmaker": "Quantum",
         "delivery_date": "2023-07-07",
@@ -35478,7 +35544,7 @@
     "owner": "Jose Fuentes",
     "boat_name": "Dove",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0101057N",
@@ -35523,7 +35589,7 @@
     "owner": "David Morris",
     "boat_name": "Resolute",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2312160Q",
@@ -35763,7 +35829,7 @@
     "owner": "Richard Deane",
     "boat_name": "Nantucket Sleighride",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "2408088Q",
@@ -35904,7 +35970,7 @@
     "owner": "Kurt Campbell",
     "boat_name": "Blackthorn",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0101056N",
@@ -36120,7 +36186,7 @@
     "owner": "Ed Feeley",
     "boat_name": "Wolverine",
     "fleet": "5",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0809302U",
@@ -36151,6 +36217,12 @@
         "sailmaker": "Quantum",
         "delivery_date": "2024-10-13",
         "type": "J"
+      },
+      {
+        "certificate": "2501049Q",
+        "sailmaker": "Quantum",
+        "delivery_date": "2025-04-01",
+        "type": "S89"
       },
       {
         "certificate": "0301031U",
@@ -36342,7 +36414,7 @@
     "owner": "Andy Cherner",
     "boat_name": "Crash",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0101043N",
@@ -36846,7 +36918,7 @@
     "owner": "Robert Amos",
     "boat_name": "Southbound",
     "fleet": "22",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1202019Q",
@@ -37606,7 +37678,7 @@
     "owner": "Bill Fields",
     "boat_name": "Beast of Burden",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0101038N",
@@ -37885,7 +37957,7 @@
     "owner": "Tom Carruthers",
     "boat_name": "Blink!",
     "fleet": "8",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0101001E",
@@ -39528,6 +39600,12 @@
         "sailmaker": "North",
         "delivery_date": "2025-03-17",
         "type": "J"
+      },
+      {
+        "certificate": "2501040N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-09",
+        "type": "S89"
       }
     ]
   },
@@ -40067,7 +40145,7 @@
     "owner": "Paul Farr",
     "boat_name": "Sharkey",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0212655Q",
@@ -40202,7 +40280,7 @@
     "owner": "Ron Anderson",
     "boat_name": "Streaker",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0306405U",
@@ -40433,7 +40511,7 @@
     "owner": "Fred Stone",
     "boat_name": "Doctor Jazz",
     "fleet": "10",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0103219N",
@@ -42188,6 +42266,12 @@
         "type": "J"
       },
       {
+        "certificate": "2501016N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-11",
+        "type": "J"
+      },
+      {
         "certificate": "0304256K",
         "sailmaker": "UK Halsey",
         "delivery_date": "2003-04-03",
@@ -43349,7 +43433,7 @@
     "owner": "Larry Harvey",
     "boat_name": "Black Flag",
     "fleet": "1",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0108606U",
@@ -43520,7 +43604,7 @@
     "owner": "Richard Collins",
     "boat_name": "Lucky Duck",
     "fleet": "8",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "1803051U",
@@ -44336,7 +44420,7 @@
     "owner": "Robert Fischer",
     "boat_name": "ATARAXIS",
     "fleet": "6",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "1010280K",
@@ -44417,7 +44501,7 @@
     "owner": "Dennis Case",
     "boat_name": "Wind Dancer",
     "fleet": "8",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0112697U",
@@ -45637,7 +45721,7 @@
     "owner": "Christopher Davis",
     "boat_name": "Moonglow",
     "fleet": "20",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "0202087Q",
@@ -45853,7 +45937,7 @@
     "owner": "Peter Busichio",
     "boat_name": "Firebrand",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2012",
     "sail_tags": [
       {
         "certificate": "0109625Q",
@@ -47595,7 +47679,7 @@
     "owner": "Ken Bowden",
     "boat_name": "Knotless",
     "fleet": "2",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0509348N",
@@ -47691,6 +47775,12 @@
         "certificate": "2302030D",
         "sailmaker": "Doyle",
         "delivery_date": "2023-04-28",
+        "type": "S89"
+      },
+      {
+        "certificate": "2501024N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-07",
         "type": "S89"
       },
       {
@@ -48631,6 +48721,12 @@
         "sailmaker": "North",
         "delivery_date": "2022-12-01",
         "type": "J"
+      },
+      {
+        "certificate": "2211438N",
+        "sailmaker": "North",
+        "delivery_date": "2025-03-06",
+        "type": "M"
       }
     ]
   },
@@ -49805,7 +49901,7 @@
     "owner": "Barry Gold",
     "boat_name": "Scapegoat",
     "fleet": "6",
-    "class_membership": "Member 2024",
+    "class_membership": "Member 2025",
     "sail_tags": [
       {
         "certificate": "0304278K",
@@ -50728,7 +50824,7 @@
     "owner": "Sean Doyle",
     "boat_name": "Kestrel",
     "fleet": "6",
-    "class_membership": "Member 2023",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "1012342D",
@@ -51551,7 +51647,7 @@
   {
     "hull_number": "636",
     "owner": "Ed Berkhout",
-    "boat_name": "Epic",
+    "boat_name": "Epic Circus",
     "fleet": "4",
     "class_membership": "Member 2024",
     "sail_tags": [
@@ -52483,7 +52579,7 @@
     "owner": "John Aras",
     "boat_name": "Aurora",
     "fleet": "22",
-    "class_membership": "Associate 2024",
+    "class_membership": "Member 2024",
     "sail_tags": [
       {
         "certificate": "0704152N",
@@ -52787,6 +52883,24 @@
         "sailmaker": "North",
         "delivery_date": "2016-09-29",
         "type": "J"
+      },
+      {
+        "certificate": "2211422N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-07",
+        "type": "S89"
+      },
+      {
+        "certificate": "2211428N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
+        "type": "J"
+      },
+      {
+        "certificate": "2501018N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
+        "type": "M"
       },
       {
         "certificate": "0804149K",
@@ -53434,6 +53548,12 @@
         "type": "J"
       },
       {
+        "certificate": "2501019N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
+        "type": "M"
+      },
+      {
         "certificate": "1509144N",
         "sailmaker": "North",
         "delivery_date": "2016-07-28",
@@ -53443,6 +53563,12 @@
         "certificate": "1603089N",
         "sailmaker": "North",
         "delivery_date": "2016-07-28",
+        "type": "J"
+      },
+      {
+        "certificate": "2111186N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
         "type": "J"
       }
     ]
@@ -53478,11 +53604,23 @@
   },
   {
     "hull_number": "685",
-    "owner": "Ramon Eluchans",
+    "owner": "Pablo Cisternas",
     "boat_name": "Knot Known",
     "fleet": "0",
     "class_membership": "",
     "sail_tags": [
+      {
+        "certificate": "2111191N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
+        "type": "J"
+      },
+      {
+        "certificate": "2501020N",
+        "sailmaker": "North",
+        "delivery_date": "2025-04-08",
+        "type": "M"
+      },
       {
         "certificate": "1601008N",
         "sailmaker": "North",
@@ -53502,7 +53640,7 @@
     "owner": "Jacob Sheetz",
     "boat_name": "Knot Known",
     "fleet": "3",
-    "class_membership": "Associate 2024",
+    "class_membership": "Associate 2025",
     "sail_tags": [
       {
         "certificate": "1401039D",
