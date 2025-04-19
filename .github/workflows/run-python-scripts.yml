@@ -135,14 +135,18 @@ jobs:
           
       - name: List workspace files
         run: |
-          echo "Checking if members.html exists..."
+          echo "Checking workspace content before execution..."
           ls -la
+          echo "Checking data directory..."
+          mkdir -p data
+          ls -la data/ || echo "Data directory empty or doesn't exist"
+          
+          echo "Checking for input files..."
           if [ -f "members.html" ]; then
-            echo "members.html exists"
+            echo "✅ members.html exists"
+            ls -la members.html
           else
-            echo "members.html does not exist"
-            echo "Contents of the workspace:"
-            ls -la
+            echo "❌ members.html does not exist"
           fi
       
       - name: Run fleet boats script
@@ -152,6 +156,8 @@ jobs:
           python scraper/fleetBoats_github_actions.py
           if [ -f "data/boats_fleet22.json" ]; then
             echo "Fleet boats script completed successfully!"
+            echo "File size: $(du -h data/boats_fleet22.json | cut -f1)"
+            echo "Entry count: $(jq length data/boats_fleet22.json)"
             echo "success=true" >> $GITHUB_OUTPUT
           else
             echo "Fleet boats script failed to generate output file!"
@@ -231,7 +237,30 @@ jobs:
       - name: Check for changes
         id: check-changes
         run: |
-          git diff --quiet data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json || echo "changes_detected=true" >> $GITHUB_OUTPUT
+          echo "File status before diff check:"
+          git status
+          
+          # Verify files exist before checking
+          echo "Verifying all required data files exist:"
+          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json; do
+            if [ -f "$file" ]; then
+              echo "✅ $file exists"
+              echo "  Size: $(du -h $file | cut -f1)"
+              echo "  Entries: $(jq length $file 2>/dev/null || echo "Not a JSON array")"
+            else
+              echo "❌ $file does not exist"
+            fi
+          done
+          
+          # Check for changes
+          git diff --quiet data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json
+          if [ $? -ne 0 ]; then
+            echo "Changes detected by git diff"
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes detected by git diff"
+          fi
+          
           # If force update is enabled, always indicate changes detected
           if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
             echo "Force update enabled, changes will be committed regardless."
@@ -244,49 +273,42 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
+          echo "Git status before commit:"
+          git status
+          
+          # Add each file individually and report status
+          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json; do
+            if [ -f "$file" ]; then
+              git add "$file"
+              echo "Added $file to staging area"
+            else
+              echo "Warning: $file does not exist, cannot add to commit"
+            fi
+          done
+          
+          echo "Git status after adding files:"
+          git status
+          
           # Add timestamp to commit message
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
           
-          # Add detailed information about what changed
+          # Create detailed commit message
           echo "Data updated on $TIMESTAMP" > commit_message.txt
           echo "" >> commit_message.txt
           echo "Changes:" >> commit_message.txt
           
-          # Check each file individually
-          if git diff --quiet data/boats_fleet22.json; then
-            echo "- No changes to boats_fleet22.json" >> commit_message.txt
-          else
-            echo "- Updated boats_fleet22.json" >> commit_message.txt
-            git add data/boats_fleet22.json
-          fi
+          # Document the changes in each file
+          git diff --cached --stat >> commit_message.txt
+          echo "" >> commit_message.txt
           
-          if git diff --quiet data/j105_members_status.json; then
-            echo "- No changes to j105_members_status.json" >> commit_message.txt
-          else
-            echo "- Updated j105_members_status.json" >> commit_message.txt
-            git add data/j105_members_status.json
-          fi
-          
-          if git diff --quiet data/sail_tags.json; then
-            echo "- No changes to sail_tags.json" >> commit_message.txt
-          else
-            echo "- Updated sail_tags.json" >> commit_message.txt
-            git add data/sail_tags.json
-          fi
-          
-          if git diff --quiet data/combined_fleet_data.json; then
-            echo "- No changes to combined_fleet_data.json" >> commit_message.txt
-          else
-            echo "- Updated combined_fleet_data.json" >> commit_message.txt
-            git add data/combined_fleet_data.json
-          fi
-          
-          if git diff --quiet data/fleet_statistics.json; then
-            echo "- No changes to fleet_statistics.json" >> commit_message.txt
-          else
-            echo "- Updated fleet_statistics.json" >> commit_message.txt
-            git add data/fleet_statistics.json
-          fi
+          # Add counts for verification
+          echo "File counts:" >> commit_message.txt
+          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json; do
+            if [ -f "$file" ]; then
+              COUNT=$(jq 'length' "$file" 2>/dev/null || echo "unknown")
+              echo "- $(basename "$file"): $COUNT entries" >> commit_message.txt
+            fi
+          done
           
           # If force update was used, mention it in commit message
           if [ "${{ github.event.inputs.force_update }}" == "true" ]; then
@@ -294,12 +316,26 @@ jobs:
             echo "Note: This update was manually forced." >> commit_message.txt
           fi
           
+          # Show the commit message that will be used
+          echo "Commit message:"
+          cat commit_message.txt
+          
           # Use token with correct permissions
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git commit -F commit_message.txt
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -F commit_message.txt || echo "No changes to commit"
+          
+          echo "Pushing changes to repository..."
+          git push origin HEAD:${GITHUB_REF#refs/heads/} || { 
+            echo "Push failed. Attempting to diagnose the issue:"
+            echo "Current branch: $(git branch --show-current)"
+            echo "Remote information:"
+            git remote -v
+            echo "Recent commits:"
+            git log --oneline -n 5
+            exit 1
+          }
+          
+          echo "Changes pushed successfully!"
       
       - name: No changes needed
         if: steps.check-changes.outputs.changes_detected != 'true'
