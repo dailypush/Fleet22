@@ -40,6 +40,16 @@
         "Notes": ""
     },
     {
+        "Hull": "7",
+        "Purchaser": "Donald Aakhus",
+        "Certificate No.": "2501017N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-18",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
         "Hull": "650",
         "Purchaser": "Jason Abernathy",
         "Certificate No.": "1704133Q",
@@ -7000,6 +7010,16 @@
         "Notes": ""
     },
     {
+        "Hull": "579",
+        "Purchaser": "Ken Bowden",
+        "Certificate No.": "2501024N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-07",
+        "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
         "Hull": "420",
         "Purchaser": "Zak Bowdish",
         "Certificate No.": "2005135D",
@@ -10106,7 +10126,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-12-28",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10116,7 +10136,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2018-11-27",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10126,7 +10146,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2020-09-01",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10136,7 +10156,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2020-03-04",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10146,7 +10166,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-04-28",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10156,7 +10176,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-04-27",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -10166,7 +10186,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2023-06-13",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -12037,6 +12057,26 @@
         "Delivery Date": "2023-03-07",
         "Sail Type": "S89",
         "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "685",
+        "Purchaser": "Pablo Cisternas",
+        "Certificate No.": "2111191N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "685",
+        "Purchaser": "Pablo Cisternas",
+        "Certificate No.": "2501020N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
+        "Sail Type": "M",
+        "Fleet": "0",
         "Notes": ""
     },
     {
@@ -22900,6 +22940,16 @@
         "Notes": ""
     },
     {
+        "Hull": "260",
+        "Purchaser": "Marty Galligan",
+        "Certificate No.": "2501034N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-31",
+        "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
         "Hull": "264",
         "Purchaser": "Dave Gallitano",
         "Certificate No.": "0105495N",
@@ -25780,6 +25830,26 @@
         "Notes": ""
     },
     {
+        "Hull": "600",
+        "Purchaser": "Jim Goldman",
+        "Certificate No.": "2211438N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-06",
+        "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "682",
+        "Purchaser": "Jorge Gonzales",
+        "Certificate No.": "2501019N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
+        "Sail Type": "M",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
         "Hull": "436",
         "Purchaser": "Daniel Gonzalez",
         "Certificate No.": "1606148Q",
@@ -25835,6 +25905,16 @@
         "Certificate No.": "1603089N",
         "Sailmaker": "North",
         "Delivery Date": "2016-07-28",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "682",
+        "Purchaser": "Jorge Gonzalez",
+        "Certificate No.": "2111186N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
         "Sail Type": "J",
         "Fleet": "0",
         "Notes": ""
@@ -27426,6 +27506,36 @@
         "Sailmaker": "North",
         "Delivery Date": "2016-09-29",
         "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "672",
+        "Purchaser": "Rodrigo Gumucio",
+        "Certificate No.": "2211422N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-07",
+        "Sail Type": "S89",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "672",
+        "Purchaser": "Rodrigo Gumucio",
+        "Certificate No.": "2211428N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "672",
+        "Purchaser": "Rodrigo Gumucio",
+        "Certificate No.": "2501018N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-08",
+        "Sail Type": "M",
         "Fleet": "0",
         "Notes": ""
     },
@@ -31190,6 +31300,16 @@
         "Notes": ""
     },
     {
+        "Hull": "251",
+        "Purchaser": "Richard Hinds",
+        "Certificate No.": "2211424N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-26",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "417",
         "Purchaser": "Adam Hinz",
         "Certificate No.": "2408103Q",
@@ -31206,6 +31326,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-10-13",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "417",
+        "Purchaser": "Adam Hinz",
+        "Certificate No.": "2501049Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-04-01",
+        "Sail Type": "S89",
         "Fleet": "5",
         "Notes": ""
     },
@@ -34300,6 +34430,16 @@
         "Notes": ""
     },
     {
+        "Hull": "382",
+        "Purchaser": "Paolo Juvara",
+        "Certificate No.": "2503085Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-04-14",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "26",
         "Purchaser": "Rolf Kaiser",
         "Certificate No.": "1005107Q",
@@ -36388,6 +36528,16 @@
         "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
+    },
+    {
+        "Hull": "407",
+        "Purchaser": "John Kircher",
+        "Certificate No.": "2001026N",
+        "Sailmaker": "North",
+        "Delivery Date": "2021-07-22",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": "C. Chadwick purchased from B. Stone after 2021 NAC, per e-mail of 3/1/22, transferred to Mayhem per e-mail of 7/12/23, then transferred to Hull 407 per e-mail of 4/16/25"
     },
     {
         "Hull": "407",
@@ -40290,6 +40440,16 @@
         "Notes": ""
     },
     {
+        "Hull": "202",
+        "Purchaser": "Arthur Libby",
+        "Certificate No.": "2211437N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-31",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "302",
         "Purchaser": "Arthur Libby",
         "Certificate No.": "0301057N",
@@ -43798,6 +43958,16 @@
         "Sail Type": "J",
         "Fleet": "2",
         "Notes": "Sail purchased used from R. Dexter, per his e-mail 1/3/23"
+    },
+    {
+        "Hull": "490",
+        "Purchaser": "Miguel Martinez",
+        "Certificate No.": "2501016N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-11",
+        "Sail Type": "J",
+        "Fleet": "2",
+        "Notes": ""
     },
     {
         "Hull": "97",
@@ -51356,7 +51526,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-04-10",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51366,7 +51536,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-02-25",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51376,7 +51546,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-07-27",
         "Sail Type": "S77",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51386,7 +51556,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-08-27",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51396,7 +51566,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-03-16",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51406,7 +51576,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-03-16",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51416,7 +51586,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-04-30",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51426,7 +51596,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2005-08-31",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51436,7 +51606,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-03-11",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51446,7 +51616,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-03-11",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51456,7 +51626,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-08-10",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51466,7 +51636,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2007-10-22",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51476,7 +51646,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-01-26",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51486,7 +51656,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-01-06",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51496,7 +51666,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-10-10",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51506,7 +51676,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2010-04-10",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51516,7 +51686,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-07-08",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51526,7 +51696,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-03-23",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -51536,7 +51706,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-06-18",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -52748,6 +52918,16 @@
         "Sail Type": "S89",
         "Fleet": "10",
         "Notes": "Sail purchased used from T. Russell, per D. Stryker e-mail 10/3/24"
+    },
+    {
+        "Hull": "170",
+        "Purchaser": "Jerry Orabona",
+        "Certificate No.": "2501012D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-04-10",
+        "Sail Type": "M",
+        "Fleet": "10",
+        "Notes": ""
     },
     {
         "Hull": "656",
@@ -62680,6 +62860,26 @@
         "Notes": ""
     },
     {
+        "Hull": "144",
+        "Purchaser": "Chip Schaffner",
+        "Certificate No.": "2201113N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-31",
+        "Sail Type": "M",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "144",
+        "Purchaser": "Chip Schaffner",
+        "Certificate No.": "2201126N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-03-31",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "514",
         "Purchaser": "George Scheel",
         "Certificate No.": "1808203U",
@@ -64967,6 +65167,16 @@
         "Delivery Date": "2004-08-02",
         "Sail Type": "J",
         "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "111",
+        "Purchaser": "Sammy Shea",
+        "Certificate No.": "2503098Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-04-15",
+        "Sail Type": "M",
+        "Fleet": "1",
         "Notes": ""
     },
     {
@@ -70148,16 +70358,6 @@
         "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
-    },
-    {
-        "Hull": "67",
-        "Purchaser": "Doug Stryker",
-        "Certificate No.": "2001026N",
-        "Sailmaker": "North",
-        "Delivery Date": "2021-07-22",
-        "Sail Type": "M",
-        "Fleet": "3",
-        "Notes": "C. Chadwick purchased from B. Stone after 2021 NAC, per e-mail of 3/1/22, transferred to Mayhem per e-mail of 7/12/23"
     },
     {
         "Hull": "67",
@@ -75950,6 +76150,16 @@
         "Notes": ""
     },
     {
+        "Hull": "87",
+        "Purchaser": "Hugh Westermeyer",
+        "Certificate No.": "2503096Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-04-17",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "437",
         "Purchaser": "Ken Westfall",
         "Certificate No.": "0103208N",
@@ -76216,6 +76426,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-03-17",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "456",
+        "Purchaser": "Alan Whitehurst",
+        "Certificate No.": "2501040N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-04-09",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
@@ -78387,6 +78607,16 @@
         "Delivery Date": "2003-03-31",
         "Sail Type": "M",
         "Fleet": "19",
+        "Notes": ""
+    },
+    {
+        "Hull": "242",
+        "Purchaser": "Ray Wulff",
+        "Certificate No.": "2201135N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-06-30",
+        "Sail Type": "S89",
+        "Fleet": "3",
         "Notes": ""
     },
     {
