@@ -2,20 +2,35 @@ import json
 import logging
 import os
 import sys
+import shutil
 from datetime import datetime
 
+# Determine paths relative to this script so it can be executed from any working
+# directory.  The data directory lives one level above this file.
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "data")
+
+# Ensure the data directory exists so logging can create the file without
+# throwing an error.
+os.makedirs(DATA_DIR, exist_ok=True)
+
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='../data/scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+LOG_FILE = os.path.join(DATA_DIR, "scraping.log")
+logging.basicConfig(
+    level=logging.INFO,
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 # Configuration
 CONFIG = {
     "current_year": datetime.now().year,  # Automatically get current year
-    "boats_file_path": '../data/boats_fleet22.json',
-    "members_file_path": '../data/j105_members_status.json',
-    "output_file_path": '../data/boats_fleet22.json',
-    "backup_file_path": '../data/boats_fleet22_backup_{timestamp}.json',
-    "create_backup": True  # Whether to create a backup of the original file
+    "boats_file_path": os.path.join(DATA_DIR, "boats_fleet22.json"),
+    "members_file_path": os.path.join(DATA_DIR, "j105_members_status.json"),
+    "output_file_path": os.path.join(DATA_DIR, "boats_fleet22.json"),
+    "backup_file_path": os.path.join(DATA_DIR, "boats_fleet22_backup_{timestamp}.json"),
+    "create_backup": True,  # Whether to create a backup of the original file
 }
 
 try:
@@ -33,10 +48,22 @@ try:
     with open(boats_file_path, 'r') as file:
         try:
             boats_fleet22 = json.load(file)
-            logging.info(f"Successfully loaded {len(boats_fleet22)} boats from {boats_file_path}")
+            logging.info(
+                f"Successfully loaded {len(boats_fleet22)} boats from {boats_file_path}"
+            )
         except json.JSONDecodeError:
             logging.error(f"Invalid JSON format in {boats_file_path}")
             sys.exit(1)
+
+    # Optionally create a backup of the boats file before modifications
+    if CONFIG["create_backup"]:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        backup_path = CONFIG["backup_file_path"].format(timestamp=timestamp)
+        try:
+            shutil.copyfile(boats_file_path, backup_path)
+            logging.info(f"Backup of {boats_file_path} saved to {backup_path}")
+        except Exception as backup_err:
+            logging.error(f"Failed to create backup: {backup_err}")
     
     # Extract hull numbers from boats_fleet22 to create a set of hull numbers for quick lookup
     boats_fleet22_hull_numbers = {boat["Hull Number"] for boat in boats_fleet22}
@@ -100,7 +127,8 @@ try:
     logging.info(summary)
 
     # You could also save this to a separate summary file if needed
-    with open(f"../data/payment_summary_{CONFIG['current_year']}.txt", 'w') as summary_file:
+    summary_path = os.path.join(DATA_DIR, f"payment_summary_{CONFIG['current_year']}.txt")
+    with open(summary_path, "w") as summary_file:
         summary_file.write(summary)
 
     def generate_detailed_report(boats_data):
@@ -128,8 +156,8 @@ try:
             report += f"Owner: {boat.get('Owner', 'Unknown')}\n"
         
         # Save the report
-        report_path = f"../data/payment_report_{CONFIG['current_year']}.txt"
-        with open(report_path, 'w') as report_file:
+        report_path = os.path.join(DATA_DIR, f"payment_report_{CONFIG['current_year']}.txt")
+        with open(report_path, "w") as report_file:
             report_file.write(report)
         
         logging.info(f"Detailed report saved to {report_path}")
