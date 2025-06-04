@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import sys
+import shutil
 from datetime import datetime
 
 # Determine paths relative to this script so it can be executed from any working
@@ -47,10 +48,22 @@ try:
     with open(boats_file_path, 'r') as file:
         try:
             boats_fleet22 = json.load(file)
-            logging.info(f"Successfully loaded {len(boats_fleet22)} boats from {boats_file_path}")
+            logging.info(
+                f"Successfully loaded {len(boats_fleet22)} boats from {boats_file_path}"
+            )
         except json.JSONDecodeError:
             logging.error(f"Invalid JSON format in {boats_file_path}")
             sys.exit(1)
+
+    # Optionally create a backup of the boats file before modifications
+    if CONFIG["create_backup"]:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        backup_path = CONFIG["backup_file_path"].format(timestamp=timestamp)
+        try:
+            shutil.copyfile(boats_file_path, backup_path)
+            logging.info(f"Backup of {boats_file_path} saved to {backup_path}")
+        except Exception as backup_err:
+            logging.error(f"Failed to create backup: {backup_err}")
     
     # Extract hull numbers from boats_fleet22 to create a set of hull numbers for quick lookup
     boats_fleet22_hull_numbers = {boat["Hull Number"] for boat in boats_fleet22}
