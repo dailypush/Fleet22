@@ -379,12 +379,12 @@
     },
     {
         "Hull": "39",
-        "Owners/Helmsmen": "Patrick Quinncannon",
+        "Owners/Helmsmen": "Bobby Martin",
         "Status": "OW",
-        "Boat Name": "Jouster",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": ""
+        "Boat Name": "Powwow",
+        "Location": "Rhode Island",
+        "Fleet": "14",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "40",
@@ -798,7 +798,7 @@
         "Boat Name": "Chaos",
         "Location": "New Hampshire",
         "Fleet": "2",
-        "Class Membership": "Member 2014"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "80",
@@ -843,7 +843,7 @@
         "Boat Name": "Mandate",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "84",
@@ -960,7 +960,7 @@
         "Boat Name": "Trio",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "92",
@@ -996,7 +996,7 @@
         "Boat Name": "Breezin Bayou",
         "Location": "Florida",
         "Fleet": "19",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "94",
@@ -1603,21 +1603,12 @@
     },
     {
         "Hull": "145",
-        "Owners/Helmsmen": "Paul Hickman",
+        "Owners/Helmsmen": "Jody Kjoller",
         "Status": "OW",
         "Boat Name": "Kashmir",
         "Location": "Michigan",
         "Fleet": "22",
-        "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "145",
-        "Owners/Helmsmen": "Jody Kjoller",
-        "Status": "CO",
-        "Boat Name": "Kashmir",
-        "Location": "Michigan",
-        "Fleet": "22",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "146",
@@ -1752,7 +1743,7 @@
         "Boat Name": "The Kernel",
         "Location": "Canada",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "159",
@@ -1824,7 +1815,7 @@
         "Boat Name": "Rapscallion",
         "Location": "Rhode Island",
         "Fleet": "14",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "166",
@@ -1879,6 +1870,15 @@
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2024"
+    },
+    {
+        "Hull": "171",
+        "Owners/Helmsmen": "John (Jay) Richardson",
+        "Status": "AM",
+        "Boat Name": "Bigamy",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "171",
@@ -2422,12 +2422,12 @@
     },
     {
         "Hull": "215",
-        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Owners/Helmsmen": "Ken Luczynski (USNA)",
         "Status": "OW",
         "Boat Name": "Constellation",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "215",
@@ -2760,7 +2760,7 @@
         "Boat Name": "Millicent",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "239",
@@ -2918,6 +2918,15 @@
     {
         "Hull": "251",
         "Owners/Helmsmen": "Amy Harris",
+        "Status": "AM",
+        "Boat Name": "Breakaway",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "251",
+        "Owners/Helmsmen": "John Vallani",
         "Status": "AM",
         "Boat Name": "Breakaway",
         "Location": "Maryland",
@@ -3291,7 +3300,7 @@
         "Boat Name": "Forro",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "284",
@@ -3381,7 +3390,7 @@
         "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "293",
@@ -3390,7 +3399,7 @@
         "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "293",
@@ -3399,7 +3408,7 @@
         "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "294",
@@ -3853,12 +3862,12 @@
     },
     {
         "Hull": "333",
-        "Owners/Helmsmen": "Christopher Lund",
+        "Owners/Helmsmen": "Tom Attick",
         "Status": "OW",
-        "Boat Name": "Whomper",
-        "Location": "United States",
-        "Fleet": "2",
-        "Class Membership": "Member 2012"
+        "Boat Name": "Knot Known",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": ""
     },
     {
         "Hull": "334",
@@ -3970,18 +3979,9 @@
     },
     {
         "Hull": "343",
-        "Owners/Helmsmen": "John Sutherland",
+        "Owners/Helmsmen": "Jamie Gregory",
         "Status": "OW",
-        "Boat Name": "London Calling",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Member 2020"
-    },
-    {
-        "Hull": "343",
-        "Owners/Helmsmen": "Peter Boland",
-        "Status": "OW",
-        "Boat Name": "London Calling",
+        "Boat Name": "Dragonfly",
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
@@ -4140,6 +4140,24 @@
         "Class Membership": "Member 2024"
     },
     {
+        "Hull": "358",
+        "Owners/Helmsmen": "Trevor Wallace",
+        "Status": "AM",
+        "Boat Name": "Thunderstruck",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "358",
+        "Owners/Helmsmen": "David Wilkes",
+        "Status": "AM",
+        "Boat Name": "Thunderstruck",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Associate 2025"
+    },
+    {
         "Hull": "359",
         "Owners/Helmsmen": "Dave Pierce",
         "Status": "OW",
@@ -4254,7 +4272,7 @@
         "Boat Name": "Starcross",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "372",
@@ -5172,7 +5190,7 @@
         "Boat Name": "Sirocco",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "442",
@@ -5550,7 +5568,7 @@
         "Boat Name": "Trident",
         "Location": "Canada",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "477",
@@ -5694,7 +5712,7 @@
         "Boat Name": "Taino",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "491",
@@ -7026,7 +7044,7 @@
         "Boat Name": "Ditch Digger",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "629",
@@ -7125,7 +7143,7 @@
         "Boat Name": "Epic Circus",
         "Location": "New York",
         "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "637",
@@ -7179,7 +7197,7 @@
         "Boat Name": "Endeavour",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "642",
@@ -7278,7 +7296,16 @@
         "Boat Name": "Aurora",
         "Location": "United States",
         "Fleet": "22",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "656",
+        "Owners/Helmsmen": "Jennifer Klock",
+        "Status": "AM",
+        "Boat Name": "Aurora",
+        "Location": "United States",
+        "Fleet": "22",
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "657",
@@ -7336,12 +7363,12 @@
     },
     {
         "Hull": "676",
-        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Owners/Helmsmen": "Ken Luczynski (USNA)",
         "Status": "OW",
         "Boat Name": "Avenger",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "677",
@@ -7463,6 +7490,15 @@
     {
         "Hull": "999",
         "Owners/Helmsmen": "Rob Ruhlman",
+        "Status": "AM",
+        "Boat Name": "Knot Known",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "999",
+        "Owners/Helmsmen": "Michael Goldfarb",
         "Status": "AM",
         "Boat Name": "Knot Known",
         "Location": "Maryland",
