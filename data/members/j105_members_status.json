@@ -156,7 +156,7 @@
         "Hull": "19",
         "Owners/Helmsmen": "Paul Zajac",
         "Status": "OW",
-        "Boat Name": "sk\u00e5l",
+        "Boat Name": "skål",
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2025"
@@ -165,7 +165,7 @@
         "Hull": "19",
         "Owners/Helmsmen": "Johan Blok",
         "Status": "CO",
-        "Boat Name": "sk\u00e5l",
+        "Boat Name": "skål",
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2023"
@@ -693,6 +693,15 @@
         "Class Membership": "Member 2025"
     },
     {
+        "Hull": "69",
+        "Owners/Helmsmen": "Timothy Johnson",
+        "Status": "AM",
+        "Boat Name": "Eau La La",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Associate 2025"
+    },
+    {
         "Hull": "70",
         "Owners/Helmsmen": "Kevin Ryman",
         "Status": "OW",
@@ -726,7 +735,7 @@
         "Boat Name": "Highlander",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "73",
@@ -2107,7 +2116,7 @@
     },
     {
         "Hull": "189",
-        "Owners/Helmsmen": "Mark D\u2019Onofrio",
+        "Owners/Helmsmen": "Mark D’Onofrio",
         "Status": "CO",
         "Boat Name": "Cerberus",
         "Location": "Massachusetts",
@@ -2163,7 +2172,7 @@
         "Hull": "193",
         "Owners/Helmsmen": "Edward Nunes",
         "Status": "OW",
-        "Boat Name": "Ce\u00f2l na Mara",
+        "Boat Name": "Ceòl na Mara",
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": ""
@@ -4098,7 +4107,7 @@
         "Hull": "353",
         "Owners/Helmsmen": "Peter Busschbach",
         "Status": "OW",
-        "Boat Name": "Alegr\u00eda",
+        "Boat Name": "Alegría",
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2025"
@@ -4188,7 +4197,7 @@
         "Hull": "362",
         "Owners/Helmsmen": "Kay Bohlmann",
         "Status": "OW",
-        "Boat Name": "Jalape\u00f1o (GER 6560)",
+        "Boat Name": "Jalapeño (GER 6560)",
         "Location": "Germany",
         "Fleet": "0",
         "Class Membership": "Member 2014"
@@ -6501,7 +6510,7 @@
         "Hull": "567",
         "Owners/Helmsmen": "Wyllys Baird",
         "Status": "OW",
-        "Boat Name": "We Be Jammin\u2019",
+        "Boat Name": "We Be Jammin’",
         "Location": "California",
         "Fleet": "1",
         "Class Membership": "Member 2022"
@@ -7021,12 +7030,12 @@
     },
     {
         "Hull": "626",
-        "Owners/Helmsmen": "Gareth Gaston",
+        "Owners/Helmsmen": "Ryan Morris",
         "Status": "OW",
-        "Boat Name": "FAIRHOPE",
-        "Location": "New York",
-        "Fleet": "10",
-        "Class Membership": "Member 2017"
+        "Boat Name": "Factor",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "627",
