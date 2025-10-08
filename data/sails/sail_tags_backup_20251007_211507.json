@@ -7212,6 +7212,16 @@
     {
         "Hull": "96",
         "Purchaser": "Peter Bowe",
+        "Certificate No.": "2111200N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-01-01",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "96",
+        "Purchaser": "Peter Bowe",
         "Certificate No.": "2111201N",
         "Sailmaker": "North",
         "Delivery Date": "2023-01-01",
@@ -7226,6 +7236,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2024-01-03",
         "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "96",
+        "Purchaser": "Peter Bowe",
+        "Certificate No.": "2201141N",
+        "Sailmaker": "North",
+        "Delivery Date": "2023-07-05",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
@@ -10772,32 +10792,12 @@
     {
         "Hull": "415",
         "Purchaser": "John Carty",
-        "Certificate No.": "2111200N",
-        "Sailmaker": "North",
-        "Delivery Date": "2023-01-01",
-        "Sail Type": "J",
-        "Fleet": "3",
-        "Notes": "Sail purchased used from P. Bowe 10/2025"
-    },
-    {
-        "Hull": "415",
-        "Purchaser": "John Carty",
         "Certificate No.": "2201066N",
         "Sailmaker": "North",
         "Delivery Date": "2024-04-01",
         "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
-    },
-    {
-        "Hull": "415",
-        "Purchaser": "John Carty",
-        "Certificate No.": "2201141N",
-        "Sailmaker": "North",
-        "Delivery Date": "2023-07-05",
-        "Sail Type": "J",
-        "Fleet": "3",
-        "Notes": "Sail purchased used from P. Bowe 10/2025"
     },
     {
         "Hull": "415",
@@ -23816,7 +23816,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2011-05-14",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23826,7 +23826,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2011-12-07",
         "Sail Type": "M",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23836,7 +23836,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2011-12-07",
         "Sail Type": "S89",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23846,7 +23846,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-03-05",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23856,7 +23856,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-03-05",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23866,7 +23866,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2014-11-21",
         "Sail Type": "S89",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23876,7 +23876,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2015-06-10",
         "Sail Type": "M",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23886,7 +23886,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2015-06-10",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23896,7 +23896,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2017-04-25",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -23906,7 +23906,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2017-04-25",
         "Sail Type": "S89",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -38247,7 +38247,7 @@
         "Delivery Date": "2025-09-10",
         "Sail Type": "M",
         "Fleet": "20",
-        "Notes": "On consignment at North Sails Seattle 10/1/25"
+        "Notes": ""
     },
     {
         "Hull": "114",
@@ -38267,7 +38267,7 @@
         "Delivery Date": "2025-09-10",
         "Sail Type": "J",
         "Fleet": "20",
-        "Notes": "On consignment at North Sails Seattle 10/1/25"
+        "Notes": ""
     },
     {
         "Hull": "183",
@@ -40977,7 +40977,7 @@
         "Delivery Date": "2003-02-14",
         "Sail Type": "S89",
         "Fleet": "6",
-        "Notes": "Purchased used from Schrager (#322) per CT 10/24/07Â"
+        "Notes": "Purchased used from Schrager (#322) per CT 10/24/07\u00c2"
     },
     {
         "Hull": "471",
@@ -62036,7 +62036,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-04-15",
         "Sail Type": "J",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -62046,7 +62046,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-03-18",
         "Sail Type": "M",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -62056,7 +62056,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2003-04-15",
         "Sail Type": "S89",
-        "Fleet": "9",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78647,7 +78647,7 @@
         "Delivery Date": "2003-03-20",
         "Sail Type": "S89",
         "Fleet": "3",
-        "Notes": "BOT 10/2007 from Mike O'Toole (#303) per MM 10/23/07Â"
+        "Notes": "BOT 10/2007 from Mike O'Toole (#303) per MM 10/23/07\u00c2"
     },
     {
         "Hull": "29",
