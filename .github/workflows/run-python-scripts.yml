@@ -44,18 +44,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scraper/requirements.txt
+          pip install -r scripts/requirements.txt
       
-      - name: Run SailTags.py
+      - name: Run scrape_sail_tags.py
         id: sail-tags
         run: |
-          echo "Running SailTags.py..."
-          python scraper/SailTags.py
-          if [ -f "data/sail_tags.json" ]; then
-            echo "SailTags.py completed successfully!"
+          echo "Running scrape_sail_tags.py..."
+          python -m scripts.scrapers.scrape_sail_tags
+          if [ -f "data/sails/sail_tags.json" ]; then
+            echo "scrape_sail_tags.py completed successfully!"
             echo "success=true" >> $GITHUB_OUTPUT
           else
-            echo "SailTags.py failed to generate output file!"
+            echo "scrape_sail_tags.py failed to generate output file!"
             echo "success=false" >> $GITHUB_OUTPUT
             exit 1
           fi
@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sail-tags-data
-          path: data/sail_tags.json
+          path: data/sails/sail_tags.json
           retention-days: 1
   
   # Job to fetch owners status data
@@ -86,18 +86,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scraper/requirements.txt
+          pip install -r scripts/requirements.txt
       
-      - name: Run getOwnersStatus.py
+      - name: Run scrape_owner_status.py
         id: owners-status
         run: |
-          echo "Running getOwnersStatus.py..."
-          python scraper/getOwnersStatus.py
-          if [ -f "data/j105_members_status.json" ]; then
-            echo "getOwnersStatus.py completed successfully!"
+          echo "Running scrape_owner_status.py..."
+          python -m scripts.scrapers.scrape_owner_status
+          if [ -f "data/members/j105_members_status.json" ]; then
+            echo "scrape_owner_status.py completed successfully!"
             echo "success=true" >> $GITHUB_OUTPUT
           else
-            echo "getOwnersStatus.py failed to generate output file!"
+            echo "scrape_owner_status.py failed to generate output file!"
             echo "success=false" >> $GITHUB_OUTPUT
             exit 1
           fi
@@ -106,7 +106,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: owners-status-data
-          path: data/j105_members_status.json
+          path: data/members/j105_members_status.json
           retention-days: 1
   
   # Job to fetch fleet boats data
@@ -131,33 +131,36 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scraper/requirements.txt
+          pip install -r scripts/requirements.txt
           
       - name: List workspace files
         run: |
           echo "Checking workspace content before execution..."
           ls -la
           echo "Checking data directory..."
-          mkdir -p data
+          mkdir -p data/boats data/sails data/members
           ls -la data/ || echo "Data directory empty or doesn't exist"
           
           echo "Checking for input files..."
-          if [ -f "members.html" ]; then
-            echo "✅ members.html exists"
+          if [ -f "pages/members.html" ]; then
+            echo "✅ pages/members.html exists"
+            ls -la pages/members.html
+          elif [ -f "members.html" ]; then
+            echo "✅ members.html exists (root)"
             ls -la members.html
           else
-            echo "❌ members.html does not exist"
+            echo "❌ members.html does not exist in pages/ or root"
           fi
       
       - name: Run fleet boats script
         id: fleet-boats
         run: |
-          echo "Running fleetBoats_github_actions.py..."
-          python scraper/fleetBoats_github_actions.py
-          if [ -f "data/boats_fleet22.json" ]; then
+          echo "Running scrape_fleet_boats.py..."
+          python -m scripts.scrapers.scrape_fleet_boats
+          if [ -f "data/boats/boats_fleet22.json" ]; then
             echo "Fleet boats script completed successfully!"
-            echo "File size: $(du -h data/boats_fleet22.json | cut -f1)"
-            echo "Entry count: $(jq length data/boats_fleet22.json)"
+            echo "File size: $(du -h data/boats/boats_fleet22.json | cut -f1)"
+            echo "Entry count: $(jq length data/boats/boats_fleet22.json)"
             echo "success=true" >> $GITHUB_OUTPUT
           else
             echo "Fleet boats script failed to generate output file!"
@@ -169,7 +172,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fleet-boats-data
-          path: data/boats_fleet22.json
+          path: data/boats/boats_fleet22.json
           retention-days: 1
   
   # Process and validate data, then commit changes
@@ -192,7 +195,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scraper/requirements.txt
+          pip install -r scripts/requirements.txt
       
       - name: Download all artifacts
         uses: actions/download-artifact@v4
@@ -201,16 +204,16 @@ jobs:
       
       - name: Move downloaded files to data directory
         run: |
-          mkdir -p data/
-          cp .downloaded-artifacts/sail-tags-data/sail_tags.json data/
-          cp .downloaded-artifacts/owners-status-data/j105_members_status.json data/
-          cp .downloaded-artifacts/fleet-boats-data/boats_fleet22.json data/
+          mkdir -p data/boats data/sails data/members data/combined
+          cp .downloaded-artifacts/sail-tags-data/sail_tags.json data/sails/
+          cp .downloaded-artifacts/owners-status-data/j105_members_status.json data/members/
+          cp .downloaded-artifacts/fleet-boats-data/boats_fleet22.json data/boats/
       
       - name: Validate data
         id: validate-data
         run: |
           echo "Validating generated data..."
-          python scraper/validate_data.py
+          python -m scripts.validators.validate_fleet_data
           if [ $? -eq 0 ]; then
             echo "data_valid=true" >> $GITHUB_OUTPUT
           else
@@ -224,8 +227,8 @@ jobs:
         if: steps.validate-data.outputs.data_valid == 'true'
         run: |
           echo "Running combined data processor..."
-          python scraper/combineFleetSailOwner.py
-          if [ -f "data/combined_fleet_data.json" ] && [ -f "data/fleet_statistics.json" ]; then
+          python -m scripts.processors.combine_data_sources
+          if [ -f "data/combined/combined_fleet_data.json" ] && [ -f "data/combined/fleet_statistics.json" ]; then
             echo "Combined data processor completed successfully!"
             echo "data_processor_success=true" >> $GITHUB_OUTPUT
           else
@@ -242,7 +245,7 @@ jobs:
           
           # Verify files exist before checking
           echo "Verifying all required data files exist:"
-          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json; do
+          for file in data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/combined/combined_fleet_data.json data/combined/fleet_statistics.json; do
             if [ -f "$file" ]; then
               echo "✅ $file exists"
               echo "  Size: $(du -h $file | cut -f1)"
@@ -253,7 +256,7 @@ jobs:
           done
           
           # Check for changes
-          git diff --quiet data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json
+          git diff --quiet data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/combined/combined_fleet_data.json data/combined/fleet_statistics.json
           if [ $? -ne 0 ]; then
             echo "Changes detected by git diff"
             echo "changes_detected=true" >> $GITHUB_OUTPUT
@@ -277,7 +280,7 @@ jobs:
           git status
           
           # Add each file individually and report status
-          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json data/fleet_statistics.json; do
+          for file in data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/combined/combined_fleet_data.json data/combined/fleet_statistics.json; do
             if [ -f "$file" ]; then
               git add "$file"
               echo "Added $file to staging area"
@@ -303,7 +306,7 @@ jobs:
           
           # Add counts for verification
           echo "File counts:" >> commit_message.txt
-          for file in data/boats_fleet22.json data/j105_members_status.json data/sail_tags.json data/combined_fleet_data.json; do
+          for file in data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/combined/combined_fleet_data.json; do
             if [ -f "$file" ]; then
               COUNT=$(jq 'length' "$file" 2>/dev/null || echo "unknown")
               echo "- $(basename "$file"): $COUNT entries" >> commit_message.txt
@@ -350,16 +353,16 @@ jobs:
           echo "Generated on: $(date -u)" >> report.md
           echo "" >> report.md
           echo "## Statistics" >> report.md
-          echo "- Sail Tags: $(jq length data/sail_tags.json) entries" >> report.md
-          echo "- Membership Status: $(jq length data/j105_members_status.json) entries" >> report.md
-          echo "- Fleet Boats: $(jq length data/boats_fleet22.json) entries" >> report.md
-          echo "- Combined Data: $(jq length data/combined_fleet_data.json) entries" >> report.md
+          echo "- Sail Tags: $(jq length data/sails/sail_tags.json) entries" >> report.md
+          echo "- Membership Status: $(jq length data/members/j105_members_status.json) entries" >> report.md
+          echo "- Fleet Boats: $(jq length data/boats/boats_fleet22.json) entries" >> report.md
+          echo "- Combined Data: $(jq length data/combined/combined_fleet_data.json) entries" >> report.md
           echo "" >> report.md
           echo "## Fleet Statistics" >> report.md
-          echo "- Total boats: $(jq '.total_boats' data/fleet_statistics.json)" >> report.md
-          echo "- Fleet 22 boats: $(jq '.fleet_22_boats' data/fleet_statistics.json)" >> report.md
-          echo "- Active memberships: $(jq '.active_membership' data/fleet_statistics.json)" >> report.md
-          echo "- Total sail tags: $(jq '.total_sail_tags' data/fleet_statistics.json)" >> report.md
+          echo "- Total boats: $(jq '.total_boats' data/combined/fleet_statistics.json)" >> report.md
+          echo "- Fleet 22 boats: $(jq '.fleet_22_boats' data/combined/fleet_statistics.json)" >> report.md
+          echo "- Active memberships: $(jq '.active_membership' data/combined/fleet_statistics.json)" >> report.md
+          echo "- Total sail tags: $(jq '.total_sail_tags' data/combined/fleet_statistics.json)" >> report.md
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -367,10 +370,10 @@ jobs:
         with:
           name: scraper-results
           path: |
-            scraper/scraping.log
+            logs/scraping.log
             report.md
-            data/fleet_statistics.json
-            data/combined_fleet_data.json
+            data/combined/fleet_statistics.json
+            data/combined/combined_fleet_data.json
           retention-days: 14
   
   # Notify on job failures
