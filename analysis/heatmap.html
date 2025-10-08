@@ -21,7 +21,7 @@
     <div id="heatmaps-container"></div>
 
     <script>
-        fetch('sail_tags.json')
+        fetch('../data/sails/sail_tags.json')
             .then(response => response.json())
             .then(data => {
                 const groupedData = groupByHull(data);

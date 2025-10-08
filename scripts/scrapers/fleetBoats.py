@@ -4,7 +4,7 @@ import json
 import logging
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
+logging.basicConfig(level=logging.INFO, filename='logs/scraping.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Determine file paths in a more robust way

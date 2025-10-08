@@ -100,7 +100,7 @@
             document.getElementById('next-year').disabled = currentYear >= new Date().getFullYear();
         }
 
-        fetch('sail_tags.json')
+        fetch('../data/sails/sail_tags.json')
             .then(response => response.json())
             .then(data => {
                 globalData = transformData(data);
