@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
 Payment status update script for Fleet22_us repository
-Updates boats_fleet22.json with both Fleet Dues and Class Dues payment status.
-Syncs with payment_tracker CSV and membership data.
+Updates boats_fleet22.json with Class Dues payment status from membership data.
+Fleet Dues are manually maintained in boats_fleet22.json.
 """
 import sys
-import csv
 from datetime import datetime
 from pathlib import Path
 
@@ -27,47 +26,6 @@ logger = setup_logger('payment_sync', PROJECT_ROOT / 'logs' / 'data_management.l
 
 # Configuration
 CURRENT_YEAR = datetime.now().year
-PAYMENT_TRACKER_CSV = PAYMENTS_DATA / f"payment_tracker_{CURRENT_YEAR}.csv"
-
-def sync_fleet_dues_from_tracker(boats_data):
-    """Sync Fleet Dues payment status from payment_tracker CSV."""
-    if not PAYMENT_TRACKER_CSV.exists():
-        logger.warning(f"Payment tracker CSV not found: {PAYMENT_TRACKER_CSV}")
-        return boats_data, 0
-    
-    try:
-        updated_count = 0
-        payment_map = {}
-        
-        # Read payment tracker CSV
-        with open(PAYMENT_TRACKER_CSV, 'r') as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                hull = row.get('Hull', '')
-                if hull and row.get('Paid 2025', '').upper() == 'YES':
-                    payment_map[hull] = {
-                        'paid': True,
-                        'date': row.get('Payment Date', ''),
-                        'method': row.get('Payment Method', '')
-                    }
-        
-        # Update boats data
-        for boat in boats_data:
-            hull = str(boat.get('Hull Number', ''))
-            if hull in payment_map:
-                payment_info = payment_map[hull]
-                boat[f'Fleet Dues {CURRENT_YEAR}'] = 'Paid'
-                boat['Fleet Dues Payment Date'] = payment_info['date']
-                boat['Fleet Dues Payment Method'] = payment_info['method']
-                updated_count += 1
-                logger.info(f"Updated Fleet Dues for hull {hull}: Paid on {payment_info['date']}")
-        
-        logger.info(f"Synced Fleet Dues for {updated_count} boats from payment tracker")
-        return boats_data, updated_count
-        
-    except Exception as e:
-        logger.error(f"Error syncing Fleet Dues from tracker: {e}")
-        return boats_data, 0
 
 
 def sync_class_dues_from_members(boats_data, members_data):
@@ -155,13 +113,13 @@ Unknown:           {class_unknown}
 
 DATA SOURCES
 ------------
-✓ Fleet Dues: Synced from payment_tracker_{CURRENT_YEAR}.csv
+✓ Fleet Dues: Manually maintained in boats_fleet22.json
 ✓ Class Dues: Synced from j105_members_status.json
 
 NEXT STEPS
 ----------
-1. Update payment_tracker CSV as payments received
-2. Re-run this script to sync boats_fleet22.json
+1. Manually update Fleet Dues status in boats_fleet22.json as payments received
+2. Re-run this script to sync Class Dues from membership data
 3. Web pages will automatically show updated status
 """
     
@@ -196,11 +154,9 @@ def main():
         logger.info(f"✓ Loaded {len(boats_data)} boats")
         print(f"Loaded {len(boats_data)} boats from boats_fleet22.json")
         
-        # Sync Fleet Dues from payment tracker CSV
-        logger.info("\nSyncing Fleet Dues from payment tracker...")
-        print("\n📊 Syncing Fleet Dues from payment tracker CSV...")
-        boats_data, fleet_count = sync_fleet_dues_from_tracker(boats_data)
-        print(f"✓ Updated Fleet Dues for {fleet_count} boats")
+        # Fleet Dues are manually maintained in boats_fleet22.json
+        print("\n� Fleet Dues: Manually maintained in boats_fleet22.json")
+        logger.info("Fleet Dues status preserved from boats_fleet22.json (manual updates)")
         
         # Load members data for Class Dues
         logger.info(f"\nLoading members data from {MEMBERS_FILE}")
@@ -237,7 +193,8 @@ def main():
         print(f"\n✅ Payment synchronization completed successfully!")
         print(f"📄 Summary: {summary_path}")
         print(f"📄 Report: {report_path}")
-        print(f"\n💡 Tip: Re-run this script after updating payment_tracker CSV")
+        print(f"\n💡 Tip: Manually update Fleet Dues in boats_fleet22.json as payments arrive")
+        print(f"💡 Tip: Re-run this script weekly to sync Class Dues from membership data")
         
         return True
         
