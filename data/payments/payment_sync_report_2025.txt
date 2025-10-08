@@ -1,29 +1,30 @@
 ================================================================================
 DETAILED PAYMENT STATUS REPORT - 2025
-Generated: 2025-10-08 03:26:12
+Generated: 2025-10-08 03:50:48
 ================================================================================
 
-FLEET DUES - PAID BOATS (5)
+FLEET DUES - PAID BOATS (8)
 --------------------------------------------------------------------------------
+Hull   77 | Dark N Stormy                  | EYC        | PAID
+Hull   91 | Trio                           | EYC        | PAID
+Hull  118 | Relentless                     | NCYC       | PAID
 Hull  144 | Fall Line                      | EYC        | PAID
 Hull  145 | Kashmir                        | NCYC       | PAID
 Hull  246 | Mr. Krabs                      | BHSC       | PAID
 Hull  261 | Unbridled                      | EYC        | PAID
 Hull  376 | Whistler                       | NCYC       | PAID
 
-FLEET DUES - UNPAID BOATS (15)
+FLEET DUES - UNPAID BOATS (13)
 --------------------------------------------------------------------------------
 Hull   10 | Zamboni                        |            | NOT PAID
 Hull   37 | Windependence                  | BHSC       | NOT PAID
 Hull   72 | Highlander                     | EYC        | NOT PAID
-Hull   77 | Dark N Stormy                  | EYC        | NOT PAID
-Hull   91 | Trio                           | EYC        | NOT PAID
-Hull  118 | Relentless                     | NCYC       | NOT PAID
 Hull  123 | Good Lookin                    |            | NOT PAID
 Hull  148 | Wish                           | GRSC       | NOT PAID
 Hull  208 | Sling Shot                     | EYC        | NOT PAID
 Hull  393 | Ovation                        | EYC        | NOT PAID
 Hull  423 | Southbound                     | SSC        | NOT PAID
+Hull  493 | Rapscallion                    | EYC        | NOT PAID
 Hull  618 | Wrecking Crew                  | BHSC       | NOT PAID
 Hull  638 | Osprey                         | BHSC       | NOT PAID
 Hull  656 | Aurora                         | BYC        | NOT PAID
@@ -43,7 +44,7 @@ Hull  423 | Southbound                     | SSC        | PAID
 Hull  638 | Osprey                         | BHSC       | PAID
 Hull  656 | Aurora                         | BYC        | PAID
 
-CLASS DUES - UNPAID BOATS (10)
+CLASS DUES - UNPAID BOATS (11)
 --------------------------------------------------------------------------------
 Hull   10 | Zamboni                        |            | NOT PAID
 Hull   37 | Windependence                  | BHSC       | NOT PAID
@@ -53,5 +54,6 @@ Hull  123 | Good Lookin                    |            | NOT PAID
 Hull  148 | Wish                           | GRSC       | NOT PAID
 Hull  208 | Sling Shot                     | EYC        | NOT PAID
 Hull  393 | Ovation                        | EYC        | NOT PAID
+Hull  493 | Rapscallion                    | EYC        | NOT PAID
 Hull  618 | Wrecking Crew                  | BHSC       | NOT PAID
 Hull  677 | MYOURI II                      | BYC        | NOT PAID

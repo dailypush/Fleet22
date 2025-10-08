@@ -1,21 +1,21 @@
 
 ================================================================================
 PAYMENT STATUS SYNC REPORT - 2025
-Generated: 2025-10-08 03:26:12
+Generated: 2025-10-08 03:50:48
 ================================================================================
 
 FLEET DUES (Fleet 22 Dues)
 --------------------------
-Total Boats:       20
-Paid:              5 (25.0%)
-Unpaid:            15 (75.0%)
-Outstanding:       $2,250 (est. $150/boat)
+Total Boats:       21
+Paid:              8 (38.1%)
+Unpaid:            13 (61.9%)
+Outstanding:       $1,950 (est. $150/boat)
 
 CLASS DUES (J/105 Class Association)
 ------------------------------------
-Total Boats:       20
-Paid:              10 (50.0%)
-Unpaid:            10 (50.0%)
+Total Boats:       21
+Paid:              10 (47.6%)
+Unpaid:            11 (52.4%)
 Unknown:           0
 
 DATA SOURCES
