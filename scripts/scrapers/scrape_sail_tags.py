@@ -1,14 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
-import json
-import logging
 import time
-import os
 from tqdm import tqdm
+import sys
+from pathlib import Path
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.logger import setup_logger
+from utils.data_loader import save_json
+from utils.path_utils import SAILS_DATA
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='logs/scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logger = setup_logger(__name__)
 
 def clean_text(text):
     return text.replace('\u00a0', ' ').strip()
@@ -23,16 +28,16 @@ def fetch_url(url, headers):
     try:
         # Throttle requests to be polite to the server
         time.sleep(1)
-        logging.info(f'Requesting {url}')
+        logger.info(f'Requesting {url}')
         # Disable SSL certificate verification
         response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()
         return response.text
     except requests.exceptions.HTTPError as e:
-        logging.error(f'HTTP error occurred: {e}')
+        logger.error(f'HTTP error occurred: {e}')
         raise SystemExit(e)
     except requests.exceptions.RequestException as e:
-        logging.error(f'Request exception: {e}')
+        logger.error(f'Request exception: {e}')
         raise SystemExit(e)
 
 def parse_html(html):
@@ -56,19 +61,20 @@ def extract_table_data(table):
         data_list.append(row_data)
     return data_list
 
-def save_to_file(data, folder_path, file_name):
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-    json_file_path = os.path.join(folder_path, file_name)
-    with open(json_file_path, 'w') as file:
-        json.dump(data, file, indent=4)
-    logging.info(f'Data has been extracted and saved as {json_file_path}.')
+def main():
+    """Main execution function."""
+    logger.info("Starting sail tags scraper")
+    
+    html_content = fetch_url(url, headers)
+    table = parse_html(html_content)
+    
+    if table:
+        data = extract_table_data(table)
+        output_file = SAILS_DATA / 'sail_tags.json'
+        save_json(data, output_file)
+        logger.info(f"Successfully scraped {len(data)} sail tag records")
+    else:
+        logger.warning('Table not found. The script may need adjustment based on the HTML structure.')
 
-# Main execution
-html_content = fetch_url(url, headers)
-table = parse_html(html_content)
-if table:
-    data = extract_table_data(table)
-    save_to_file(data, '../data', 'sail_tags.json')
-else:
-    logging.warning('Table not found. The script may need adjustment based on the HTML structure.')
+if __name__ == "__main__":
+    main()
