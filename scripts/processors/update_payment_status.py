@@ -29,7 +29,7 @@ CURRENT_YEAR = datetime.now().year
 
 
 def sync_class_dues_from_members(boats_data, members_data):
-    """Sync Class Dues payment status from J/105 members data."""
+    """Sync Class Dues payment status from J/105 members data (simplified format)."""
     updated_count = 0
     
     try:
@@ -53,18 +53,17 @@ def sync_class_dues_from_members(boats_data, members_data):
                             "status": membership
                         }
         
-        # Update boats with Class Dues status
+        # Update boats with Class Dues status (simplified format)
         for boat in boats_data:
             hull_number = str(boat.get("Hull Number", ""))
             member_info = latest_membership_status.get(hull_number)
             
             if member_info and member_info["year"] == CURRENT_YEAR:
-                boat[f'Class Dues {CURRENT_YEAR}'] = 'Paid'
-                boat['Class Dues Payment Date'] = f"{CURRENT_YEAR}-01-01"  # Approximate
+                boat['Class Dues'] = 'Paid'
                 updated_count += 1
                 logger.info(f"Hull {hull_number} ({boat.get('Boat Name', 'Unknown')}): Class Dues Paid for {CURRENT_YEAR}")
             else:
-                boat[f'Class Dues {CURRENT_YEAR}'] = 'Unpaid'
+                boat['Class Dues'] = 'Not Paid'
                 if member_info:
                     logger.info(f"Hull {hull_number}: Class Dues not paid for {CURRENT_YEAR} (last paid: {member_info['year']})")
         
@@ -77,17 +76,17 @@ def sync_class_dues_from_members(boats_data, members_data):
 
 
 def generate_summary_report(boats_data):
-    """Generate summary statistics for both Fleet and Class Dues."""
+    """Generate summary statistics for both Fleet and Class Dues (simplified format)."""
     total = len(boats_data)
     
-    # Fleet Dues stats
-    fleet_paid = sum(1 for b in boats_data if b.get(f'Fleet Dues {CURRENT_YEAR}') == 'Paid')
+    # Fleet Dues stats (simplified format)
+    fleet_paid = sum(1 for b in boats_data if b.get('Fleet Dues') == 'Paid')
     fleet_unpaid = total - fleet_paid
     fleet_rate = (fleet_paid / total * 100) if total > 0 else 0
     
-    # Class Dues stats  
-    class_paid = sum(1 for b in boats_data if b.get(f'Class Dues {CURRENT_YEAR}') == 'Paid')
-    class_unpaid = sum(1 for b in boats_data if b.get(f'Class Dues {CURRENT_YEAR}') == 'Unpaid')
+    # Class Dues stats (simplified format)
+    class_paid = sum(1 for b in boats_data if b.get('Class Dues') == 'Paid')
+    class_unpaid = sum(1 for b in boats_data if b.get('Class Dues') == 'Not Paid')
     class_unknown = total - class_paid - class_unpaid
     class_rate = (class_paid / total * 100) if total > 0 else 0
     
@@ -205,7 +204,7 @@ def main():
 
 
 def generate_detailed_report(boats_data, year):
-    """Generate a detailed payment status report for both Fleet and Class Dues."""
+    """Generate a detailed payment status report for both Fleet and Class Dues (simplified format)."""
     
     # Sort boats
     def get_hull_sort_key(boat):
@@ -215,15 +214,15 @@ def generate_detailed_report(boats_data, year):
         except (ValueError, TypeError):
             return 99999
     
-    # Categorize by payment status
-    fleet_paid = sorted([b for b in boats_data if b.get(f'Fleet Dues {year}') == 'Paid'], 
+    # Categorize by payment status (simplified format)
+    fleet_paid = sorted([b for b in boats_data if b.get('Fleet Dues') == 'Paid'], 
                         key=get_hull_sort_key)
-    fleet_unpaid = sorted([b for b in boats_data if b.get(f'Fleet Dues {year}') != 'Paid'], 
+    fleet_unpaid = sorted([b for b in boats_data if b.get('Fleet Dues') != 'Paid'], 
                           key=get_hull_sort_key)
     
-    class_paid = sorted([b for b in boats_data if b.get(f'Class Dues {year}') == 'Paid'], 
+    class_paid = sorted([b for b in boats_data if b.get('Class Dues') == 'Paid'], 
                         key=get_hull_sort_key)
-    class_unpaid = sorted([b for b in boats_data if b.get(f'Class Dues {year}') == 'Unpaid'], 
+    class_unpaid = sorted([b for b in boats_data if b.get('Class Dues') == 'Not Paid'], 
                           key=get_hull_sort_key)
     
     # Build report
@@ -232,15 +231,14 @@ def generate_detailed_report(boats_data, year):
     report += f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
     report += f"{'='*80}\n\n"
     
-    # Fleet Dues Section
+    # Fleet Dues Section (simplified format)
     report += f"FLEET DUES - PAID BOATS ({len(fleet_paid)})\n"
     report += "-" * 80 + "\n"
     for boat in fleet_paid:
         report += f"Hull {boat.get('Hull Number', ''):>4} | "
         report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
         report += f"{boat.get('Yacht Club', ''):<10} | "
-        report += f"Paid: {boat.get('Fleet Dues Payment Date', 'N/A')} "
-        report += f"via {boat.get('Fleet Dues Payment Method', 'N/A')}\n"
+        report += f"PAID\n"
     
     report += f"\nFLEET DUES - UNPAID BOATS ({len(fleet_unpaid)})\n"
     report += "-" * 80 + "\n"
@@ -248,16 +246,16 @@ def generate_detailed_report(boats_data, year):
         report += f"Hull {boat.get('Hull Number', ''):>4} | "
         report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
         report += f"{boat.get('Yacht Club', ''):<10} | "
-        report += f"UNPAID\n"
+        report += f"NOT PAID\n"
     
-    # Class Dues Section
+    # Class Dues Section (simplified format)
     report += f"\n\nCLASS DUES - PAID BOATS ({len(class_paid)})\n"
     report += "-" * 80 + "\n"
     for boat in class_paid:
         report += f"Hull {boat.get('Hull Number', ''):>4} | "
         report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
         report += f"{boat.get('Yacht Club', ''):<10} | "
-        report += f"Paid for {year}\n"
+        report += f"PAID\n"
     
     report += f"\nCLASS DUES - UNPAID BOATS ({len(class_unpaid)})\n"
     report += "-" * 80 + "\n"
@@ -265,7 +263,7 @@ def generate_detailed_report(boats_data, year):
         report += f"Hull {boat.get('Hull Number', ''):>4} | "
         report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
         report += f"{boat.get('Yacht Club', ''):<10} | "
-        report += f"UNPAID\n"
+        report += f"NOT PAID\n"
     
     # Save the report
     report_path = PAYMENTS_DATA / f"payment_sync_report_{year}.txt"

@@ -18,16 +18,10 @@ from utils.path_utils import BOATS_FILE, PROJECT_ROOT
 # Setup logging
 logger = setup_logger(__name__)
 
-# Payment fields to preserve from existing data
+# Payment fields to preserve from existing data (simplified format)
 PAYMENT_FIELDS = [
-    'Owner',
-    'Contact Email',
-    'Fleet Dues 2025',
-    'Fleet Dues Payment Date',
-    'Fleet Dues Payment Method',
-    'Class Dues 2025',
-    'Class Dues Payment Date',
-    'Notes'
+    'Fleet Dues',
+    'Class Dues'
 ]
 
 def get_existing_fleet_data():
@@ -64,12 +58,8 @@ def merge_payment_data(scraped_data, payment_map):
             merged_count += 1
         else:
             # Initialize payment fields for new boats
-            for field in PAYMENT_FIELDS:
-                if field not in boat:
-                    if 'Dues' in field and 'Date' not in field and 'Method' not in field:
-                        boat[field] = 'Unpaid' if 'Fleet' in field else 'Unknown'
-                    else:
-                        boat[field] = ''
+            boat['Fleet Dues'] = 'Not Paid'
+            boat['Class Dues'] = 'Not Paid'
     
     logger.info(f"Merged payment data for {merged_count} boats")
     return scraped_data
@@ -148,7 +138,7 @@ def main():
     # Save the data
     save_json(data, BOATS_FILE)
     logger.info(f"Successfully processed {len(data)} boat entries")
-    paid_count = len([b for b in data if b.get('Fleet Dues 2025') == 'Paid'])
+    paid_count = len([b for b in data if b.get('Fleet Dues') == 'Paid'])
     print(f"Successfully processed {len(data)} boat entries and saved to {BOATS_FILE}")
     print(f"Preserved payment data: {paid_count} paid boats")
     
