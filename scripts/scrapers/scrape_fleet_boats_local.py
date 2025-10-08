@@ -12,11 +12,41 @@ from bs4 import BeautifulSoup
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.logger import setup_logger
-from utils.data_loader import save_json
+from utils.data_loader import save_json, load_json
 from utils.path_utils import PROJECT_ROOT, BOATS_FILE, ensure_directories
 
 # Setup logging
 logger = setup_logger('local_scraper', PROJECT_ROOT / 'logs' / 'scraping.log')
+
+# Payment fields to preserve from existing data
+PAYMENT_FIELDS = [
+    'Owner',
+    'Contact Email',
+    'Fleet Dues 2025',
+    'Fleet Dues Payment Date',
+    'Fleet Dues Payment Method',
+    'Class Dues 2025',
+    'Class Dues Payment Date',
+    'Notes'
+]
+
+def load_existing_payment_data():
+    """Load existing payment data to preserve it during scraping."""
+    try:
+        if BOATS_FILE.exists():
+            existing_data = load_json(BOATS_FILE)
+            # Create a mapping of hull number -> payment data
+            payment_map = {}
+            for boat in existing_data:
+                hull = str(boat.get('Hull Number', ''))
+                if hull:
+                    payment_map[hull] = {field: boat.get(field, '') for field in PAYMENT_FIELDS}
+            logger.info(f"Loaded existing payment data for {len(payment_map)} boats")
+            return payment_map
+        return {}
+    except Exception as e:
+        logger.warning(f"Could not load existing payment data: {e}")
+        return {}
 
 def scrape_local_fleet_boats(html_file_path):
     """Scrape boat data from a local HTML file."""
@@ -58,6 +88,27 @@ def scrape_local_fleet_boats(html_file_path):
         logger.error(f"Error processing fleet boats data: {str(e)}")
         raise
 
+def merge_payment_data(scraped_data, payment_map):
+    """Merge scraped boat data with existing payment information."""
+    merged_count = 0
+    for boat in scraped_data:
+        hull = str(boat.get('Hull Number', ''))
+        if hull in payment_map:
+            # Preserve existing payment data
+            boat.update(payment_map[hull])
+            merged_count += 1
+        else:
+            # Initialize payment fields for new boats
+            for field in PAYMENT_FIELDS:
+                if field not in boat:
+                    if 'Dues' in field and 'Date' not in field and 'Method' not in field:
+                        boat[field] = 'Unpaid' if 'Fleet' in field else 'Unknown'
+                    else:
+                        boat[field] = ''
+    
+    logger.info(f"Merged payment data for {merged_count} boats")
+    return scraped_data
+
 def main():
     parser = argparse.ArgumentParser(
         description="Scrape fleet boats data from a local HTML file"
@@ -92,14 +143,22 @@ def main():
         # Ensure directories exist
         ensure_directories()
         
+        # Load existing payment data to preserve it
+        logger.info("Loading existing payment data...")
+        payment_map = load_existing_payment_data()
+        
         # Scrape the data
         boats_data = scrape_local_fleet_boats(args.input)
+        
+        # Merge with existing payment data
+        boats_data = merge_payment_data(boats_data, payment_map)
         
         # Save the data (automatic backup via save_json)
         save_json(boats_data, args.output)
         
         print(f"✅ Successfully processed {len(boats_data)} boat entries")
         print(f"📄 Saved to {args.output}")
+        print(f"💾 Preserved payment data for {len([b for b in boats_data if b.get('Fleet Dues 2025') == 'Paid'])} paid boats")
         
         logger.info(f"Local scraper completed successfully")
         return 0

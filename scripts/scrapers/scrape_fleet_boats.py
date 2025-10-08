@@ -18,6 +18,18 @@ from utils.path_utils import BOATS_FILE, PROJECT_ROOT
 # Setup logging
 logger = setup_logger(__name__)
 
+# Payment fields to preserve from existing data
+PAYMENT_FIELDS = [
+    'Owner',
+    'Contact Email',
+    'Fleet Dues 2025',
+    'Fleet Dues Payment Date',
+    'Fleet Dues Payment Method',
+    'Class Dues 2025',
+    'Class Dues Payment Date',
+    'Notes'
+]
+
 def get_existing_fleet_data():
     """Try to load existing boats_fleet22.json data if available"""
     if BOATS_FILE.exists():
@@ -29,6 +41,38 @@ def get_existing_fleet_data():
             logger.error(f"Error loading existing fleet data: {str(e)}")
     
     return None
+
+def extract_payment_data(existing_data):
+    """Extract payment data from existing boats data."""
+    payment_map = {}
+    if existing_data:
+        for boat in existing_data:
+            hull = str(boat.get('Hull Number', ''))
+            if hull:
+                payment_map[hull] = {field: boat.get(field, '') for field in PAYMENT_FIELDS}
+        logger.info(f"Extracted payment data for {len(payment_map)} boats")
+    return payment_map
+
+def merge_payment_data(scraped_data, payment_map):
+    """Merge scraped boat data with existing payment information."""
+    merged_count = 0
+    for boat in scraped_data:
+        hull = str(boat.get('Hull Number', ''))
+        if hull in payment_map:
+            # Preserve existing payment data
+            boat.update(payment_map[hull])
+            merged_count += 1
+        else:
+            # Initialize payment fields for new boats
+            for field in PAYMENT_FIELDS:
+                if field not in boat:
+                    if 'Dues' in field and 'Date' not in field and 'Method' not in field:
+                        boat[field] = 'Unpaid' if 'Fleet' in field else 'Unknown'
+                    else:
+                        boat[field] = ''
+    
+    logger.info(f"Merged payment data for {merged_count} boats")
+    return scraped_data
 
 def try_load_from_members_html():
     """Try to load data from members.html file"""
@@ -81,13 +125,32 @@ def main():
     """Main execution function."""
     logger.info("Starting fleet boats scraper")
     
-    # Try different methods to get the data
-    data = get_existing_fleet_data() or try_load_from_members_html() or generate_fallback_data()
+    # Load existing data to preserve payment information
+    existing_data = get_existing_fleet_data()
+    payment_map = extract_payment_data(existing_data)
+    
+    # Try different methods to get fresh boat list
+    fresh_data = try_load_from_members_html()
+    
+    if fresh_data:
+        # Merge fresh data with existing payment data
+        data = merge_payment_data(fresh_data, payment_map)
+        logger.info("Updated boat list with preserved payment data")
+    elif existing_data:
+        # Use existing data if we can't get fresh data
+        data = existing_data
+        logger.info("Using existing boat data (no updates available)")
+    else:
+        # Last resort fallback
+        data = generate_fallback_data()
+        logger.warning("Using fallback data")
     
     # Save the data
     save_json(data, BOATS_FILE)
     logger.info(f"Successfully processed {len(data)} boat entries")
+    paid_count = len([b for b in data if b.get('Fleet Dues 2025') == 'Paid'])
     print(f"Successfully processed {len(data)} boat entries and saved to {BOATS_FILE}")
+    print(f"Preserved payment data: {paid_count} paid boats")
     
     return True
 

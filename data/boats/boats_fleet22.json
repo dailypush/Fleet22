@@ -3,120 +3,260 @@
         "Hull Number": "677",
         "Boat Name": "MYOURI II",
         "Yacht Club": "BYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "656",
         "Boat Name": "Aurora",
         "Yacht Club": "BYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "638",
         "Boat Name": "Osprey",
         "Yacht Club": "BHSC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "618",
         "Boat Name": "Wrecking Crew",
         "Yacht Club": "BHSC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "246",
         "Boat Name": "Mr. Krabs",
         "Yacht Club": "BHSC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Paid",
+        "Fleet Dues Payment Date": "2025-09-22",
+        "Fleet Dues Payment Method": "Check",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "37",
         "Boat Name": "Windependence",
         "Yacht Club": "BHSC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "423",
         "Boat Name": "Southbound",
         "Yacht Club": "SSC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "376",
         "Boat Name": "Whistler",
         "Yacht Club": "NCYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Paid",
+        "Fleet Dues Payment Date": "2025-09-28",
+        "Fleet Dues Payment Method": "Venmo",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "145",
         "Boat Name": "Kashmir",
         "Yacht Club": "NCYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Paid",
+        "Fleet Dues Payment Date": "2025-09-20",
+        "Fleet Dues Payment Method": "Online",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "118",
         "Boat Name": "Relentless",
         "Yacht Club": "NCYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "148",
         "Boat Name": "Wish",
         "Yacht Club": "GRSC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "123",
         "Boat Name": "Good Lookin",
         "Yacht Club": "",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "10",
         "Boat Name": "Zamboni",
         "Yacht Club": "",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "393",
         "Boat Name": "Ovation",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "261",
         "Boat Name": "Unbridled",
         "Yacht Club": "EYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Paid",
+        "Fleet Dues Payment Date": "2025-09-25",
+        "Fleet Dues Payment Method": "Venmo",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "208",
         "Boat Name": "Sling Shot",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "144",
         "Boat Name": "Fall Line",
         "Yacht Club": "EYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Paid",
+        "Fleet Dues Payment Date": "2025-09-15",
+        "Fleet Dues Payment Method": "Venmo",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "91",
         "Boat Name": "Trio",
         "Yacht Club": "EYC",
-        "Class Dues": "Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "77",
         "Boat Name": "Dark N Stormy",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     },
     {
         "Hull Number": "72",
         "Boat Name": "Highlander",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Owner": "",
+        "Contact Email": "",
+        "Fleet Dues 2025": "Unpaid",
+        "Fleet Dues Payment Date": "",
+        "Fleet Dues Payment Method": "",
+        "Class Dues 2025": "Unknown",
+        "Class Dues Payment Date": "",
+        "Notes": ""
     }
 ]
