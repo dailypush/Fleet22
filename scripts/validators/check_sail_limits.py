@@ -1,24 +1,45 @@
+#!/usr/bin/env python3
+"""
+Sail purchase limits validator for Fleet22_us repository
+Analyzes sail purchase records against J/105 class rules.
+"""
 import argparse
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.logger import setup_logger
+from utils.path_utils import PROJECT_ROOT, SAILS_FILE
+
+# Setup logging
+logger = setup_logger('sail_limits', PROJECT_ROOT / 'logs' / 'scraping.log')
 
 # Keywords indicating a sail replacement/defect exempt from limits
 REPLACEMENT_KEYWORDS = {"replacement", "replaced", "destroyed", "defective"}
 
 def load_data(file_path):
     """Load JSON sail tags into a DataFrame and parse dates."""
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-    df = pd.DataFrame(data)
-    df['Delivery Date'] = pd.to_datetime(df['Delivery Date'], errors='coerce')
-    df = df.dropna(subset=['Delivery Date'])
-    df['Year'] = df['Delivery Date'].dt.year
-    # Exclude hull 0 (sailmaker entries)
-    df = df[df['Hull'] != '0']
-    return df
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        logger.info(f"Loaded {len(data)} sail tags from {file_path}")
+        df = pd.DataFrame(data)
+        df['Delivery Date'] = pd.to_datetime(df['Delivery Date'], errors='coerce')
+        df = df.dropna(subset=['Delivery Date'])
+        df['Year'] = df['Delivery Date'].dt.year
+        # Exclude hull 0 (sailmaker entries)
+        df = df[df['Hull'] != '0']
+        logger.info(f"Processing {len(df)} valid sail entries (excluding Hull 0)")
+        return df
+    except Exception as e:
+        logger.error(f"Error loading data from {file_path}: {e}")
+        raise
 
 def is_replacement(note):
     """Determine if a sail entry is a replacement/exempt based on notes."""
@@ -71,12 +92,14 @@ def analyze_limits(df):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Analyze sail purchase records for class-rule violations."
+        description="Analyze sail purchase records for J/105 class-rule violations."
     )
     parser.add_argument(
         'input_file',
         type=Path,
-        help="Path to sail_tags.json file"
+        nargs='?',
+        default=SAILS_FILE,
+        help=f"Path to sail_tags.json file (default: {SAILS_FILE})"
     )
     parser.add_argument(
         '--output',
@@ -86,19 +109,32 @@ def main():
     )
     args = parser.parse_args()
 
-    df = load_data(args.input_file)
-    violations = analyze_limits(df)
+    logger.info(f"Starting sail limits analysis...")
+    
+    try:
+        df = load_data(args.input_file)
+        violations = analyze_limits(df)
 
-    if violations.empty:
-        print("No violations found (excluding Hull 0).")
-    else:
-        print("Violations detected (excluding Hull 0):")
-        print(violations.to_string(index=False))
+        if violations.empty:
+            print("✅ No violations found (excluding Hull 0).")
+            logger.info("No sail limit violations detected")
+        else:
+            print("⚠️  Violations detected (excluding Hull 0):")
+            print(violations.to_string(index=False))
+            logger.warning(f"Found {len(violations)} sail limit violations")
 
-        if args.output:
-            violations.to_csv(args.output, index=False)
-            print(f"\nViolations written to: {args.output}")
+            if args.output:
+                violations.to_csv(args.output, index=False)
+                print(f"\n📄 Violations written to: {args.output}")
+                logger.info(f"Violations report saved to {args.output}")
+        
+        return 0
+        
+    except Exception as e:
+        logger.error(f"Error during sail limits analysis: {e}")
+        print(f"❌ Error: {e}")
+        return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
  
