@@ -1,11 +1,11 @@
 # Fleet22_us Script Modernization - Completion Report
 
 ## Overview
-Successfully modernized all 10 Python scripts in the Fleet22_us workspace as part of the comprehensive workspace reorganization effort.
+Successfully modernized all 11 Python scripts in the Fleet22_us workspace as part of the comprehensive workspace reorganization effort.
 
 **Date Completed:** October 7, 2025  
 **Branch:** feature/rearrange  
-**Total Scripts Modernized:** 10/10 (100%)
+**Total Scripts Modernized:** 11/11 (100%)
 
 ---
 
@@ -132,7 +132,7 @@ Successfully modernized all 10 Python scripts in the Fleet22_us workspace as par
 
 ---
 
-### 4. Analysis (1 script)
+### 4. Analysis (2 scripts)
 
 #### analyze_sailmaker_trends.py ✅
 - **Location:** `scripts/analysis/analyze_sailmaker_trends.py`
@@ -148,6 +148,18 @@ Successfully modernized all 10 Python scripts in the Fleet22_us workspace as par
   - Quantum: 1,646 purchases
   - North: 3,188 purchases
   - Ullman: 1,622 purchases
+
+#### sailHeatMap.py ✅
+- **Location:** `analysis/heatmaps/sailHeatMap.py`
+- **Purpose:** Generate sail purchase heatmaps by hull
+- **Test Results:** 3 heatmaps generated (hulls 10, 423, 656)
+- **Output:** `analysis/heatmaps/heatmaps/*.png`
+- **Key Features:**
+  - Flexible hull selection (all, limited, or specific hulls)
+  - CLI arguments: --input, --output, --fleet, --limit, --hulls
+  - High-quality output (300 DPI, 12x8 figures)
+  - Progress bars with tqdm
+  - Year/Sail Type/Sailmaker breakdown
 
 ---
 
@@ -165,6 +177,7 @@ Successfully modernized all 10 Python scripts in the Fleet22_us workspace as par
 | update_payment_status.py | 20 | ✅ Pass | 50% payment rate |
 | check_sail_limits.py | 8,091 | ✅ Pass | 2,031 violations found |
 | analyze_sailmaker_trends.py | 6,466 | ✅ Pass | Chart generated |
+| sailHeatMap.py | 353 (Fleet 22) | ✅ Pass | 3 test heatmaps generated |
 
 ---
 
