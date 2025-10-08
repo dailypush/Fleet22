@@ -4,44 +4,43 @@ GitHub Actions compatible version of fleetBoats.py
 This script checks for existing boats_fleet22.json data in the data directory.
 If it exists, it uses that. If not, it uses a fallback approach.
 """
-import os
-import json
-import logging
-import time
-import requests
+import sys
+from pathlib import Path
 from bs4 import BeautifulSoup
 
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.logger import setup_logger
+from utils.data_loader import load_json, save_json
+from utils.path_utils import BOATS_FILE, PROJECT_ROOT
+
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logger = setup_logger(__name__)
 
 def get_existing_fleet_data():
     """Try to load existing boats_fleet22.json data if available"""
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(script_dir, '..'))
-    data_dir = os.path.join(project_root, 'data')
-    existing_file = os.path.join(data_dir, 'boats_fleet22.json')
-    
-    if os.path.exists(existing_file):
+    if BOATS_FILE.exists():
         try:
-            with open(existing_file, 'r') as f:
-                data = json.load(f)
-                logging.info(f"Loaded {len(data)} boat entries from existing file: {existing_file}")
-                return data
+            data = load_json(BOATS_FILE)
+            logger.info(f"Loaded {len(data)} boat entries from existing file: {BOATS_FILE}")
+            return data
         except Exception as e:
-            logging.error(f"Error loading existing fleet data: {str(e)}")
+            logger.error(f"Error loading existing fleet data: {str(e)}")
     
     return None
 
 def try_load_from_members_html():
     """Try to load data from members.html file"""
     try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.abspath(os.path.join(script_dir, '..'))
-        file_path = os.path.join(project_root, 'members.html')
+        # Look for members.html in pages or project root
+        members_pages = PROJECT_ROOT / 'pages' / 'members.html'
+        members_root = PROJECT_ROOT / 'members.html'
         
-        if not os.path.exists(file_path):
-            logging.warning(f"members.html not found at: {file_path}")
+        file_path = members_pages if members_pages.exists() else members_root
+        
+        if not file_path.exists():
+            logger.warning(f"members.html not found at: {file_path}")
             return None
             
         with open(file_path, 'r') as file:
@@ -51,7 +50,7 @@ def try_load_from_members_html():
         table = soup.find('table', {'class': 'table table-striped'})
         
         if table is None:
-            logging.warning("Could not find the table with class 'table table-striped'")
+            logger.warning("Could not find the table with class 'table table-striped'")
             return None
         
         data_list = []
@@ -63,41 +62,32 @@ def try_load_from_members_html():
                 row_data = {headers[i]: col.text.strip() for i, col in enumerate(cols)}
                 data_list.append(row_data)
         
-        logging.info(f"Extracted {len(data_list)} boat entries from members.html")
+        logger.info(f"Extracted {len(data_list)} boat entries from members.html")
         return data_list
     
     except Exception as e:
-        logging.error(f"Error processing members.html: {str(e)}")
+        logger.error(f"Error processing members.html: {str(e)}")
         return None
 
 def generate_fallback_data():
     """Generate fallback data"""
     # This is just a minimal structure to allow the workflow to continue
-    logging.warning("Using fallback data generation")
+    logger.warning("Using fallback data generation")
     return [
-        {"Hull #": "Unavailable", "Boat Name": "Data Unavailable", "Owner": "N/A"}
+        {"Hull Number": "Unavailable", "Boat Name": "Data Unavailable", "Owner": "N/A"}
     ]
 
 def main():
-    # Determine file paths
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(script_dir, '..'))
-    data_dir = os.path.join(project_root, 'data')
-    
-    # Ensure the data directory exists
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
+    """Main execution function."""
+    logger.info("Starting fleet boats scraper")
     
     # Try different methods to get the data
     data = get_existing_fleet_data() or try_load_from_members_html() or generate_fallback_data()
     
     # Save the data
-    output_file_path = os.path.join(data_dir, 'boats_fleet22.json')
-    with open(output_file_path, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
-    
-    logging.info(f"Saved {len(data)} boat entries to {output_file_path}")
-    print(f"Successfully processed {len(data)} boat entries and saved to {output_file_path}")
+    save_json(data, BOATS_FILE)
+    logger.info(f"Successfully processed {len(data)} boat entries")
+    print(f"Successfully processed {len(data)} boat entries and saved to {BOATS_FILE}")
     
     return True
 
@@ -105,6 +95,6 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"Unexpected error: {str(e)}")
+        logger.error(f"Unexpected error: {str(e)}")
         print(f"Error: {str(e)}")
         raise

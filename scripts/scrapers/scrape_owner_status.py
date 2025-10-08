@@ -1,16 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
-import json
-import logging
 import time
 import re
-import os
+import sys
+from pathlib import Path
 from tqdm import tqdm
-# from datetime import datetime
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.logger import setup_logger
+from utils.data_loader import save_json
+from utils.path_utils import MEMBERS_FILE
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logger = setup_logger(__name__)
 
 # URL of the website to scrape and headers to mimic a browser visit
 url = 'https://archive.j105.org/members/owners.php'
@@ -18,78 +22,87 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-try:
-    # Throttle requests to be polite to the server
-    time.sleep(1)
-    
-    # Send a GET request to the website with headers
-    logging.info(f'Requesting {url}')
-    # Disable SSL certificate verification
-    response = requests.get(url, headers=headers, verify=False)
-    response.raise_for_status()
+def fetch_owner_status():
+    """Fetch owner status data from J105 archive."""
+    try:
+        # Throttle requests to be polite to the server
+        time.sleep(1)
+        
+        # Send a GET request to the website with headers
+        logger.info(f'Requesting {url}')
+        # Disable SSL certificate verification
+        response = requests.get(url, headers=headers, verify=False)
+        response.raise_for_status()
+        return response.text
 
-except requests.exceptions.HTTPError as e:
-    logging.error(f'HTTP error occurred: {e}')
-    raise SystemExit(e)
-except requests.exceptions.RequestException as e:
-    logging.error(f'Request exception: {e}')
-    raise SystemExit(e)
+    except requests.exceptions.HTTPError as e:
+        logger.error(f'HTTP error occurred: {e}')
+        raise SystemExit(e)
+    except requests.exceptions.RequestException as e:
+        logger.error(f'Request exception: {e}')
+        raise SystemExit(e)
 
-# Parse the HTML content
-soup = BeautifulSoup(response.text, 'html.parser')
+def parse_owner_data(html_content):
+    """Parse HTML content and extract owner data."""
+    # Parse the HTML content
+    soup = BeautifulSoup(html_content, 'html.parser')
 
-# Specific CSS selector for the table, ensure it correctly points to the table you're interested in
-selector = 'table[width="98%"]'
-table = soup.select_one(selector)
+    # Specific CSS selector for the table
+    selector = 'table[width="98%"]'
+    table = soup.select_one(selector)
 
-if table:
+    if not table:
+        logger.warning('Table not found. Check the CSS selector.')
+        return []
+
     # Extract headers from the first row's <td> elements
     first_row = table.find('tr')
-    if first_row:
-        headers = [td.text.strip() for td in first_row.find_all('td')]
+    if not first_row:
+        logger.warning('No header row found in table.')
+        return []
+    
+    headers = [td.text.strip() for td in first_row.find_all('td')]
     
     # Initialize a list to hold all rows of data
     data_list = []
     
     # Iterate over each row in the table starting from the second row
-    for row in tqdm(table.find_all('tr')[1:], desc="Scraping Rows"):
+    for row in tqdm(table.find_all('tr')[1:], desc="Processing Rows"):
         cols = row.find_all('td')
         if len(cols) == len(headers):
-            # Directly address the problematic field by index or header name if known
-            # Example: Assuming "Class Membership" is the last column
+            # Sanitize the Class Membership field (last column)
             class_membership_text = cols[-1].text.replace('\n', ' ').strip()
             class_membership_text = re.sub(r'\s+', ' ', class_membership_text)
             
             # Apply general sanitization to other fields
             row_data = {headers[i]: re.sub(r'\s+', ' ', cols[i].text).strip() for i in range(len(cols)-1)}
             
-            # Update the problematic field with sanitized text
+            # Update the Class Membership field with sanitized text
             row_data["Class Membership"] = class_membership_text
-            # Check if the 'Fleet' column matches '22'
-            # if row_data.get("Fleet") == "22":
-            #     data_list.append(row_data)
             data_list.append(row_data)
-
         else:
-            logging.warning(f'Skipping row with unexpected number of columns: {len(cols)} expected: {len(headers)}')
+            logger.warning(f'Skipping row with unexpected number of columns: {len(cols)} expected: {len(headers)}')
     
-    # Convert the list to JSON and save
-    json_data = json.dumps(data_list, indent=4)
-    # Generate a filename with the current date
-    # date_str = datetime.now().strftime("%Y-%m-%d")
-    # filename = f"j105_members_status_{date_str}.json"
-    # Ensure the 'data' folder exists
-    folder_path = '../data'
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    return data_list
 
-    # Define the full path for the JSON output file
-    json_file_path = os.path.join(folder_path, 'j105_members_status.json')
+def main():
+    """Main execution function."""
+    logger.info("Starting owner status scraper")
+    
+    # Fetch data from website
+    html_content = fetch_owner_status()
+    
+    # Parse the HTML
+    data_list = parse_owner_data(html_content)
+    
+    if data_list:
+        # Save the data
+        save_json(data_list, MEMBERS_FILE)
+        logger.info(f"Successfully scraped {len(data_list)} owner records")
+        print(f"Successfully scraped {len(data_list)} owner records")
+    else:
+        logger.warning("No data extracted")
+        print("Warning: No data extracted")
 
-    # Use this filename when saving the JSON data
-    with open(json_file_path, 'w') as file:
-        file.write(json_data)
-
-    logging.info(f'Data has been extracted and saved as {json_file_path}.')
-else:
-    logging.warning('Table not found. Check the CSS selector.')
+if __name__ == "__main__":
+    main()
