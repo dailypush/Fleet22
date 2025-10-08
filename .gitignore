@@ -1,0 +1,132 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.virtualenv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/*.log
+*.log
+scraping.log
+
+# Backup files
+*_backup_*.json
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Shell scripts (reorganization/cleanup scripts)
+reorganize_*.sh
+update_references.sh
+cleanup_*.sh
+
+# Documentation drafts (keep final docs)
+REORGANIZATION_*.md
+README_REORGANIZATION.md
+UPDATE_SUMMARY.md
+TESTING_CHECKLIST.md
+
+# Analysis cache
+analysis/heatmaps/heatmaps/
+
+# Data files that are auto-generated
+data/combined/
+data/sails/sail_tags.json
+
+# Payment tracker CSV (if using manual method)
+data/payments/payment_tracker_*.csv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Node modules (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Scraped data that's frequently updated
+scraping.log
+
+# GitHub Actions artifacts
+report.md
