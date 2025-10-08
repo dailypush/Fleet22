@@ -5,47 +5,37 @@ Combines and harmonizes data from multiple sources into a consolidated dataset.
 """
 import json
 import os
-import logging
+import sys
 import re
 from datetime import datetime
+from pathlib import Path
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.logger import setup_logger
+from utils.data_loader import load_json, save_json
+from utils.path_utils import (
+    PROJECT_ROOT,
+    BOATS_FILE,
+    SAILS_FILE,
+    MEMBERS_FILE,
+    COMBINED_FILE,
+    STATISTICS_FILE,
+    ensure_directories
+)
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, filename='scraping.log', filemode='a',
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+logger = setup_logger('processor', PROJECT_ROOT / 'logs' / 'scraping.log')
 
-# Try both relative and absolute paths for flexibility
-DEFAULT_DATA_DIR = '../data'
-GITHUB_DATA_DIR = 'data'
-
-def get_data_dir():
-    """Determine which data directory to use."""
-    if os.path.exists(DEFAULT_DATA_DIR) and os.path.isdir(DEFAULT_DATA_DIR):
-        return DEFAULT_DATA_DIR
-    elif os.path.exists(GITHUB_DATA_DIR) and os.path.isdir(GITHUB_DATA_DIR):
-        return GITHUB_DATA_DIR
+def load_json_data(filepath):
+    """Load JSON data from a file path."""
+    data = load_json(filepath)
+    if data:
+        logger.info(f"Successfully loaded {len(data)} items from {filepath}")
     else:
-        raise FileNotFoundError("Could not find data directory")
-
-def get_output_dir():
-    """Determine which output directory to use."""
-    data_dir = get_data_dir()
-    # Create the directory if it doesn't exist
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
-    return data_dir
-
-def load_json_data(filename):
-    """Load JSON data from a file."""
-    data_dir = get_data_dir()
-    filepath = os.path.join(data_dir, filename)
-    try:
-        with open(filepath, 'r') as f:
-            data = json.load(f)
-            logging.info(f"Successfully loaded {len(data)} items from {filepath}")
-            return data
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        logging.error(f"Error loading {filepath}: {e}")
-        return []
+        logger.warning(f"No data loaded from {filepath}")
+    return data if data else []
 
 def standardize_hull_number(hull_num):
     """Standardize hull number format."""
@@ -76,17 +66,17 @@ def standardize_owner_name(owner_name):
 
 def combine_boat_data():
     """Combine boat data from multiple sources."""
-    sail_tags_data = load_json_data('sail_tags.json')
-    membership_data = load_json_data('j105_members_status.json')
-    fleet_boats_data = load_json_data('boats_fleet22.json')
+    sail_tags_data = load_json_data(SAILS_FILE)
+    membership_data = load_json_data(MEMBERS_FILE)
+    fleet_boats_data = load_json_data(BOATS_FILE)
     
     # Log the first item of each data source to help debug
     if sail_tags_data:
-        logging.info(f"sail_tags.json first item keys: {list(sail_tags_data[0].keys())}")
+        logger.info(f"sail_tags.json first item keys: {list(sail_tags_data[0].keys())}")
     if membership_data:
-        logging.info(f"j105_members_status.json first item keys: {list(membership_data[0].keys())}")
+        logger.info(f"j105_members_status.json first item keys: {list(membership_data[0].keys())}")
     if fleet_boats_data:
-        logging.info(f"boats_fleet22.json first item keys: {list(fleet_boats_data[0].keys())}")
+        logger.info(f"boats_fleet22.json first item keys: {list(fleet_boats_data[0].keys())}")
     
     # Create a dictionary to track all unique hull numbers
     combined_data = {}
@@ -172,19 +162,14 @@ def combine_boat_data():
     # Sort by hull number
     combined_list.sort(key=lambda x: int(x['hull_number']) if x['hull_number'].isdigit() else float('inf'))
     
-    logging.info(f"Combined data has {len(combined_list)} entries")
+    logger.info(f"Combined data has {len(combined_list)} entries")
     return combined_list
 
 def save_combined_data(data):
     """Save combined data to a JSON file."""
-    output_dir = get_output_dir()
-    output_file = os.path.join(output_dir, 'combined_fleet_data.json')
-    
-    with open(output_file, 'w') as f:
-        json.dump(data, f, indent=2)
-    
-    logging.info(f"Combined data saved to {output_file} with {len(data)} entries.")
-    print(f"Combined data saved to {output_file} with {len(data)} entries.")
+    save_json(data, COMBINED_FILE)
+    logger.info(f"Combined data saved to {COMBINED_FILE} with {len(data)} entries.")
+    print(f"Combined data saved to {COMBINED_FILE} with {len(data)} entries.")
 
 def generate_fleet_statistics(combined_data):
     """Generate statistics about the fleet."""
@@ -198,27 +183,25 @@ def generate_fleet_statistics(combined_data):
         'generation': datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')
     }
     
-    output_dir = get_output_dir()
-    stats_file = os.path.join(output_dir, 'fleet_statistics.json')
-    
-    with open(stats_file, 'w') as f:
-        json.dump(stats, f, indent=2)
-        
-    logging.info(f"Fleet statistics saved to {stats_file}.")
-    print(f"Fleet statistics saved to {stats_file}.")
+    save_json(stats, STATISTICS_FILE)
+    logger.info(f"Fleet statistics saved to {STATISTICS_FILE}.")
+    print(f"Fleet statistics saved to {STATISTICS_FILE}.")
     
     return stats
 
 def main():
     try:
-        logging.info("Starting data combination process...")
+        logger.info("Starting data combination process...")
+        
+        # Ensure directories exist
+        ensure_directories()
         
         # Combine data from all sources
         combined_data = combine_boat_data()
         
         # If no data was combined, generate a placeholder entry to avoid errors
         if not combined_data:
-            logging.warning("No data was combined. Creating a placeholder entry.")
+            logger.warning("No data was combined. Creating a placeholder entry.")
             combined_data = [{
                 'hull_number': '0',
                 'owner': 'No Owner Data',
@@ -241,7 +224,7 @@ def main():
         # Always return success even if no data was found
         return True
     except Exception as e:
-        logging.error(f"Error in data combination process: {str(e)}")
+        logger.error(f"Error in data combination process: {str(e)}")
         print(f"Error in data combination process: {str(e)}")
         return False
 
