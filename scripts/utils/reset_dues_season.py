@@ -70,7 +70,6 @@ def main():
     # Default paths
     project_root = Path(__file__).parent.parent.parent
     boats_file = project_root / "data" / "boats" / "boats_fleet22.json"
-    root_file = project_root / "data" / "boats_fleet22.json"
     
     # Parse command line arguments
     import argparse
@@ -140,15 +139,6 @@ Examples:
         args.output,
         reset_class_dues=not args.fleet_only
     )
-    
-    # Also update the root file if we updated the boats directory file
-    if str(input_file) == str(boats_file) and root_file.exists():
-        print(f"\n🔄 Also updating root file: {root_file}")
-        reset_dues_season(
-            str(root_file), 
-            None,
-            reset_class_dues=not args.fleet_only
-        )
     
     print("\n✅ Season reset complete!")
     print("\n💡 Next steps:")

@@ -87,15 +87,15 @@
             });
         }
 
-        fetch('https://api.github.com/repos/dailypush/Fleet22/contents/data/boats_fleet22.json')
+        fetch('https://api.github.com/repos/dailypush/Fleet22/contents/data/boats/boats_fleet22.json')
             .then(response => response.json())
             .then(data => {
-                // Decode the base64 content
-                const fileContent = atob(data.content.replace(/\s/g, '')); // Remove potential whitespace
-                const json = JSON.parse(fileContent);
-                fillTable(json); // Make sure to call fillTable with the parsed JSON data
-                // Fetch the commit history for the last updated date
-                return fetch('https://api.github.com/repos/dailypush/Fleet22/commits?path=/data/boats_fleet22.json');
+                const content = atob(data.content);
+                const boatsData = JSON.parse(content);
+                fillTable(boatsData);
+                
+                // Fetch last updated date
+                return fetch('https://api.github.com/repos/dailypush/Fleet22/commits?path=data/boats/boats_fleet22.json');
             })
             .then(response => response.json())
             .then(commits => {

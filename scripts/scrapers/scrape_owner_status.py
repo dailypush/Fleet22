@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import re
 import sys
+import html
 from pathlib import Path
 from tqdm import tqdm
 
@@ -73,9 +74,16 @@ def parse_owner_data(html_content):
             # Sanitize the Class Membership field (last column)
             class_membership_text = cols[-1].text.replace('\n', ' ').strip()
             class_membership_text = re.sub(r'\s+', ' ', class_membership_text)
+            # Decode any HTML entities that might have been missed
+            class_membership_text = html.unescape(class_membership_text)
             
             # Apply general sanitization to other fields
-            row_data = {headers[i]: re.sub(r'\s+', ' ', cols[i].text).strip() for i in range(len(cols)-1)}
+            row_data = {}
+            for i in range(len(cols)-1):
+                # Get text, sanitize whitespace, and decode HTML entities
+                text = re.sub(r'\s+', ' ', cols[i].text).strip()
+                text = html.unescape(text)
+                row_data[headers[i]] = text
             
             # Update the Class Membership field with sanitized text
             row_data["Class Membership"] = class_membership_text

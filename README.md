@@ -203,7 +203,7 @@ The following JSON data files are automatically maintained:
 - `data/sails/sail_tags.json`: Sail certification data for all J/105 boats (automatically scraped)
 
 **Fleet Data:**
-- `data/boats_fleet22.json`: Fleet 22 specific boat information
+- `data/boats/boats_fleet22.json`: Fleet 22 specific boat information (automatically updated)
 - `data/boats/*.json`: Individual boat data files
 
 **Combined Data:**
