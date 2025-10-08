@@ -277,13 +277,20 @@ jobs:
             fi
           done
           
-          # Check for changes
+          # Check for changes using git diff
+          # Note: git diff --quiet returns 1 if there are differences, 0 if no differences
+          # We need to capture this without failing the step
+          set +e  # Disable exit on error temporarily
           git diff --quiet data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/combined/combined_fleet_data.json data/combined/fleet_statistics.json data/payments/payment_sync_summary_2025.txt data/payments/payment_sync_report_2025.txt
-          if [ $? -ne 0 ]; then
+          DIFF_EXIT_CODE=$?
+          set -e  # Re-enable exit on error
+          
+          if [ $DIFF_EXIT_CODE -ne 0 ]; then
             echo "Changes detected by git diff"
             echo "changes_detected=true" >> $GITHUB_OUTPUT
           else
             echo "No changes detected by git diff"
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
           fi
           
           # If force update is enabled, always indicate changes detected
