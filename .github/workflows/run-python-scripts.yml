@@ -237,28 +237,7 @@ jobs:
             exit 1
           fi
       
-      - name: Sync payment status
-        id: sync-payment
-        if: steps.data-processor.outputs.data_processor_success == 'true'
-        run: |
-          echo "Syncing payment status from payment tracker and member data..."
-          python -m scripts.processors.update_payment_status
-          if [ $? -eq 0 ]; then
-            echo "Payment sync completed successfully!"
-            echo "Verifying boats_fleet22.json was updated..."
-            if [ -f "data/boats/boats_fleet22.json" ]; then
-              echo "File size: $(du -h data/boats/boats_fleet22.json | cut -f1)"
-              echo "Entry count: $(jq length data/boats/boats_fleet22.json)"
-              echo "payment_sync_success=true" >> $GITHUB_OUTPUT
-            else
-              echo "Warning: boats_fleet22.json not found after sync"
-              echo "payment_sync_success=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "Payment sync failed. Continuing with workflow..."
-            echo "payment_sync_success=false" >> $GITHUB_OUTPUT
-          fi
-      
+      # Stage 5: Check for changes in the generated files
       - name: Check for changes
         id: check-changes
         run: |
@@ -294,7 +273,7 @@ jobs:
           # We need to capture this without failing the step
           # Exclude data/combined/ files as they are in .gitignore
           set +e  # Disable exit on error temporarily
-          git diff --quiet data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/payments/payment_sync_summary_2025.txt data/payments/payment_sync_report_2025.txt
+          git diff --quiet data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json
           DIFF_EXIT_CODE=$?
           set -e  # Re-enable exit on error
           
@@ -323,7 +302,7 @@ jobs:
           
           # Add each file individually and report status
           # Note: Excluding data/combined/ files as they are in .gitignore (auto-generated)
-          for file in data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json data/payments/payment_sync_summary_2025.txt data/payments/payment_sync_report_2025.txt; do
+          for file in data/boats/boats_fleet22.json data/members/j105_members_status.json data/sails/sail_tags.json; do
             if [ -f "$file" ]; then
               git add "$file"
               echo "Added $file to staging area"
@@ -406,15 +385,6 @@ jobs:
           echo "- Fleet 22 boats: $(jq '.fleet_22_boats' data/combined/fleet_statistics.json)" >> report.md
           echo "- Active memberships: $(jq '.active_membership' data/combined/fleet_statistics.json)" >> report.md
           echo "- Total sail tags: $(jq '.total_sail_tags' data/combined/fleet_statistics.json)" >> report.md
-          echo "" >> report.md
-          echo "## Payment Status" >> report.md
-          if [ -f "data/payments/payment_sync_summary_2025.txt" ]; then
-            echo '```' >> report.md
-            cat data/payments/payment_sync_summary_2025.txt >> report.md
-            echo '```' >> report.md
-          else
-            echo "Payment sync summary not available" >> report.md
-          fi
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -426,8 +396,6 @@ jobs:
             report.md
             data/combined/fleet_statistics.json
             data/combined/combined_fleet_data.json
-            data/payments/payment_sync_summary_2025.txt
-            data/payments/payment_sync_report_2025.txt
           retention-days: 14
   
   # Notify on job failures
