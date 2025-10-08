@@ -1,0 +1,57 @@
+================================================================================
+DETAILED PAYMENT STATUS REPORT - 2025
+Generated: 2025-10-07 22:14:07
+================================================================================
+
+FLEET DUES - PAID BOATS (5)
+--------------------------------------------------------------------------------
+Hull  144 | Fall Line                      | EYC        | Paid: 2025-09-15 via Venmo
+Hull  145 | Kashmir                        | NCYC       | Paid: 2025-09-20 via Online
+Hull  246 | Mr. Krabs                      | BHSC       | Paid: 2025-09-22 via Check
+Hull  261 | Unbridled                      | EYC        | Paid: 2025-09-25 via Venmo
+Hull  376 | Whistler                       | NCYC       | Paid: 2025-09-28 via Venmo
+
+FLEET DUES - UNPAID BOATS (15)
+--------------------------------------------------------------------------------
+Hull   10 | Zamboni                        |            | UNPAID
+Hull   37 | Windependence                  | BHSC       | UNPAID
+Hull   72 | Highlander                     | EYC        | UNPAID
+Hull   77 | Dark N Stormy                  | EYC        | UNPAID
+Hull   91 | Trio                           | EYC        | UNPAID
+Hull  118 | Relentless                     | NCYC       | UNPAID
+Hull  123 | Good Lookin                    |            | UNPAID
+Hull  148 | Wish                           | GRSC       | UNPAID
+Hull  208 | Sling Shot                     | EYC        | UNPAID
+Hull  393 | Ovation                        | EYC        | UNPAID
+Hull  423 | Southbound                     | SSC        | UNPAID
+Hull  618 | Wrecking Crew                  | BHSC       | UNPAID
+Hull  638 | Osprey                         | BHSC       | UNPAID
+Hull  656 | Aurora                         | BYC        | UNPAID
+Hull  677 | MYOURI II                      | BYC        | UNPAID
+
+
+CLASS DUES - PAID BOATS (10)
+--------------------------------------------------------------------------------
+Hull   72 | Highlander                     | EYC        | Paid for 2025
+Hull   91 | Trio                           | EYC        | Paid for 2025
+Hull  144 | Fall Line                      | EYC        | Paid for 2025
+Hull  145 | Kashmir                        | NCYC       | Paid for 2025
+Hull  246 | Mr. Krabs                      | BHSC       | Paid for 2025
+Hull  261 | Unbridled                      | EYC        | Paid for 2025
+Hull  376 | Whistler                       | NCYC       | Paid for 2025
+Hull  423 | Southbound                     | SSC        | Paid for 2025
+Hull  638 | Osprey                         | BHSC       | Paid for 2025
+Hull  656 | Aurora                         | BYC        | Paid for 2025
+
+CLASS DUES - UNPAID BOATS (10)
+--------------------------------------------------------------------------------
+Hull   10 | Zamboni                        |            | UNPAID
+Hull   37 | Windependence                  | BHSC       | UNPAID
+Hull   77 | Dark N Stormy                  | EYC        | UNPAID
+Hull  118 | Relentless                     | NCYC       | UNPAID
+Hull  123 | Good Lookin                    |            | UNPAID
+Hull  148 | Wish                           | GRSC       | UNPAID
+Hull  208 | Sling Shot                     | EYC        | UNPAID
+Hull  393 | Ovation                        | EYC        | UNPAID
+Hull  618 | Wrecking Crew                  | BHSC       | UNPAID
+Hull  677 | MYOURI II                      | BYC        | UNPAID

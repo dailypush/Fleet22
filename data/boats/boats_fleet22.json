@@ -8,7 +8,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -21,8 +21,8 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -34,8 +34,8 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -47,7 +47,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -60,8 +60,8 @@
         "Fleet Dues 2025": "Paid",
         "Fleet Dues Payment Date": "2025-09-22",
         "Fleet Dues Payment Method": "Check",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -73,7 +73,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -86,8 +86,8 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -99,8 +99,8 @@
         "Fleet Dues 2025": "Paid",
         "Fleet Dues Payment Date": "2025-09-28",
         "Fleet Dues Payment Method": "Venmo",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -112,8 +112,8 @@
         "Fleet Dues 2025": "Paid",
         "Fleet Dues Payment Date": "2025-09-20",
         "Fleet Dues Payment Method": "Online",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -125,7 +125,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -138,7 +138,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -151,7 +151,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -164,7 +164,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -177,7 +177,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -190,8 +190,8 @@
         "Fleet Dues 2025": "Paid",
         "Fleet Dues Payment Date": "2025-09-25",
         "Fleet Dues Payment Method": "Venmo",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -203,7 +203,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -216,8 +216,8 @@
         "Fleet Dues 2025": "Paid",
         "Fleet Dues Payment Date": "2025-09-15",
         "Fleet Dues Payment Method": "Venmo",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -229,8 +229,8 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     },
     {
@@ -242,7 +242,7 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
+        "Class Dues 2025": "Unpaid",
         "Class Dues Payment Date": "",
         "Notes": ""
     },
@@ -255,8 +255,8 @@
         "Fleet Dues 2025": "Unpaid",
         "Fleet Dues Payment Date": "",
         "Fleet Dues Payment Method": "",
-        "Class Dues 2025": "Unknown",
-        "Class Dues Payment Date": "",
+        "Class Dues 2025": "Paid",
+        "Class Dues Payment Date": "2025-01-01",
         "Notes": ""
     }
 ]

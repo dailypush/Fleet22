@@ -1,0 +1,30 @@
+
+================================================================================
+PAYMENT STATUS SYNC REPORT - 2025
+Generated: 2025-10-07 22:14:07
+================================================================================
+
+FLEET DUES (Fleet 22 Dues)
+--------------------------
+Total Boats:       20
+Paid:              5 (25.0%)
+Unpaid:            15 (75.0%)
+Outstanding:       $2,250 (est. $150/boat)
+
+CLASS DUES (J/105 Class Association)
+------------------------------------
+Total Boats:       20
+Paid:              10 (50.0%)
+Unpaid:            10 (50.0%)
+Unknown:           0
+
+DATA SOURCES
+------------
+✓ Fleet Dues: Synced from payment_tracker_2025.csv
+✓ Class Dues: Synced from j105_members_status.json
+
+NEXT STEPS
+----------
+1. Update payment_tracker CSV as payments received
+2. Re-run this script to sync boats_fleet22.json
+3. Web pages will automatically show updated status

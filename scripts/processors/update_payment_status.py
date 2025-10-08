@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
 Payment status update script for Fleet22_us repository
-Updates boat payment status based on membership data.
+Updates boats_fleet22.json with both Fleet Dues and Class Dues payment status.
+Syncs with payment_tracker CSV and membership data.
 """
 import sys
+import csv
 from datetime import datetime
 from pathlib import Path
 
@@ -21,133 +23,295 @@ from utils.path_utils import (
 )
 
 # Setup logging
-logger = setup_logger('payment_processor', PROJECT_ROOT / 'logs' / 'scraping.log')
+logger = setup_logger('payment_sync', PROJECT_ROOT / 'logs' / 'data_management.log')
 
 # Configuration
-CONFIG = {
-    "current_year": datetime.now().year,
-    "create_backup": True,  # Automatic backups via data_loader
-}
+CURRENT_YEAR = datetime.now().year
+PAYMENT_TRACKER_CSV = PAYMENTS_DATA / f"payment_tracker_{CURRENT_YEAR}.csv"
+
+def sync_fleet_dues_from_tracker(boats_data):
+    """Sync Fleet Dues payment status from payment_tracker CSV."""
+    if not PAYMENT_TRACKER_CSV.exists():
+        logger.warning(f"Payment tracker CSV not found: {PAYMENT_TRACKER_CSV}")
+        return boats_data, 0
+    
+    try:
+        updated_count = 0
+        payment_map = {}
+        
+        # Read payment tracker CSV
+        with open(PAYMENT_TRACKER_CSV, 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                hull = row.get('Hull', '')
+                if hull and row.get('Paid 2025', '').upper() == 'YES':
+                    payment_map[hull] = {
+                        'paid': True,
+                        'date': row.get('Payment Date', ''),
+                        'method': row.get('Payment Method', '')
+                    }
+        
+        # Update boats data
+        for boat in boats_data:
+            hull = str(boat.get('Hull Number', ''))
+            if hull in payment_map:
+                payment_info = payment_map[hull]
+                boat[f'Fleet Dues {CURRENT_YEAR}'] = 'Paid'
+                boat['Fleet Dues Payment Date'] = payment_info['date']
+                boat['Fleet Dues Payment Method'] = payment_info['method']
+                updated_count += 1
+                logger.info(f"Updated Fleet Dues for hull {hull}: Paid on {payment_info['date']}")
+        
+        logger.info(f"Synced Fleet Dues for {updated_count} boats from payment tracker")
+        return boats_data, updated_count
+        
+    except Exception as e:
+        logger.error(f"Error syncing Fleet Dues from tracker: {e}")
+        return boats_data, 0
+
+
+def sync_class_dues_from_members(boats_data, members_data):
+    """Sync Class Dues payment status from J/105 members data."""
+    updated_count = 0
+    
+    try:
+        # Extract hull numbers from boats for quick lookup
+        boats_hull_numbers = {str(boat["Hull Number"]) for boat in boats_data}
+        
+        # Track latest membership status per hull
+        latest_membership_status = {}
+        
+        for member in members_data:
+            hull_number = str(member.get("Hull", ""))
+            if hull_number in boats_hull_numbers:
+                membership = member.get("Class Membership", "")
+                membership_parts = membership.split()
+                
+                if membership_parts and membership_parts[-1].isdigit():
+                    year = int(membership_parts[-1])
+                    if hull_number not in latest_membership_status or year > latest_membership_status[hull_number]["year"]:
+                        latest_membership_status[hull_number] = {
+                            "year": year,
+                            "status": membership
+                        }
+        
+        # Update boats with Class Dues status
+        for boat in boats_data:
+            hull_number = str(boat.get("Hull Number", ""))
+            member_info = latest_membership_status.get(hull_number)
+            
+            if member_info and member_info["year"] == CURRENT_YEAR:
+                boat[f'Class Dues {CURRENT_YEAR}'] = 'Paid'
+                boat['Class Dues Payment Date'] = f"{CURRENT_YEAR}-01-01"  # Approximate
+                updated_count += 1
+                logger.info(f"Hull {hull_number} ({boat.get('Boat Name', 'Unknown')}): Class Dues Paid for {CURRENT_YEAR}")
+            else:
+                boat[f'Class Dues {CURRENT_YEAR}'] = 'Unpaid'
+                if member_info:
+                    logger.info(f"Hull {hull_number}: Class Dues not paid for {CURRENT_YEAR} (last paid: {member_info['year']})")
+        
+        logger.info(f"Synced Class Dues for {updated_count} boats from members data")
+        return boats_data, updated_count
+        
+    except Exception as e:
+        logger.error(f"Error syncing Class Dues from members: {e}")
+        return boats_data, 0
+
+
+def generate_summary_report(boats_data):
+    """Generate summary statistics for both Fleet and Class Dues."""
+    total = len(boats_data)
+    
+    # Fleet Dues stats
+    fleet_paid = sum(1 for b in boats_data if b.get(f'Fleet Dues {CURRENT_YEAR}') == 'Paid')
+    fleet_unpaid = total - fleet_paid
+    fleet_rate = (fleet_paid / total * 100) if total > 0 else 0
+    
+    # Class Dues stats  
+    class_paid = sum(1 for b in boats_data if b.get(f'Class Dues {CURRENT_YEAR}') == 'Paid')
+    class_unpaid = sum(1 for b in boats_data if b.get(f'Class Dues {CURRENT_YEAR}') == 'Unpaid')
+    class_unknown = total - class_paid - class_unpaid
+    class_rate = (class_paid / total * 100) if total > 0 else 0
+    
+    summary = f"""
+{'='*80}
+PAYMENT STATUS SYNC REPORT - {CURRENT_YEAR}
+Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+{'='*80}
+
+FLEET DUES (Fleet 22 Dues)
+--------------------------
+Total Boats:       {total}
+Paid:              {fleet_paid} ({fleet_rate:.1f}%)
+Unpaid:            {fleet_unpaid} ({100-fleet_rate:.1f}%)
+Outstanding:       ${fleet_unpaid * 150:,} (est. $150/boat)
+
+CLASS DUES (J/105 Class Association)
+------------------------------------
+Total Boats:       {total}
+Paid:              {class_paid} ({class_rate:.1f}%)
+Unpaid:            {class_unpaid} ({100-class_rate:.1f}%)
+Unknown:           {class_unknown}
+
+DATA SOURCES
+------------
+✓ Fleet Dues: Synced from payment_tracker_{CURRENT_YEAR}.csv
+✓ Class Dues: Synced from j105_members_status.json
+
+NEXT STEPS
+----------
+1. Update payment_tracker CSV as payments received
+2. Re-run this script to sync boats_fleet22.json
+3. Web pages will automatically show updated status
+"""
+    
+    return summary, {
+        'total': total,
+        'fleet_paid': fleet_paid,
+        'fleet_unpaid': fleet_unpaid,
+        'class_paid': class_paid,
+        'class_unpaid': class_unpaid,
+        'class_unknown': class_unknown
+    }
+
 
 def main():
-    """Main function to update payment status."""
+    """Main function to sync all payment status data."""
     try:
-        logger.info("Starting payment status update...")
+        logger.info("="*80)
+        logger.info("Starting payment status synchronization...")
+        logger.info("="*80)
         
         # Ensure directories exist
         ensure_directories()
         
-        # Load the JSON data for boats and members status
-        boats_fleet22 = load_json(BOATS_FILE)
-        if not boats_fleet22:
+        # Load boats data
+        logger.info(f"Loading boats data from {BOATS_FILE}")
+        boats_data = load_json(BOATS_FILE)
+        if not boats_data:
             logger.error(f"Failed to load boats data from {BOATS_FILE}")
+            print("❌ Error: Could not load boats data")
             return False
         
-        logger.info(f"Successfully loaded {len(boats_fleet22)} boats from {BOATS_FILE}")
+        logger.info(f"✓ Loaded {len(boats_data)} boats")
+        print(f"Loaded {len(boats_data)} boats from boats_fleet22.json")
         
-        members_status = load_json(MEMBERS_FILE)
-        if not members_status:
-            logger.error(f"Failed to load members data from {MEMBERS_FILE}")
-            return False
-            
-        logger.info(f"Successfully loaded {len(members_status)} member entries from {MEMBERS_FILE}")
+        # Sync Fleet Dues from payment tracker CSV
+        logger.info("\nSyncing Fleet Dues from payment tracker...")
+        print("\n📊 Syncing Fleet Dues from payment tracker CSV...")
+        boats_data, fleet_count = sync_fleet_dues_from_tracker(boats_data)
+        print(f"✓ Updated Fleet Dues for {fleet_count} boats")
         
-        # Extract hull numbers from boats_fleet22 to create a set of hull numbers for quick lookup
-        boats_fleet22_hull_numbers = {boat["Hull Number"] for boat in boats_fleet22}
+        # Load members data for Class Dues
+        logger.info(f"\nLoading members data from {MEMBERS_FILE}")
+        members_data = load_json(MEMBERS_FILE)
+        if members_data:
+            logger.info(f"✓ Loaded {len(members_data)} member records")
+            print(f"\n📊 Syncing Class Dues from J/105 members data...")
+            boats_data, class_count = sync_class_dues_from_members(boats_data, members_data)
+            print(f"✓ Updated Class Dues for {class_count} boats")
+        else:
+            logger.warning(f"Failed to load members data from {MEMBERS_FILE}")
+            print("⚠️  Warning: Could not sync Class Dues (members data unavailable)")
         
-        # Prepare a dictionary to hold the latest membership status for each hull
-        latest_membership_status = {}
-
-        for member in members_status:
-            hull_number = member["Hull"]
-            if hull_number in boats_fleet22_hull_numbers:
-                membership_parts = member["Class Membership"].split()
-                if membership_parts and membership_parts[-1].isdigit():
-                    year = int(membership_parts[-1])
-                    if hull_number not in latest_membership_status or year > latest_membership_status[hull_number]["year"]:
-                        latest_membership_status[hull_number] = {"year": year, "status": member["Class Membership"]}
-
-        # Now iterate through boats in boats_fleet22, updating "Class Dues" based on the latest membership status
-        for boat in boats_fleet22:
-            hull_number = boat["Hull Number"]
-            member_info = latest_membership_status.get(hull_number)
-
-            boat["Class Dues"] = "Not Paid"  # Default to "Not Paid"
-            if member_info and member_info["year"] == CONFIG["current_year"]:
-                boat["Class Dues"] = "Paid"
-                logger.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) is marked as Paid for {CONFIG['current_year']}.")
-            elif member_info:
-                logger.info(f"Hull Number {hull_number} ({boat.get('Boat Name', 'Unknown')}) has not paid for {CONFIG['current_year']}, highest year paid: {member_info['year']}.")
-                print(f"Hull Number {hull_number}({boat.get('Boat Name', 'Unknown')}) has not paid Class Dues for {CONFIG['current_year']}, highest year paid: {member_info['year']}.")
-
-        # Save the updated boats list (automatic backup via save_json)
-        save_json(boats_fleet22, BOATS_FILE)
-        logger.info(f"Updated boats list with Class Dues status saved to {BOATS_FILE}")
-
-        # Generate and log summary statistics
-        total_boats = len(boats_fleet22)
-        paid_boats = sum(1 for boat in boats_fleet22 if boat.get("Class Dues") == "Paid")
-        unpaid_boats = total_boats - paid_boats
-        payment_rate = (paid_boats / total_boats) * 100 if total_boats > 0 else 0
-
-        summary = f"""
------ Payment Status Summary for {CONFIG['current_year']} -----
-Total boats: {total_boats}
-Paid boats: {paid_boats} ({payment_rate:.1f}%)
-Unpaid boats: {unpaid_boats} ({100-payment_rate:.1f}%)
-        """
-
+        # Save updated boats data
+        logger.info(f"\nSaving updated boats data to {BOATS_FILE}")
+        save_json(boats_data, BOATS_FILE)
+        logger.info("✓ Boats data saved with automatic backup")
+        print(f"\n💾 Saved updated data to boats_fleet22.json (backup created)")
+        
+        # Generate and display summary
+        summary, stats = generate_summary_report(boats_data)
         print(summary)
         logger.info(summary)
-
-        # Save summary to file in payments directory
-        summary_path = PAYMENTS_DATA / f"payment_summary_{CONFIG['current_year']}.txt"
+        
+        # Save summary to file
+        summary_path = PAYMENTS_DATA / f"payment_sync_summary_{CURRENT_YEAR}.txt"
         summary_path.write_text(summary)
-        logger.info(f"Payment summary saved to {summary_path}")
-
-        # Generate and save detailed report
-        report_path = generate_detailed_report(boats_fleet22, CONFIG['current_year'])
+        logger.info(f"Summary saved to {summary_path}")
+        
+        # Generate detailed report
+        report_path = generate_detailed_report(boats_data, CURRENT_YEAR)
         logger.info(f"Detailed report saved to {report_path}")
         
-        print(f"\n✅ Payment status update completed successfully!")
-        print(f"Summary: {summary_path}")
-        print(f"Report: {report_path}")
+        print(f"\n✅ Payment synchronization completed successfully!")
+        print(f"📄 Summary: {summary_path}")
+        print(f"📄 Report: {report_path}")
+        print(f"\n💡 Tip: Re-run this script after updating payment_tracker CSV")
         
         return True
         
     except Exception as e:
-        logger.error(f"An error occurred: {str(e)}")
-        print(f"❌ Error updating payment status: {str(e)}")
+        logger.error(f"Error during payment synchronization: {str(e)}")
+        print(f"❌ Error: {str(e)}")
         return False
 
 
 def generate_detailed_report(boats_data, year):
-    """Generate a detailed payment status report."""
-    # Sort boats by payment status and then by hull number
-    paid_boats = sorted([b for b in boats_data if b.get("Class Dues") == "Paid"], 
-                        key=lambda x: x.get("Hull Number", ""))
-    unpaid_boats = sorted([b for b in boats_data if b.get("Class Dues") != "Paid"], 
-                          key=lambda x: x.get("Hull Number", ""))
+    """Generate a detailed payment status report for both Fleet and Class Dues."""
     
-    report = f"PAYMENT STATUS REPORT - {year}\n"
-    report += f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+    # Sort boats
+    def get_hull_sort_key(boat):
+        hull = boat.get('Hull Number', '')
+        try:
+            return int(hull)
+        except (ValueError, TypeError):
+            return 99999
     
-    report += "PAID BOATS\n"
-    report += "----------\n"
-    for boat in paid_boats:
-        report += f"Hull: {boat.get('Hull Number', 'Unknown')} | "
-        report += f"Boat: {boat.get('Boat Name', 'Unknown')} | "
-        report += f"Owner: {boat.get('Owner', 'Unknown')}\n"
+    # Categorize by payment status
+    fleet_paid = sorted([b for b in boats_data if b.get(f'Fleet Dues {year}') == 'Paid'], 
+                        key=get_hull_sort_key)
+    fleet_unpaid = sorted([b for b in boats_data if b.get(f'Fleet Dues {year}') != 'Paid'], 
+                          key=get_hull_sort_key)
     
-    report += "\nUNPAID BOATS\n"
-    report += "------------\n"
-    for boat in unpaid_boats:
-        report += f"Hull: {boat.get('Hull Number', 'Unknown')} | "
-        report += f"Boat: {boat.get('Boat Name', 'Unknown')} | "
-        report += f"Owner: {boat.get('Owner', 'Unknown')}\n"
+    class_paid = sorted([b for b in boats_data if b.get(f'Class Dues {year}') == 'Paid'], 
+                        key=get_hull_sort_key)
+    class_unpaid = sorted([b for b in boats_data if b.get(f'Class Dues {year}') == 'Unpaid'], 
+                          key=get_hull_sort_key)
+    
+    # Build report
+    report = f"{'='*80}\n"
+    report += f"DETAILED PAYMENT STATUS REPORT - {year}\n"
+    report += f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+    report += f"{'='*80}\n\n"
+    
+    # Fleet Dues Section
+    report += f"FLEET DUES - PAID BOATS ({len(fleet_paid)})\n"
+    report += "-" * 80 + "\n"
+    for boat in fleet_paid:
+        report += f"Hull {boat.get('Hull Number', ''):>4} | "
+        report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
+        report += f"{boat.get('Yacht Club', ''):<10} | "
+        report += f"Paid: {boat.get('Fleet Dues Payment Date', 'N/A')} "
+        report += f"via {boat.get('Fleet Dues Payment Method', 'N/A')}\n"
+    
+    report += f"\nFLEET DUES - UNPAID BOATS ({len(fleet_unpaid)})\n"
+    report += "-" * 80 + "\n"
+    for boat in fleet_unpaid:
+        report += f"Hull {boat.get('Hull Number', ''):>4} | "
+        report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
+        report += f"{boat.get('Yacht Club', ''):<10} | "
+        report += f"UNPAID\n"
+    
+    # Class Dues Section
+    report += f"\n\nCLASS DUES - PAID BOATS ({len(class_paid)})\n"
+    report += "-" * 80 + "\n"
+    for boat in class_paid:
+        report += f"Hull {boat.get('Hull Number', ''):>4} | "
+        report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
+        report += f"{boat.get('Yacht Club', ''):<10} | "
+        report += f"Paid for {year}\n"
+    
+    report += f"\nCLASS DUES - UNPAID BOATS ({len(class_unpaid)})\n"
+    report += "-" * 80 + "\n"
+    for boat in class_unpaid:
+        report += f"Hull {boat.get('Hull Number', ''):>4} | "
+        report += f"{boat.get('Boat Name', 'Unknown'):<30} | "
+        report += f"{boat.get('Yacht Club', ''):<10} | "
+        report += f"UNPAID\n"
     
     # Save the report
-    report_path = PAYMENTS_DATA / f"payment_report_{year}.txt"
+    report_path = PAYMENTS_DATA / f"payment_sync_report_{year}.txt"
     report_path.write_text(report)
     
     return report_path
