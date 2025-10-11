@@ -780,7 +780,7 @@
         "Boat Name": "Dark N Stormy",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "78",
@@ -3808,12 +3808,12 @@
     },
     {
         "Hull": "327",
-        "Owners/Helmsmen": "Russell Hopper",
+        "Owners/Helmsmen": "Park McRitchie",
         "Status": "OW",
-        "Boat Name": "H-Bomb",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Member 2024"
+        "Boat Name": "J-4",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "328",
@@ -6522,7 +6522,7 @@
         "Boat Name": "Honey Badger",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "569",
