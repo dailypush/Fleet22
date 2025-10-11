@@ -68,12 +68,12 @@ TESTING_CHECKLIST.md
 # Analysis cache
 analysis/heatmaps/heatmaps/
 
-# Data files that are auto-generated
-data/combined/
-data/sails/sail_tags.json
+# # Data files that are auto-generated
+# data/combined/
+# data/sails/sail_tags.json
 
-# Prevent duplicate boats file (use data/boats/boats_fleet22.json only)
-data/boats_fleet22.json
+# # Prevent duplicate boats file (use data/boats/boats_fleet22.json only)
+# data/boats_fleet22.json
 
 # Payment tracker CSV (if using manual method)
 data/payments/payment_tracker_*.csv
