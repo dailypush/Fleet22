@@ -145,5 +145,12 @@
         "Yacht Club": "EYC",
         "Fleet Dues": "Not Paid",
         "Class Dues": "Not Paid"
+    },
+    {
+        "Hull Number": "327",
+        "Boat Name": "J-4",
+        "Yacht Club": "Tba",
+        "Fleet Dues": "Not Paid",
+        "Class Dues": "Not Paid"
     }
 ]
