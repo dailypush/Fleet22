@@ -30372,10 +30372,30 @@
     {
         "Hull": "639",
         "Purchaser": "Elizabeth Henderson",
+        "Certificate No.": "2203230N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-10-13",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "639",
+        "Purchaser": "Elizabeth Henderson",
         "Certificate No.": "2211430N",
         "Sailmaker": "North",
         "Delivery Date": "2024-12-31",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "639",
+        "Purchaser": "Elizabeth Henderson",
+        "Certificate No.": "2506136N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-10-13",
+        "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
     },
@@ -36886,7 +36906,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-04-11",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -37047,6 +37067,26 @@
         "Delivery Date": "2024-05-23",
         "Sail Type": "J",
         "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "227",
+        "Purchaser": "Bonnie Kirchner",
+        "Certificate No.": "2501037N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-10-16",
+        "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "227",
+        "Purchaser": "Bonnie Kirchner",
+        "Certificate No.": "2503074N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-10-16",
+        "Sail Type": "J",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41546,7 +41586,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2014-10-21",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41556,7 +41596,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-05-09",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41566,7 +41606,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2019-02-14",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41576,7 +41616,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2020-04-15",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41586,7 +41626,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2019-06-19",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41596,7 +41636,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2022-03-02",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -50786,7 +50826,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-05-07",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -50796,7 +50836,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-05-14",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -71676,7 +71716,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2003-04-02",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -71686,7 +71726,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2006-12-01",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": "Donated by BH per email 12/8/06"
     },
     {
@@ -71696,7 +71736,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2006-12-01",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": "Donated by BH per email 12/8/06"
     },
     {

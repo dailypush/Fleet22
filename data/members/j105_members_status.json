@@ -2611,11 +2611,11 @@
     },
     {
         "Hull": "227",
-        "Owners/Helmsmen": "Ed Lobo",
+        "Owners/Helmsmen": "Bonnie Kirchner",
         "Status": "OW",
-        "Boat Name": "Waterwolf",
+        "Boat Name": "Knot Known",
         "Location": "Massachusetts",
-        "Fleet": "14",
+        "Fleet": "2",
         "Class Membership": ""
     },
     {
@@ -3508,6 +3508,15 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "299",
+        "Owners/Helmsmen": "Laurie Anna Kaplan",
+        "Status": "AM",
+        "Boat Name": "Jaded",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "299",
