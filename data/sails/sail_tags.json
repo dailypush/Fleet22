@@ -39301,6 +39301,16 @@
     },
     {
         "Hull": "513",
+        "Purchaser": "Frank Lataweic",
+        "Certificate No.": "2505126D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-10-17",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "513",
         "Purchaser": "Frank Latawiec",
         "Certificate No.": "1705159D",
         "Sailmaker": "Doyle",
@@ -51235,6 +51245,16 @@
         "Certificate No.": "2407082D",
         "Sailmaker": "Doyle",
         "Delivery Date": "2024-10-29",
+        "Sail Type": "J",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
+        "Hull": "194",
+        "Purchaser": "Gary Myer",
+        "Certificate No.": "2505125D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-10-17",
         "Sail Type": "J",
         "Fleet": "10",
         "Notes": ""
@@ -67836,6 +67856,16 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2023-02-08",
         "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "69",
+        "Purchaser": "Mark Smith",
+        "Certificate No.": "2505124D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-08-19",
+        "Sail Type": "J",
         "Fleet": "17",
         "Notes": ""
     },
