@@ -262,6 +262,15 @@
     },
     {
         "Hull": "29",
+        "Owners/Helmsmen": "Paul Murphy",
+        "Status": "AM",
+        "Boat Name": "Warbride",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "29",
         "Owners/Helmsmen": "Ben duPont",
         "Status": "OW",
         "Boat Name": "Warbride",
@@ -5650,6 +5659,15 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "482",
+        "Owners/Helmsmen": "Jeff Janders",
+        "Status": "AM",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "483",

@@ -13842,6 +13842,16 @@
     {
         "Hull": "23",
         "Purchaser": "Tom Collier",
+        "Certificate No.": "2406078K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2024-10-01",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "23",
+        "Purchaser": "Tom Collier",
         "Certificate No.": "2502071K",
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2025-03-18",
@@ -19056,6 +19066,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-09-18",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "29",
+        "Purchaser": "Ben duPont",
+        "Certificate No.": "2508182Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-10-15",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
@@ -46380,6 +46400,16 @@
         "Notes": ""
     },
     {
+        "Hull": "64",
+        "Purchaser": "David McKee",
+        "Certificate No.": "2508185Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-10-23",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "490",
         "Purchaser": "Douglas McKeige",
         "Certificate No.": "0304256K",
@@ -55640,6 +55670,16 @@
         "Notes": ""
     },
     {
+        "Hull": "642",
+        "Purchaser": "Carlos Perez",
+        "Certificate No.": "2501041N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-10-24",
+        "Sail Type": "M",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
         "Hull": "35",
         "Purchaser": "Chris Perkins",
         "Certificate No.": "0312680N",
@@ -60736,6 +60776,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-03-17",
         "Sail Type": "S89",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
+        "Hull": "218",
+        "Purchaser": "George Roland",
+        "Certificate No.": "2508184Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-10-22",
+        "Sail Type": "J",
         "Fleet": "8",
         "Notes": ""
     },
