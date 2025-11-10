@@ -3363,7 +3363,7 @@
         "Boat Name": "Sivka",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "289",
@@ -3462,7 +3462,7 @@
         "Boat Name": "Kinship",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "295",
@@ -3480,7 +3480,7 @@
         "Boat Name": "Kinship",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "296",
@@ -3871,12 +3871,12 @@
     },
     {
         "Hull": "331",
-        "Owners/Helmsmen": "John Koten",
+        "Owners/Helmsmen": "Scott Herman",
         "Status": "OW",
         "Boat Name": "Gray Matter",
-        "Location": "New York",
-        "Fleet": "10",
-        "Class Membership": "Member 2023"
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "332",
@@ -4074,7 +4074,7 @@
         "Boat Name": "Sealark",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "349",
@@ -4479,7 +4479,7 @@
         "Boat Name": "Y-not",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "387",

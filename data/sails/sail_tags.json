@@ -19496,7 +19496,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-04-22",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -20346,7 +20346,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2006-06-19",
         "Sail Type": "M",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -22396,7 +22396,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2013-08-14",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -37936,7 +37936,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2012-12-01",
         "Sail Type": "M",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37946,7 +37946,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-08-24",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37956,7 +37956,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-08-24",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37966,7 +37966,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-06-15",
         "Sail Type": "S89",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37976,7 +37976,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2017-08-17",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37986,7 +37986,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-08-17",
         "Sail Type": "S89",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": "Sail transferred from Koten's 630 to Koten's 331, per JK e-mail of 9/26/18"
     },
     {
@@ -37996,7 +37996,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2019-05-31",
         "Sail Type": "M",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38006,7 +38006,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2018-12-17",
         "Sail Type": "M",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38016,7 +38016,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2019-06-11",
         "Sail Type": "S89",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38026,7 +38026,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2019-12-13",
         "Sail Type": "S89",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38036,7 +38036,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2020-03-16",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38046,7 +38046,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-06-14",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38056,7 +38056,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-12-16",
         "Sail Type": "J",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -38066,7 +38066,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2023-06-07",
         "Sail Type": "S89",
-        "Fleet": "10",
+        "Fleet": "11",
         "Notes": ""
     },
     {
@@ -46666,6 +46666,26 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-03-20",
         "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": ""
+    },
+    {
+        "Hull": "306",
+        "Purchaser": "Bill McKenzie",
+        "Certificate No.": "2503078N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-11-06",
+        "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": ""
+    },
+    {
+        "Hull": "306",
+        "Purchaser": "Bill McKenzie",
+        "Certificate No.": "2508187N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-11-06",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": ""
     },
@@ -56625,6 +56645,26 @@
         "Certificate No.": "2211412N",
         "Sailmaker": "North",
         "Delivery Date": "2024-12-09",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "299",
+        "Purchaser": "Chris Phoenix",
+        "Certificate No.": "2507162N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-11-06",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "299",
+        "Purchaser": "Chris Phoenix",
+        "Certificate No.": "2508188N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-01-01",
         "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
@@ -69296,6 +69336,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-08-12",
         "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "147",
+        "Purchaser": "Eric Stang",
+        "Certificate No.": "2510230Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-11-01",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
