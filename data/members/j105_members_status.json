@@ -3493,12 +3493,12 @@
     },
     {
         "Hull": "297",
-        "Owners/Helmsmen": "John Blair",
+        "Owners/Helmsmen": "Thomas Evans",
         "Status": "OW",
-        "Boat Name": "Pendragon",
+        "Boat Name": "Phantom",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": ""
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "298",
@@ -4920,7 +4920,7 @@
         "Boat Name": "Wolverine",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "418",
