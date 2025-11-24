@@ -3483,6 +3483,15 @@
         "Class Membership": "Associate 2026"
     },
     {
+        "Hull": "295",
+        "Owners/Helmsmen": "Calvin Lutton",
+        "Status": "AM",
+        "Boat Name": "Kinship",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Associate 2026"
+    },
+    {
         "Hull": "296",
         "Owners/Helmsmen": "Bee Bednar",
         "Status": "OW",
@@ -3517,15 +3526,6 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "299",
-        "Owners/Helmsmen": "Laurie Anna Kaplan",
-        "Status": "AM",
-        "Boat Name": "Jaded",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "299",
@@ -5631,6 +5631,15 @@
         "Boat Name": "Gangbusters",
         "Location": "Illinois",
         "Fleet": "5",
+        "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "482",
+        "Owners/Helmsmen": "Laurie Anna Kaplan",
+        "Status": "CO",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
         "Class Membership": "Member 2025"
     },
     {
