@@ -6,6 +6,7 @@ import sys
 import html
 from pathlib import Path
 from tqdm import tqdm
+from typing import List, Dict, Optional
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -18,33 +19,46 @@ from utils.path_utils import MEMBERS_FILE
 logger = setup_logger(__name__)
 
 # URL of the website to scrape and headers to mimic a browser visit
-url = 'https://archive.j105.org/members/owners.php'
-headers = {
+URL = 'https://archive.j105.org/members/owners.php'
+HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-def fetch_owner_status():
-    """Fetch owner status data from J105 archive."""
+def fetch_owner_status() -> str:
+    """
+    Fetch owner status data from J105 archive.
+    
+    Returns:
+        The response text content
+        
+    Raises:
+        requests.RequestException: If the request fails
+    """
     try:
         # Throttle requests to be polite to the server
         time.sleep(1)
         
         # Send a GET request to the website with headers
-        logger.info(f'Requesting {url}')
-        # Disable SSL certificate verification
-        response = requests.get(url, headers=headers, verify=False)
+        logger.info(f'Requesting {URL}')
+        
+        response = requests.get(URL, headers=HEADERS)
         response.raise_for_status()
         return response.text
 
-    except requests.exceptions.HTTPError as e:
-        logger.error(f'HTTP error occurred: {e}')
-        raise SystemExit(e)
     except requests.exceptions.RequestException as e:
-        logger.error(f'Request exception: {e}')
-        raise SystemExit(e)
+        logger.error(f'Request failed: {e}')
+        raise
 
-def parse_owner_data(html_content):
-    """Parse HTML content and extract owner data."""
+def parse_owner_data(html_content: str) -> List[Dict[str, str]]:
+    """
+    Parse HTML content and extract owner data.
+    
+    Args:
+        html_content: Raw HTML string
+        
+    Returns:
+        List of dictionaries containing owner data
+    """
     # Parse the HTML content
     soup = BeautifulSoup(html_content, 'html.parser')
 
@@ -68,7 +82,8 @@ def parse_owner_data(html_content):
     data_list = []
     
     # Iterate over each row in the table starting from the second row
-    for row in tqdm(table.find_all('tr')[1:], desc="Processing Rows"):
+    rows = table.find_all('tr')[1:]
+    for row in tqdm(rows, desc="Processing Rows"):
         cols = row.find_all('td')
         if len(cols) == len(headers):
             # Sanitize the Class Membership field (last column)
@@ -97,20 +112,23 @@ def main():
     """Main execution function."""
     logger.info("Starting owner status scraper")
     
-    # Fetch data from website
-    html_content = fetch_owner_status()
-    
-    # Parse the HTML
-    data_list = parse_owner_data(html_content)
-    
-    if data_list:
-        # Save the data
-        save_json(data_list, MEMBERS_FILE)
-        logger.info(f"Successfully scraped {len(data_list)} owner records")
-        print(f"Successfully scraped {len(data_list)} owner records")
-    else:
-        logger.warning("No data extracted")
-        print("Warning: No data extracted")
+    try:
+        # Fetch data from website
+        html_content = fetch_owner_status()
+        
+        # Parse the HTML
+        data_list = parse_owner_data(html_content)
+        
+        if data_list:
+            # Save the data
+            save_json(data_list, MEMBERS_FILE)
+            logger.info(f"Successfully scraped {len(data_list)} owner records")
+        else:
+            logger.warning("No data extracted")
+            
+    except Exception as e:
+        logger.error(f"Script failed: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
