@@ -54080,6 +54080,26 @@
         "Notes": ""
     },
     {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2509205N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-03",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2509208N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-03",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "510",
         "Purchaser": "Domingo Pagan",
         "Certificate No.": "0302107Q",
@@ -72116,6 +72136,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-12-24",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "55",
+        "Purchaser": "Mark Sweeney",
+        "Certificate No.": "2510213Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-11-19",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
