@@ -5056,7 +5056,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2018-03-13",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -5066,7 +5066,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2018-03-13",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -5076,7 +5076,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2024-08-29",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -9396,6 +9396,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-02-08",
         "Sail Type": "M",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "72",
+        "Purchaser": "Stuart Butcher",
+        "Certificate No.": "2510214Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-03",
+        "Sail Type": "S89",
         "Fleet": "22",
         "Notes": ""
     },
@@ -15566,7 +15576,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-06-01",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15576,7 +15586,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-08-28",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15586,7 +15596,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2003-06-03",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15596,7 +15606,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2003-06-03",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15606,7 +15616,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2003-06-20",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15616,7 +15626,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2004-12-16",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15626,7 +15636,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2004-12-16",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15636,7 +15646,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2005-01-03",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15646,7 +15656,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2005-12-29",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15656,7 +15666,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2005-12-29",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15666,7 +15676,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-05-12",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15676,7 +15686,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-08-16",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15686,7 +15696,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2006-05-12",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15696,7 +15706,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2008-05-23",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15706,7 +15716,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2010-09-03",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15716,7 +15726,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2010-09-03",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -15726,7 +15736,7 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2010-09-03",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -57910,6 +57920,26 @@
         "Notes": ""
     },
     {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "2508191N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-11",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "2508195N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-12",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "482",
         "Purchaser": "Mark Prentice",
         "Certificate No.": "2312174B",
@@ -71026,7 +71056,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2001-04-02",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -73796,7 +73826,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2013-09-12",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {
@@ -73806,7 +73836,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2013-12-13",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "6",
         "Notes": ""
     },
     {

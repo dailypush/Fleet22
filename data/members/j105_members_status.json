@@ -2269,12 +2269,12 @@
     },
     {
         "Hull": "200",
-        "Owners/Helmsmen": "Michael Kontonotas",
+        "Owners/Helmsmen": "David Sexton",
         "Status": "OW",
         "Boat Name": "Apollo",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2021"
     },
     {
         "Hull": "201",
@@ -2499,7 +2499,7 @@
         "Boat Name": "Jalopy",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "218",
@@ -2613,9 +2613,9 @@
         "Hull": "226",
         "Owners/Helmsmen": "Bob Betensky",
         "Status": "OW",
-        "Boat Name": "Horny Toad",
-        "Location": "Texas",
-        "Fleet": "17",
+        "Boat Name": "Shooting Star",
+        "Location": "New York",
+        "Fleet": "6",
         "Class Membership": ""
     },
     {
@@ -3804,7 +3804,7 @@
         "Boat Name": "Global Nomads",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "326",
@@ -4923,6 +4923,15 @@
         "Class Membership": "Member 2026"
     },
     {
+        "Hull": "417",
+        "Owners/Helmsmen": "Timothy Sheehan",
+        "Status": "AM",
+        "Boat Name": "Wolverine",
+        "Location": "Illinois",
+        "Fleet": "5",
+        "Class Membership": "Associate 2026"
+    },
+    {
         "Hull": "418",
         "Owners/Helmsmen": "David Owen",
         "Status": "OW",
@@ -4987,21 +4996,21 @@
     },
     {
         "Hull": "422",
-        "Owners/Helmsmen": "Al Hughes",
-        "Status": "OW",
-        "Boat Name": "Creative",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "422",
         "Owners/Helmsmen": "Shauna Walgren",
         "Status": "AM",
-        "Boat Name": "Creative",
+        "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "422",
+        "Owners/Helmsmen": "Mark Prentice",
+        "Status": "OW",
+        "Boat Name": "Panic",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "423",
@@ -5619,10 +5628,10 @@
         "Hull": "479",
         "Owners/Helmsmen": "Branwell Lepp",
         "Status": "OW",
-        "Boat Name": "It Wasn\\\\\\'t Me",
+        "Boat Name": "It Wasn\\\\\\\\\\\\\\'t Me",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "480",
@@ -5631,7 +5640,7 @@
         "Boat Name": "Gangbusters",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "482",
@@ -5650,15 +5659,6 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2023"
-    },
-    {
-        "Hull": "482",
-        "Owners/Helmsmen": "Mark Prentice",
-        "Status": "AM",
-        "Boat Name": "Panic",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "482",
@@ -6036,7 +6036,7 @@
         "Boat Name": "Wind Dancer",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "515",
@@ -6999,7 +6999,7 @@
         "Boat Name": "Wrecking Crew",
         "Location": "New York",
         "Fleet": "22",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "619",
