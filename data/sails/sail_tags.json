@@ -1300,6 +1300,16 @@
         "Notes": ""
     },
     {
+        "Hull": "249",
+        "Purchaser": "Kirk Arthurs",
+        "Certificate No.": "2505127D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-17",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "333",
         "Purchaser": "Tom Attick",
         "Certificate No.": "2506152Q",
@@ -6255,6 +6265,16 @@
         "Certificate No.": "2501044Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-02-06",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "519",
+        "Purchaser": "Jean-Pierre Boespflug",
+        "Certificate No.": "2508174Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-15",
         "Sail Type": "J",
         "Fleet": "20",
         "Notes": ""
@@ -20387,6 +20407,16 @@
         "Delivery Date": "2006-06-19",
         "Sail Type": "M",
         "Fleet": "11",
+        "Notes": ""
+    },
+    {
+        "Hull": "684",
+        "Purchaser": "Jose Tomas Errazuriz",
+        "Certificate No.": "2507160N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "J",
+        "Fleet": "0",
         "Notes": ""
     },
     {
@@ -77506,6 +77536,26 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-04-17",
         "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "87",
+        "Purchaser": "Hugh Westermeyer",
+        "Certificate No.": "2508172Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-17",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "87",
+        "Purchaser": "Hugh Westermeyer",
+        "Certificate No.": "2508173Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-17",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
