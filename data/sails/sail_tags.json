@@ -3180,6 +3180,26 @@
         "Notes": ""
     },
     {
+        "Hull": "334",
+        "Purchaser": "Paul Beaudin",
+        "Certificate No.": "2512271D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "334",
+        "Purchaser": "Paul Beaudin",
+        "Certificate No.": "2512272D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "S89",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
         "Hull": "566",
         "Purchaser": "Robert Beck",
         "Certificate No.": "0202112N",
@@ -5106,6 +5126,26 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2021-09-29",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "43",
+        "Purchaser": "Hugh Bethel",
+        "Certificate No.": "2512274D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "43",
+        "Purchaser": "Hugh Bethel",
+        "Certificate No.": "2512275D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
     },
@@ -11390,6 +11430,16 @@
         "Notes": ""
     },
     {
+        "Hull": "378",
+        "Purchaser": "Chris Chandler",
+        "Certificate No.": "2510225Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "560",
         "Purchaser": "Mike Chapman",
         "Certificate No.": "0704158Q",
@@ -13916,6 +13966,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2025-03-18",
         "Sail Type": "S89",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "23",
+        "Purchaser": "Tom Collier",
+        "Certificate No.": "2510224Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "M",
         "Fleet": "17",
         "Notes": ""
     },
@@ -30000,6 +30060,26 @@
         "Notes": ""
     },
     {
+        "Hull": "440",
+        "Purchaser": "Bob Hayward",
+        "Certificate No.": "2506142N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "440",
+        "Purchaser": "Bob Hayward",
+        "Certificate No.": "2507161N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "34",
         "Purchaser": "Jay Heaslip",
         "Certificate No.": "2109138D",
@@ -44506,6 +44586,16 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2021-12-01",
         "Sail Type": "M",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "507",
+        "Purchaser": "Walt Marti",
+        "Certificate No.": "2512273D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
         "Fleet": "2",
         "Notes": ""
     },
@@ -60796,6 +60886,16 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2025-05-29",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "303",
+        "Purchaser": "Kristen Robinson",
+        "Certificate No.": "2512270D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
