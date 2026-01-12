@@ -55570,6 +55570,16 @@
         "Notes": ""
     },
     {
+        "Hull": "398",
+        "Purchaser": "Don Peloquin",
+        "Certificate No.": "2512280Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "495",
         "Purchaser": "Dave Pengelly",
         "Certificate No.": "1302106Q",
@@ -68707,6 +68717,26 @@
         "Delivery Date": "2003-05-02",
         "Sail Type": "M",
         "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "675",
+        "Purchaser": "Fred Soward",
+        "Certificate No.": "2510226Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "675",
+        "Purchaser": "Fred Soward",
+        "Certificate No.": "2510231Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-22",
+        "Sail Type": "M",
+        "Fleet": "17",
         "Notes": ""
     },
     {

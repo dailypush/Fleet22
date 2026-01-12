@@ -960,7 +960,7 @@
         "Boat Name": "Trio",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "91",
@@ -1945,21 +1945,21 @@
     },
     {
         "Hull": "174",
-        "Owners/Helmsmen": "Irene Tang",
-        "Status": "CO",
-        "Boat Name": "Mazu",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "174",
         "Owners/Helmsmen": "Nicholas Wilkerson",
         "Status": "CO",
         "Boat Name": "Mazu",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "174",
+        "Owners/Helmsmen": "Kim Schulze",
+        "Status": "CO",
+        "Boat Name": "Mazu",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "175",
@@ -4029,7 +4029,7 @@
         "Boat Name": "TNT",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "345",
@@ -4677,7 +4677,7 @@
         "Boat Name": "Boss Lady",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "401",
@@ -4686,7 +4686,7 @@
         "Boat Name": "Boss Lady",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "402",
@@ -5149,12 +5149,12 @@
     },
     {
         "Hull": "435",
-        "Owners/Helmsmen": "Steve Howell",
+        "Owners/Helmsmen": "Samuel Rohrbach",
         "Status": "OW",
-        "Boat Name": "Blink!",
+        "Boat Name": "Gnatcatcher",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "436",
@@ -7404,7 +7404,16 @@
         "Boat Name": "The Asylum",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "675",
+        "Owners/Helmsmen": "Fred Soward",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "676",
