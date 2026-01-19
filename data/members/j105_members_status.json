@@ -42,7 +42,7 @@
         "Boat Name": "Glider IV",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "6",
@@ -699,7 +699,7 @@
         "Boat Name": "Eau La La",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "69",
@@ -2107,30 +2107,21 @@
     },
     {
         "Hull": "189",
-        "Owners/Helmsmen": "Christopher White",
-        "Status": "CO",
-        "Boat Name": "Cerberus",
-        "Location": "Massachusetts",
+        "Owners/Helmsmen": "Doug Merrill",
+        "Status": "OW",
+        "Boat Name": "MOOvin Up",
+        "Location": "Vermont",
         "Fleet": "2",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "189",
-        "Owners/Helmsmen": "Ken Dieselman",
+        "Owners/Helmsmen": "John Harris",
         "Status": "CO",
-        "Boat Name": "Cerberus",
-        "Location": "Massachusetts",
+        "Boat Name": "MOOvin Up",
+        "Location": "Vermont",
         "Fleet": "2",
-        "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "189",
-        "Owners/Helmsmen": "Mark D’Onofrio",
-        "Status": "CO",
-        "Boat Name": "Cerberus",
-        "Location": "Massachusetts",
-        "Fleet": "2",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "190",
@@ -2724,7 +2715,7 @@
         "Boat Name": "Peer Gynt",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "236",
@@ -3535,6 +3526,15 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Associate 2025"
+    },
+    {
+        "Hull": "300",
+        "Owners/Helmsmen": "James Mackevich",
+        "Status": "OW",
+        "Boat Name": "Knot Known",
+        "Location": "Unknown",
+        "Fleet": "14",
+        "Class Membership": ""
     },
     {
         "Hull": "301",
@@ -5028,7 +5028,7 @@
         "Boat Name": "Flying Pig",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "425",
@@ -5910,7 +5910,7 @@
         "Boat Name": "Lucky Duck",
         "Location": "California",
         "Fleet": "8",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "504",
