@@ -567,6 +567,24 @@
         "Class Membership": "Member 2025"
     },
     {
+        "Hull": "56",
+        "Owners/Helmsmen": "Paul Thompson",
+        "Status": "CO",
+        "Boat Name": "Good Company 2.0",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "56",
+        "Owners/Helmsmen": "Steve Helm",
+        "Status": "CO",
+        "Boat Name": "Good Company 2.0",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
+    },
+    {
         "Hull": "57",
         "Owners/Helmsmen": "John Dye",
         "Status": "OW",
@@ -1270,9 +1288,9 @@
     },
     {
         "Hull": "114",
-        "Owners/Helmsmen": "Erik Kristen",
+        "Owners/Helmsmen": "Michael Goldfarb",
         "Status": "OW",
-        "Boat Name": "More Jubilee",
+        "Boat Name": "Knot Known",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
@@ -3516,7 +3534,7 @@
         "Boat Name": "Jaded",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "299",
@@ -3903,7 +3921,7 @@
         "Boat Name": "Loulou",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "335",
@@ -5946,7 +5964,7 @@
         "Boat Name": "McMac",
         "Location": "Canada",
         "Fleet": "9",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "507",
@@ -5991,7 +6009,7 @@
         "Boat Name": "Forerunner",
         "Location": "Florida",
         "Fleet": "19",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "510",
@@ -7215,7 +7233,7 @@
         "Boat Name": "Chinook",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "640",
@@ -7544,15 +7562,6 @@
     {
         "Hull": "999",
         "Owners/Helmsmen": "Rob Ruhlman",
-        "Status": "AM",
-        "Boat Name": "Knot Known",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "999",
-        "Owners/Helmsmen": "Michael Goldfarb",
         "Status": "AM",
         "Boat Name": "Knot Known",
         "Location": "Maryland",

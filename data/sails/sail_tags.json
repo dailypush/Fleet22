@@ -9510,6 +9510,16 @@
         "Notes": ""
     },
     {
+        "Hull": "72",
+        "Purchaser": "Stuart Butcher",
+        "Certificate No.": "2512288Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-10",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "312",
         "Purchaser": "Heinz Butner",
         "Certificate No.": "0202130U",
@@ -12030,6 +12040,16 @@
         "Notes": ""
     },
     {
+        "Hull": "419",
+        "Purchaser": "Andy Cherner",
+        "Certificate No.": "2512286Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "293",
         "Purchaser": "George Chernev",
         "Certificate No.": "2501031N",
@@ -14046,6 +14066,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-18",
         "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "23",
+        "Purchaser": "Tom Collier",
+        "Certificate No.": "2512289Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-24",
+        "Sail Type": "J",
         "Fleet": "17",
         "Notes": ""
     },
@@ -19266,6 +19296,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-10-15",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "29",
+        "Purchaser": "Ben duPont",
+        "Certificate No.": "2512293Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-28",
+        "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
     },
@@ -26390,6 +26430,16 @@
         "Notes": ""
     },
     {
+        "Hull": "114",
+        "Purchaser": "Michael Goldfarb",
+        "Certificate No.": "2506138N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "282",
         "Purchaser": "Peter Goldman",
         "Certificate No.": "0101109N",
@@ -28036,6 +28086,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-03-20",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "159",
+        "Purchaser": "Angelo Guarino",
+        "Certificate No.": "2512291Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-19",
+        "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
     },
@@ -35330,6 +35390,16 @@
         "Notes": ""
     },
     {
+        "Hull": "163",
+        "Purchaser": "John Kalanik",
+        "Certificate No.": "2512287Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "249",
         "Purchaser": "Max Kalehoff",
         "Certificate No.": "1510169D",
@@ -41856,6 +41926,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-11-22",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "119",
+        "Purchaser": "Jeff Littfin",
+        "Certificate No.": "2508171Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-01",
+        "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
     },
@@ -80466,6 +80546,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-04-29",
         "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "242",
+        "Purchaser": "Ray Wulff",
+        "Certificate No.": "2512290Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-12",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
