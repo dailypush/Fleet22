@@ -23350,6 +23350,36 @@
         "Notes": "Evolution Sails"
     },
     {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511261S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511262S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "S89",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511263S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
         "Hull": "128",
         "Purchaser": "Charleston Athletic  Fund",
         "Certificate No.": "2501008S",
@@ -23376,6 +23406,36 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2025-04-07",
         "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2505130S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2505131S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511264S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": "Evolution Sails"
     },
@@ -33306,7 +33366,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2001-05-20",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67160,6 +67220,16 @@
         "Notes": ""
     },
     {
+        "Hull": "372",
+        "Purchaser": "Dana Sibilla",
+        "Certificate No.": "2509200N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "46",
         "Purchaser": "Len Siegal",
         "Certificate No.": "0201040D",
@@ -67856,7 +67926,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2004-05-26",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67866,7 +67936,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2004-05-26",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67876,7 +67946,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2007-06-01",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67886,7 +67956,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2023-09-30",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -80386,6 +80456,26 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2023-11-09",
         "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "201",
+        "Purchaser": "John Wrangle",
+        "Certificate No.": "2511259S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-03",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "201",
+        "Purchaser": "John Wrangle",
+        "Certificate No.": "2511260S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-13",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": "Evolution Sails"
     },
