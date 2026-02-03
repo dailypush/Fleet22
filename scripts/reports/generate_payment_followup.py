@@ -160,7 +160,7 @@ Subject: Fleet 22 Dues Payment Reminder - [Yacht Club Name]
 Dear [Yacht Club Fleet Captain/Secretary],
 
 This is a friendly reminder that the following Fleet 22 boats from [Yacht Club]
-have outstanding dues payments for the 2025 season:
+have outstanding dues payments for the 2026 season:
 
 [List boats here]
 

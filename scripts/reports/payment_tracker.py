@@ -29,7 +29,7 @@ def create_payment_tracker(boats_data, output_file):
             'Hull',
             'Boat Name',
             'Yacht Club',
-            'Paid 2025',
+            'Paid 2026',
             'Payment Date',
             'Payment Method',
             'Amount',
@@ -49,7 +49,7 @@ def create_payment_tracker(boats_data, output_file):
                     'Hull': boat.get('Hull Number', ''),
                     'Boat Name': boat.get('Boat Name', ''),
                     'Yacht Club': boat.get('Yacht Club', ''),
-                    'Paid 2025': 'NO',
+                    'Paid 2026': 'NO',
                     'Payment Date': '',
                     'Payment Method': '',
                     'Amount': '',
@@ -76,7 +76,7 @@ def update_payment_status(tracker_file, hull, paid=True, payment_date=None, meth
             reader = csv.DictReader(csvfile)
             for row in reader:
                 if row['Hull'] == str(hull):
-                    row['Paid 2025'] = 'YES' if paid else 'NO'
+                    row['Paid 2026'] = 'YES' if paid else 'NO'
                     if payment_date:
                         row['Payment Date'] = payment_date
                     if method:
@@ -115,7 +115,7 @@ def generate_summary(tracker_file):
         with open(tracker_file, 'r') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                if row['Paid 2025'].upper() == 'YES':
+                if row['Paid 2026'].upper() == 'YES':
                     paid_count += 1
                     paid_boats.append(row)
                     # Extract amount
@@ -178,7 +178,7 @@ def main():
     parser.add_argument(
         '--tracker',
         type=Path,
-        default=PROJECT_ROOT / 'data' / 'payments' / 'payment_tracker_2025.csv',
+        default=PROJECT_ROOT / 'data' / 'payments' / 'payment_tracker_2026.csv',
         help="Path to payment tracker CSV file"
     )
     parser.add_argument(

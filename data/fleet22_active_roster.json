@@ -1,0 +1,285 @@
+{
+  "fleet": "22",
+  "fleet_name": "Fleet 22 - Lake Erie",
+  "last_updated": "2026-02-02",
+  "total_active_boats": 18,
+  "boats": [
+    {
+      "hull_number": "72",
+      "boat_name": "Highlander",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Stuart Butcher",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [
+        {
+          "name": "David Butcher",
+          "class_membership": "Member 2024"
+        }
+      ],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "77",
+      "boat_name": "Dark N Stormy",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Ronald Carson",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "91",
+      "boat_name": "Trio",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Paul Uhlir",
+          "class_membership": "Member 2026"
+        }
+      ],
+      "co_owners": [
+        {
+          "name": "Joseph Uhlir",
+          "class_membership": "Member 2025"
+        },
+        {
+          "name": "Timothy Roberts",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "144",
+      "boat_name": "Fall Line",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Chip Schaffner",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": [
+        {
+          "name": "Jeff Haase",
+          "class_membership": "Associate 2026"
+        },
+        {
+          "name": "John Bodie",
+          "class_membership": "Associate 2025"
+        }
+      ]
+    },
+    {
+      "hull_number": "145",
+      "boat_name": "Kashmir",
+      "location": "Michigan",
+      "owners": [
+        {
+          "name": "Jody Kjoller",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "208",
+      "boat_name": "Slingshot",
+      "location": "Ohio",
+      "owners": [],
+      "co_owners": [
+        {
+          "name": "Doug Kohler",
+          "class_membership": "Member 2024"
+        }
+      ],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "246",
+      "boat_name": "Mr Krabs",
+      "location": "New York",
+      "owners": [
+        {
+          "name": "Paul Schiavoni",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "249",
+      "boat_name": "LauraBea",
+      "location": "Michigan",
+      "owners": [
+        {
+          "name": "Kirk Arthurs",
+          "class_membership": "Member 2026"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "261",
+      "boat_name": "Unbridled",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Robert Mock",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": [
+        {
+          "name": "Chad Edwards",
+          "class_membership": "Associate 2025"
+        }
+      ]
+    },
+    {
+      "hull_number": "308",
+      "boat_name": "Hamlet",
+      "location": "Massachusetts",
+      "owners": [
+        {
+          "name": "Steven Robinson",
+          "class_membership": "Member 2024"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "327",
+      "boat_name": "J-4",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Park McRitchie",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "376",
+      "boat_name": "Whistler",
+      "location": "Michigan",
+      "owners": [
+        {
+          "name": "William Taylor",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": [
+        {
+          "name": "Craig Mueller",
+          "class_membership": "Associate 2025"
+        }
+      ]
+    },
+    {
+      "hull_number": "393",
+      "boat_name": "Ovation",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Cindy Einhouse",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [
+        {
+          "name": "Tom Einhouse",
+          "class_membership": "Member 2022"
+        }
+      ],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "423",
+      "boat_name": "Southbound",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Lease Schock",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "493",
+      "boat_name": "Rapscallion",
+      "location": "Ohio",
+      "owners": [
+        {
+          "name": "Tom Cliffel",
+          "class_membership": "Member 2024"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "618",
+      "boat_name": "Wrecking Crew",
+      "location": "New York",
+      "owners": [
+        {
+          "name": "Duke Mueller",
+          "class_membership": "Member 2026"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "638",
+      "boat_name": "Osprey",
+      "location": "New York",
+      "owners": [
+        {
+          "name": "Michael Seitz",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": []
+    },
+    {
+      "hull_number": "656",
+      "boat_name": "Aurora",
+      "location": "United States",
+      "owners": [
+        {
+          "name": "Sara Creenan",
+          "class_membership": "Member 2025"
+        }
+      ],
+      "co_owners": [],
+      "affiliate_members": [
+        {
+          "name": "Jennifer Klock",
+          "class_membership": "Associate 2025"
+        }
+      ]
+    }
+  ]
+}

@@ -9510,6 +9510,16 @@
         "Notes": ""
     },
     {
+        "Hull": "72",
+        "Purchaser": "Stuart Butcher",
+        "Certificate No.": "2512288Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-10",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "312",
         "Purchaser": "Heinz Butner",
         "Certificate No.": "0202130U",
@@ -12030,6 +12040,16 @@
         "Notes": ""
     },
     {
+        "Hull": "419",
+        "Purchaser": "Andy Cherner",
+        "Certificate No.": "2512286Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-18",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "293",
         "Purchaser": "George Chernev",
         "Certificate No.": "2501031N",
@@ -14046,6 +14066,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-18",
         "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "23",
+        "Purchaser": "Tom Collier",
+        "Certificate No.": "2512289Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-24",
+        "Sail Type": "J",
         "Fleet": "17",
         "Notes": ""
     },
@@ -23320,6 +23350,36 @@
         "Notes": "Evolution Sails"
     },
     {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511261S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511262S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "S89",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "63",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511263S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
         "Hull": "128",
         "Purchaser": "Charleston Athletic  Fund",
         "Certificate No.": "2501008S",
@@ -23346,6 +23406,36 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2025-04-07",
         "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2505130S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2505131S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "128",
+        "Purchaser": "Charleston Athletic  Fund",
+        "Certificate No.": "2511264S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-20",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": "Evolution Sails"
     },
@@ -26397,6 +26487,16 @@
         "Delivery Date": "2022-06-14",
         "Sail Type": "J",
         "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "114",
+        "Purchaser": "Michael Goldfarb",
+        "Certificate No.": "2506138N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "S89",
+        "Fleet": "20",
         "Notes": ""
     },
     {
@@ -33266,7 +33366,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2001-05-20",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -41886,6 +41986,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-11-22",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "119",
+        "Purchaser": "Jeff Littfin",
+        "Certificate No.": "2508171Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-12-01",
+        "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
     },
@@ -67110,6 +67220,16 @@
         "Notes": ""
     },
     {
+        "Hull": "372",
+        "Purchaser": "Dana Sibilla",
+        "Certificate No.": "2509200N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "46",
         "Purchaser": "Len Siegal",
         "Certificate No.": "0201040D",
@@ -67806,7 +67926,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2004-05-26",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67816,7 +67936,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2004-05-26",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67826,7 +67946,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2007-06-01",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -67836,7 +67956,7 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2023-09-30",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -80336,6 +80456,26 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2023-11-09",
         "Sail Type": "J",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "201",
+        "Purchaser": "John Wrangle",
+        "Certificate No.": "2511259S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-03",
+        "Sail Type": "M",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "201",
+        "Purchaser": "John Wrangle",
+        "Certificate No.": "2511260S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2025-12-13",
+        "Sail Type": "S89",
         "Fleet": "11",
         "Notes": "Evolution Sails"
     },

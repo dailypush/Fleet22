@@ -303,7 +303,7 @@
         "Boat Name": "Counterpoint",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "32",
@@ -312,7 +312,7 @@
         "Boat Name": "Counterpoint",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "33",
@@ -565,6 +565,24 @@
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "56",
+        "Owners/Helmsmen": "Paul Thompson",
+        "Status": "CO",
+        "Boat Name": "Good Company 2.0",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "56",
+        "Owners/Helmsmen": "Steve Helm",
+        "Status": "CO",
+        "Boat Name": "Good Company 2.0",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "57",
@@ -933,7 +951,7 @@
         "Boat Name": "Moose Unknown",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "89",
@@ -1014,7 +1032,7 @@
         "Boat Name": "Breezin Bayou",
         "Location": "Florida",
         "Fleet": "19",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "94",
@@ -1270,9 +1288,9 @@
     },
     {
         "Hull": "114",
-        "Owners/Helmsmen": "Erik Kristen",
+        "Owners/Helmsmen": "Michael Goldfarb",
         "Status": "OW",
-        "Boat Name": "More Jubilee",
+        "Boat Name": "Knot Known",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
@@ -1527,7 +1545,7 @@
         "Boat Name": "Blow Boat!!",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "137",
@@ -1600,6 +1618,15 @@
         "Location": "Ontario",
         "Fleet": "4",
         "Class Membership": "Member 2015"
+    },
+    {
+        "Hull": "144",
+        "Owners/Helmsmen": "Jeff Haase",
+        "Status": "AM",
+        "Boat Name": "Fall Line",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "144",
@@ -1828,12 +1855,12 @@
     },
     {
         "Hull": "165",
-        "Owners/Helmsmen": "Fred Darlington",
+        "Owners/Helmsmen": "Rob Berry",
         "Status": "OW",
-        "Boat Name": "Rapscallion",
-        "Location": "Rhode Island",
-        "Fleet": "14",
-        "Class Membership": "Member 2025"
+        "Boat Name": "Tazzie",
+        "Location": "New Hampshire",
+        "Fleet": "2",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "166",
@@ -3516,7 +3543,7 @@
         "Boat Name": "Jaded",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "299",
@@ -3903,7 +3930,7 @@
         "Boat Name": "Loulou",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "335",
@@ -4713,7 +4740,7 @@
         "Boat Name": "Liftoff",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "404",
@@ -5941,12 +5968,21 @@
     },
     {
         "Hull": "506",
+        "Owners/Helmsmen": "Rory MacDonald",
+        "Status": "CO",
+        "Boat Name": "McMac",
+        "Location": "Canada",
+        "Fleet": "9",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "506",
         "Owners/Helmsmen": "Sean McDermott",
         "Status": "CO",
         "Boat Name": "McMac",
         "Location": "Canada",
         "Fleet": "9",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "507",
@@ -5991,7 +6027,7 @@
         "Boat Name": "Forerunner",
         "Location": "Florida",
         "Fleet": "19",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "510",
@@ -7089,7 +7125,7 @@
         "Boat Name": "Ditch Digger",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "629",
@@ -7548,15 +7584,6 @@
         "Boat Name": "Knot Known",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "999",
-        "Owners/Helmsmen": "Michael Goldfarb",
-        "Status": "AM",
-        "Boat Name": "Knot Known",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     }
 ]
