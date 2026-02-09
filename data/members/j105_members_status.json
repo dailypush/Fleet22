@@ -204,7 +204,7 @@
         "Boat Name": "Infinity",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "24",
@@ -420,7 +420,7 @@
         "Boat Name": "Spitfire",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "42",
@@ -564,7 +564,7 @@
         "Boat Name": "Good Company 2.0",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "56",
@@ -1482,7 +1482,7 @@
         "Boat Name": "Deja Voodoo",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "132",
@@ -1621,15 +1621,6 @@
     },
     {
         "Hull": "144",
-        "Owners/Helmsmen": "Jeff Haase",
-        "Status": "AM",
-        "Boat Name": "Fall Line",
-        "Location": "Ohio",
-        "Fleet": "22",
-        "Class Membership": "Associate 2026"
-    },
-    {
-        "Hull": "144",
         "Owners/Helmsmen": "Chip Schaffner",
         "Status": "OW",
         "Boat Name": "Fall Line",
@@ -1684,12 +1675,30 @@
     },
     {
         "Hull": "148",
-        "Owners/Helmsmen": "Colin Mills",
+        "Owners/Helmsmen": "Jeff Haase",
         "Status": "OW",
         "Boat Name": "Wish",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2018"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "148",
+        "Owners/Helmsmen": "Abligail Ruhlman",
+        "Status": "CO",
+        "Boat Name": "Wish",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "148",
+        "Owners/Helmsmen": "Rob Ruhlman",
+        "Status": "CO",
+        "Boat Name": "Wish",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "149",
@@ -1770,7 +1779,7 @@
         "Boat Name": "Zippity",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "157",
@@ -2094,7 +2103,7 @@
         "Boat Name": "Bon Bon",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "185",
@@ -3057,7 +3066,7 @@
         "Boat Name": "Unbridled",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "262",
@@ -3174,7 +3183,7 @@
         "Boat Name": "Double Trouble",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "272",
@@ -3184,6 +3193,15 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "272",
+        "Owners/Helmsmen": "Paul Henderson",
+        "Status": "AM",
+        "Boat Name": "Double Trouble",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "273",
@@ -3354,7 +3372,7 @@
         "Boat Name": "Beauty",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "287",
@@ -3453,7 +3471,7 @@
         "Boat Name": "Rumpus",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "294",
@@ -3516,7 +3534,7 @@
         "Boat Name": "Stinger",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "297",
@@ -4047,7 +4065,7 @@
         "Boat Name": "TNT",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "344",
@@ -4416,7 +4434,7 @@
         "Boat Name": "Rocky",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "379",
@@ -4515,7 +4533,7 @@
         "Boat Name": "CRUSH!",
         "Location": "Georgia",
         "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "388",
@@ -4677,7 +4695,7 @@
         "Boat Name": "Usual Suspects",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "399",
@@ -4731,7 +4749,7 @@
         "Boat Name": "Liftoff",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "403",
@@ -4848,7 +4866,7 @@
         "Boat Name": "Paladin",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "412",
@@ -5109,7 +5127,7 @@
         "Boat Name": "Kinderspel2",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "431",
@@ -5244,7 +5262,7 @@
         "Boat Name": "Kinetic",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "441",
@@ -6135,7 +6153,7 @@
         "Boat Name": "Asterix",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "520",
@@ -6945,7 +6963,7 @@
         "Boat Name": "I.T.Sails",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "606",
@@ -7012,12 +7030,12 @@
     },
     {
         "Hull": "615",
-        "Owners/Helmsmen": "Gerard Golay",
+        "Owners/Helmsmen": "Markus Seifert",
         "Status": "OW",
-        "Boat Name": "Tabig IV",
-        "Location": "France",
+        "Boat Name": "Papa Echo",
+        "Location": "Spain",
         "Fleet": "0",
-        "Class Membership": "Member 2006"
+        "Class Membership": ""
     },
     {
         "Hull": "617",
@@ -7089,7 +7107,7 @@
         "Boat Name": "Texas Ranger IV",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "625",
@@ -7359,7 +7377,7 @@
         "Boat Name": "Radiance",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "650",
@@ -7446,7 +7464,7 @@
         "Hull": "675",
         "Owners/Helmsmen": "Fred Soward",
         "Status": "OW",
-        "Boat Name": "Knot Known",
+        "Boat Name": "America J",
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2026"
@@ -7576,14 +7594,5 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "999",
-        "Owners/Helmsmen": "Rob Ruhlman",
-        "Status": "AM",
-        "Boat Name": "Knot Known",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2026"
     }
 ]
