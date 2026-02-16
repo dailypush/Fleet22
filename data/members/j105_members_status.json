@@ -4734,6 +4734,15 @@
         "Class Membership": "Member 2026"
     },
     {
+        "Hull": "401",
+        "Owners/Helmsmen": "Randy Benton",
+        "Status": "AM",
+        "Boat Name": "Boss Lady",
+        "Location": "California",
+        "Fleet": "8",
+        "Class Membership": "Associate 2026"
+    },
+    {
         "Hull": "402",
         "Owners/Helmsmen": "Frank Conway",
         "Status": "OW",
@@ -5154,7 +5163,7 @@
         "Boat Name": "Dead on Arrival",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "433",

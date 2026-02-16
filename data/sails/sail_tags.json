@@ -2740,6 +2740,16 @@
         "Notes": ""
     },
     {
+        "Hull": "156",
+        "Purchaser": "Alan Bates",
+        "Certificate No.": "2601031Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-02-15",
+        "Sail Type": "S89",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "287",
         "Purchaser": "Wolfgang Bauchinger",
         "Certificate No.": "1102059N",
@@ -66186,6 +66196,16 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2024-07-25",
         "Sail Type": "S89",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "225",
+        "Purchaser": "Cristiano Serrao",
+        "Certificate No.": "2509209N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-02-12",
+        "Sail Type": "J",
         "Fleet": "6",
         "Notes": ""
     },
