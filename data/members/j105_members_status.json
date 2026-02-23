@@ -2742,7 +2742,7 @@
         "Boat Name": "Peer Gynt",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "235",
@@ -2824,6 +2824,15 @@
         "Location": "South Carolina",
         "Fleet": "11",
         "Class Membership": "Member 2025"
+    },
+    {
+        "Hull": "239",
+        "Owners/Helmsmen": "Scott Weller",
+        "Status": "AM",
+        "Boat Name": "Ruckus",
+        "Location": "South Carolina",
+        "Fleet": "11",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "240",
@@ -5064,7 +5073,7 @@
         "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "423",
@@ -5721,7 +5730,7 @@
         "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "482",
@@ -5730,7 +5739,7 @@
         "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "483",

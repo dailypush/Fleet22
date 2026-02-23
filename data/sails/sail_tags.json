@@ -2742,6 +2742,16 @@
     {
         "Hull": "156",
         "Purchaser": "Alan Bates",
+        "Certificate No.": "2510231Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-02-16",
+        "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "156",
+        "Purchaser": "Alan Bates",
         "Certificate No.": "2601031Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-02-15",
@@ -54560,6 +54570,16 @@
         "Notes": ""
     },
     {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2511267N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "510",
         "Purchaser": "Domingo Pagan",
         "Certificate No.": "0302107Q",
@@ -58396,6 +58416,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-12-12",
         "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "2508196N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "J",
         "Fleet": "20",
         "Notes": ""
     },
@@ -69092,7 +69122,7 @@
     {
         "Hull": "675",
         "Purchaser": "Fred Soward",
-        "Certificate No.": "2510231Q",
+        "Certificate No.": "2512281Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-22",
         "Sail Type": "M",
