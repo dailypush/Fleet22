@@ -1,6 +1,0 @@
-
------ Payment Status Summary for 2025 -----
-Total boats: 20
-Paid boats: 10 (50.0%)
-Unpaid boats: 10 (50.0%)
-        

@@ -1194,7 +1194,7 @@
         "Boat Name": "Vytis",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "104",
@@ -1203,7 +1203,7 @@
         "Boat Name": "Vytis",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "105",
@@ -1302,7 +1302,7 @@
         "Boat Name": "Puff",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "115",
@@ -1311,7 +1311,16 @@
         "Boat Name": "Puff",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "115",
+        "Owners/Helmsmen": "Steven Neidhardt",
+        "Status": "AM",
+        "Boat Name": "Puff",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "116",
@@ -6234,7 +6243,7 @@
         "Boat Name": "Moonglow",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "525",
@@ -6243,7 +6252,7 @@
         "Boat Name": "Moonglow",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2025"
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "526",
@@ -6990,7 +6999,7 @@
         "Boat Name": "Mojo",
         "Location": "Canada",
         "Fleet": "9",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "608",
