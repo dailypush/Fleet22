@@ -1,0 +1,30 @@
+
+================================================================================
+PAYMENT STATUS SYNC REPORT - 2026
+Generated: 2026-02-26 23:01:27
+================================================================================
+
+FLEET DUES (Fleet 22 Dues)
+--------------------------
+Total Boats:       19
+Paid:              0 (0.0%)
+Unpaid:            19 (100.0%)
+Outstanding:       $2,850 (est. $150/boat)
+
+CLASS DUES (J/105 Class Association)
+------------------------------------
+Total Boats:       19
+Paid:              4 (21.1%)
+Unpaid:            15 (78.9%)
+Unknown:           0
+
+DATA SOURCES
+------------
+✓ Fleet Dues: Manually maintained in boats_fleet22.json
+✓ Class Dues: Synced from j105_members_status.json
+
+NEXT STEPS
+----------
+1. Manually update Fleet Dues status in boats_fleet22.json as payments received
+2. Re-run this script to sync Class Dues from membership data
+3. Web pages will automatically show updated status

@@ -1,0 +1,55 @@
+================================================================================
+DETAILED PAYMENT STATUS REPORT - 2026
+Generated: 2026-02-26 23:01:27
+================================================================================
+
+FLEET DUES - PAID BOATS (0)
+--------------------------------------------------------------------------------
+
+FLEET DUES - UNPAID BOATS (19)
+--------------------------------------------------------------------------------
+Hull   10 | Zamboni                        |            | NOT PAID
+Hull   37 | Windependence                  | BHSC       | NOT PAID
+Hull   72 | Highlander                     | EYC        | NOT PAID
+Hull   77 | Dark N Stormy                  | EYC        | NOT PAID
+Hull   91 | Trio                           | EYC        | NOT PAID
+Hull  144 | Fall Line                      | EYC        | NOT PAID
+Hull  145 | Kashmir                        | NCYC       | NOT PAID
+Hull  148 | Wish                           | GRSC       | NOT PAID
+Hull  208 | Sling Shot                     | EYC        | NOT PAID
+Hull  246 | Mr. Krabs                      | BHSC       | NOT PAID
+Hull  261 | Unbridled                      | EYC        | NOT PAID
+Hull  327 | J-4                            | Tba        | NOT PAID
+Hull  376 | Whistler                       | NCYC       | NOT PAID
+Hull  393 | Ovation                        | EYC        | NOT PAID
+Hull  423 | Southbound                     | SSC        | NOT PAID
+Hull  493 | Rapscallion                    | EYC        | NOT PAID
+Hull  618 | Wrecking Crew                  | BHSC       | NOT PAID
+Hull  638 | Osprey                         | BHSC       | NOT PAID
+Hull  656 | Aurora                         | BYC        | NOT PAID
+
+
+CLASS DUES - PAID BOATS (4)
+--------------------------------------------------------------------------------
+Hull   91 | Trio                           | EYC        | PAID
+Hull  148 | Wish                           | GRSC       | PAID
+Hull  261 | Unbridled                      | EYC        | PAID
+Hull  618 | Wrecking Crew                  | BHSC       | PAID
+
+CLASS DUES - UNPAID BOATS (15)
+--------------------------------------------------------------------------------
+Hull   10 | Zamboni                        |            | NOT PAID
+Hull   37 | Windependence                  | BHSC       | NOT PAID
+Hull   72 | Highlander                     | EYC        | NOT PAID
+Hull   77 | Dark N Stormy                  | EYC        | NOT PAID
+Hull  144 | Fall Line                      | EYC        | NOT PAID
+Hull  145 | Kashmir                        | NCYC       | NOT PAID
+Hull  208 | Sling Shot                     | EYC        | NOT PAID
+Hull  246 | Mr. Krabs                      | BHSC       | NOT PAID
+Hull  327 | J-4                            | Tba        | NOT PAID
+Hull  376 | Whistler                       | NCYC       | NOT PAID
+Hull  393 | Ovation                        | EYC        | NOT PAID
+Hull  423 | Southbound                     | SSC        | NOT PAID
+Hull  493 | Rapscallion                    | EYC        | NOT PAID
+Hull  638 | Osprey                         | BHSC       | NOT PAID
+Hull  656 | Aurora                         | BYC        | NOT PAID

@@ -182,116 +182,9 @@
                                     <th scope="col">Yacht Club</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="boats-table-body">
                                 <tr>
-                                    <td>677</td>
-                                    <td>MYOURI II</td>
-                                    <td>BYC</td>
-                                </tr>
-                                <tr>
-                                    <td>656</td>
-                                    <td>Aurora</td>
-                                    <td>BYC</td>
-                                </tr>
-                                <tr>
-                                    <td>638</td>
-                                    <td>Osprey</td>
-                                    <td>BHSC</td>
-                                </tr>
-                                <tr>
-                                    <td>618</td>
-                                    <td>Wrecking Crew</td>
-                                    <td>BHSC</td>
-                                </tr>
-                                <tr>
-                                    <td>246</td>
-                                    <td>Mr. Krabs</td>
-                                    <td>BHSC</td>
-                                </tr>
-                                <tr>
-                                    <td>37</td>
-                                    <td>Windependence</td>
-                                    <td>BHSC</td>
-                                </tr>
-                                <tr>
-                                    <td>423</td>
-                                    <td>Southbound</td>
-                                    <td>SSC</td>
-                                </tr>
-                                <tr>
-                                    <td>376</td>
-                                    <td>Whistler</td>
-                                    <td>NCYC</td>
-                                </tr>
-                                <tr>
-                                    <td>145</td>
-                                    <td>Kashmir</td>
-                                    <td>NCYC</td>
-                                </tr>
-                                <tr>
-                                    <td>118</td>
-                                    <td>Relentless</td>
-                                    <td>NCYC</td>
-                                </tr>
-                                <tr>
-                                    <td>148</td>
-                                    <td>Wish</td>
-                                    <td>GRSC</td>
-                                </tr>
-                                <tr>
-                                    <td>123</td>
-                                    <td>Good Lookin</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Zamboni</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>393</td>
-                                    <td>Ovation</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>261</td>
-                                    <td>Unbridled</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>208</td>
-                                    <td>Sling Shot</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>144</td>
-                                    <td>Fall Line</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>91</td>
-                                    <td>Trio</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>77</td>
-                                    <td>Dark N Stormy</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>72</td>
-                                    <td>Highlander</td>
-                                    <td>EYC</td>
-                                </tr>
-                                <tr>
-                                    <td>493</td>
-                                    <td>Rapscallion</td>
-                                    <td>EYC</td>
-                                </tr>
-                                 <tr>
-                                    <td>327</td>
-                                    <td>J-4</td>
-                                    <td>Tba</td>
+                                    <td colspan="3" class="text-center text-muted">Loading boats...</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -314,7 +207,38 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Removed Google Drive script reference since we're using direct linking -->
+    
+    <!-- Load boats data -->
+    <script>
+        async function loadBoatsTable() {
+            try {
+                const response = await fetch('../data/boats/boats_fleet22.json');
+                const boats = await response.json();
+                const tbody = document.getElementById('boats-table-body');
+                
+                // Clear loading message
+                tbody.innerHTML = '';
+                
+                // Populate table with boats data
+                boats.forEach(boat => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${boat['Hull Number']}</td>
+                        <td>${boat['Boat Name']}</td>
+                        <td>${boat['Yacht Club'] || ''}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error loading boats data:', error);
+                const tbody = document.getElementById('boats-table-body');
+                tbody.innerHTML = '<tr><td colspan="3" class="text-center text-danger">Error loading boats data</td></tr>';
+            }
+        }
+        
+        // Load boats when page is ready
+        document.addEventListener('DOMContentLoaded', loadBoatsTable);
+    </script>
 
 </body>
 
