@@ -987,7 +987,7 @@
         "Boat Name": "Trio",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "91",
@@ -1936,15 +1936,6 @@
     },
     {
         "Hull": "171",
-        "Owners/Helmsmen": "John (Jay) Richardson",
-        "Status": "AM",
-        "Boat Name": "Bigamy",
-        "Location": "New Jersey",
-        "Fleet": "10",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "171",
         "Owners/Helmsmen": "George Ferguson",
         "Status": "OW",
         "Boat Name": "Bigamy",
@@ -1959,7 +1950,7 @@
         "Boat Name": "SkyFall",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "173",
@@ -2467,12 +2458,12 @@
     },
     {
         "Hull": "214",
-        "Owners/Helmsmen": "David Ogryzlo",
+        "Owners/Helmsmen": "John (Jay) Richardson",
         "Status": "OW",
         "Boat Name": "True Blue",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Member 2022"
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2025"
     },
     {
         "Hull": "215",
@@ -2877,7 +2868,7 @@
         "Boat Name": "Phantom",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "244",
@@ -4708,9 +4699,18 @@
     },
     {
         "Hull": "398",
-        "Owners/Helmsmen": "Don Peloquin",
-        "Status": "OW",
-        "Boat Name": "Usual Suspects",
+        "Owners/Helmsmen": "Larry Wise",
+        "Status": "CO",
+        "Boat Name": "Knot Known",
+        "Location": "Texas",
+        "Fleet": "17",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "398",
+        "Owners/Helmsmen": "Alexander Wise",
+        "Status": "CO",
+        "Boat Name": "Knot Known",
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2026"
@@ -5046,7 +5046,7 @@
         "Boat Name": "Knot Known",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "421",
@@ -7143,7 +7143,7 @@
         "Boat Name": "Reckless",
         "Location": "Connecticut",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "626",

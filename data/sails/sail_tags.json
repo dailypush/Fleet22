@@ -8946,7 +8946,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2014-08-04",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": "Sail returned to North (F/R) from Peter Hall, per MM e-mail of 4/30/14. Re-sold to Doug Bullock 8/2014."
     },
     {
@@ -8956,7 +8956,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2014-04-16",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -8966,7 +8966,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2016-06-15",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -8976,7 +8976,7 @@
         "Sailmaker": "Evolution Sails Toronto",
         "Delivery Date": "2018-07-08",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -11466,6 +11466,26 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2025-01-22",
         "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
+        "Hull": "514",
+        "Purchaser": "Ed Chambers",
+        "Certificate No.": "2506139N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-03-03",
+        "Sail Type": "S89",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
+        "Hull": "514",
+        "Purchaser": "Ed Chambers",
+        "Certificate No.": "2506141N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-03-03",
+        "Sail Type": "M",
         "Fleet": "8",
         "Notes": ""
     },
@@ -45996,7 +46016,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2007-09-27",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -46006,7 +46026,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2010-12-12",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -46016,7 +46036,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-02-21",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -46026,7 +46046,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2013-08-22",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -60840,6 +60860,16 @@
         "Notes": ""
     },
     {
+        "Hull": "268",
+        "Purchaser": "John Rivlin",
+        "Certificate No.": "2601032Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-02",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "567",
         "Purchaser": "Trevor Roach",
         "Certificate No.": "1009212Z",
@@ -70166,7 +70196,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-01-30",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -70176,7 +70206,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-01-24",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -70186,7 +70216,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-12-01",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -70196,7 +70226,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2003-10-24",
         "Sail Type": "M",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -70206,7 +70236,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-09-06",
         "Sail Type": "J",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -70216,7 +70246,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-01-01",
         "Sail Type": "S89",
-        "Fleet": "4",
+        "Fleet": "10",
         "Notes": ""
     },
     {
