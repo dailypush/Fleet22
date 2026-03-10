@@ -12860,6 +12860,16 @@
         "Notes": ""
     },
     {
+        "Hull": "493",
+        "Purchaser": "Tom Cliffel",
+        "Certificate No.": "2601004Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-04",
+        "Sail Type": "M",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
         "Hull": "74",
         "Purchaser": "Mark Cloutier",
         "Certificate No.": "0304308D",
@@ -80537,6 +80547,16 @@
         "Delivery Date": "2025-05-21",
         "Sail Type": "M",
         "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "465",
+        "Purchaser": "John Woods",
+        "Certificate No.": "2601018Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-02-27",
+        "Sail Type": "S89",
+        "Fleet": "17",
         "Notes": ""
     },
     {
