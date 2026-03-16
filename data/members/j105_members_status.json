@@ -316,12 +316,12 @@
     },
     {
         "Hull": "33",
-        "Owners/Helmsmen": "Eric & Kyung-hee Doelling",
+        "Owners/Helmsmen": "Christopher Scott",
         "Status": "OW",
-        "Boat Name": "La Pavoni",
+        "Boat Name": "J/Aquatic",
         "Location": "California",
-        "Fleet": "1",
-        "Class Membership": ""
+        "Fleet": "8",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "34",
@@ -1119,16 +1119,16 @@
         "Hull": "101",
         "Owners/Helmsmen": "Judith McLean",
         "Status": "CO",
-        "Boat Name": "Esprit d\\\\\\'Ecosse",
+        "Boat Name": "Esprit d\\'Ecosse",
         "Location": "Illinois",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "101",
         "Owners/Helmsmen": "Ross McLean",
         "Status": "CO",
-        "Boat Name": "Esprit d\\\\\\'Ecosse",
+        "Boat Name": "Esprit d\\'Ecosse",
         "Location": "Illinois",
         "Fleet": "5",
         "Class Membership": "Member 2015"
@@ -3660,16 +3660,16 @@
         "Boat Name": "RumFront",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "306",
-        "Owners/Helmsmen": "Fred Martschink",
+        "Owners/Helmsmen": "Robert Turner IV",
         "Status": "CO",
         "Boat Name": "RumFront",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": ""
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "306",
@@ -3678,7 +3678,7 @@
         "Boat Name": "RumFront",
         "Location": "South Carolina",
         "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "307",
@@ -5793,7 +5793,7 @@
         "Boat Name": "Saluki",
         "Location": "Michigan",
         "Fleet": "5",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "488",
@@ -5865,7 +5865,7 @@
         "Boat Name": "Rapscallion",
         "Location": "Ohio",
         "Fleet": "22",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "494",
@@ -6958,12 +6958,12 @@
     },
     {
         "Hull": "602",
-        "Owners/Helmsmen": "Steve Willits",
+        "Owners/Helmsmen": "Brad Kahn",
         "Status": "OW",
-        "Boat Name": "Synapse",
-        "Location": "Texas",
-        "Fleet": "17",
-        "Class Membership": "Member 2022"
+        "Boat Name": "Legacy",
+        "Location": "Ohio",
+        "Fleet": "22",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "603",

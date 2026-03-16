@@ -12862,6 +12862,16 @@
     {
         "Hull": "493",
         "Purchaser": "Tom Cliffel",
+        "Certificate No.": "2601001Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-10",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "493",
+        "Purchaser": "Tom Cliffel",
         "Certificate No.": "2601004Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-03-04",
@@ -22266,7 +22276,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-09-17",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22276,7 +22286,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-09-17",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22286,7 +22296,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-09-17",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22296,7 +22306,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2002-11-19",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22306,7 +22316,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-06-11",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22316,7 +22326,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-06-11",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22326,7 +22336,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2004-05-07",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22336,7 +22346,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-09-25",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22346,7 +22356,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-09-25",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -22356,7 +22366,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2006-09-25",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -41330,6 +41340,16 @@
         "Notes": ""
     },
     {
+        "Hull": "328",
+        "Purchaser": "Cedric Lewis",
+        "Certificate No.": "2508193N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-31",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "535",
         "Purchaser": "Jaime Lewis",
         "Certificate No.": "0701082N",
@@ -46016,6 +46036,16 @@
         "Sailmaker": "Shore",
         "Delivery Date": "2025-05-28",
         "Sail Type": "S89",
+        "Fleet": "6",
+        "Notes": "Evolution Sails"
+    },
+    {
+        "Hull": "629",
+        "Purchaser": "Chuck McCarthy",
+        "Certificate No.": "2601050S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2026-03-10",
+        "Sail Type": "J",
         "Fleet": "6",
         "Notes": "Evolution Sails"
     },
@@ -70040,6 +70070,16 @@
         "Notes": ""
     },
     {
+        "Hull": "147",
+        "Purchaser": "Eric Stang",
+        "Certificate No.": "2601034Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-10",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "449",
         "Purchaser": "Eric Stang",
         "Certificate No.": "0203148N",
@@ -76500,6 +76540,16 @@
         "Notes": ""
     },
     {
+        "Hull": "630",
+        "Purchaser": "Justin Walling",
+        "Certificate No.": "2601047S",
+        "Sailmaker": "Shore",
+        "Delivery Date": "2026-03-12",
+        "Sail Type": "S89",
+        "Fleet": "11",
+        "Notes": "Evolution Sails"
+    },
+    {
         "Hull": "123",
         "Purchaser": "Dean Walsh",
         "Certificate No.": "0509288N",
@@ -79506,7 +79556,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2021-03-19",
         "Sail Type": "M",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -79516,7 +79566,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2021-03-19",
         "Sail Type": "S89",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -79526,7 +79576,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2021-03-12",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
@@ -79536,7 +79586,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2021-05-07",
         "Sail Type": "J",
-        "Fleet": "17",
+        "Fleet": "22",
         "Notes": ""
     },
     {
