@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """
-GitHub Actions compatible version of fleetBoats.py
-This script checks for existing boats_fleet22.json data in the data directory.
-If it exists, it uses that. If not, it uses a fallback approach.
+Fleet 22 boat data builder.
+Loads Fleet 22 boats from j105_members_status.json (filtering by Fleet == "22"),
+merges with existing boats_fleet22.json to preserve payment and yacht club data.
 """
 import sys
 from pathlib import Path
-from bs4 import BeautifulSoup
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.logger import setup_logger
 from utils.data_loader import load_json, save_json
-from utils.path_utils import BOATS_FILE, PROJECT_ROOT
+from utils.path_utils import BOATS_FILE, MEMBERS_FILE
 
 # Setup logging
 logger = setup_logger(__name__)
 
-# Payment fields to preserve from existing data (simplified format)
-PAYMENT_FIELDS = [
+# Fields to preserve from existing data (manually maintained)
+PRESERVE_FIELDS = [
     'Fleet Dues',
-    'Class Dues'
+    'Class Dues',
+    'Yacht Club'
 ]
 
 def get_existing_fleet_data():
@@ -36,104 +36,92 @@ def get_existing_fleet_data():
     
     return None
 
-def extract_payment_data(existing_data):
-    """Extract payment data from existing boats data."""
-    payment_map = {}
+def extract_preserved_data(existing_data):
+    """Extract payment and yacht club data from existing boats data, keyed by hull number."""
+    preserved_map = {}
     if existing_data:
         for boat in existing_data:
             hull = str(boat.get('Hull Number', ''))
             if hull:
-                payment_map[hull] = {field: boat.get(field, '') for field in PAYMENT_FIELDS}
-        logger.info(f"Extracted payment data for {len(payment_map)} boats")
-    return payment_map
+                preserved_map[hull] = {field: boat.get(field, '') for field in PRESERVE_FIELDS}
+        logger.info(f"Extracted preserved data for {len(preserved_map)} boats")
+    return preserved_map
 
-def merge_payment_data(scraped_data, payment_map):
-    """Merge scraped boat data with existing payment information."""
+def merge_preserved_data(scraped_data, preserved_map):
+    """Merge scraped boat data with existing payment and yacht club information."""
     merged_count = 0
     for boat in scraped_data:
         hull = str(boat.get('Hull Number', ''))
-        if hull in payment_map:
-            # Preserve existing payment data
-            boat.update(payment_map[hull])
+        if hull in preserved_map:
+            existing = preserved_map[hull]
+            # Preserve Fleet Dues (manually maintained — never overwrite)
+            boat['Fleet Dues'] = existing.get('Fleet Dues', 'Not Paid')
+            # Preserve Class Dues
+            boat['Class Dues'] = existing.get('Class Dues', 'Not Paid')
+            # Preserve Yacht Club
+            boat['Yacht Club'] = existing.get('Yacht Club', '')
             merged_count += 1
         else:
-            # Initialize payment fields for new boats
+            # Initialize fields for new boats
+            boat.setdefault('Yacht Club', '')
             boat['Fleet Dues'] = 'Not Paid'
             boat['Class Dues'] = 'Not Paid'
     
-    logger.info(f"Merged payment data for {merged_count} boats")
+    logger.info(f"Merged preserved data for {merged_count} boats")
     return scraped_data
 
-def try_load_from_members_html():
-    """Try to load data from members.html file"""
-    try:
-        # Look for members.html in pages or project root
-        members_pages = PROJECT_ROOT / 'pages' / 'members.html'
-        members_root = PROJECT_ROOT / 'members.html'
-        
-        file_path = members_pages if members_pages.exists() else members_root
-        
-        if not file_path.exists():
-            logger.warning(f"members.html not found at: {file_path}")
-            return None
-            
-        with open(file_path, 'r') as file:
-            html_content = file.read()
-            
-        soup = BeautifulSoup(html_content, 'html.parser')
-        table = soup.find('table', {'class': 'table table-striped'})
-        
-        if table is None:
-            logger.warning("Could not find the table with class 'table table-striped'")
-            return None
-        
-        data_list = []
-        headers = [header.text.strip() for header in table.find_all('th')]
-        
-        for row in table.find_all('tr')[1:]:
-            cols = row.find_all('td')
-            if len(cols) == len(headers):
-                row_data = {headers[i]: col.text.strip() for i, col in enumerate(cols)}
-                data_list.append(row_data)
-        
-        logger.info(f"Extracted {len(data_list)} boat entries from members.html")
-        return data_list
-    
-    except Exception as e:
-        logger.error(f"Error processing members.html: {str(e)}")
+def load_fleet22_from_members():
+    """Load Fleet 22 boats from j105_members_status.json, deduplicated by hull number."""
+    if not MEMBERS_FILE.exists():
+        logger.warning(f"Members file not found: {MEMBERS_FILE}")
         return None
 
-def generate_fallback_data():
-    """Generate fallback data"""
-    # This is just a minimal structure to allow the workflow to continue
-    logger.warning("Using fallback data generation")
-    return [
-        {"Hull Number": "Unavailable", "Boat Name": "Data Unavailable", "Owner": "N/A"}
-    ]
+    try:
+        all_members = load_json(MEMBERS_FILE)
+        fleet22_entries = [m for m in all_members if m.get('Fleet') == '22']
+        logger.info(f"Found {len(fleet22_entries)} Fleet 22 entries in members data")
+
+        # Deduplicate by hull number (multiple entries = co-owners)
+        seen_hulls = set()
+        boats = []
+        for entry in fleet22_entries:
+            hull = str(entry.get('Hull', ''))
+            if hull and hull not in seen_hulls:
+                seen_hulls.add(hull)
+                boats.append({
+                    'Hull Number': hull,
+                    'Boat Name': entry.get('Boat Name', ''),
+                })
+        
+        logger.info(f"Deduplicated to {len(boats)} unique Fleet 22 boats")
+        return boats
+    except Exception as e:
+        logger.error(f"Error loading members data: {str(e)}")
+        return None
 
 def main():
     """Main execution function."""
-    logger.info("Starting fleet boats scraper")
+    logger.info("Starting fleet boats builder")
     
-    # Load existing data to preserve payment information
+    # Load existing data to preserve payment and yacht club information
     existing_data = get_existing_fleet_data()
-    payment_map = extract_payment_data(existing_data)
+    preserved_map = extract_preserved_data(existing_data)
     
-    # Try different methods to get fresh boat list
-    fresh_data = try_load_from_members_html()
+    # Load Fleet 22 boats from members JSON
+    fresh_data = load_fleet22_from_members()
     
     if fresh_data:
-        # Merge fresh data with existing payment data
-        data = merge_payment_data(fresh_data, payment_map)
-        logger.info("Updated boat list with preserved payment data")
+        # Merge fresh data with existing preserved data
+        data = merge_preserved_data(fresh_data, preserved_map)
+        logger.info("Updated boat list with preserved data")
     elif existing_data:
-        # Use existing data if we can't get fresh data
+        # Use existing data if members file unavailable
         data = existing_data
-        logger.info("Using existing boat data (no updates available)")
+        logger.info("Using existing boat data (members file unavailable)")
     else:
-        # Last resort fallback
-        data = generate_fallback_data()
-        logger.warning("Using fallback data")
+        logger.error("No data source available")
+        print("Error: No data source available")
+        return False
     
     # Save the data
     save_json(data, BOATS_FILE)
