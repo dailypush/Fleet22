@@ -5,6 +5,7 @@ Loads Fleet 22 boats from j105_members_status.json (filtering by Fleet == "22"),
 merges with existing boats_fleet22.json to preserve payment and yacht club data.
 """
 import sys
+from datetime import date
 from pathlib import Path
 
 # Add parent directory to path for imports
@@ -20,9 +21,10 @@ logger = setup_logger(__name__)
 # Fields to preserve from existing data (manually maintained)
 PRESERVE_FIELDS = [
     'Fleet Dues',
-    'Class Dues',
     'Yacht Club'
 ]
+
+CURRENT_YEAR = str(date.today().year)
 
 def get_existing_fleet_data():
     """Try to load existing boats_fleet22.json data if available"""
@@ -48,7 +50,11 @@ def extract_preserved_data(existing_data):
     return preserved_map
 
 def merge_preserved_data(scraped_data, preserved_map):
-    """Merge scraped boat data with existing payment and yacht club information."""
+    """Merge scraped boat data with existing fleet dues and yacht club information.
+    
+    Class Dues are derived from the members JSON Class Membership field.
+    Fleet Dues are manually maintained — only preserved from existing data.
+    """
     merged_count = 0
     for boat in scraped_data:
         hull = str(boat.get('Hull Number', ''))
@@ -56,8 +62,6 @@ def merge_preserved_data(scraped_data, preserved_map):
             existing = preserved_map[hull]
             # Preserve Fleet Dues (manually maintained — never overwrite)
             boat['Fleet Dues'] = existing.get('Fleet Dues', 'Not Paid')
-            # Preserve Class Dues
-            boat['Class Dues'] = existing.get('Class Dues', 'Not Paid')
             # Preserve Yacht Club
             boat['Yacht Club'] = existing.get('Yacht Club', '')
             merged_count += 1
@@ -65,7 +69,10 @@ def merge_preserved_data(scraped_data, preserved_map):
             # Initialize fields for new boats
             boat.setdefault('Yacht Club', '')
             boat['Fleet Dues'] = 'Not Paid'
-            boat['Class Dues'] = 'Not Paid'
+
+        # Class Dues derived from members data Class Membership field
+        class_membership = boat.pop('Class Membership', '')
+        boat['Class Dues'] = 'Paid' if f'Member {CURRENT_YEAR}' in class_membership else 'Not Paid'
     
     logger.info(f"Merged preserved data for {merged_count} boats")
     return scraped_data
@@ -91,6 +98,7 @@ def load_fleet22_from_members():
                 boats.append({
                     'Hull Number': hull,
                     'Boat Name': entry.get('Boat Name', ''),
+                    'Class Membership': entry.get('Class Membership', ''),
                 })
         
         logger.info(f"Deduplicated to {len(boats)} unique Fleet 22 boats")
