@@ -32,7 +32,7 @@
         "Boat Name": "Fall Line",
         "Fleet Dues": "Not Paid",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "145",
@@ -67,7 +67,7 @@
         "Boat Name": "Mr Krabs",
         "Fleet Dues": "Paid",
         "Yacht Club": "BHSC",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "249",
@@ -81,7 +81,7 @@
         "Boat Name": "Unbridled",
         "Fleet Dues": "Not Paid",
         "Yacht Club": "EYC",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "308",
@@ -102,7 +102,7 @@
         "Boat Name": "Whistler",
         "Fleet Dues": "Not Paid",
         "Yacht Club": "NCYC",
-        "Class Dues": "Not Paid"
+        "Class Dues": "Paid"
     },
     {
         "Hull Number": "393",
