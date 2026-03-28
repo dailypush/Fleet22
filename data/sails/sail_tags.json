@@ -27460,6 +27460,16 @@
         "Notes": ""
     },
     {
+        "Hull": "113",
+        "Purchaser": "Bennet Greenwald",
+        "Certificate No.": "2601006Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-24",
+        "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
         "Hull": "216",
         "Purchaser": "Bennett Greenwald",
         "Certificate No.": "0504023U",
@@ -30558,6 +30568,16 @@
         "Sail Type": "M",
         "Fleet": "1",
         "Notes": "2025 NAC sail"
+    },
+    {
+        "Hull": "27",
+        "Purchaser": "Randy Hecht",
+        "Certificate No.": "2601035Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-24",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
     },
     {
         "Hull": "338",
@@ -35410,6 +35430,26 @@
         "Notes": ""
     },
     {
+        "Hull": "382",
+        "Purchaser": "Paolo Juvara",
+        "Certificate No.": "2601044Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-26",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "382",
+        "Purchaser": "Paolo Juvara",
+        "Certificate No.": "2601045Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-26",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "26",
         "Purchaser": "Rolf Kaiser",
         "Certificate No.": "1005107Q",
@@ -39226,6 +39266,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-11-22",
         "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "644",
+        "Purchaser": "Phillip Laby",
+        "Certificate No.": "2601005Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-03-25",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
@@ -62860,6 +62910,16 @@
         "Notes": ""
     },
     {
+        "Hull": "304",
+        "Purchaser": "Gregory Ryan",
+        "Certificate No.": "2508194N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-03-23",
+        "Sail Type": "S89",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
         "Hull": "626",
         "Purchaser": "Jay Ryan",
         "Certificate No.": "0302108Q",
@@ -67136,6 +67196,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2024-08-09",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "424",
+        "Purchaser": "Mike Sheppard",
+        "Certificate No.": "2504103K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2026-04-30",
+        "Sail Type": "S89",
         "Fleet": "5",
         "Notes": ""
     },
@@ -73160,16 +73230,6 @@
         "Notes": ""
     },
     {
-        "Hull": "174",
-        "Purchaser": "Irene Tang",
-        "Certificate No.": "2508177Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2025-08-19",
-        "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
         "Hull": "418",
         "Purchaser": "Will Tate",
         "Certificate No.": "1103128U",
@@ -77330,6 +77390,16 @@
         "Notes": ""
     },
     {
+        "Hull": "673",
+        "Purchaser": "Jon Weglarz",
+        "Certificate No.": "2504104K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2026-04-30",
+        "Sail Type": "S77",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "581",
         "Purchaser": "Dave Wegner",
         "Certificate No.": "1702103Q",
@@ -79176,6 +79246,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-07-03",
         "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "174",
+        "Purchaser": "Nicholas Wilkerson",
+        "Certificate No.": "2508177Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-08-19",
+        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
