@@ -262,15 +262,6 @@
     },
     {
         "Hull": "29",
-        "Owners/Helmsmen": "Paul Murphy",
-        "Status": "AM",
-        "Boat Name": "Warbride",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "29",
         "Owners/Helmsmen": "Ben duPont",
         "Status": "OW",
         "Boat Name": "Warbride",
@@ -549,15 +540,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "55",
-        "Owners/Helmsmen": "Todd Hiller",
-        "Status": "AM",
-        "Boat Name": "Kobayashi Maru",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "56",
         "Owners/Helmsmen": "Joel Scott",
         "Status": "OW",
@@ -639,15 +621,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "63",
-        "Owners/Helmsmen": "Greg Fisher",
-        "Status": "AM",
-        "Boat Name": "Young American Sailing Academy",
-        "Location": "New York",
-        "Fleet": "11",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "64",
         "Owners/Helmsmen": "David McKee",
         "Status": "OW",
@@ -655,15 +628,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "64",
-        "Owners/Helmsmen": "Roger Kagan",
-        "Status": "AM",
-        "Boat Name": "Relentless",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "65",
@@ -718,15 +682,6 @@
         "Location": "Texas",
         "Fleet": "17",
         "Class Membership": "Member 2026"
-    },
-    {
-        "Hull": "69",
-        "Owners/Helmsmen": "Timothy Johnson",
-        "Status": "AM",
-        "Boat Name": "Eau La La",
-        "Location": "Texas",
-        "Fleet": "17",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "70",
@@ -954,15 +909,6 @@
         "Class Membership": "Member 2026"
     },
     {
-        "Hull": "89",
-        "Owners/Helmsmen": "Jack Aitchison",
-        "Status": "AM",
-        "Boat Name": "Moose Unknown",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "90",
         "Owners/Helmsmen": "Patricia Schulze",
         "Status": "OW",
@@ -1060,15 +1006,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "96",
-        "Owners/Helmsmen": "Michael McNamara",
-        "Status": "AM",
-        "Boat Name": "Good Trade",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "97",
@@ -1584,15 +1521,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "139",
-        "Owners/Helmsmen": "David Owen",
-        "Status": "AM",
-        "Boat Name": "Warlock",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "140",
         "Owners/Helmsmen": "Nissan Motor Co.",
         "Status": "OW",
@@ -1852,15 +1780,6 @@
         "Location": "Illinois",
         "Fleet": "5",
         "Class Membership": "Member 2026"
-    },
-    {
-        "Hull": "163",
-        "Owners/Helmsmen": "James Elvart",
-        "Status": "AM",
-        "Boat Name": "Pura Vida",
-        "Location": "Illinois",
-        "Fleet": "5",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "164",
@@ -2565,15 +2484,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "220",
-        "Owners/Helmsmen": "Shane Kilberg",
-        "Status": "AM",
-        "Boat Name": "Lagniappe",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "221",
         "Owners/Helmsmen": "Eric Cooper",
         "Status": "OW",
@@ -2608,15 +2518,6 @@
         "Location": "Connecticut",
         "Fleet": "6",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "225",
-        "Owners/Helmsmen": "Rodolfo Hirsch",
-        "Status": "AM",
-        "Boat Name": "Shaken not Stirred",
-        "Location": "Connecticut",
-        "Fleet": "6",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "225",
@@ -2943,24 +2844,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "250",
-        "Owners/Helmsmen": "RJ Bay",
-        "Status": "AM",
-        "Boat Name": "Smoke and Oakum",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "250",
-        "Owners/Helmsmen": "John Fowlkes",
-        "Status": "AM",
-        "Boat Name": "Smoke and Oakum",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "251",
         "Owners/Helmsmen": "Richard Hinds",
         "Status": "OW",
@@ -2968,24 +2851,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "251",
-        "Owners/Helmsmen": "Amy Harris",
-        "Status": "AM",
-        "Boat Name": "Breakaway",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "251",
-        "Owners/Helmsmen": "John Vallani",
-        "Status": "AM",
-        "Boat Name": "Breakaway",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "252",
@@ -3139,15 +3004,6 @@
         "Location": "Ontario",
         "Fleet": "4",
         "Class Membership": "Member 2021"
-    },
-    {
-        "Hull": "267",
-        "Owners/Helmsmen": "Todd Irving",
-        "Status": "AM",
-        "Boat Name": "Live Edge",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "268",
@@ -3573,15 +3429,6 @@
         "Class Membership": "Member 2026"
     },
     {
-        "Hull": "299",
-        "Owners/Helmsmen": "Rod Hearne",
-        "Status": "AM",
-        "Boat Name": "Jaded",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "300",
         "Owners/Helmsmen": "James Mackevich",
         "Status": "OW",
@@ -3889,15 +3736,6 @@
     },
     {
         "Hull": "328",
-        "Owners/Helmsmen": "Fredrik Salvesen",
-        "Status": "AM",
-        "Boat Name": "Mirage",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "328",
         "Owners/Helmsmen": "Cedric Lewis",
         "Status": "OW",
         "Boat Name": "Mirage",
@@ -4132,15 +3970,6 @@
     },
     {
         "Hull": "349",
-        "Owners/Helmsmen": "Rusell Radke",
-        "Status": "AM",
-        "Boat Name": "Sealark",
-        "Location": "Illinois",
-        "Fleet": "5",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "349",
         "Owners/Helmsmen": "David Brown",
         "Status": "AM",
         "Boat Name": "Sealark",
@@ -4219,24 +4048,6 @@
         "Location": "Ontario",
         "Fleet": "4",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "358",
-        "Owners/Helmsmen": "Trevor Wallace",
-        "Status": "AM",
-        "Boat Name": "Thunderstruck",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "358",
-        "Owners/Helmsmen": "David Wilkes",
-        "Status": "AM",
-        "Boat Name": "Thunderstruck",
-        "Location": "Ontario",
-        "Fleet": "4",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "359",
@@ -4417,15 +4228,6 @@
         "Location": "Michigan",
         "Fleet": "22",
         "Class Membership": "Member 2026"
-    },
-    {
-        "Hull": "376",
-        "Owners/Helmsmen": "Craig Mueller",
-        "Status": "AM",
-        "Boat Name": "Whistler",
-        "Location": "Michigan",
-        "Fleet": "22",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "377",
@@ -4824,15 +4626,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "407",
-        "Owners/Helmsmen": "Barry Moss",
-        "Status": "AM",
-        "Boat Name": "Chessie",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "409",
         "Owners/Helmsmen": "Eric Green",
         "Status": "OW",
@@ -4840,24 +4633,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "409",
-        "Owners/Helmsmen": "Jaimie Martin",
-        "Status": "AM",
-        "Boat Name": "Dove",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "409",
-        "Owners/Helmsmen": "Kai Johnston",
-        "Status": "AM",
-        "Boat Name": "Dove",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "410",
@@ -4903,15 +4678,6 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2026"
-    },
-    {
-        "Hull": "412",
-        "Owners/Helmsmen": "Philippe Bach",
-        "Status": "AM",
-        "Boat Name": "Paladin",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "413",
@@ -4968,15 +4734,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "415",
-        "Owners/Helmsmen": "Laura Carty",
-        "Status": "AM",
-        "Boat Name": "Blackthorn",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "416",
         "Owners/Helmsmen": "Jim Murphy",
         "Status": "OW",
@@ -5022,15 +4779,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "419",
-        "Owners/Helmsmen": "Sara Morgan Watters",
-        "Status": "AM",
-        "Boat Name": "Crash",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "420",
         "Owners/Helmsmen": "Zak Bowdish",
         "Status": "OW",
@@ -5056,24 +4804,6 @@
         "Location": "Illinois",
         "Fleet": "5",
         "Class Membership": "Member 2023"
-    },
-    {
-        "Hull": "421",
-        "Owners/Helmsmen": "Margaret Johnston",
-        "Status": "AM",
-        "Boat Name": "Knot Known",
-        "Location": "Illinois",
-        "Fleet": "5",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "422",
-        "Owners/Helmsmen": "Shauna Walgren",
-        "Status": "AM",
-        "Boat Name": "Panic",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "422",
@@ -5463,24 +5193,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "456",
-        "Owners/Helmsmen": "Kristen Berry",
-        "Status": "AM",
-        "Boat Name": "Sterling",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "456",
-        "Owners/Helmsmen": "Eric Keitz",
-        "Status": "AM",
-        "Boat Name": "Sterling",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "457",
         "Owners/Helmsmen": "Carl Bradshaw",
         "Status": "OW",
@@ -5571,15 +5283,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "468",
-        "Owners/Helmsmen": "Kate Molitor",
-        "Status": "AM",
-        "Boat Name": "Sharkey",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "469",
         "Owners/Helmsmen": "Greg Arkus",
         "Status": "OW",
@@ -5616,15 +5319,6 @@
         "Class Membership": "Member 2023"
     },
     {
-        "Hull": "472",
-        "Owners/Helmsmen": "Roy Carley",
-        "Status": "AM",
-        "Boat Name": "Doctor Jazz",
-        "Location": "New Jersey",
-        "Fleet": "10",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "473",
         "Owners/Helmsmen": "Dick Starita",
         "Status": "OW",
@@ -5650,24 +5344,6 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2024"
-    },
-    {
-        "Hull": "475",
-        "Owners/Helmsmen": "Dan Weatbrook",
-        "Status": "AM",
-        "Boat Name": "Corvo105",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "475",
-        "Owners/Helmsmen": "Stefan Damstrom",
-        "Status": "AM",
-        "Boat Name": "Corvo105",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "476",
@@ -5949,15 +5625,6 @@
         "Class Membership": "Member 2025"
     },
     {
-        "Hull": "501",
-        "Owners/Helmsmen": "Allan Wilkins",
-        "Status": "AM",
-        "Boat Name": "Tenacious",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
         "Hull": "502",
         "Owners/Helmsmen": "Theresa Brandner",
         "Status": "OW",
@@ -6148,15 +5815,6 @@
     },
     {
         "Hull": "517",
-        "Owners/Helmsmen": "Robert Thomson",
-        "Status": "AM",
-        "Boat Name": "Rocket J Squirrel",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "517",
         "Owners/Helmsmen": "Dotty Holoubek",
         "Status": "OW",
         "Boat Name": "Rocket J Squirrel",
@@ -6217,15 +5875,6 @@
         "Location": "Maryland",
         "Fleet": "3",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "523",
-        "Owners/Helmsmen": "William York",
-        "Status": "AM",
-        "Boat Name": "Santas Reign, Dear",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "524",
@@ -7089,7 +6738,7 @@
         "Boat Name": "Scapegoat",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "620",
@@ -7174,30 +6823,12 @@
     },
     {
         "Hull": "629",
-        "Owners/Helmsmen": "Ryan Glaze",
-        "Status": "AM",
-        "Boat Name": "Kestrel",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2025"
-    },
-    {
-        "Hull": "629",
         "Owners/Helmsmen": "Chuck McCarthy",
         "Status": "OW",
         "Boat Name": "Kestrel",
         "Location": "New York",
         "Fleet": "6",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "629",
-        "Owners/Helmsmen": "John McCarthy",
-        "Status": "AM",
-        "Boat Name": "Kestrel",
-        "Location": "New York",
-        "Fleet": "6",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "630",
@@ -7432,15 +7063,6 @@
         "Location": "United States",
         "Fleet": "22",
         "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "656",
-        "Owners/Helmsmen": "Jennifer Klock",
-        "Status": "AM",
-        "Boat Name": "Aurora",
-        "Location": "United States",
-        "Fleet": "22",
-        "Class Membership": "Associate 2025"
     },
     {
         "Hull": "657",
