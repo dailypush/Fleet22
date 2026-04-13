@@ -447,7 +447,7 @@
         "Boat Name": "Jester",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "45",
@@ -627,7 +627,16 @@
         "Boat Name": "Relentless",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "64",
+        "Owners/Helmsmen": "Roger Kagan",
+        "Status": "AM",
+        "Boat Name": "Relentless",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "65",
@@ -1005,7 +1014,16 @@
         "Boat Name": "Good Trade",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "96",
+        "Owners/Helmsmen": "Michael McNamara",
+        "Status": "AM",
+        "Boat Name": "Good Trade",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "97",
@@ -1073,20 +1091,20 @@
     {
         "Hull": "102",
         "Owners/Helmsmen": "Kevin Ward",
-        "Status": "OW",
-        "Boat Name": "Syndicate",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "102",
-        "Owners/Helmsmen": "Michael Brown",
         "Status": "CO",
         "Boat Name": "Syndicate",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "102",
+        "Owners/Helmsmen": "Michael Brown",
+        "Status": "OW",
+        "Boat Name": "Syndicate",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "102",
@@ -1095,7 +1113,7 @@
         "Boat Name": "Syndicate",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "103",
@@ -1743,7 +1761,7 @@
         "Boat Name": "Crescendo",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "160",
@@ -2238,7 +2256,7 @@
         "Boat Name": "Dog House",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "202",
@@ -2247,7 +2265,7 @@
         "Boat Name": "Dog House",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "202",
@@ -2256,7 +2274,7 @@
         "Boat Name": "Dog House",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "203",
@@ -2328,7 +2346,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "210",
@@ -2337,7 +2355,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "210",
@@ -2346,7 +2364,7 @@
         "Boat Name": "Key Players",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "211",
@@ -2472,7 +2490,7 @@
         "Boat Name": "Lagniappe",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "220",
@@ -2481,7 +2499,7 @@
         "Boat Name": "Lagniappe",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "221",
@@ -2760,7 +2778,7 @@
         "Boat Name": "Patriot",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "243",
@@ -2832,7 +2850,7 @@
         "Boat Name": "Smoke and Oakum",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "250",
@@ -2841,7 +2859,16 @@
         "Boat Name": "Smoke and Oakum",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "250",
+        "Owners/Helmsmen": "RJ Bay",
+        "Status": "AM",
+        "Boat Name": "Smoke and Oakum",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "251",
@@ -2850,7 +2877,25 @@
         "Boat Name": "Breakaway",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "251",
+        "Owners/Helmsmen": "Amy Harris",
+        "Status": "AM",
+        "Boat Name": "Breakaway",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "251",
+        "Owners/Helmsmen": "John Vallani",
+        "Status": "AM",
+        "Boat Name": "Breakaway",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "252",
@@ -3067,6 +3112,15 @@
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "272",
+        "Owners/Helmsmen": "Ramona Barber",
+        "Status": "CO",
+        "Boat Name": "Double Trouble",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "273",
@@ -3480,7 +3534,7 @@
         "Boat Name": "Velvet Hammer",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "304",
@@ -3583,12 +3637,21 @@
     },
     {
         "Hull": "313",
-        "Owners/Helmsmen": "Miles Martschink",
+        "Owners/Helmsmen": "Steve Van Winkle",
         "Status": "OW",
         "Boat Name": "Skimmer",
-        "Location": "South Carolina",
-        "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "313",
+        "Owners/Helmsmen": "Steve Dirkse",
+        "Status": "CO",
+        "Boat Name": "Skimmer",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "314",
@@ -3651,7 +3714,7 @@
         "Boat Name": "Rum Puppy",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "321",
@@ -3660,7 +3723,7 @@
         "Boat Name": "Rum Puppy",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "322",
@@ -3736,12 +3799,21 @@
     },
     {
         "Hull": "328",
+        "Owners/Helmsmen": "Fredrik Salvesen",
+        "Status": "AM",
+        "Boat Name": "Mirage",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "328",
         "Owners/Helmsmen": "Cedric Lewis",
         "Status": "OW",
         "Boat Name": "Mirage",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "329",
@@ -3759,7 +3831,7 @@
         "Boat Name": "At-Tack",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "331",
@@ -3867,7 +3939,7 @@
         "Boat Name": "Rift",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "341",
@@ -3903,7 +3975,7 @@
         "Boat Name": "Dragonfly",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "344",
@@ -4623,7 +4695,16 @@
         "Boat Name": "Chessie",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "407",
+        "Owners/Helmsmen": "Barry Moss",
+        "Status": "AM",
+        "Boat Name": "Chessie",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "409",
@@ -4731,7 +4812,16 @@
         "Boat Name": "Blackthorn",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "415",
+        "Owners/Helmsmen": "Laura Carty",
+        "Status": "AM",
+        "Boat Name": "Blackthorn",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "416",
@@ -5253,7 +5343,7 @@
         "Boat Name": "Exit Strategy",
         "Location": "Florida",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "466",
@@ -5317,6 +5407,15 @@
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2023"
+    },
+    {
+        "Hull": "472",
+        "Owners/Helmsmen": "Roy Carley",
+        "Status": "AM",
+        "Boat Name": "Doctor Jazz",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "473",
@@ -5613,7 +5712,7 @@
         "Boat Name": "Tenacious",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "501",
@@ -5622,7 +5721,7 @@
         "Boat Name": "Tenacious",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "502",
@@ -5811,7 +5910,16 @@
         "Boat Name": "Rocket J Squirrel",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "517",
+        "Owners/Helmsmen": "Robert Thomson",
+        "Status": "AM",
+        "Boat Name": "Rocket J Squirrel",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "517",
@@ -5820,7 +5928,7 @@
         "Boat Name": "Rocket J Squirrel",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "518",
@@ -5874,7 +5982,16 @@
         "Boat Name": "Santas Reign, Dear",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "523",
+        "Owners/Helmsmen": "William York",
+        "Status": "AM",
+        "Boat Name": "Santas Reign, Dear",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "524",
@@ -5919,7 +6036,7 @@
         "Boat Name": "Firebrand",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "527",
@@ -6720,7 +6837,7 @@
         "Boat Name": "Blizzard",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "618",
