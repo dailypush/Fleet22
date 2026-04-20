@@ -663,7 +663,7 @@
         "Boat Name": "MAYHEM",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "67",
@@ -1392,7 +1392,7 @@
         "Boat Name": "Blue Flash",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "125",
@@ -2589,7 +2589,7 @@
         "Boat Name": "Bluelight",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "230",
@@ -4254,7 +4254,7 @@
         "Boat Name": "Escape Artist",
         "Location": "Oregon",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "374",
@@ -4300,6 +4300,15 @@
         "Location": "Michigan",
         "Fleet": "22",
         "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "376",
+        "Owners/Helmsmen": "Craig Mueller",
+        "Status": "AM",
+        "Boat Name": "Whistler",
+        "Location": "Michigan",
+        "Fleet": "22",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "377",
@@ -6396,7 +6405,7 @@
         "Boat Name": "We Be Jammin’",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "568",

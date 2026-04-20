@@ -2670,6 +2670,36 @@
         "Notes": ""
     },
     {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "0306404U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2003-07-22",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": "Sail purchased used"
+    },
+    {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "1301021N",
+        "Sailmaker": "North",
+        "Delivery Date": "2013-05-03",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": "Sail purchased used"
+    },
+    {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "1302064Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2013-10-14",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": "Sail purchased used"
+    },
+    {
         "Hull": "156",
         "Purchaser": "Alan Bates",
         "Certificate No.": "0509269N",
@@ -6132,16 +6162,6 @@
     {
         "Hull": "297",
         "Purchaser": "John Blair",
-        "Certificate No.": "1301021N",
-        "Sailmaker": "North",
-        "Delivery Date": "2013-05-03",
-        "Sail Type": "M",
-        "Fleet": "8",
-        "Notes": ""
-    },
-    {
-        "Hull": "297",
-        "Purchaser": "John Blair",
         "Certificate No.": "1303131U",
         "Sailmaker": "Ullman",
         "Delivery Date": "2013-07-11",
@@ -6176,16 +6196,6 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2011-11-23",
         "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "475",
-        "Purchaser": "Robert Blaylock",
-        "Certificate No.": "1302064Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2013-10-14",
-        "Sail Type": "J",
         "Fleet": "20",
         "Notes": ""
     },
@@ -6464,7 +6474,7 @@
         "Purchaser": "Larry Boline",
         "Certificate No.": "0303181N",
         "Sailmaker": "North",
-        "Delivery Date": "2007-04-23",
+        "Delivery Date": "2003-05-09",
         "Sail Type": "S89",
         "Fleet": "8",
         "Notes": "Purchased with boat in 2007 per LB 4/23/2007"
@@ -6474,7 +6484,7 @@
         "Purchaser": "Larry Boline",
         "Certificate No.": "0303181N",
         "Sailmaker": "North",
-        "Delivery Date": "2003-05-09",
+        "Delivery Date": "2007-04-23",
         "Sail Type": "S89",
         "Fleet": "8",
         "Notes": "Purchased with boat in 2007 per LB 4/23/2007"
@@ -7406,6 +7416,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-01-21",
         "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "96",
+        "Purchaser": "Peter Bowe",
+        "Certificate No.": "2601008Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-04-10",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
@@ -19567,7 +19587,7 @@
         "Delivery Date": "2009-04-02",
         "Sail Type": "S89",
         "Fleet": "20",
-        "Notes": ""
+        "Notes": "Sail destroyed per D. Batalov 2026"
     },
     {
         "Hull": "229",
@@ -25096,16 +25116,6 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-07-22",
         "Sail Type": "M",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "604",
-        "Purchaser": "Bernie Girod",
-        "Certificate No.": "0306404U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2003-07-22",
-        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -41426,6 +41436,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-12-31",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "328",
+        "Purchaser": "Cedric Lewis",
+        "Certificate No.": "2511242N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-04-15",
+        "Sail Type": "M",
         "Fleet": "3",
         "Notes": ""
     },
@@ -72422,6 +72442,16 @@
     {
         "Hull": "67",
         "Purchaser": "Doug Stryker",
+        "Certificate No.": "2307103Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2022-05-10",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": "Sail purchased used from R. Wulff, per e-mail 4/19/26"
+    },
+    {
+        "Hull": "67",
+        "Purchaser": "Doug Stryker",
         "Certificate No.": "2408098Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-09-10",
@@ -80896,16 +80926,6 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2023-08-17",
         "Sail Type": "M",
-        "Fleet": "3",
-        "Notes": ""
-    },
-    {
-        "Hull": "242",
-        "Purchaser": "Ray Wulff",
-        "Certificate No.": "2307103Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2022-05-10",
-        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
