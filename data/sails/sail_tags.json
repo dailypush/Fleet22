@@ -41450,6 +41450,16 @@
         "Notes": ""
     },
     {
+        "Hull": "328",
+        "Purchaser": "Cedric Lewis",
+        "Certificate No.": "2511256N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-04-24",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "535",
         "Purchaser": "Jaime Lewis",
         "Certificate No.": "0701082N",
@@ -80966,6 +80976,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-12",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "242",
+        "Purchaser": "Ray Wulff",
+        "Certificate No.": "2601009Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-04-27",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
