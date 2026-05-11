@@ -1027,21 +1027,21 @@
     },
     {
         "Hull": "97",
-        "Owners/Helmsmen": "Maarten Zonjee",
-        "Status": "OW",
-        "Boat Name": "Joyride",
-        "Location": "South Carolina",
-        "Fleet": "11",
+        "Owners/Helmsmen": "Elizabeth Pilcher",
+        "Status": "CO",
+        "Boat Name": "Ceòl na Mara",
+        "Location": "New Jersey",
+        "Fleet": "10",
         "Class Membership": "Member 2025"
     },
     {
         "Hull": "97",
-        "Owners/Helmsmen": "Elizabeth Pilcher",
-        "Status": "CO",
-        "Boat Name": "Joyride",
-        "Location": "South Carolina",
-        "Fleet": "11",
-        "Class Membership": "Member 2025"
+        "Owners/Helmsmen": "David Frizell",
+        "Status": "OW",
+        "Boat Name": "Ceòl na Mara",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "98",
@@ -6423,7 +6423,7 @@
         "Boat Name": "Honey Badger",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "569",
