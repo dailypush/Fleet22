@@ -2827,12 +2827,12 @@
     },
     {
         "Hull": "247",
-        "Owners/Helmsmen": "Stephen Blaisdell",
+        "Owners/Helmsmen": "Ryan Collet",
         "Status": "OW",
         "Boat Name": "Atlantic Ave",
-        "Location": "United States",
+        "Location": "Maine",
         "Fleet": "23",
-        "Class Membership": "Member 2012"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "248",
@@ -5464,6 +5464,15 @@
     },
     {
         "Hull": "476",
+        "Owners/Helmsmen": "Dennis Bartley",
+        "Status": "AM",
+        "Boat Name": "Trident",
+        "Location": "Canada",
+        "Fleet": "4",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "476",
         "Owners/Helmsmen": "Andrew Lennox",
         "Status": "OW",
         "Boat Name": "Trident",
@@ -5568,7 +5577,7 @@
         "Boat Name": "Air Express",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "486",
@@ -6945,7 +6954,7 @@
         "Boat Name": "Gryphon",
         "Location": "Canada",
         "Fleet": "9",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "628",
@@ -7278,7 +7287,7 @@
         "Boat Name": "Myouri II",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "678",
