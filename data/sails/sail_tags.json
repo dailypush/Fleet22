@@ -290,6 +290,16 @@
         "Notes": ""
     },
     {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
+        "Certificate No.": "2601011Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-05-22",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "403",
         "Purchaser": "Lynn Adkins",
         "Certificate No.": "0408373Q",
@@ -23950,6 +23960,16 @@
         "Notes": ""
     },
     {
+        "Hull": "480",
+        "Purchaser": "Mark Gannon",
+        "Certificate No.": "2511250N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-05-27",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "174",
         "Purchaser": "Matthew Gardner-Brown",
         "Certificate No.": "0601012E",
@@ -40750,6 +40770,16 @@
         "Notes": ""
     },
     {
+        "Hull": "479",
+        "Purchaser": "Branwell Lepp",
+        "Certificate No.": "2511245N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-05-24",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "418",
         "Purchaser": "Greth Lester",
         "Certificate No.": "1302108Q",
@@ -43486,6 +43516,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2023-12-07",
         "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "295",
+        "Purchaser": "Josh Lutton",
+        "Certificate No.": "2603056N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-05-27",
+        "Sail Type": "M",
         "Fleet": "5",
         "Notes": ""
     },
@@ -52456,6 +52496,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2018-05-22",
         "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "390",
+        "Purchaser": "Mark Nichols",
+        "Certificate No.": "2603058N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-05-29",
+        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },
@@ -80817,6 +80867,16 @@
         "Delivery Date": "2025-05-21",
         "Sail Type": "M",
         "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "465",
+        "Purchaser": "John Woods",
+        "Certificate No.": "2601010Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-05-26",
+        "Sail Type": "J",
+        "Fleet": "5",
         "Notes": ""
     },
     {
