@@ -267,7 +267,7 @@
         "Boat Name": "Warbride",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "30",
@@ -537,7 +537,16 @@
         "Boat Name": "Kobayashi Maru",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "55",
+        "Owners/Helmsmen": "Todd Hiller",
+        "Status": "AM",
+        "Boat Name": "Kobayashi Maru",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "56",
@@ -2418,7 +2427,7 @@
         "Boat Name": "Constellation",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "215",
@@ -3108,7 +3117,7 @@
         "Hull": "272",
         "Owners/Helmsmen": "Adrien Felon",
         "Status": "OW",
-        "Boat Name": "Double Trouble",
+        "Boat Name": "Debonair",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2026"
@@ -3117,7 +3126,7 @@
         "Hull": "272",
         "Owners/Helmsmen": "Paul Henderson",
         "Status": "AM",
-        "Boat Name": "Double Trouble",
+        "Boat Name": "Debonair",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Associate 2026"
@@ -3126,7 +3135,7 @@
         "Hull": "272",
         "Owners/Helmsmen": "Ramona Barber",
         "Status": "CO",
-        "Boat Name": "Double Trouble",
+        "Boat Name": "Debonair",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2026"
@@ -3750,7 +3759,7 @@
         "Boat Name": "Juggernaut",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "322",
@@ -4902,7 +4911,25 @@
         "Boat Name": "Crash",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "419",
+        "Owners/Helmsmen": "Sara Morgan Watters",
+        "Status": "AM",
+        "Boat Name": "Crash",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "419",
+        "Owners/Helmsmen": "Jacob Doyle",
+        "Status": "AM",
+        "Boat Name": "Crash",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "420",
@@ -6607,12 +6634,30 @@
     },
     {
         "Hull": "586",
-        "Owners/Helmsmen": "Jahn Tihansky (USNA)",
+        "Owners/Helmsmen": "Jaimie Martin",
         "Status": "OW",
-        "Boat Name": "Dreadnought",
+        "Boat Name": "Trouble",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "586",
+        "Owners/Helmsmen": "Kai Johnston",
+        "Status": "AM",
+        "Boat Name": "Trouble",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "586",
+        "Owners/Helmsmen": "John Martin",
+        "Status": "AM",
+        "Boat Name": "Trouble",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "587",
