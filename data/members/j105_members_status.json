@@ -1221,7 +1221,7 @@
         "Boat Name": "Hey Jude",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "111",
@@ -2158,6 +2158,15 @@
         "Location": "Ontario",
         "Fleet": "4",
         "Class Membership": "Member 2021"
+    },
+    {
+        "Hull": "192",
+        "Owners/Helmsmen": "Kathy Pask",
+        "Status": "AM",
+        "Boat Name": "Full Tilt",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "193",
@@ -3291,7 +3300,7 @@
         "Boat Name": "Forro",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "284",
@@ -4272,7 +4281,7 @@
         "Boat Name": "Starcross",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "372",
@@ -5343,7 +5352,25 @@
         "Boat Name": "Sterling",
         "Location": "Maryland",
         "Fleet": "3",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "456",
+        "Owners/Helmsmen": "Kristen Berry",
+        "Status": "AM",
+        "Boat Name": "Sterling",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "456",
+        "Owners/Helmsmen": "Eric Keitz",
+        "Status": "AM",
+        "Boat Name": "Sterling",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "457",
@@ -7228,12 +7255,12 @@
     },
     {
         "Hull": "648",
-        "Owners/Helmsmen": "Anton Devcic",
+        "Owners/Helmsmen": "Michael LaChance",
         "Status": "OW",
-        "Boat Name": "ADRIA",
-        "Location": "Wisconsin",
-        "Fleet": "5",
-        "Class Membership": "Member 2010"
+        "Boat Name": "Adria",
+        "Location": "Connecticut",
+        "Fleet": "2",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "649",
