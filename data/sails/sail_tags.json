@@ -4210,6 +4210,26 @@
         "Notes": ""
     },
     {
+        "Hull": "84",
+        "Purchaser": "Pat Benedict",
+        "Certificate No.": "2201110N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-17",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "84",
+        "Purchaser": "Pat Benedict",
+        "Certificate No.": "2203224N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-17",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "42",
         "Purchaser": "Shawn Bennett",
         "Certificate No.": "1308226Q",
@@ -17530,6 +17550,16 @@
         "Notes": ""
     },
     {
+        "Hull": "123",
+        "Purchaser": "Mark DenUyl",
+        "Certificate No.": "2604080N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-16",
+        "Sail Type": "J",
+        "Fleet": "18",
+        "Notes": ""
+    },
+    {
         "Hull": "348",
         "Purchaser": "Dennis Dettmer",
         "Certificate No.": "0112711K",
@@ -30050,6 +30080,16 @@
         "Notes": ""
     },
     {
+        "Hull": "504",
+        "Purchaser": "Larry Harteck",
+        "Certificate No.": "2603062N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-12",
+        "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
         "Hull": "406",
         "Purchaser": "Don Harthorn",
         "Certificate No.": "0103223N",
@@ -30536,6 +30576,26 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-12-22",
         "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "440",
+        "Purchaser": "Bob Hayward",
+        "Certificate No.": "2603063N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-18",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "440",
+        "Purchaser": "Bob Hayward",
+        "Certificate No.": "2603064N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-15",
+        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -43600,6 +43660,16 @@
         "Notes": ""
     },
     {
+        "Hull": "295",
+        "Purchaser": "Josh Lutton",
+        "Certificate No.": "2603060N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-15",
+        "Sail Type": "J",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
         "Hull": "357",
         "Purchaser": "Dick MacClay",
         "Certificate No.": "1507108N",
@@ -51566,6 +51636,16 @@
         "Sailmaker": "Point Sails",
         "Delivery Date": "2023-02-12",
         "Sail Type": "S77",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "618",
+        "Purchaser": "Duke Mueller",
+        "Certificate No.": "2506146Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-07-22",
+        "Sail Type": "J",
         "Fleet": "22",
         "Notes": ""
     },
@@ -65510,6 +65590,16 @@
         "Notes": ""
     },
     {
+        "Hull": "563",
+        "Purchaser": "Matthew Schmitt",
+        "Certificate No.": "2201096N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-18",
+        "Sail Type": "J",
+        "Fleet": "14",
+        "Notes": ""
+    },
+    {
         "Hull": "0",
         "Purchaser": "Michael Schmolling",
         "Certificate No.": "1208165N",
@@ -73906,6 +73996,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2024-11-08",
         "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": ""
+    },
+    {
+        "Hull": "376",
+        "Purchaser": "William Taylor",
+        "Certificate No.": "2511239N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-06-15",
+        "Sail Type": "S77",
         "Fleet": "22",
         "Notes": ""
     },
