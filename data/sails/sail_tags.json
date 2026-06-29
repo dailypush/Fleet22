@@ -33110,16 +33110,6 @@
         "Notes": ""
     },
     {
-        "Hull": "327",
-        "Purchaser": "Russell Hopper",
-        "Certificate No.": "1902038N",
-        "Sailmaker": "North",
-        "Delivery Date": "2019-07-20",
-        "Sail Type": "J",
-        "Fleet": "22",
-        "Notes": ""
-    },
-    {
         "Hull": "519",
         "Purchaser": "Eric Hopper",
         "Certificate No.": "0911334N",
@@ -35668,6 +35658,16 @@
         "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
+    },
+    {
+        "Hull": "602",
+        "Purchaser": "Brad Kahn",
+        "Certificate No.": "1902038N",
+        "Sailmaker": "North",
+        "Delivery Date": "2019-07-20",
+        "Sail Type": "J",
+        "Fleet": "22",
+        "Notes": "Sail purchased used after R. Hopper, per e-mail 6/22/26"
     },
     {
         "Hull": "26",
@@ -70586,7 +70586,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2001-04-27",
         "Sail Type": "J",
-        "Fleet": "6",
+        "Fleet": "2",
         "Notes": ""
     },
     {
