@@ -3950,6 +3950,16 @@
         "Notes": ""
     },
     {
+        "Hull": "430",
+        "Purchaser": "John Bell",
+        "Certificate No.": "2601030Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-06-29",
+        "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "486",
         "Purchaser": "Scott Bender",
         "Certificate No.": "0301064N",
@@ -9866,6 +9876,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-06-01",
         "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "482",
+        "Purchaser": "Mike Cain",
+        "Certificate No.": "2601042Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-06-30",
+        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -19280,6 +19300,16 @@
         "Notes": ""
     },
     {
+        "Hull": "9",
+        "Purchaser": "Stephen Driscoll",
+        "Certificate No.": "2604108Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-06-29",
+        "Sail Type": "J",
+        "Fleet": "8",
+        "Notes": ""
+    },
+    {
         "Hull": "105",
         "Purchaser": "Chuck Driscoll",
         "Certificate No.": "0604149N",
@@ -19556,7 +19586,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-10-17",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19566,7 +19596,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-10-17",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19576,7 +19606,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-10-17",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19586,7 +19616,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2016-10-17",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19596,7 +19626,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2018-05-16",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19606,7 +19636,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-05-04",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19616,7 +19646,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2017-10-04",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19626,7 +19656,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2018-10-05",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19636,7 +19666,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2020-06-01",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -19646,7 +19676,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2022-05-04",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -44366,7 +44396,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-19",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -44376,7 +44406,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-19",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -44386,7 +44416,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-19",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -44396,7 +44426,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-19",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -44406,7 +44436,7 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-12-19",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -55806,7 +55836,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2011-03-29",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -69826,7 +69856,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2012-12-03",
         "Sail Type": "M",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -69836,7 +69866,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2012-12-03",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -69846,7 +69876,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2014-07-09",
         "Sail Type": "S89",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -69856,7 +69886,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2016-02-02",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -69866,7 +69896,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2022-05-11",
         "Sail Type": "J",
-        "Fleet": "3",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77826,7 +77856,7 @@
         "Sailmaker": "Banks",
         "Delivery Date": "2001-01-10",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77836,7 +77866,7 @@
         "Sailmaker": "Banks",
         "Delivery Date": "2001-01-10",
         "Sail Type": "S77",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77846,7 +77876,7 @@
         "Sailmaker": "Banks",
         "Delivery Date": "2001-06-23",
         "Sail Type": "S77",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": "Replaces destroyed 0102121B. Approved Fleet #14 6/5/01."
     },
     {
@@ -77856,7 +77886,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-01-09",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77866,7 +77896,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2002-01-28",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77876,7 +77906,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2003-07-03",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77886,7 +77916,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2003-10-16",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77896,7 +77926,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2003-11-21",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77906,7 +77936,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2004-09-14",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77916,7 +77946,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-11-03",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77926,7 +77956,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2005-10-26",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77936,7 +77966,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-11-20",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77946,7 +77976,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2008-11-20",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77956,7 +77986,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2007-11-21",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77966,7 +77996,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2007-11-21",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77976,7 +78006,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2007-11-23",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77986,7 +78016,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-06-10",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -77996,7 +78026,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2009-10-15",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78006,7 +78036,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2010-10-29",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78016,7 +78046,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2010-10-29",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78026,7 +78056,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-11-12",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78036,7 +78066,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2012-11-15",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78046,7 +78076,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2015-09-29",
         "Sail Type": "M",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78056,7 +78086,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2016-03-30",
         "Sail Type": "J",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {
@@ -78066,7 +78096,7 @@
         "Sailmaker": "North",
         "Delivery Date": "2015-06-17",
         "Sail Type": "S89",
-        "Fleet": "14",
+        "Fleet": "10",
         "Notes": ""
     },
     {

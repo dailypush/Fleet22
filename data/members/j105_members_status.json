@@ -159,7 +159,7 @@
         "Boat Name": "skål",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "19",
@@ -654,7 +654,7 @@
         "Boat Name": "Solution",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "66",
@@ -1860,7 +1860,7 @@
         "Boat Name": "Peregrina",
         "Location": "Connecticut",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "168",
@@ -1887,7 +1887,7 @@
         "Boat Name": "Orca",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "171",
@@ -1896,7 +1896,7 @@
         "Boat Name": "Bigamy",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "172",
@@ -2193,7 +2193,7 @@
         "Boat Name": "Magic",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "195",
@@ -3522,10 +3522,10 @@
         "Hull": "300",
         "Owners/Helmsmen": "James Mackevich",
         "Status": "OW",
-        "Boat Name": "Knot Known",
-        "Location": "Unknown",
-        "Fleet": "14",
-        "Class Membership": ""
+        "Boat Name": "For Sail",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "301",
@@ -5973,7 +5973,7 @@
         "Boat Name": "ATARAXIS",
         "Location": "New York",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "514",
@@ -7402,8 +7402,8 @@
         "Owners/Helmsmen": "Perry Moy",
         "Status": "CO",
         "Boat Name": "Synergy",
-        "Location": "Maryland",
-        "Fleet": "3",
+        "Location": "New Jersey",
+        "Fleet": "10",
         "Class Membership": "Member 2016"
     },
     {
@@ -7411,27 +7411,18 @@
         "Owners/Helmsmen": "Henrik Pedersen",
         "Status": "CO",
         "Boat Name": "Synergy",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Member 2022"
-    },
-    {
-        "Hull": "680",
-        "Owners/Helmsmen": "David Lewis",
-        "Status": "CO",
-        "Boat Name": "Synergy",
-        "Location": "Maryland",
-        "Fleet": "3",
+        "Location": "New Jersey",
+        "Fleet": "10",
         "Class Membership": "Member 2022"
     },
     {
         "Hull": "680",
         "Owners/Helmsmen": "David Spence",
-        "Status": "CO",
+        "Status": "OW",
         "Boat Name": "Synergy",
-        "Location": "Maryland",
-        "Fleet": "3",
-        "Class Membership": "Member 2023"
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "681",
