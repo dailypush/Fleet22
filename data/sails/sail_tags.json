@@ -3960,6 +3960,16 @@
         "Notes": ""
     },
     {
+        "Hull": "430",
+        "Purchaser": "John Bell",
+        "Certificate No.": "2604109Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-07",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "486",
         "Purchaser": "Scott Bender",
         "Certificate No.": "0301064N",
@@ -5097,6 +5107,16 @@
         "Delivery Date": "0000-00-00",
         "Sail Type": "J",
         "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "165",
+        "Purchaser": "Rob Berry",
+        "Certificate No.": "2201098N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-07-08",
+        "Sail Type": "J",
+        "Fleet": "2",
         "Notes": ""
     },
     {
@@ -6554,7 +6574,7 @@
         "Purchaser": "Larry Boline",
         "Certificate No.": "0303181N",
         "Sailmaker": "North",
-        "Delivery Date": "2007-04-23",
+        "Delivery Date": "2003-05-09",
         "Sail Type": "S89",
         "Fleet": "8",
         "Notes": "Purchased with boat in 2007 per LB 4/23/2007"
@@ -6564,7 +6584,7 @@
         "Purchaser": "Larry Boline",
         "Certificate No.": "0303181N",
         "Sailmaker": "North",
-        "Delivery Date": "2003-05-09",
+        "Delivery Date": "2007-04-23",
         "Sail Type": "S89",
         "Fleet": "8",
         "Notes": "Purchased with boat in 2007 per LB 4/23/2007"
@@ -6826,6 +6846,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-04-29",
         "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "322",
+        "Purchaser": "Kyle Bollhorst",
+        "Certificate No.": "2511248N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-07-08",
+        "Sail Type": "S89",
         "Fleet": "3",
         "Notes": ""
     },
@@ -68420,6 +68450,16 @@
         "Notes": "Sail sold from Bee Bednar, per BB e-mail 1/22/13"
     },
     {
+        "Hull": "338",
+        "Purchaser": "Ron Simon",
+        "Certificate No.": "2601019Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-10",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "142",
         "Purchaser": "Bob Simons",
         "Certificate No.": "0302101N",
@@ -70666,6 +70706,26 @@
         "Sailmaker": "North",
         "Delivery Date": "2024-12-05",
         "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "5",
+        "Purchaser": "Richard Stearns",
+        "Certificate No.": "2512295Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-10",
+        "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "5",
+        "Purchaser": "Richard Stearns",
+        "Certificate No.": "2512298Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-10",
+        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },

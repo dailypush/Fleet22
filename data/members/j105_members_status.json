@@ -2994,7 +2994,7 @@
         "Boat Name": "Atalanta",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "261",
@@ -3943,7 +3943,7 @@
     },
     {
         "Hull": "338",
-        "Owners/Helmsmen": "Zack Hegge",
+        "Owners/Helmsmen": "Ron Simon",
         "Status": "OW",
         "Boat Name": "the Ruckus",
         "Location": "Oregon",
@@ -4128,7 +4128,7 @@
         "Boat Name": "Alegría",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "354",
@@ -5532,7 +5532,25 @@
         "Boat Name": "Corvo105",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "475",
+        "Owners/Helmsmen": "Dan Weatbrook",
+        "Status": "AM",
+        "Boat Name": "Corvo105",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "475",
+        "Owners/Helmsmen": "Alex Weatbrook",
+        "Status": "AM",
+        "Boat Name": "Corvo105",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "476",
@@ -6657,7 +6675,7 @@
         "Boat Name": "ARETE",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2023"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "586",
@@ -7413,7 +7431,7 @@
         "Boat Name": "Synergy",
         "Location": "New Jersey",
         "Fleet": "10",
-        "Class Membership": "Member 2022"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "680",
