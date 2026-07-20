@@ -5253,7 +5253,7 @@
         "Boat Name": "Cush",
         "Location": "Connecticut",
         "Fleet": "6",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "449",
@@ -5712,7 +5712,7 @@
         "Boat Name": "No Quarter",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2024"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "490",
@@ -7143,7 +7143,7 @@
         "Boat Name": "Merlin",
         "Location": "Massachusetts",
         "Fleet": "2",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "636",
@@ -7152,7 +7152,7 @@
         "Boat Name": "Epic Circus",
         "Location": "New York",
         "Fleet": "4",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "637",
@@ -7292,11 +7292,11 @@
     {
         "Hull": "649",
         "Owners/Helmsmen": "Robert Brann",
-        "Status": "AM",
+        "Status": "CO",
         "Boat Name": "Radiance",
         "Location": "Texas",
         "Fleet": "17",
-        "Class Membership": "Associate 2026"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "650",
