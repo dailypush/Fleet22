@@ -396,7 +396,7 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2010-06-02",
         "Sail Type": "J",
-        "Fleet": "22",
+        "Fleet": "4",
         "Notes": ""
     },
     {
@@ -406,7 +406,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2010-12-29",
         "Sail Type": "S89",
-        "Fleet": "22",
+        "Fleet": "4",
         "Notes": ""
     },
     {
@@ -19476,7 +19476,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2012-12-24",
         "Sail Type": "M",
-        "Fleet": "22",
+        "Fleet": "4",
         "Notes": ""
     },
     {
@@ -19486,7 +19486,7 @@
         "Sailmaker": "Doyle",
         "Delivery Date": "2012-12-24",
         "Sail Type": "J",
-        "Fleet": "22",
+        "Fleet": "4",
         "Notes": ""
     },
     {
@@ -79755,6 +79755,16 @@
         "Certificate No.": "2508177Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-08-19",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "174",
+        "Purchaser": "Nicholas Wilkerson",
+        "Certificate No.": "2510229Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-24",
         "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""

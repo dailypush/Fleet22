@@ -90,6 +90,15 @@
         "Class Membership": "Member 2023"
     },
     {
+        "Hull": "10",
+        "Owners/Helmsmen": "Josh Stack",
+        "Status": "OW",
+        "Boat Name": "Sea Cow",
+        "Location": "New York",
+        "Fleet": "4",
+        "Class Membership": "Member 2026"
+    },
+    {
         "Hull": "11",
         "Owners/Helmsmen": "Chuck Shortz",
         "Status": "OW",
@@ -1257,7 +1266,7 @@
         "Boat Name": "Knot Known",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "115",
@@ -4971,7 +4980,7 @@
         "Hull": "422",
         "Owners/Helmsmen": "Mark Prentice",
         "Status": "OW",
-        "Boat Name": "Panic",
+        "Boat Name": "Creative",
         "Location": "Washington",
         "Fleet": "20",
         "Class Membership": "Member 2026"
@@ -6226,6 +6235,15 @@
         "Location": "Sweden",
         "Fleet": "0",
         "Class Membership": "Member 2010"
+    },
+    {
+        "Hull": "535",
+        "Owners/Helmsmen": "Adam Barboza",
+        "Status": "AM",
+        "Boat Name": "Windfire",
+        "Location": "Bermuda",
+        "Fleet": "21",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "535",
