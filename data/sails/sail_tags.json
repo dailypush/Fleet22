@@ -302,6 +302,36 @@
     {
         "Hull": "517",
         "Purchaser": "Steve Adams",
+        "Certificate No.": "2212454C",
+        "Sailmaker": "Sinbad Sails",
+        "Delivery Date": "2022-12-31",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
+        "Certificate No.": "2212455C",
+        "Sailmaker": "Sinbad Sails",
+        "Delivery Date": "2022-12-31",
+        "Sail Type": "J",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
+        "Certificate No.": "2212456C",
+        "Sailmaker": "Sinbad Sails",
+        "Delivery Date": "2022-12-31",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "517",
+        "Purchaser": "Steve Adams",
         "Certificate No.": "2601011Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-05-22",
@@ -7376,6 +7406,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-04-07",
         "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "579",
+        "Purchaser": "Ken Bowden",
+        "Certificate No.": "2511244N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-08-03",
+        "Sail Type": "J",
         "Fleet": "2",
         "Notes": ""
     },
@@ -60700,6 +60740,16 @@
         "Notes": ""
     },
     {
+        "Hull": "413",
+        "Purchaser": "Andrew Reservitz",
+        "Certificate No.": "2511255N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-08-06",
+        "Sail Type": "S89",
+        "Fleet": "14",
+        "Notes": ""
+    },
+    {
         "Hull": "512",
         "Purchaser": "Dave Reynolds",
         "Certificate No.": "0504063U",
@@ -65676,6 +65726,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2026-06-18",
         "Sail Type": "J",
+        "Fleet": "14",
+        "Notes": ""
+    },
+    {
+        "Hull": "563",
+        "Purchaser": "Matthew Schmitt",
+        "Certificate No.": "2604066N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-08-03",
+        "Sail Type": "S89",
         "Fleet": "14",
         "Notes": ""
     },

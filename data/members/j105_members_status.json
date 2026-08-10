@@ -271,6 +271,15 @@
     },
     {
         "Hull": "29",
+        "Owners/Helmsmen": "Paul Murphy",
+        "Status": "AM",
+        "Boat Name": "Warbride",
+        "Location": "Maryland",
+        "Fleet": "3",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "29",
         "Owners/Helmsmen": "Ben duPont",
         "Status": "OW",
         "Boat Name": "Warbride",
@@ -4785,7 +4794,7 @@
         "Boat Name": "Resolute",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "411",
