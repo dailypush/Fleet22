@@ -61,6 +61,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main navigation">
             <div class="container-fluid">
@@ -94,10 +95,13 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
-            <img src="https://ik.imagekit.io/fleet22/tr:w-1920,f-auto,pr-true/2022/hero_shot.jpeg" 
-                 alt="J105 sailboats racing on Lake Erie with colorful spinnakers deployed" 
-                 class="hero-image" 
-                 style="width:100%; height:auto;">
+              <img src="https://ik.imagekit.io/fleet22/tr:w-1920,f-auto,pr-true/2022/hero_shot.jpeg"
+                  alt="J105 sailboats racing on Lake Erie with colorful spinnakers deployed"
+                  class="hero-image"
+                  width="1920"
+                  height="1080"
+                  fetchpriority="high"
+                  decoding="async">
             <div class="hero-text">
                 <h1 id="hero-heading">Welcome to J105 Fleet 22 Lake Erie</h1>
                 <p class="tagline">Navigating Waters, Charting Friendships</p>
@@ -117,28 +121,20 @@
         <section class="events-highlight" aria-labelledby="events-heading">
             <div class="container">
                 <h2 id="events-heading">
-                    <i class="bi bi-snow2 text-info" aria-hidden="true"></i> Upcoming Events <i class="bi bi-snow2 text-info" aria-hidden="true"></i>
+                    Upcoming Events
                 </h2>
 
                 <!-- 2026 Season Banner -->
-                <div class="alert alert-success text-center mb-4" role="alert">
-                    <h4 class="alert-heading"><i class="bi bi-flag"></i> 2026 Racing Season</h4>
+                <div class="alert alert-success text-center mb-4">
+                    <h4 class="alert-heading"><i class="bi bi-flag" aria-hidden="true"></i> 2026 Racing Season</h4>
                     <p class="mb-0">Fleet 22 is ready for the 2026 season! Stay tuned for regatta announcements and local events on Lake Erie.</p>
                 </div>
 
-                <div class="event" role="article">
-                    <h3><i class="bi bi-calendar-check" aria-hidden="true"></i> Fleet 22 Annual Meeting</h3>
-                    <p class="event-date">Saturday, March 28, 2026 at 3:00 PM ET</p>
-                    <p class="event-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Edgewater Yacht Club Board Room</p>
-                    <p class="event-location"><i class="bi bi-camera-video" aria-hidden="true"></i> Join via Zoom: <a href="https://us06web.zoom.us/j/81733225672?pwd=Hkr1vosu8V62fqdOolBi5zFdcnqbbj.1" target="_blank" rel="noopener" aria-label="Join Fleet 22 annual meeting on Zoom (opens in new tab)">https://us06web.zoom.us/j/81733225672?pwd=Hkr1vosu8V62fqdOolBi5zFdcnqbbj.1</a></p>
-                    <p class="event-location"><strong>Meeting ID:</strong> 817 3322 5672 | <strong>Passcode:</strong> 536173</p>
-                </div>
-
-                <div class="event" role="article">
-                    <h3><i class="bi bi-trophy" aria-hidden="true"></i><a href="https://www.2026j105northamericans.com/" aria-label="2026 J-105 North Americans website"> J-105 North Americans Championship</a></h3>
-                    <p class="event-date">October 15-18, 2026</p>
+                <article class="event">
+                    <h3><i class="bi bi-trophy" aria-hidden="true"></i> <a href="https://www.2026j105northamericans.com/">J-105 North Americans Championship</a></h3>
+                    <p class="event-date"><time datetime="2026-10-15">October 15</time>-<time datetime="2026-10-18">18, 2026</time></p>
                     <p class="event-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Shilshole Bay Marina, Seattle WA</p>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -147,10 +143,10 @@
             <div class="container">
                 <h2 id="gallery-heading">Gallery Preview</h2>
                 <div class="gallery-grid">
-                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" alt="J105 sailboat racing with crew on the rail">
-                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" alt="Fleet of J105 boats at the starting line">
-                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" alt="Aerial view of J105 sailboats racing on Lake Erie">
-                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" alt="Close-up of J105 boat with crew during a tack maneuver">
+                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0699035B-106C-4275-B431-92E21316157C_1_105_c.jpeg" alt="J105 sailboat racing with crew on the rail" width="328" height="246" loading="lazy" decoding="async">
+                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/230A6CAC-D95C-40E1-BADD-00111F593A7D_1_105_c.jpeg" alt="Fleet of J105 boats at the starting line" width="328" height="246" loading="lazy" decoding="async">
+                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/209D61C1-3DCE-4CA5-B5B9-518C11477EDC_1_105_c.jpeg" alt="Aerial view of J105 sailboats racing on Lake Erie" width="328" height="246" loading="lazy" decoding="async">
+                    <img src="https://ik.imagekit.io/fleet22/tr:ar-4-3,h-246/2022/0821CC49-161C-45A4-BB0D-2752572D9886_1_105_c.jpeg" alt="Close-up of J105 boat with crew during a tack maneuver" width="328" height="246" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -160,7 +156,7 @@
             <div class="container">
                 <h2 id="join-heading">Join the Adventure</h2>
                 <p>Become a part of Fleet 22 Lake Erie and experience the thrill of J105 racing.</p>
-                <a href="./pages/join.html" class="join-btn" role="button" aria-label="Learn more about joining Fleet 22">Join the Fleet</a>
+                <a href="./pages/join.html" class="join-btn">Join the Fleet</a>
             </div>
         </section>
     </main>
