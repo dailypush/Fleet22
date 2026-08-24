@@ -18710,6 +18710,16 @@
         "Notes": ""
     },
     {
+        "Hull": "284",
+        "Purchaser": "Michael Donohue",
+        "Certificate No.": "2511252N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-08-18",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "190",
         "Purchaser": "Brian Dougherty",
         "Certificate No.": "0104242N",
@@ -42597,6 +42607,16 @@
         "Delivery Date": "2005-09-30",
         "Sail Type": "J",
         "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "412",
+        "Purchaser": "Nathalie Lodewyckx",
+        "Certificate No.": "2604111Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-15",
+        "Sail Type": "J",
+        "Fleet": "20",
         "Notes": ""
     },
     {
