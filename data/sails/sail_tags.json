@@ -1840,6 +1840,16 @@
         "Notes": ""
     },
     {
+        "Hull": "16",
+        "Purchaser": "Doug Bailey",
+        "Certificate No.": "2604095Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-27",
+        "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "256",
         "Purchaser": "Mac Baird",
         "Certificate No.": "1308240N",
@@ -17912,6 +17922,16 @@
     {
         "Hull": "345",
         "Purchaser": "Ric Dexter",
+        "Certificate No.": "2511253N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-08-24",
+        "Sail Type": "S89",
+        "Fleet": "2",
+        "Notes": ""
+    },
+    {
+        "Hull": "345",
+        "Purchaser": "Ric Dexter",
         "Certificate No.": "2512276D",
         "Sailmaker": "Doyle",
         "Delivery Date": "2026-05-22",
@@ -18716,6 +18736,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2026-08-18",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "284",
+        "Purchaser": "Michael Donohue",
+        "Certificate No.": "2607155Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
     },
@@ -52360,6 +52390,16 @@
         "Notes": ""
     },
     {
+        "Hull": "194",
+        "Purchaser": "Ann Myer",
+        "Certificate No.": "2512278D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2026-08-24",
+        "Sail Type": "S89",
+        "Fleet": "10",
+        "Notes": ""
+    },
+    {
         "Hull": "335",
         "Purchaser": "Dan Nash",
         "Certificate No.": "1403077D",
@@ -54296,6 +54336,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-08-10",
         "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "103",
+        "Purchaser": "Donald Olgado",
+        "Certificate No.": "2604088Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
     },
@@ -62976,6 +63026,26 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-09-01",
         "Sail Type": "M",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "3",
+        "Purchaser": "Tim Russell",
+        "Certificate No.": "2607159Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "3",
+        "Purchaser": "Tim Russell",
+        "Certificate No.": "2607160Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
     },
@@ -76176,6 +76246,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-08-20",
         "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "149",
+        "Purchaser": "Brent Vaughan",
+        "Certificate No.": "2607156Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
