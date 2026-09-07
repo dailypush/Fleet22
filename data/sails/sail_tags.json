@@ -560,6 +560,26 @@
         "Notes": ""
     },
     {
+        "Hull": "89",
+        "Purchaser": "John Aitchison",
+        "Certificate No.": "2604065N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-03",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "89",
+        "Purchaser": "John Aitchison",
+        "Certificate No.": "2605129N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-04",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "210",
         "Purchaser": "Pendleton Alexander",
         "Certificate No.": "1407193N",
@@ -8396,6 +8416,16 @@
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2026-05-22",
         "Sail Type": "M",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "288",
+        "Purchaser": "Dimitry Braznichenko",
+        "Certificate No.": "2603054K",
+        "Sailmaker": "UK Halsey",
+        "Delivery Date": "2026-09-02",
+        "Sail Type": "S77",
         "Fleet": "5",
         "Notes": ""
     },
@@ -26890,6 +26920,16 @@
         "Notes": ""
     },
     {
+        "Hull": "114",
+        "Purchaser": "Michael Goldfarb",
+        "Certificate No.": "2605128N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-04",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "282",
         "Purchaser": "Peter Goldman",
         "Certificate No.": "0101109N",
@@ -31236,6 +31276,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-10-13",
         "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "639",
+        "Purchaser": "Elizabeth Henderson",
+        "Certificate No.": "2604073N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-01",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
@@ -55190,6 +55240,26 @@
         "Notes": ""
     },
     {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2604070N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-01",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "403",
+        "Purchaser": "Jeffrey Pace",
+        "Certificate No.": "2605131N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-04",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "510",
         "Purchaser": "Domingo Pagan",
         "Certificate No.": "0302107Q",
@@ -59030,6 +59100,26 @@
         "Notes": ""
     },
     {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "2604071N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-03",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "2605132N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-04",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
         "Hull": "482",
         "Purchaser": "Mark Prentice",
         "Certificate No.": "2312174B",
@@ -60346,6 +60436,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2025-05-15",
         "Sail Type": "J",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "110",
+        "Purchaser": "James Rathbun",
+        "Certificate No.": "2605137N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-04",
+        "Sail Type": "S89",
         "Fleet": "4",
         "Notes": ""
     },
