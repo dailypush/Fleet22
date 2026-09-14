@@ -343,30 +343,12 @@
     },
     {
         "Hull": "35",
-        "Owners/Helmsmen": "Dave Wilson",
-        "Status": "CO",
-        "Boat Name": "Good Timin'",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": "Member 2017"
-    },
-    {
-        "Hull": "35",
-        "Owners/Helmsmen": "Chris Perkins",
+        "Owners/Helmsmen": "Eric Stang",
         "Status": "OW",
-        "Boat Name": "Good Timin'",
+        "Boat Name": "JuJu",
         "Location": "California",
         "Fleet": "1",
-        "Class Membership": "Member 2017"
-    },
-    {
-        "Hull": "35",
-        "Owners/Helmsmen": "Phillips Perkins",
-        "Status": "CO",
-        "Boat Name": "Good Timin'",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": "Member 2017"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "36",
@@ -1636,15 +1618,6 @@
         "Location": "New York",
         "Fleet": "6",
         "Class Membership": ""
-    },
-    {
-        "Hull": "147",
-        "Owners/Helmsmen": "Eric Stang",
-        "Status": "CO",
-        "Boat Name": "JuJu",
-        "Location": "California",
-        "Fleet": "1",
-        "Class Membership": "Member 2026"
     },
     {
         "Hull": "147",
@@ -6550,6 +6523,15 @@
         "Location": "New Jersey",
         "Fleet": "10",
         "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "568",
+        "Owners/Helmsmen": "Geoffrey Pierini",
+        "Status": "AM",
+        "Boat Name": "Honey Badger",
+        "Location": "New Jersey",
+        "Fleet": "10",
+        "Class Membership": "Associate 2026"
     },
     {
         "Hull": "569",
