@@ -26972,6 +26972,16 @@
     {
         "Hull": "114",
         "Purchaser": "Michael Goldfarb",
+        "Certificate No.": "2508191N",
+        "Sailmaker": "North",
+        "Delivery Date": "2025-12-11",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "114",
+        "Purchaser": "Michael Goldfarb",
         "Certificate No.": "2605128N",
         "Sailmaker": "North",
         "Delivery Date": "2026-09-04",
@@ -39770,6 +39780,16 @@
         "Notes": ""
     },
     {
+        "Hull": "644",
+        "Purchaser": "Phillip Laby",
+        "Certificate No.": "2607152Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-26",
+        "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "77",
         "Purchaser": "Michael LaChance",
         "Certificate No.": "0408351U",
@@ -49146,6 +49166,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-08-25",
         "Sail Type": "M",
+        "Fleet": "4",
+        "Notes": ""
+    },
+    {
+        "Hull": "293",
+        "Purchaser": "Terry Michaelson",
+        "Certificate No.": "2604091Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-08-22",
+        "Sail Type": "J",
         "Fleet": "4",
         "Notes": ""
     },
@@ -59182,16 +59212,6 @@
     {
         "Hull": "422",
         "Purchaser": "Mark Prentice",
-        "Certificate No.": "2508191N",
-        "Sailmaker": "North",
-        "Delivery Date": "2025-12-11",
-        "Sail Type": "J",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "422",
-        "Purchaser": "Mark Prentice",
         "Certificate No.": "2508195N",
         "Sailmaker": "North",
         "Delivery Date": "2025-12-12",
@@ -64840,6 +64860,16 @@
         "Notes": ""
     },
     {
+        "Hull": "153",
+        "Purchaser": "Artem Savinov",
+        "Certificate No.": "2604118Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-09-15",
+        "Sail Type": "S89",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
         "Hull": "355",
         "Purchaser": "Artem Savinov",
         "Certificate No.": "1412332Q",
@@ -68316,6 +68346,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-07-25",
         "Sail Type": "J",
+        "Fleet": "6",
+        "Notes": ""
+    },
+    {
+        "Hull": "274",
+        "Purchaser": "Brian Simkins",
+        "Certificate No.": "2512297Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-09-01",
+        "Sail Type": "S89",
         "Fleet": "6",
         "Notes": ""
     },
@@ -72292,9 +72332,9 @@
     {
         "Hull": "116",
         "Purchaser": "Bruce Stone",
-        "Certificate No.": "2603059N",
+        "Certificate No.": "2511247N",
         "Sailmaker": "North",
-        "Delivery Date": "2026-08-10",
+        "Delivery Date": "2026-09-14",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
@@ -72302,9 +72342,9 @@
     {
         "Hull": "116",
         "Purchaser": "Bruce Stone",
-        "Certificate No.": "2604083N",
+        "Certificate No.": "2603059N",
         "Sailmaker": "North",
-        "Delivery Date": "2026-09-09",
+        "Delivery Date": "2026-08-10",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""
@@ -73486,6 +73526,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-08-26",
         "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "115",
+        "Purchaser": "Stephen Summers",
+        "Certificate No.": "2609208D",
+        "Sailmaker": "Doyle",
+        "Delivery Date": "2025-05-22",
+        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -74718,6 +74768,16 @@
         "Sail Type": "M",
         "Fleet": "0",
         "Notes": "Duplicate tag per J. Thorpe e-mail 4/5/2022"
+    },
+    {
+        "Hull": "0",
+        "Purchaser": "North Sails TBD",
+        "Certificate No.": "2604083N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-09",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
     },
     {
         "Hull": "479",
