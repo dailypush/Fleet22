@@ -2745,6 +2745,15 @@
         "Class Membership": "Member 2025"
     },
     {
+        "Hull": "238",
+        "Owners/Helmsmen": "Nicholas Dotsch",
+        "Status": "AM",
+        "Boat Name": "Millicent",
+        "Location": "Ontario",
+        "Fleet": "4",
+        "Class Membership": "Associate 2026"
+    },
+    {
         "Hull": "239",
         "Owners/Helmsmen": "Matthew Seif",
         "Status": "CO",
@@ -3399,7 +3408,7 @@
         "Boat Name": "The Usual Suspects",
         "Location": "Ontario",
         "Fleet": "4",
-        "Class Membership": "Member 2025"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "294",

@@ -2771,6 +2771,16 @@
     },
     {
         "Hull": "229",
+        "Purchaser": "Denis Bartalov",
+        "Certificate No.": "2501043N",
+        "Sailmaker": "North",
+        "Delivery Date": "2002-04-01",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "229",
         "Purchaser": "Denis Batalov",
         "Certificate No.": "0306404U",
         "Sailmaker": "Ullman",
@@ -2798,6 +2808,16 @@
         "Sail Type": "J",
         "Fleet": "20",
         "Notes": "Sail purchased used"
+    },
+    {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "1312336U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2013-12-02",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": "Sail purchased used from Hull 422"
     },
     {
         "Hull": "229",
@@ -6005,16 +6025,6 @@
         "Certificate No.": "1802034Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2018-05-07",
-        "Sail Type": "J",
-        "Fleet": "20",
-        "Notes": "Sail purchased used from Alex Clegg, per P. Viola e-mail 10/13/21"
-    },
-    {
-        "Hull": "235",
-        "Purchaser": "Sara Billey",
-        "Certificate No.": "1908173Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2019-08-30",
         "Sail Type": "J",
         "Fleet": "20",
         "Notes": "Sail purchased used from Alex Clegg, per P. Viola e-mail 10/13/21"
@@ -26982,6 +26992,16 @@
     {
         "Hull": "114",
         "Purchaser": "Michael Goldfarb",
+        "Certificate No.": "2604082N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-21",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "114",
+        "Purchaser": "Michael Goldfarb",
         "Certificate No.": "2605128N",
         "Sailmaker": "North",
         "Delivery Date": "2026-09-04",
@@ -31012,16 +31032,6 @@
     {
         "Hull": "27",
         "Purchaser": "Randy Hecht",
-        "Certificate No.": "2506148Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2025-07-24",
-        "Sail Type": "M",
-        "Fleet": "1",
-        "Notes": "2025 NAC sail"
-    },
-    {
-        "Hull": "27",
-        "Purchaser": "Randy Hecht",
         "Certificate No.": "2601035Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-03-24",
@@ -32838,6 +32848,16 @@
         "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
+    },
+    {
+        "Hull": "238",
+        "Purchaser": "Simon Hirst",
+        "Certificate No.": "2506148Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2025-07-24",
+        "Sail Type": "M",
+        "Fleet": "4",
+        "Notes": "2025 NAC sail purchased from R. Hecht"
     },
     {
         "Hull": "42",
@@ -59232,6 +59252,16 @@
     {
         "Hull": "422",
         "Purchaser": "Mark Prentice",
+        "Certificate No.": "2511265N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-25",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
         "Certificate No.": "2604071N",
         "Sailmaker": "North",
         "Delivery Date": "2026-09-03",
@@ -64306,16 +64336,6 @@
         "Sailmaker": "Ullman",
         "Delivery Date": "2012-12-26",
         "Sail Type": "J",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "422",
-        "Purchaser": "Ed Sanford",
-        "Certificate No.": "1312336U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2013-12-02",
-        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -73522,6 +73542,36 @@
     {
         "Hull": "115",
         "Purchaser": "Stephen Summers",
+        "Certificate No.": "1807184Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2019-06-14",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": "Sail purchased used from P. Viola in 2023, per e-mail 9/22/26"
+    },
+    {
+        "Hull": "115",
+        "Purchaser": "Stephen Summers",
+        "Certificate No.": "1906118Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2019-06-21",
+        "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": "Sail purchased used from P. Viola in 2023, per e-mail 9/22/26"
+    },
+    {
+        "Hull": "115",
+        "Purchaser": "Stephen Summers",
+        "Certificate No.": "1908173Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2019-08-30",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": "Sail purchased used from Alex Clegg, per P. Viola e-mail 10/13/21. Sail purchased used from P. Viola in 2023, per e-mail 9/22/26"
+    },
+    {
+        "Hull": "115",
+        "Purchaser": "Stephen Summers",
         "Certificate No.": "2604100Q",
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-08-26",
@@ -76787,26 +76837,6 @@
         "Delivery Date": "2012-05-02",
         "Sail Type": "J",
         "Fleet": "8",
-        "Notes": ""
-    },
-    {
-        "Hull": "235",
-        "Purchaser": "Paul Viola",
-        "Certificate No.": "1807184Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2019-06-14",
-        "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "235",
-        "Purchaser": "Paul Viola",
-        "Certificate No.": "1906118Q",
-        "Sailmaker": "Quantum",
-        "Delivery Date": "2019-06-21",
-        "Sail Type": "M",
-        "Fleet": "20",
         "Notes": ""
     },
     {
