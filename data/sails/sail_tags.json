@@ -2771,16 +2771,6 @@
     },
     {
         "Hull": "229",
-        "Purchaser": "Denis Bartalov",
-        "Certificate No.": "2501043N",
-        "Sailmaker": "North",
-        "Delivery Date": "2002-04-01",
-        "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "229",
         "Purchaser": "Denis Batalov",
         "Certificate No.": "0306404U",
         "Sailmaker": "Ullman",
@@ -2826,6 +2816,16 @@
         "Sailmaker": "North",
         "Delivery Date": "2026-06-04",
         "Sail Type": "M",
+        "Fleet": "20",
+        "Notes": ""
+    },
+    {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "2501043N",
+        "Sailmaker": "North",
+        "Delivery Date": "2002-04-01",
+        "Sail Type": "S89",
         "Fleet": "20",
         "Notes": ""
     },
@@ -17076,6 +17076,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2024-08-15",
         "Sail Type": "J",
+        "Fleet": "1",
+        "Notes": ""
+    },
+    {
+        "Hull": "414",
+        "Purchaser": "Richard Deane",
+        "Certificate No.": "2604090Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-09-30",
+        "Sail Type": "S89",
         "Fleet": "1",
         "Notes": ""
     },
@@ -39332,16 +39342,6 @@
     {
         "Hull": "114",
         "Purchaser": "Erik Kristen",
-        "Certificate No.": "1709267N",
-        "Sailmaker": "North",
-        "Delivery Date": "2018-04-13",
-        "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "114",
-        "Purchaser": "Erik Kristen",
         "Certificate No.": "1803077N",
         "Sailmaker": "North",
         "Delivery Date": "2018-10-05",
@@ -59228,6 +59228,16 @@
         "Sail Type": "M",
         "Fleet": "23",
         "Notes": ""
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
+        "Certificate No.": "1709267N",
+        "Sailmaker": "North",
+        "Delivery Date": "2018-04-13",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": "Sail purchased used from E. Kristen 2024"
     },
     {
         "Hull": "422",

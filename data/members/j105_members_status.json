@@ -5608,26 +5608,8 @@
     },
     {
         "Hull": "482",
-        "Owners/Helmsmen": "Laurie Anna Kaplan",
-        "Status": "CO",
-        "Boat Name": "Panic",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Member 2025"
-    },
-    {
-        "Hull": "482",
-        "Owners/Helmsmen": "Chuck Stephens",
-        "Status": "CO",
-        "Boat Name": "Panic",
-        "Location": "Washington",
-        "Fleet": "20",
-        "Class Membership": "Member 2023"
-    },
-    {
-        "Hull": "482",
         "Owners/Helmsmen": "Mike Cain",
-        "Status": "CO",
+        "Status": "OW",
         "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
@@ -5636,11 +5618,11 @@
     {
         "Hull": "482",
         "Owners/Helmsmen": "Jeff Janders",
-        "Status": "AM",
+        "Status": "CO",
         "Boat Name": "Panic",
         "Location": "Washington",
         "Fleet": "20",
-        "Class Membership": "Associate 2026"
+        "Class Membership": "Member 2026"
     },
     {
         "Hull": "483",
