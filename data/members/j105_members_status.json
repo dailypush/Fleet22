@@ -3124,6 +3124,15 @@
     },
     {
         "Hull": "272",
+        "Owners/Helmsmen": "Irene Tang",
+        "Status": "CO",
+        "Boat Name": "Debonair",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "272",
         "Owners/Helmsmen": "Adrien Felon",
         "Status": "OW",
         "Boat Name": "Debonair",
@@ -6042,6 +6051,15 @@
         "Hull": "519",
         "Owners/Helmsmen": "Jean-Pierre Boespflug",
         "Status": "OW",
+        "Boat Name": "Asterix",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Member 2026"
+    },
+    {
+        "Hull": "519",
+        "Owners/Helmsmen": "Thomas Han",
+        "Status": "CO",
         "Boat Name": "Asterix",
         "Location": "Washington",
         "Fleet": "20",
