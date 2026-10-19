@@ -1370,6 +1370,16 @@
         "Notes": ""
     },
     {
+        "Hull": "124",
+        "Purchaser": "Matthew Arno",
+        "Certificate No.": "2604104Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-20",
+        "Sail Type": "S89",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
         "Hull": "509",
         "Purchaser": "Bill Aronson",
         "Certificate No.": "0210520Q",
@@ -2808,6 +2818,16 @@
         "Sail Type": "S89",
         "Fleet": "20",
         "Notes": "Sail purchased used from Hull 422"
+    },
+    {
+        "Hull": "229",
+        "Purchaser": "Denis Batalov",
+        "Certificate No.": "2111236N",
+        "Sailmaker": "North",
+        "Delivery Date": "2022-04-08",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": "Sail purchased used"
     },
     {
         "Hull": "229",
@@ -31102,9 +31122,9 @@
     {
         "Hull": "27",
         "Purchaser": "Randy Hecht",
-        "Certificate No.": "2607150Q",
+        "Certificate No.": "2608190Q",
         "Sailmaker": "Quantum",
-        "Delivery Date": "2026-09-30",
+        "Delivery Date": "2026-10-11",
         "Sail Type": "M",
         "Fleet": "1",
         "Notes": ""
@@ -55470,6 +55490,16 @@
         "Notes": ""
     },
     {
+        "Hull": "999",
+        "Purchaser": "Quantum Sails Pacific",
+        "Certificate No.": "2607150Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-09-30",
+        "Sail Type": "M",
+        "Fleet": "3",
+        "Notes": "Sail returned by R. Hecht 10/2026"
+    },
+    {
         "Hull": "510",
         "Purchaser": "Domingo Pagan",
         "Certificate No.": "0302107Q",
@@ -58026,16 +58056,6 @@
         "Sailmaker": "North",
         "Delivery Date": "2021-05-05",
         "Sail Type": "S89",
-        "Fleet": "20",
-        "Notes": ""
-    },
-    {
-        "Hull": "299",
-        "Purchaser": "Chris Phoenix",
-        "Certificate No.": "2111236N",
-        "Sailmaker": "North",
-        "Delivery Date": "2022-04-08",
-        "Sail Type": "J",
         "Fleet": "20",
         "Notes": ""
     },
@@ -61178,6 +61198,16 @@
         "Sail Type": "J",
         "Fleet": "14",
         "Notes": "Inspected KWRW 2007, was 06051812U"
+    },
+    {
+        "Hull": "212",
+        "Purchaser": "Lenny Rezabek",
+        "Certificate No.": "1801011B",
+        "Sailmaker": "Banks",
+        "Delivery Date": "2018-03-17",
+        "Sail Type": "S89",
+        "Fleet": "20",
+        "Notes": ""
     },
     {
         "Hull": "212",
@@ -65676,6 +65706,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2025-01-21",
         "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
+        "Hull": "250",
+        "Purchaser": "David Scheidt",
+        "Certificate No.": "2608194Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-10-14",
+        "Sail Type": "J",
         "Fleet": "3",
         "Notes": ""
     },
@@ -82842,6 +82882,16 @@
     {
         "Hull": "130",
         "Purchaser": "William Zartler",
+        "Certificate No.": "2001110Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2020-03-20",
+        "Sail Type": "J",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "130",
+        "Purchaser": "William Zartler",
         "Certificate No.": "2109114K",
         "Sailmaker": "UK Halsey",
         "Delivery Date": "2021-09-21",
@@ -82956,6 +83006,16 @@
         "Sailmaker": "Quantum",
         "Delivery Date": "2026-07-21",
         "Sail Type": "M",
+        "Fleet": "17",
+        "Notes": ""
+    },
+    {
+        "Hull": "130",
+        "Purchaser": "William Zartler",
+        "Certificate No.": "2604089Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-07-20",
+        "Sail Type": "S89",
         "Fleet": "17",
         "Notes": ""
     },

@@ -1252,6 +1252,15 @@
     },
     {
         "Hull": "114",
+        "Owners/Helmsmen": "Jen Morgan-Glass",
+        "Status": "AM",
+        "Boat Name": "Knot Known",
+        "Location": "Washington",
+        "Fleet": "20",
+        "Class Membership": "Associate 2026"
+    },
+    {
+        "Hull": "114",
         "Owners/Helmsmen": "Michael Goldfarb",
         "Status": "OW",
         "Boat Name": "Knot Known",
