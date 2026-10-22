@@ -5,6 +5,8 @@
 
 const AnalysisBoatLookup = typeof module !== 'undefined' && module.exports
     ? require('../assets/js/boat-lookup.js') : window.FleetBoatLookup;
+const AnalysisUtils = typeof module !== 'undefined' && module.exports
+    ? require('./sail-analysis-utils.js') : window.SailAnalysisUtils;
 
 class SailAnalysisHeatmap extends AnalysisBoatLookup {
     constructor(containerId, dataPath, {autoInit = true} = {}) {
@@ -14,6 +16,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         this.sailData = [];
         this.dataLoaded = false;
         this.currentHull = null;
+        this.restoringUrl = false;
         this.tooltip = null;
         this.records = [];
         this.filters = {startYear: null, endYear: null, sailType: '', sailmaker: '', includeUndated: true};
@@ -39,7 +42,8 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
                           'startYear', 'endYear', 'sailTypeFilter', 'sailmakerFilter', 'includeUndated',
                           'filterControls', 'filterStatus', 'tableSearch', 'recordDetails', 'detailsHeading',
                           'detailsSummary', 'recordRows', 'clearCell', 'previousPage', 'nextPage', 'tablePage',
-                          'dataQuality']) {
+                          'dataQuality', 'latestSection', 'latestDeliveries', 'copyLink', 'shareStatus',
+                          'shareFallback', 'shareUrl', 'exportCsv', 'dataFreshness']) {
             this.elements[id] = document.getElementById(id);
         }
         this.elements.hullSelect.addEventListener('change', event => this.selectHull(event.target.value));
@@ -54,8 +58,10 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             input.addEventListener('keydown', event => this.handleSuggestionKeydown(event, field));
         }
         this.setupFilters();
+        this.setupActions();
         // Registry lookup is optional and does not block direct hull analysis.
         const registry = this.loadBoatData();
+        const freshness = this.loadFreshness();
         try {
             await this.loadData();
             this.dataLoaded = true;
@@ -65,11 +71,11 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             if (this.currentHull) {
                 this.resetFilters();
                 this.updateVisualization(this.currentHull);
-            }
+            } else this.restoreView(window.location.href);
         } catch (error) {
             this.showError('Error loading sail data: ' + error.message);
         }
-        await registry;
+        await Promise.all([registry, freshness]);
     }
 
     async loadData() {
@@ -131,8 +137,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
     }
 
     selectHull(value) {
-        const hull = String(value || '').trim().replace(/^0+(?=\d)/, '');
-        this.currentHull = /^\d+$/.test(hull) ? hull : null;
+        this.currentHull = AnalysisUtils.normalizeHull(value);
         this.selectedCell = null;
         this.tableQuery = '';
         this.tablePage = 0;
@@ -144,6 +149,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         this.applyBoatDetails();
         if (!this.currentHull) this.clearVisualization();
         else if (this.dataLoaded) this.updateVisualization(this.currentHull);
+        this.syncUrl();
     }
 
     applyBoatDetails() {
@@ -165,6 +171,127 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             if (this.state.ownerLookupUnavailable) {
                 this.elements.lookupStatus.textContent += ' Owner lookup is unavailable; hull analysis still works.';
             }
+        }
+    }
+
+    setupActions() {
+        this.elements.copyLink.addEventListener('click', () => this.copyAnalysisLink());
+        this.elements.exportCsv.addEventListener('click', () => this.exportRecords());
+        window.addEventListener('popstate', () => {
+            if (this.dataLoaded) this.restoreView(window.location.href);
+        });
+    }
+
+    updateActions() {
+        if (this.elements.copyLink) this.elements.copyLink.disabled = !this.currentHull || !this.dataLoaded;
+    }
+
+    async loadFreshness() {
+        if (!this.elements.dataFreshness) return;
+        try {
+            const response = await fetch('../data/metadata.json');
+            if (!response.ok) throw new Error('Metadata unavailable');
+            const metadata = await response.json();
+            const date = typeof metadata.checked_at === 'string' ? new Date(metadata.checked_at) : new Date(NaN);
+            if (!Number.isFinite(date.getTime()) || !metadata.files?.['sails/sail_tags.json']) throw new Error('Invalid metadata');
+            this.elements.dataFreshness.textContent = `Data last checked: ${date.toLocaleString()}`;
+        } catch {
+            this.elements.dataFreshness.textContent = 'Data refresh date unavailable.';
+        }
+    }
+
+    viewState() {
+        return {hull: this.currentHull, ...this.filters, query: this.tableQuery, cell: this.selectedCell};
+    }
+
+    syncUrl() {
+        if (typeof window === 'undefined' || !this.dataLoaded || this.restoringUrl) return;
+        const url = AnalysisUtils.viewUrl(window.location.href, this.viewState());
+        if (url !== window.location.href) {
+            window.history.replaceState(null, '', url);
+            if (this.elements.shareStatus) this.elements.shareStatus.textContent = '';
+            if (this.elements.shareFallback) this.elements.shareFallback.hidden = true;
+        }
+        if (this.elements.shareUrl) this.elements.shareUrl.value = url;
+        this.updateActions();
+    }
+
+    restoreView(url) {
+        const view = AnalysisUtils.parseView(url);
+        this.restoringUrl = true;
+        try {
+            this.selectHull(view.hull || '');
+            if (!view.hull) return;
+            if (view.startYear !== null) {
+                this.filters.startYear = view.startYear;
+                this.filters.endYear = view.endYear;
+                const years = [...new Set([...this.availableYears, view.startYear, view.endYear])].sort((a, b) => a - b);
+                for (const id of ['startYear', 'endYear']) this.setOptions(this.elements[id], years);
+            }
+            const records = this.getHullRecords();
+            if (records.some(record => record.sailType === view.sailType)) this.filters.sailType = view.sailType;
+            if (records.some(record => record.sailmaker === view.sailmaker)) this.filters.sailmaker = view.sailmaker;
+            this.filters.includeUndated = view.includeUndated;
+            this.syncFilterControls();
+            this.tableQuery = view.query;
+            if (this.elements.tableSearch) this.elements.tableSearch.value = this.tableQuery;
+            const active = this.filterRecords(records);
+            this.selectedCell = view.cell && active.some(record => record.year === view.cell.year &&
+                record.sailType === view.cell.sailType && record.sailmaker === view.cell.sailmaker) ? view.cell : null;
+            this.updateVisualization(this.currentHull);
+        } finally {
+            this.restoringUrl = false;
+            this.syncUrl();
+        }
+    }
+
+    async copyAnalysisLink() {
+        this.syncUrl();
+        const url = AnalysisUtils.viewUrl(window.location.href, this.viewState());
+        try {
+            await navigator.clipboard.writeText(url);
+            this.elements.shareStatus.textContent = 'Analysis link copied. It includes the selected boat, filters and table search.';
+            this.elements.shareFallback.hidden = true;
+        } catch {
+            this.elements.shareFallback.hidden = false;
+            this.elements.shareUrl.value = url;
+            this.elements.shareUrl.focus();
+            this.elements.shareUrl.select();
+            this.elements.shareStatus.textContent = 'Copy the selected analysis link below.';
+        }
+    }
+
+    exportRecords() {
+        const records = this.getTableRecords();
+        if (!records.length) return;
+        const url = URL.createObjectURL(new Blob([AnalysisUtils.recordsCsv(records, this.state.boatLookup)], {type: 'text/csv;charset=utf-8'}));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `hull-${this.currentHull}-sail-records.csv`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    renderLatestDeliveries(records) {
+        if (!this.elements.latestSection) return;
+        this.elements.latestSection.hidden = !records.length;
+        this.elements.latestDeliveries.replaceChildren();
+        for (const latest of AnalysisUtils.latestDeliveries(records)) {
+            const card = document.createElement('div');
+            card.className = 'latest-card';
+            for (const [value, className] of [
+                [latest.sailType, 'fw-bold'], [latest.date || 'No known delivery date', ''],
+                [latest.records.map(record => `${record.sailmaker} · ${record.certificate || 'Certificate not recorded'}`).join('; '), 'small text-muted']
+            ]) {
+                if (!value) continue;
+                const line = document.createElement('p');
+                line.className = className;
+                line.textContent = value;
+                card.appendChild(line);
+            }
+            this.elements.latestDeliveries.appendChild(card);
         }
     }
 
@@ -330,6 +457,8 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
 
     updateVisualization(hull) {
         const hullRecords = this.getHullRecords(hull);
+        this.renderLatestDeliveries(hullRecords);
+        this.updateActions();
         if (hullRecords.length === 0) {
             this.clearVisualization();
             document.getElementById('hullStats').textContent = 'No sail records for this hull.';
@@ -345,6 +474,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             ? 'Matching records have unknown delivery dates. See the records table below.'
             : 'No records match these filters. Adjust the filters or choose All history.');
         this.renderRecordTable();
+        this.syncUrl();
     }
 
     processDataForHeatmap(records) {
@@ -511,6 +641,8 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         this.elements.tablePage.textContent = `Page ${this.tablePage + 1} of ${pages}`;
         this.elements.previousPage.disabled = this.tablePage === 0;
         this.elements.nextPage.disabled = this.tablePage >= pages - 1;
+        if (this.elements.exportCsv) this.elements.exportCsv.disabled = !records.length;
+        this.syncUrl();
     }
 
     updateStats(hull, hullRecords) {
@@ -541,6 +673,8 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         if (this.elements.recordDetails) this.elements.recordDetails.hidden = true;
         if (this.elements.filterStatus) this.elements.filterStatus.textContent = '';
         if (this.elements.dataQuality) this.elements.dataQuality.textContent = '';
+        if (this.elements.latestSection) this.elements.latestSection.hidden = true;
+        this.updateActions();
     }
 
     showNoData(message) {

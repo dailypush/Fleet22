@@ -42,6 +42,10 @@
         }
 
         #heatmap .empty-cell { cursor: default; }
+        .latest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+        .latest-card { background: #f8f9fa; padding: 12px; border-radius: 6px; }
+        .latest-card p { margin-bottom: 4px; }
+        #shareUrl { max-width: 100%; }
         .cell-text { pointer-events: none; }
         .record-table { min-width: 900px; }
         .record-table td { overflow-wrap: anywhere; }
@@ -139,6 +143,7 @@
         <div class="header-section">
             <h1>J105 Sail Analysis</h1>
             <p class="text-muted">Find a boat by hull, boat name, or current owner to explore its sail registration history.</p>
+            <p id="dataFreshness" class="small text-muted" role="status">Checking data freshness…</p>
         </div>
 
         <div class="controls">
@@ -166,8 +171,20 @@
                 <p id="selectedBoat" class="fw-bold mb-2" aria-live="polite">No boat selected.</p>
                 <div id="hullStats">Select a hull to see statistics</div>
             </div>
+            <button id="copyLink" type="button" class="btn btn-outline-primary btn-sm mt-3" disabled>Copy analysis link</button>
+            <p id="shareStatus" class="small mt-2 mb-0" role="status" aria-live="polite"></p>
+            <div id="shareFallback" class="mt-2" hidden>
+                <label for="shareUrl" class="form-label">Analysis link — select and copy</label>
+                <input id="shareUrl" class="form-control" type="text" readonly>
+            </div>
             <p class="small text-muted mt-2 mb-0">Historical registration records do not establish current sail ownership, condition, or inventory. Repeated certificate entries are counted as separate records.</p>
         </div>
+
+        <section id="latestSection" class="controls" aria-labelledby="latestHeading" hidden>
+            <h2 id="latestHeading" class="h5">Latest recorded deliveries</h2>
+            <p class="small text-muted">Across all history. Filters do not affect these dates. These records do not establish current inventory or sail condition.</p>
+            <div id="latestDeliveries" class="latest-grid"></div>
+        </section>
 
         <div class="controls">
             <fieldset id="filterControls" disabled>
@@ -235,8 +252,10 @@
                 <button id="clearCell" type="button" class="btn btn-outline-primary btn-sm" hidden>Show all filtered records</button>
             </div>
             <p id="detailsSummary" role="status" aria-live="polite"></p>
+            <button id="exportCsv" type="button" class="btn btn-outline-primary btn-sm mb-2">Export these records (CSV)</button>
+            <p class="small text-muted">CSV includes all matching rows across pages, following the table search and selected chart cell.</p>
             <label for="tableSearch" class="form-label">Search these records</label>
-            <input id="tableSearch" type="search" class="form-control mb-2" placeholder="Certificate, purchaser, notes…" aria-describedby="tableHelp">
+            <input id="tableSearch" type="search" maxlength="200" class="form-control mb-2" placeholder="Certificate, purchaser, notes…" aria-describedby="tableHelp">
             <p id="tableHelp" class="small text-muted">Table search only; chart totals follow the filters above. Purchaser names are historical and may differ from the current owner.</p>
             <div class="table-responsive" tabindex="0" role="region" aria-label="Sail registration records, scroll horizontally on smaller screens">
                 <table class="table table-striped table-sm record-table">
@@ -260,6 +279,7 @@
     </div>
 
     <script src="../assets/js/boat-lookup.js"></script>
+    <script src="sail-analysis-utils.js"></script>
     <script src="sail-analysis.js"></script>
     <script>
         // Initialize the heatmap application

@@ -350,3 +350,56 @@ test('full source snapshot aggregation accounts for every dated record without N
     assert.ok(cells.every(cell => Number.isInteger(cell.year)));
     assert.equal(app.records.length, source.length);
 });
+
+test('shared analysis restores filters, table query and a valid selected cell', () => {
+    const app = analysis();
+    app.elements.tableSearch = {value: ''};
+    app.restoreView('https://fleet22.us/analysis/sail_analysis_heatmap.html?hull=00493&from=2024&to=2026&type=M&maker=North&undated=0&q=historical&cellYear=2026&cellType=M&cellMaker=North');
+    assert.equal(app.currentHull, '493');
+    assert.deepEqual(app.filters, {startYear: 2024, endYear: 2026, sailType: 'M', sailmaker: 'North', includeUndated: false});
+    assert.equal(app.tableQuery, 'historical');
+    assert.equal(app.elements.tableSearch.value, 'historical');
+    assert.equal(app.selectedCell.year, 2026);
+    assert.equal(app.restoringUrl, false);
+    assert.equal(app.getTableRecords().length, 1);
+});
+
+test('shared links discard unavailable filter values and cells that do not match records', () => {
+    const app = analysis();
+    app.restoreView('https://fleet22.us/analysis/sail_analysis_heatmap.html?hull=493&from=2024&to=2026&type=missing&maker=missing&cellYear=2025&cellType=M&cellMaker=North');
+    assert.equal(app.filters.sailType, '');
+    assert.equal(app.filters.sailmaker, '');
+    assert.equal(app.selectedCell, null);
+    assert.equal(app.filteredRecords.length, 1);
+});
+
+test('freshness metadata failures do not block available sail analysis', async () => {
+    const app = analysis();
+    app.elements.dataFreshness = {textContent: ''};
+    const original = global.fetch;
+    global.fetch = async () => ({ok: false, status: 503});
+    try {
+        await app.loadFreshness();
+        assert.equal(app.elements.dataFreshness.textContent, 'Data refresh date unavailable.');
+        app.selectHull('493');
+        assert.equal(app.view.hull, '493');
+    } finally {
+        global.fetch = original;
+    }
+});
+
+test('freshness displays valid successful check dates and rejects missing or invalid dates', async () => {
+    const app = analysis();
+    app.elements.dataFreshness = {textContent: ''};
+    const original = global.fetch;
+    try {
+        for (const checked_at of ['2026-10-22T00:00:00Z', 'invalid', null]) {
+            global.fetch = async () => ({ok: true, json: async () => ({checked_at, files: {'sails/sail_tags.json': {records: 1}}})});
+            await app.loadFreshness();
+            assert.match(app.elements.dataFreshness.textContent, checked_at === '2026-10-22T00:00:00Z'
+                ? /^Data last checked:/ : /^Data refresh date unavailable/);
+        }
+    } finally {
+        global.fetch = original;
+    }
+});

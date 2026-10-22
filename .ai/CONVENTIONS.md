@@ -81,6 +81,9 @@ All shared nav bars should show:
 - Validate full calendar dates without timezone conversion or rollover. Unknown dates remain available in the table and never create a chart year.
 - Year/type/maker filters affect chart and table; table search and selected-cell scope affect only the table. Recent presets use the current calendar year and exclude undated records unless explicitly re-enabled.
 - Keep cell activation usable by click, tap, Enter and Space. Render source fields as text, keep mobile scrolling inside chart/table containers, and prevent hover tooltips from expanding the mobile viewport.
+- Keep Latest recorded deliveries above Filter registrations. These summaries use the selected hull's entire history, independently of the filters, and retain tied latest records.
+- Analysis stays focused on one boat; the user does not want boat comparison, source listing/links, or navigation from analysis to the declaration.
+- Share URLs contain the selected hull, filters, table search and cell scope. Validate restored parameters and never encode unselected name-search edits. CSV follows the complete matching table result, across pages, with proper escaping and formula-prefix handling.
 
 ### CSS Files
 - `assets/css/styles.css` — Main site styles

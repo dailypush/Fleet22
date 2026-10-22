@@ -97,6 +97,8 @@ Filter registrations by delivery-year range, sail type and sailmaker, with calen
 
 Counts represent source registration records, not current inventory or unique sails. Repeated certificates are retained and flagged, including cross-hull occurrences that may reflect transfers. Notes flags are keyword hints, not class-rule exemption decisions. The chart includes empty years, sizes itself by unique rows, and shows a numeric color-scale maximum for the current filters.
 
+Latest recorded deliveries appear above the registration filters and summarize each sail type across all history. The analysis URL preserves the selected hull, filters, table search and chart cell; Copy analysis link provides clipboard copying with a manual-copy fallback. CSV export includes all matching table records across pages, including current boat/owner context, historical purchaser, notes and flags. CSV fields are escaped and spreadsheet formula prefixes are neutralized. The header displays the last successful data-check date when freshness metadata is available.
+
 Both tools share current-owner matching and accessible suggestions in `assets/js/boat-lookup.js` and `assets/css/boat-lookup.css`. Run the JavaScript regressions with `node --test tests/test_*.cjs`.
 
 Members, dues and sail analysis load deployment-local JSON. The dues page displays successful refresh time from `data/metadata.json`; failed data loads show an error. Keep historical event content dated and avoid labeling past events as upcoming.
