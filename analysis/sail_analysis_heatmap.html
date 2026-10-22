@@ -26,17 +26,30 @@
             margin-top: 20px;
         }
 
-        .heatmap rect {
+        #heatmap rect {
             stroke-width: 1;
             stroke: #E6E6E6;
             cursor: pointer;
             transition: opacity 0.2s;
         }
 
-        .heatmap rect:hover {
+        #heatmap rect[role="button"]:hover,
+        #heatmap rect[role="button"]:focus,
+        #heatmap rect[aria-pressed="true"] {
             opacity: 0.8;
             stroke: #333;
             stroke-width: 2;
+        }
+
+        #heatmap .empty-cell { cursor: default; }
+        .cell-text { pointer-events: none; }
+        .record-table { min-width: 900px; }
+        .record-table td { overflow-wrap: anywhere; }
+        .record-table td:nth-child(6) { min-width: 220px; }
+        .record-table td:nth-child(7) { min-width: 180px; }
+        #detailsHeading:focus { outline: 2px solid #007bff; outline-offset: 4px; }
+        @media (max-width: 575px) {
+            .heatmap-container { padding: 16px; }
         }
 
         .controls {
@@ -56,7 +69,7 @@
         }
 
         .heatmap-scroll { overflow-x: auto; }
-        #heatmap { min-width: 700px; }
+        #heatmap { min-width: 0; }
 
         .legend-gradient {
             width: 200px;
@@ -69,15 +82,9 @@
             font-size: 12px;
         }
 
-        .heatmap-title {
-            font-size: 18px;
-            font-weight: bold;
-            text-anchor: middle;
-            fill: #333;
-        }
-
         .tooltip {
-            position: absolute;
+            position: fixed;
+            max-width: calc(100vw - 24px);
             padding: 10px;
             background: rgba(0, 0, 0, 0.8);
             color: white;
@@ -131,7 +138,7 @@
         </nav>
         <div class="header-section">
             <h1>J105 Sail Analysis</h1>
-            <p class="text-muted">Find a boat by hull, boat name, or current owner to explore its sail purchases.</p>
+            <p class="text-muted">Find a boat by hull, boat name, or current owner to explore its sail registration history.</p>
         </div>
 
         <div class="controls">
@@ -159,6 +166,42 @@
                 <p id="selectedBoat" class="fw-bold mb-2" aria-live="polite">No boat selected.</p>
                 <div id="hullStats">Select a hull to see statistics</div>
             </div>
+            <p class="small text-muted mt-2 mb-0">Historical registration records do not establish current sail ownership, condition, or inventory. Repeated certificate entries are counted as separate records.</p>
+        </div>
+
+        <div class="controls">
+            <fieldset id="filterControls" disabled>
+                <legend class="h5">Filter registrations</legend>
+                <div class="d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Delivery year shortcuts">
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-year-preset="all">All history</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-year-preset="3">Last 3 years</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-year-preset="5">Last 5 years</button>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-2">
+                        <label for="startYear" class="form-label">From year</label>
+                        <select id="startYear" class="form-select"></select>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="endYear" class="form-label">Through year</label>
+                        <select id="endYear" class="form-select"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sailTypeFilter" class="form-label">Sail type</label>
+                        <select id="sailTypeFilter" class="form-select"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sailmakerFilter" class="form-label">Sailmaker</label>
+                        <select id="sailmakerFilter" class="form-select"></select>
+                    </div>
+                </div>
+                <div class="form-check mt-3">
+                    <input id="includeUndated" type="checkbox" class="form-check-input" checked aria-describedby="undatedHelp">
+                    <label for="includeUndated" class="form-check-label">Include undated records in the table</label>
+                </div>
+                <p id="undatedHelp" class="small text-muted mb-0">Undated records cannot appear on the yearly chart. When included, they appear in the table regardless of the year range. Recent-year shortcuts exclude them.</p>
+            </fieldset>
+            <p id="filterStatus" class="small mt-3 mb-0" role="status" aria-live="polite"></p>
         </div>
 
         <div class="heatmap-container">
@@ -168,20 +211,52 @@
                 </div>
                 <p>Loading sail data...</p>
             </div>
-            <p class="small text-muted d-md-none">Scroll the chart horizontally to see all years.</p>
-            <div class="heatmap-scroll" tabindex="0" role="region" aria-label="Sail purchase heatmap, scroll horizontally on smaller screens">
+            <h2 id="heatmapHeading" class="h5" hidden></h2>
+            <p class="small text-muted d-md-none">For longer timelines, scroll the chart horizontally to see all years.</p>
+            <p class="small text-muted">Select a numbered cell to see its records below. Empty cells indicate zero dated records.</p>
+            <div class="heatmap-scroll" tabindex="0" role="region" aria-label="Sail registration heatmap, scroll horizontally on smaller screens">
                 <div id="heatmap"></div>
             </div>
             <div id="noData" class="no-data" style="display: none;">
                 No sail data available for the selected hull.
             </div>
             <div class="legend" style="display: none;">
-                <span><strong>Purchase Count:</strong></span>
-                <span>Low</span>
-                <div class="legend-gradient"></div>
-                <span>High</span>
+                <span><strong>Records per cell:</strong></span>
+                <span>0</span>
+                <div class="legend-gradient" aria-hidden="true"></div>
+                <span id="legendMax"></span>
+                <span class="small text-muted">Scale adjusts to the selected filters.</span>
             </div>
         </div>
+
+        <section id="recordDetails" class="heatmap-container mb-4" aria-labelledby="detailsHeading" hidden>
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <h2 id="detailsHeading" class="h5" tabindex="-1">Sail registration records</h2>
+                <button id="clearCell" type="button" class="btn btn-outline-primary btn-sm" hidden>Show all filtered records</button>
+            </div>
+            <p id="detailsSummary" role="status" aria-live="polite"></p>
+            <label for="tableSearch" class="form-label">Search these records</label>
+            <input id="tableSearch" type="search" class="form-control mb-2" placeholder="Certificate, purchaser, notes…" aria-describedby="tableHelp">
+            <p id="tableHelp" class="small text-muted">Table search only; chart totals follow the filters above. Purchaser names are historical and may differ from the current owner.</p>
+            <div class="table-responsive" tabindex="0" role="region" aria-label="Sail registration records, scroll horizontally on smaller screens">
+                <table class="table table-striped table-sm record-table">
+                    <caption>Source registration records for the selected hull and filters</caption>
+                    <thead><tr>
+                        <th scope="col">Certificate</th><th scope="col">Delivery date</th>
+                        <th scope="col">Sail type</th><th scope="col">Sailmaker</th>
+                        <th scope="col">Purchaser at registration</th><th scope="col">Notes</th>
+                        <th scope="col">Record flags</th>
+                    </tr></thead>
+                    <tbody id="recordRows"></tbody>
+                </table>
+            </div>
+            <div class="d-flex align-items-center flex-wrap gap-3 my-3" role="group" aria-label="Record table pages">
+                <button id="previousPage" type="button" class="btn btn-outline-secondary btn-sm">Previous</button>
+                <span id="tablePage" class="small" role="status" aria-live="polite"></span>
+                <button id="nextPage" type="button" class="btn btn-outline-secondary btn-sm">Next</button>
+            </div>
+            <p id="dataQuality" class="small text-muted mb-0"></p>
+        </section>
     </div>
 
     <script src="../assets/js/boat-lookup.js"></script>

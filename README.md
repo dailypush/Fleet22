@@ -93,6 +93,10 @@ The sail declaration is reusable across J/105 events, with optional event name/d
 
 Sail analysis (`analysis/sail_analysis_heatmap.html`) uses the same boat/owner suggestions as the declaration. Type two characters and choose a match to update the hull, names, chart and statistics together, or select a hull directly. Typing alone leaves the selected analysis unchanged. Missing registry data does not block hull analysis; boats without sail records show an empty state.
 
+Filter registrations by delivery-year range, sail type and sailmaker, with calendar-year shortcuts for the last three/five years. Unknown delivery dates can be included in the table independently of the year range; they never appear on the chart. Selecting a numbered chart cell by click, tap, Enter or Space opens its source records. The searchable table includes certificates, historical purchasers, notes and record flags, with 25 rows per page. Table search does not change chart totals. Switching hulls resets filters and table search.
+
+Counts represent source registration records, not current inventory or unique sails. Repeated certificates are retained and flagged, including cross-hull occurrences that may reflect transfers. Notes flags are keyword hints, not class-rule exemption decisions. The chart includes empty years, sizes itself by unique rows, and shows a numeric color-scale maximum for the current filters.
+
 Both tools share current-owner matching and accessible suggestions in `assets/js/boat-lookup.js` and `assets/css/boat-lookup.css`. Run the JavaScript regressions with `node --test tests/test_*.cjs`.
 
 Members, dues and sail analysis load deployment-local JSON. The dues page displays successful refresh time from `data/metadata.json`; failed data loads show an error. Keep historical event content dated and avoid labeling past events as upcoming.

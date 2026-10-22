@@ -76,6 +76,12 @@ All shared nav bars should show:
 - In analysis, names are search queries. Only explicit suggestion/hull selection changes the chart; always keep selected identity and results in sync.
 - Missing registry matches must not block direct hull analysis. Clear old charts/statistics for boats without sail records.
 
+### Sail Analysis Records and Filters
+- Chart totals count source registration records, not unique certificates or current sail inventory. Preserve repeated certificates and flag same-hull/cross-hull occurrences; do not silently deduplicate transfers.
+- Validate full calendar dates without timezone conversion or rollover. Unknown dates remain available in the table and never create a chart year.
+- Year/type/maker filters affect chart and table; table search and selected-cell scope affect only the table. Recent presets use the current calendar year and exclude undated records unless explicitly re-enabled.
+- Keep cell activation usable by click, tap, Enter and Space. Render source fields as text, keep mobile scrolling inside chart/table containers, and prevent hover tooltips from expanding the mobile viewport.
+
 ### CSS Files
 - `assets/css/styles.css` — Main site styles
 - `assets/css/na.css` — North Americans-specific styles

@@ -15,6 +15,12 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         this.dataLoaded = false;
         this.currentHull = null;
         this.tooltip = null;
+        this.records = [];
+        this.filters = {startYear: null, endYear: null, sailType: '', sailmaker: '', includeUndated: true};
+        this.selectedCell = null;
+        this.tableQuery = '';
+        this.tablePage = 0;
+        this.pageSize = 25;
         this.config = {
             membersUrl: '../data/members/j105_members_status.json',
             boatsUrl: '../data/boats/boats_fleet22.json'
@@ -29,7 +35,11 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
 
     async init() {
         for (const id of ['hullSelect', 'boatName', 'owner', 'ownerSuggestions',
-                          'boatNameSuggestions', 'suggestionStatus', 'lookupStatus', 'selectedBoat']) {
+                          'boatNameSuggestions', 'suggestionStatus', 'lookupStatus', 'selectedBoat',
+                          'startYear', 'endYear', 'sailTypeFilter', 'sailmakerFilter', 'includeUndated',
+                          'filterControls', 'filterStatus', 'tableSearch', 'recordDetails', 'detailsHeading',
+                          'detailsSummary', 'recordRows', 'clearCell', 'previousPage', 'nextPage', 'tablePage',
+                          'dataQuality']) {
             this.elements[id] = document.getElementById(id);
         }
         this.elements.hullSelect.addEventListener('change', event => this.selectHull(event.target.value));
@@ -43,6 +53,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             input.addEventListener('blur', () => this.closeIdentitySuggestions());
             input.addEventListener('keydown', event => this.handleSuggestionKeydown(event, field));
         }
+        this.setupFilters();
         // Registry lookup is optional and does not block direct hull analysis.
         const registry = this.loadBoatData();
         try {
@@ -51,7 +62,10 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
             this.setupTooltip();
             this.populateHullDropdown();
             this.hideLoading();
-            if (this.currentHull) this.updateVisualization(this.currentHull);
+            if (this.currentHull) {
+                this.resetFilters();
+                this.updateVisualization(this.currentHull);
+            }
         } catch (error) {
             this.showError('Error loading sail data: ' + error.message);
         }
@@ -64,6 +78,7 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         const data = await response.json();
         if (!Array.isArray(data)) throw new Error('Expected a sail record list');
         this.sailData = data;
+        this.indexRecords();
     }
 
     async loadBoatData() {
@@ -118,6 +133,11 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
     selectHull(value) {
         const hull = String(value || '').trim().replace(/^0+(?=\d)/, '');
         this.currentHull = /^\d+$/.test(hull) ? hull : null;
+        this.selectedCell = null;
+        this.tableQuery = '';
+        this.tablePage = 0;
+        if (this.elements.tableSearch) this.elements.tableSearch.value = '';
+        this.resetFilters();
         this.state.identityOverrides.clear();
         this.closeIdentitySuggestions();
         this.populateHullDropdown();
@@ -148,208 +168,385 @@ class SailAnalysisHeatmap extends AnalysisBoatLookup {
         }
     }
 
+    // Parse calendar dates without timezone conversion or Date's rollover of invalid days.
+    static deliveryYear(value) {
+        const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value || '').trim());
+        if (!match) return null;
+        const [, year, month, day] = match.map(Number);
+        if (year < 1900 || month < 1 || month > 12 || day < 1) return null;
+        const date = new Date(Date.UTC(year, month - 1, day));
+        return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day
+            ? year : null;
+    }
+
+    static prepareRecords(source) {
+        const certificates = new Map();
+        source.forEach(record => {
+            const certificate = String(record['Certificate No.'] || '').trim();
+            if (!certificate) return;
+            if (!certificates.has(certificate)) certificates.set(certificate, []);
+            certificates.get(certificate).push(String(record.Hull));
+        });
+        return source.map(record => {
+            const certificate = String(record['Certificate No.'] || '').trim();
+            const occurrences = certificates.get(certificate) || [];
+            const hull = String(record.Hull).trim().replace(/^0+(?=\d)/, '');
+            const otherHulls = [...new Set(occurrences.filter(value => value !== String(record.Hull)))];
+            const flags = [];
+            const year = SailAnalysisHeatmap.deliveryYear(record['Delivery Date']);
+            if (year === null) flags.push('Unknown delivery date');
+            if (occurrences.length > 1) {
+                flags.push(otherHulls.length
+                    ? `Certificate also recorded on hull ${otherHulls.join(', ')}`
+                    : 'Certificate repeated on this hull');
+            }
+            const notes = String(record.Notes || '');
+            if (/\b(replacement|replaced|defective|destroyed)\b/i.test(notes)) flags.push('Replacement or damage mentioned in notes');
+            if (/\b(used|sold|donated|transfer|transferred)\b/i.test(notes)) flags.push('Used sail or transfer mentioned in notes');
+            return {
+                source: record, hull, certificate, year, flags,
+                repeatedCertificate: occurrences.length > 1,
+                sailType: String(record['Sail Type'] || '').trim() || 'Unknown type',
+                sailmaker: String(record.Sailmaker || '').trim() || 'Unknown sailmaker'
+            };
+        });
+    }
+
+    indexRecords() {
+        if (this.indexedSource === this.sailData) return;
+        this.records = SailAnalysisHeatmap.prepareRecords(this.sailData);
+        this.indexedSource = this.sailData;
+    }
+
+    setupFilters() {
+        for (const [id, key] of [['startYear', 'startYear'], ['endYear', 'endYear'],
+                               ['sailTypeFilter', 'sailType'], ['sailmakerFilter', 'sailmaker']]) {
+            this.elements[id].addEventListener('change', event => {
+                this.filters[key] = key.endsWith('Year') ? Number(event.target.value) : event.target.value;
+                // Moving either endpoint keeps the interval valid.
+                if (this.filters.startYear > this.filters.endYear) {
+                    const other = key === 'startYear' ? 'endYear' : 'startYear';
+                    this.filters[other] = this.filters[key];
+                    this.elements[other].value = String(this.filters[key]);
+                }
+                this.refreshFilters();
+            });
+        }
+        this.elements.includeUndated.addEventListener('change', event => {
+            this.filters.includeUndated = event.target.checked;
+            this.refreshFilters();
+        });
+        document.querySelectorAll('[data-year-preset]').forEach(button => {
+            button.addEventListener('click', () => this.applyYearPreset(button.dataset.yearPreset));
+        });
+        this.elements.tableSearch.addEventListener('input', event => {
+            this.tableQuery = event.target.value.trim();
+            this.tablePage = 0;
+            this.renderRecordTable();
+        });
+        this.elements.clearCell.addEventListener('click', () => {
+            this.selectedCell = null;
+            this.tablePage = 0;
+            this.markSelectedCell();
+            this.renderRecordTable();
+        });
+        for (const [id, direction] of [['previousPage', -1], ['nextPage', 1]]) {
+            this.elements[id].addEventListener('click', () => {
+                this.tablePage += direction;
+                this.renderRecordTable();
+            });
+        }
+    }
+
+    setOptions(element, values, placeholder) {
+        if (!element) return;
+        element.replaceChildren();
+        for (const value of [...(placeholder ? [''] : []), ...values]) {
+            const option = document.createElement('option');
+            option.value = String(value);
+            option.textContent = value === '' ? placeholder : String(value);
+            element.appendChild(option);
+        }
+    }
+
+    getHullRecords(hull = this.currentHull) {
+        this.indexRecords();
+        return this.records.filter(record => record.hull === hull);
+    }
+
+    resetFilters() {
+        const records = this.getHullRecords();
+        const years = records.map(record => record.year).filter(year => year !== null);
+        const currentYear = new Date().getFullYear();
+        const minYear = years.length ? Math.min(...years) : currentYear;
+        const maxYear = years.length ? Math.max(...years, currentYear) : currentYear;
+        this.availableYears = Array.from({length: maxYear - minYear + 1}, (_, index) => minYear + index);
+        this.filters = {startYear: minYear, endYear: maxYear, sailType: '', sailmaker: '', includeUndated: true};
+        for (const id of ['startYear', 'endYear']) this.setOptions(this.elements[id], this.availableYears);
+        this.setOptions(this.elements.sailTypeFilter, [...new Set(records.map(record => record.sailType))].sort(), 'All sail types');
+        this.setOptions(this.elements.sailmakerFilter, [...new Set(records.map(record => record.sailmaker))].sort(), 'All sailmakers');
+        this.syncFilterControls();
+        if (this.elements.filterControls) this.elements.filterControls.disabled = !this.currentHull || !records.length;
+    }
+
+    syncFilterControls() {
+        for (const [id, key] of [['startYear', 'startYear'], ['endYear', 'endYear'],
+                               ['sailTypeFilter', 'sailType'], ['sailmakerFilter', 'sailmaker']]) {
+            if (this.elements[id]) this.elements[id].value = String(this.filters[key]);
+        }
+        if (this.elements.includeUndated) this.elements.includeUndated.checked = this.filters.includeUndated;
+    }
+
+    applyYearPreset(preset) {
+        const currentYear = new Date().getFullYear();
+        const all = preset === 'all';
+        this.filters.startYear = all ? this.availableYears[0] : currentYear - Number(preset) + 1;
+        this.filters.endYear = all ? this.availableYears.at(-1) : currentYear;
+        // Recent presets exclude undated records; the checkbox can include them again.
+        this.filters.includeUndated = all;
+        const years = [...new Set([...this.availableYears, this.filters.startYear, this.filters.endYear])].sort((a, b) => a - b);
+        for (const id of ['startYear', 'endYear']) this.setOptions(this.elements[id], years);
+        this.syncFilterControls();
+        this.refreshFilters();
+    }
+
+    filterRecords(records) {
+        return records.filter(record =>
+            (!this.filters.sailType || record.sailType === this.filters.sailType) &&
+            (!this.filters.sailmaker || record.sailmaker === this.filters.sailmaker) &&
+            (record.year === null ? this.filters.includeUndated :
+                record.year >= this.filters.startYear && record.year <= this.filters.endYear));
+    }
+
+    refreshFilters() {
+        this.selectedCell = null;
+        this.tablePage = 0;
+        if (this.currentHull) this.updateVisualization(this.currentHull);
+    }
+
     setupTooltip() {
-        this.tooltip = d3.select('body')
-            .append('div')
-            .attr('class', 'tooltip')
-            .style('opacity', 0);
+        this.tooltip = d3.select('body').append('div').attr('class', 'tooltip').style('opacity', 0);
     }
 
     updateVisualization(hull) {
-        const hullData = this.sailData.filter(item => String(item.Hull) === hull);
-        if (hullData.length === 0) {
+        const hullRecords = this.getHullRecords(hull);
+        if (hullRecords.length === 0) {
             this.clearVisualization();
             document.getElementById('hullStats').textContent = 'No sail records for this hull.';
-            this.showNoData();
+            this.showNoData('No sail records available for the selected hull.');
             return;
         }
+        this.filteredRecords = this.filterRecords(hullRecords);
         this.hideNoData();
-        this.updateStats(hull, hullData);
-        const processedData = this.processDataForHeatmap(hullData);
+        this.updateStats(hull, hullRecords);
+        const processedData = this.processDataForHeatmap(this.filteredRecords);
         this.createHeatmap(processedData, hull);
+        if (!processedData.length) this.showNoData(this.filteredRecords.length
+            ? 'Matching records have unknown delivery dates. See the records table below.'
+            : 'No records match these filters. Adjust the filters or choose All history.');
+        this.renderRecordTable();
     }
 
-    processDataForHeatmap(hullData) {
-        const summary = {};
-        
-        hullData.forEach(({ 'Sail Type': sailType, 'Sailmaker': sailmaker, 'Delivery Date': date }) => {
-            if (!date) return;
-            
-            const year = new Date(date).getFullYear().toString();
-            const key = `${sailType} (${sailmaker})`;
-
-            if (!summary[key]) {
-                summary[key] = {};
-            }
-
-            if (!summary[key][year]) {
-                summary[key][year] = 0;
-            }
-
-            summary[key][year] += 1;
+    processDataForHeatmap(records) {
+        const summary = new Map();
+        records.forEach(record => {
+            if (record.year === null) return;
+            const key = JSON.stringify([record.sailType, record.sailmaker]);
+            const cellKey = JSON.stringify([key, record.year]);
+            if (!summary.has(cellKey)) summary.set(cellKey, {
+                key, year: record.year, count: 0, sailType: record.sailType, sailmaker: record.sailmaker
+            });
+            summary.get(cellKey).count++;
         });
+        return [...summary.values()].sort((a, b) =>
+            a.sailType.localeCompare(b.sailType) || a.sailmaker.localeCompare(b.sailmaker) || a.year - b.year);
+    }
 
-        return Object.entries(summary).flatMap(([key, years]) => {
-            return Object.entries(years).map(([year, count]) => ({
-                key, 
-                year: parseInt(year), 
-                count,
-                sailType: key.split(' (')[0],
-                sailmaker: key.split(' (')[1].replace(')', '')
-            }));
-        });
+    getChartLayout(data) {
+        const rows = [...new Set(data.map(cell => cell.key))];
+        const start = this.filters.startYear;
+        const end = this.filters.endYear;
+        return {
+            rows, height: rows.length * 32,
+            years: Array.from({length: end - start + 1}, (_, index) => start + index)
+        };
     }
 
     createHeatmap(data, hull) {
-        // Clear previous heatmap
-        d3.select('#heatmap').selectAll('*').remove();
-
+        const chart = d3.select(`#${this.containerId}`);
+        chart.selectAll('*').remove();
+        this.tooltip?.style('opacity', 0).style('left', '0px').style('top', '0px');
+        document.querySelector('.legend').style.display = 'none';
+        const heading = document.getElementById('heatmapHeading');
+        heading.hidden = !data.length;
+        heading.textContent = `Hull ${hull} · Recorded sail registrations`;
         if (data.length === 0) return;
 
-        const containerWidth = document.getElementById('heatmap').offsetWidth;
-        const margin = { top: 60, right: 50, bottom: 100, left: 200 };
+        const {rows, years, height} = this.getChartLayout(data);
+        const margin = {top: 15, right: 25, bottom: 75, left: 180};
+        const containerWidth = Math.max(document.getElementById(this.containerId).offsetWidth, margin.left + margin.right + years.length * 36);
         const width = containerWidth - margin.left - margin.right;
-        const height = Math.max(400, data.length * 30) - margin.top - margin.bottom;
-
-        const svg = d3.select('#heatmap')
-            .append('svg')
-            .attr('width', containerWidth)
+        const svgRoot = chart.append('svg').attr('width', containerWidth)
             .attr('height', height + margin.top + margin.bottom)
-            .append('g')
-            .attr('transform', `translate(${margin.left},${margin.top})`);
-
-        // Title
-        svg.append('text')
-            .attr('class', 'heatmap-title')
-            .attr('x', width / 2)
-            .attr('y', -30)
-            .text(`Hull ${hull} - Sail Purchases by Type & Maker`);
-
-        // Scales
-        const years = [...new Set(data.map(d => d.year))].sort();
-        const sailTypes = [...new Set(data.map(d => d.key))];
-
-        const xScale = d3.scaleBand()
-            .domain(years)
-            .range([0, width])
-            .padding(0.1);
-
-        const yScale = d3.scaleBand()
-            .domain(sailTypes)
-            .range([0, height])
-            .padding(0.1);
-
-        const maxCount = d3.max(data, d => d.count);
-        const colorScale = d3.scaleSequential(d3.interpolateBlues)
-            .domain([0, maxCount]);
-
-        // Create heatmap cells
-        svg.selectAll('.cell')
-            .data(data)
-            .enter()
-            .append('rect')
-            .attr('class', 'cell')
-            .attr('x', d => xScale(d.year))
-            .attr('y', d => yScale(d.key))
-            .attr('width', xScale.bandwidth())
-            .attr('height', yScale.bandwidth())
-            .attr('fill', d => colorScale(d.count))
-            .on('mouseover', (event, d) => {
-                this.tooltip
-                    .style('opacity', 1)
-                    .html(`
-                        <strong>${d.sailType}</strong><br>
-                        Sailmaker: ${d.sailmaker}<br>
-                        Year: ${d.year}<br>
-                        Purchases: ${d.count}
-                    `)
-                    .style('left', (event.pageX + 10) + 'px')
-                    .style('top', (event.pageY - 10) + 'px');
+            .attr('role', 'group').attr('aria-labelledby', 'chartTitle chartDescription');
+        svgRoot.append('title').attr('id', 'chartTitle').text(`Hull ${hull}: recorded sail registrations`);
+        svgRoot.append('desc').attr('id', 'chartDescription')
+            .text('Counts of dated records by sail type, sailmaker and delivery year. Empty cells mean zero records. Activate a numbered cell to filter the records table below.');
+        const svg = svgRoot.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+        const xScale = d3.scaleBand().domain(years).range([0, width]).padding(0.1);
+        const yScale = d3.scaleBand().domain(rows).range([0, height]).padding(0.1);
+        const maxCount = d3.max(data, cell => cell.count);
+        const colorScale = d3.scaleSequential(d3.interpolateBlues).domain([0, maxCount]);
+        const byCell = new Map(data.map(cell => [JSON.stringify([cell.key, cell.year]), cell]));
+        const rowDetails = new Map(data.map(cell => [cell.key, cell]));
+        const grid = rows.flatMap(key => years.map(year => byCell.get(JSON.stringify([key, year])) || {
+            ...rowDetails.get(key), key, year, count: 0
+        }));
+        const cells = svg.selectAll('.cell').data(grid).enter().append('rect')
+            .attr('class', cell => cell.count ? 'cell' : 'cell empty-cell')
+            .attr('x', cell => xScale(cell.year)).attr('y', cell => yScale(cell.key))
+            .attr('width', xScale.bandwidth()).attr('height', yScale.bandwidth())
+            .attr('fill', cell => cell.count ? colorScale(cell.count) : '#f5f5f5');
+        cells.filter(cell => cell.count > 0)
+            .attr('tabindex', 0).attr('role', 'button')
+            .attr('aria-label', cell => `${cell.year}, ${cell.sailType}, ${cell.sailmaker}: ${cell.count} recorded registrations. Show records.`)
+            .on('click', (_, cell) => this.selectCell(cell))
+            .on('keydown', (event, cell) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    this.selectCell(cell);
+                }
             })
-            .on('mouseout', () => {
-                this.tooltip.style('opacity', 0);
-            });
-
-        // Add text labels on cells if they're large enough
-        svg.selectAll('.cell-text')
-            .data(data.filter(d => xScale.bandwidth() > 30 && yScale.bandwidth() > 20))
-            .enter()
-            .append('text')
-            .attr('class', 'cell-text')
-            .attr('x', d => xScale(d.year) + xScale.bandwidth() / 2)
-            .attr('y', d => yScale(d.key) + yScale.bandwidth() / 2)
-            .attr('text-anchor', 'middle')
-            .attr('dominant-baseline', 'middle')
-            .attr('fill', d => d.count > maxCount * 0.6 ? 'white' : 'black')
-            .attr('font-size', '12px')
-            .text(d => d.count);
-
-        // Axes
-        const xAxis = d3.axisBottom(xScale);
-        const yAxis = d3.axisLeft(yScale);
-
-        svg.append('g')
-            .attr('class', 'x-axis')
-            .attr('transform', `translate(0,${height})`)
-            .call(xAxis)
-            .selectAll('text')
-            .style('text-anchor', 'end')
-            .attr('dx', '-.8em')
-            .attr('dy', '.15em')
-            .attr('transform', 'rotate(-45)');
-
-        svg.append('g')
-            .attr('class', 'y-axis')
-            .call(yAxis);
-
-        // Axis labels
-        svg.append('text')
-            .attr('transform', 'rotate(-90)')
-            .attr('y', 0 - margin.left + 20)
-            .attr('x', 0 - (height / 2))
-            .style('text-anchor', 'middle')
-            .style('font-size', '14px')
-            .style('fill', '#666')
-            .text('Sail Type (Sailmaker)');
-
-        svg.append('text')
-            .attr('transform', `translate(${width / 2}, ${height + margin.bottom - 20})`)
-            .style('text-anchor', 'middle')
-            .style('font-size', '14px')
-            .style('fill', '#666')
-            .text('Year');
-
-        // Show legend
+            .on('mouseover', (event, cell) => {
+                if (window.matchMedia('(hover: none)').matches) return;
+                this.tooltip.style('opacity', 1)
+                    .text(`${cell.sailType} · ${cell.sailmaker} · ${cell.year}: ${cell.count} recorded registrations`);
+                const bounds = this.tooltip.node().getBoundingClientRect();
+                this.tooltip.style('left', `${Math.max(12, Math.min(event.clientX + 10, window.innerWidth - bounds.width - 12))}px`)
+                    .style('top', `${Math.max(12, Math.min(event.clientY + 10, window.innerHeight - bounds.height - 12))}px`);
+            })
+            .on('mouseout', () => this.tooltip.style('opacity', 0))
+            .on('blur', () => this.tooltip.style('opacity', 0));
+        cells.append('title').text(cell => `${cell.sailType} (${cell.sailmaker}), ${cell.year}: ${cell.count} records`);
+        svg.selectAll('.cell-text').data(data).enter().append('text')
+            .attr('class', 'cell-text').attr('x', cell => xScale(cell.year) + xScale.bandwidth() / 2)
+            .attr('y', cell => yScale(cell.key) + yScale.bandwidth() / 2)
+            .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+            .attr('fill', cell => cell.count > maxCount * 0.6 ? 'white' : 'black').attr('font-size', '12px')
+            .text(cell => cell.count);
+        svg.append('g').attr('class', 'x-axis').attr('transform', `translate(0,${height})`)
+            .call(d3.axisBottom(xScale)).selectAll('text').style('text-anchor', 'end')
+            .attr('dx', '-.8em').attr('dy', '.15em').attr('transform', 'rotate(-45)');
+        svg.append('g').attr('class', 'y-axis').call(d3.axisLeft(yScale)
+            .tickFormat(key => { const cell = rowDetails.get(key); return `${cell.sailType} (${cell.sailmaker})`; }));
+        svg.append('text').attr('x', width / 2).attr('y', height + 65)
+            .attr('text-anchor', 'middle').attr('fill', '#666').text('Delivery year');
+        const stops = Array.from({length: 11}, (_, index) => d3.interpolateBlues(index / 10));
+        document.querySelector('.legend-gradient').style.background = `linear-gradient(to right, ${stops.join(', ')})`;
+        document.getElementById('legendMax').textContent = String(maxCount);
         document.querySelector('.legend').style.display = 'flex';
+        this.markSelectedCell();
     }
 
-    updateStats(hull, hullData) {
-        const statsDiv = document.getElementById('hullStats');
-        const totalSails = hullData.length;
-        const sailmakers = [...new Set(hullData.map(item => item.Sailmaker))];
-        const sailTypes = [...new Set(hullData.map(item => item['Sail Type']))];
-        const years = [...new Set(hullData.map(item => new Date(item['Delivery Date']).getFullYear()))];
+    selectCell(cell) {
+        this.selectedCell = {key: cell.key, year: cell.year, sailType: cell.sailType, sailmaker: cell.sailmaker};
+        this.tablePage = 0;
+        // A cell opens its full record list even if a previous table search was entered.
+        this.tableQuery = '';
+        this.elements.tableSearch.value = '';
+        this.tooltip?.style('opacity', 0);
+        this.markSelectedCell();
+        this.renderRecordTable();
+        this.elements.detailsHeading.focus({preventScroll: true});
+        this.elements.detailsHeading.scrollIntoView({block: 'nearest'});
+    }
 
-        const title = document.createElement('strong');
-        title.textContent = `Hull ${hull} Statistics:`;
-        statsDiv.replaceChildren(title);
-        for (const line of [`Total Sails: ${totalSails}`, `Sailmakers: ${sailmakers.join(', ')}`,
-                            `Sail Types: ${sailTypes.join(', ')}`,
-                            `Years: ${Math.min(...years)} - ${Math.max(...years)}`]) {
-            statsDiv.append(document.createElement('br'), document.createTextNode(line));
+    markSelectedCell() {
+        d3.select(`#${this.containerId}`).selectAll('.cell[role="button"]')
+            .attr('aria-pressed', cell => String(Boolean(this.selectedCell && cell.key === this.selectedCell.key && cell.year === this.selectedCell.year)));
+    }
+
+    getTableRecords() {
+        const query = this.tableQuery.toLocaleLowerCase();
+        return (this.filteredRecords || []).filter(record => {
+            if (this.selectedCell && (record.year !== this.selectedCell.year ||
+                record.sailType !== this.selectedCell.sailType || record.sailmaker !== this.selectedCell.sailmaker)) return false;
+            return !query || [record.certificate, record.source['Delivery Date'], record.sailType,
+                record.sailmaker, record.source.Purchaser, record.source.Notes, ...record.flags]
+                .some(value => String(value || '').toLocaleLowerCase().includes(query));
+        }).sort((a, b) => (b.year ?? -1) - (a.year ?? -1) ||
+            String(b.source['Delivery Date']).localeCompare(String(a.source['Delivery Date'])) || a.certificate.localeCompare(b.certificate));
+    }
+
+    renderRecordTable() {
+        if (!this.elements.recordDetails) return;
+        this.elements.recordDetails.hidden = false;
+        const records = this.getTableRecords();
+        const pages = Math.max(1, Math.ceil(records.length / this.pageSize));
+        this.tablePage = Math.max(0, Math.min(this.tablePage, pages - 1));
+        this.elements.detailsHeading.textContent = this.selectedCell
+            ? `${this.selectedCell.year} · ${this.selectedCell.sailType} · ${this.selectedCell.sailmaker}` : 'Sail registration records';
+        this.elements.clearCell.hidden = !this.selectedCell;
+        this.elements.detailsSummary.textContent = `${records.length} record${records.length === 1 ? '' : 's'}${this.selectedCell ? ' in this chart cell' : ' matching the filters'}${this.tableQuery ? ' and table search' : ''}.`;
+        this.elements.recordRows.replaceChildren();
+        for (const record of records.slice(this.tablePage * this.pageSize, (this.tablePage + 1) * this.pageSize)) {
+            const row = document.createElement('tr');
+            for (const value of [record.certificate || 'Not recorded', record.year === null ? 'Unknown' : record.source['Delivery Date'],
+                                record.sailType, record.sailmaker, record.source.Purchaser || 'Not recorded',
+                                record.source.Notes || '—', record.flags.join('; ') || '—']) {
+                const cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            }
+            this.elements.recordRows.appendChild(row);
         }
+        if (!records.length) {
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.colSpan = 7;
+            cell.textContent = 'No records match. Clear the table search or adjust the filters.';
+            row.appendChild(cell);
+            this.elements.recordRows.appendChild(row);
+        }
+        this.elements.tablePage.textContent = `Page ${this.tablePage + 1} of ${pages}`;
+        this.elements.previousPage.disabled = this.tablePage === 0;
+        this.elements.nextPage.disabled = this.tablePage >= pages - 1;
+    }
+
+    updateStats(hull, hullRecords) {
+        const filtered = this.filteredRecords;
+        const undated = filtered.filter(record => record.year === null).length;
+        const repeated = hullRecords.filter(record => record.repeatedCertificate).length;
+        const allUndated = hullRecords.filter(record => record.year === null).length;
+        document.getElementById('hullStats').textContent = `Recorded sail registrations: ${hullRecords.length}. ${filtered.length} match the filters; ${filtered.length - undated} dated records plotted; ${undated} undated records included in the table.`;
+        if (this.elements.filterStatus) this.elements.filterStatus.textContent =
+            `Delivery years ${this.filters.startYear}–${this.filters.endYear} · ${this.filters.sailType || 'All sail types'} · ${this.filters.sailmaker || 'All sailmakers'}. ${filtered.length} matching records.`;
+        if (this.elements.dataQuality) this.elements.dataQuality.textContent = [
+            `${allUndated} record${allUndated === 1 ? ' has an' : 's have an'} unknown delivery date.`,
+            `${repeated} record${repeated === 1 ? ' has a' : 's have a'} repeated certificate number in the source dataset.`,
+            'Repeated entries are retained and flagged; they can represent transfers or multiple entries on one hull. Notes flags are hints, not verified exemptions.'
+        ].join(' ');
     }
 
     clearVisualization() {
-        d3.select('#heatmap').selectAll('*').remove();
+        d3.select(`#${this.containerId}`).selectAll('*').remove();
         this.hideNoData();
         document.querySelector('.legend').style.display = 'none';
         document.getElementById('hullStats').textContent = 'Select a hull to see statistics';
         this.tooltip?.style('opacity', 0);
+        this.filteredRecords = [];
+        this.selectedCell = null;
+        const heading = document.getElementById('heatmapHeading');
+        if (heading) heading.hidden = true;
+        if (this.elements.recordDetails) this.elements.recordDetails.hidden = true;
+        if (this.elements.filterStatus) this.elements.filterStatus.textContent = '';
+        if (this.elements.dataQuality) this.elements.dataQuality.textContent = '';
     }
 
-    showNoData() {
-        document.getElementById('noData').style.display = 'block';
+    showNoData(message) {
+        const element = document.getElementById('noData');
+        element.style.display = 'block';
+        if (message) element.textContent = message;
         document.querySelector('.legend').style.display = 'none';
     }
 
