@@ -37,6 +37,14 @@ python3 -m http.server 8000 --bind 127.0.0.1
 # Open http://127.0.0.1:8000/tools/documents/Sail_dec_auto.html
 ```
 
+## Shared lookup with Sail Analysis
+
+`assets/js/boat-lookup.js` provides `BoatLookupController`, the shared current-owner index, name matching, registry loading and keyboard/pointer suggestion behavior. `SailDeclarationManager` and `SailAnalysisHeatmap` extend it; each keeps its own selection and display behavior. Both pages load the shared script before their application script and use `assets/css/boat-lookup.css` for the dropdowns.
+
+The declaration preserves manual identity edits and saved values. Analysis treats name inputs as searches; explicit selection updates the hull/chart, while free typing does not relabel or switch the selected analysis. Current registry owners are used in both tools, with no fallback to historical sail purchasers.
+
+Run all JavaScript regressions with `node --test tests/test_*.cjs`.
+
 ## Architecture
 
 ### File Structure

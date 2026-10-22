@@ -1,0 +1,42 @@
+        .identity-field {
+            position: relative;
+            --lookup-gutter: 0.75rem;
+        }
+
+        .identity-suggestions {
+            position: absolute;
+            top: 100%;
+            left: var(--lookup-gutter);
+            right: var(--lookup-gutter);
+            z-index: 20;
+            max-height: 16rem;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #adb5bd;
+            border-radius: 0.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .identity-option {
+            padding: 0.6rem 0.75rem;
+            cursor: pointer;
+            overflow-wrap: anywhere;
+        }
+
+        .identity-option + .identity-option {
+            border-top: 1px solid #e9ecef;
+        }
+
+        .identity-option small {
+            display: block;
+            color: #495057;
+        }
+
+        .identity-option:hover,
+        .identity-option[aria-selected="true"] {
+            background: #e7f1ff;
+        }
+
+.form-row .identity-field {
+    --lookup-gutter: 5px;
+}

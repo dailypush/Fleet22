@@ -175,8 +175,10 @@ Members is the primary entry point for Sail Declaration, Fleet Dues payment inst
 ### Analysis/Visualization Pages
 - `analysis/githeatmap.html` — Git commit activity
 - `analysis/heatmap.html` — Sail purchase heatmap
-- `analysis/sail_analysis_heatmap.html` — Comprehensive sail analysis
+- `analysis/sail_analysis_heatmap.html` — Hull/boat/owner search and sail purchase heatmap
 - `analysis/treemap/treemap.html` — Sail tag treemap
+
+Sail analysis and declaration share `assets/js/boat-lookup.js` (`BoatLookupController`) and `assets/css/boat-lookup.css`. This centralizes current-owner/co-owner ranking, partial name matching, registry loading and accessible suggestions. Analysis name inputs are searches: explicit selection updates hull, names, chart and statistics; typing alone preserves the selected hull. Direct hull selection remains usable if membership lookup fails. The selector includes registry boats without sails and shows a cleared no-data state for them. Mobile charts scroll within their container. JavaScript tests run via `node --test tests/test_*.cjs` in CI.
 
 Shared public navigation/footer come from `templates/` via `python -m scripts.generate_site`. Generated HTML and sitemap stay checked in. Public pages use pinned Bootstrap 5.3.8 with integrity hashes. Analysis pages load shared deployment-local sail data; the duplicate treemap dataset and unused duplicate photos were removed. Original `/images/` URLs remain valid.
 

@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/test_sail_declaration.cjs
+      - run: node --test tests/test_*.cjs
       - run: python -m scripts.validators.validate_fleet_data
       - run: python -m scripts.generate_site --check
       - run: python -m scripts.validators.check_site

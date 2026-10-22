@@ -91,6 +91,10 @@ Members is the hub for Sail Declaration, Fleet Dues payment instructions (`pages
 
 The sail declaration is reusable across J/105 events, with optional event name/dates saved and printed alongside boat and sail information.
 
+Sail analysis (`analysis/sail_analysis_heatmap.html`) uses the same boat/owner suggestions as the declaration. Type two characters and choose a match to update the hull, names, chart and statistics together, or select a hull directly. Typing alone leaves the selected analysis unchanged. Missing registry data does not block hull analysis; boats without sail records show an empty state.
+
+Both tools share current-owner matching and accessible suggestions in `assets/js/boat-lookup.js` and `assets/css/boat-lookup.css`. Run the JavaScript regressions with `node --test tests/test_*.cjs`.
+
 Members, dues and sail analysis load deployment-local JSON. The dues page displays successful refresh time from `data/metadata.json`; failed data loads show an error. Keep historical event content dated and avoid labeling past events as upcoming.
 
 The checker verifies local HTML resources, CSS image URLs, fragment targets and sitemap paths across public pages, analysis pages and tools. External links require separate review.

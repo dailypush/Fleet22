@@ -3,33 +3,149 @@
  * Handles data processing and visualization for Fleet 22 sail analysis
  */
 
-class SailAnalysisHeatmap {
-    constructor(containerId, dataPath) {
+const AnalysisBoatLookup = typeof module !== 'undefined' && module.exports
+    ? require('../assets/js/boat-lookup.js') : window.FleetBoatLookup;
+
+class SailAnalysisHeatmap extends AnalysisBoatLookup {
+    constructor(containerId, dataPath, {autoInit = true} = {}) {
+        super();
         this.containerId = containerId;
         this.dataPath = dataPath;
         this.sailData = [];
+        this.dataLoaded = false;
         this.currentHull = null;
         this.tooltip = null;
-        this.init();
+        this.config = {
+            membersUrl: '../data/members/j105_members_status.json',
+            boatsUrl: '../data/boats/boats_fleet22.json'
+        };
+        this.state = {
+            boatLookup: new Map(), boatLookupLoaded: false, ownerLookupUnavailable: false,
+            identityOverrides: new Set(), suggestions: {field: null, matches: [], activeIndex: -1}
+        };
+        this.elements = {};
+        this.ready = autoInit ? this.init() : Promise.resolve();
     }
 
     async init() {
+        for (const id of ['hullSelect', 'boatName', 'owner', 'ownerSuggestions',
+                          'boatNameSuggestions', 'suggestionStatus', 'lookupStatus', 'selectedBoat']) {
+            this.elements[id] = document.getElementById(id);
+        }
+        this.elements.hullSelect.addEventListener('change', event => this.selectHull(event.target.value));
+        for (const field of ['owner', 'boatName']) {
+            const input = this.elements[field];
+            input.addEventListener('input', () => {
+                this.state.identityOverrides.add(field);
+                this.showIdentitySuggestions(field);
+            });
+            input.addEventListener('focus', () => this.showIdentitySuggestions(field));
+            input.addEventListener('blur', () => this.closeIdentitySuggestions());
+            input.addEventListener('keydown', event => this.handleSuggestionKeydown(event, field));
+        }
+        // Registry lookup is optional and does not block direct hull analysis.
+        const registry = this.loadBoatData();
         try {
             await this.loadData();
+            this.dataLoaded = true;
             this.setupTooltip();
             this.populateHullDropdown();
             this.hideLoading();
+            if (this.currentHull) this.updateVisualization(this.currentHull);
         } catch (error) {
-            this.showError('Error loading data: ' + error.message);
+            this.showError('Error loading sail data: ' + error.message);
         }
+        await registry;
     }
 
     async loadData() {
         const response = await fetch(this.dataPath);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new Error('Expected a sail record list');
+        this.sailData = data;
+    }
+
+    async loadBoatData() {
+        await super.loadBoatData();
+        this.populateHullDropdown();
+    }
+
+    showIdentitySuggestions(field) {
+        super.showIdentitySuggestions(field);
+        if (!this.elements.lookupStatus) return;
+        const query = this.elements[field]?.value?.trim() || '';
+        let message = 'Choose a hull, or type at least two characters of a boat or owner name.';
+        if (!this.state.boatLookupLoaded) {
+            message = 'Name suggestions are loading. You can still choose a hull directly.';
+        } else if (field === 'owner' && this.state.ownerLookupUnavailable) {
+            message = 'Owner lookup is unavailable. Choose a hull or search by boat name.';
+        } else if (query.length >= 2) {
+            message = this.state.suggestions.matches.length
+                ? 'Choose a suggestion to update the analysis. Typing alone keeps the current selection.'
+                : 'No matching suggestions. Try another name or choose a hull directly.';
         }
-        this.sailData = await response.json();
+        this.elements.lookupStatus.textContent = message;
+    }
+
+    getHullNumber() {
+        return this.currentHull || '';
+    }
+
+    populateHullDropdown() {
+        const select = this.elements.hullSelect;
+        if (!select) return;
+        const hulls = new Set([...this.sailData.map(item => String(item.Hull)), ...this.state.boatLookup.keys()]);
+        if (this.currentHull) hulls.add(this.currentHull);
+        select.replaceChildren();
+        const placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.textContent = 'Select a hull…';
+        select.appendChild(placeholder);
+        [...hulls].filter(hull => /^\d+$/.test(hull)).sort((a, b) => Number(a) - Number(b)).forEach(hull => {
+            const option = document.createElement('option');
+            option.value = hull;
+            option.textContent = `Hull ${hull}`;
+            select.appendChild(option);
+        });
+        select.value = this.currentHull || '';
+    }
+
+    selectBoatSuggestion(match) {
+        if (match && this.state.boatLookup.has(match.hull)) this.selectHull(match.hull);
+    }
+
+    selectHull(value) {
+        const hull = String(value || '').trim().replace(/^0+(?=\d)/, '');
+        this.currentHull = /^\d+$/.test(hull) ? hull : null;
+        this.state.identityOverrides.clear();
+        this.closeIdentitySuggestions();
+        this.populateHullDropdown();
+        this.applyBoatDetails();
+        if (!this.currentHull) this.clearVisualization();
+        else if (this.dataLoaded) this.updateVisualization(this.currentHull);
+    }
+
+    applyBoatDetails() {
+        const details = this.state.boatLookup.get(this.currentHull);
+        for (const field of ['owner', 'boatName']) {
+            if (this.elements[field] && !this.state.identityOverrides.has(field)) {
+                this.elements[field].value = details?.[field] || '';
+            }
+        }
+        if (this.elements.selectedBoat) {
+            this.elements.selectedBoat.textContent = this.currentHull
+                ? `Hull ${this.currentHull} · ${details?.boatName || 'Boat name unavailable'} · Owner: ${details?.owner || 'Unavailable'}`
+                : 'No boat selected.';
+        }
+        if (this.elements.lookupStatus) {
+            this.elements.lookupStatus.textContent = this.currentHull
+                ? 'Showing the selected hull. Choose another hull or name suggestion to switch boats.'
+                : 'Choose a hull, or type at least two characters of a boat or owner name.';
+            if (this.state.ownerLookupUnavailable) {
+                this.elements.lookupStatus.textContent += ' Owner lookup is unavailable; hull analysis still works.';
+            }
+        }
     }
 
     setupTooltip() {
@@ -39,40 +155,16 @@ class SailAnalysisHeatmap {
             .style('opacity', 0);
     }
 
-    populateHullDropdown() {
-        const hullSelect = document.getElementById('hullSelect');
-        const hulls = [...new Set(this.sailData.map(item => item.Hull))]
-            .sort((a, b) => parseInt(a) - parseInt(b));
-        
-        hullSelect.innerHTML = '<option value="">Select a hull...</option>';
-        hulls.forEach(hull => {
-            const option = document.createElement('option');
-            option.value = hull;
-            option.textContent = `Hull ${hull}`;
-            hullSelect.appendChild(option);
-        });
-
-        hullSelect.addEventListener('change', (e) => {
-            if (e.target.value) {
-                this.currentHull = e.target.value;
-                this.updateVisualization(e.target.value);
-            } else {
-                this.clearVisualization();
-            }
-        });
-    }
-
     updateVisualization(hull) {
-        const hullData = this.sailData.filter(item => item.Hull === hull);
-        
+        const hullData = this.sailData.filter(item => String(item.Hull) === hull);
         if (hullData.length === 0) {
+            this.clearVisualization();
+            document.getElementById('hullStats').textContent = 'No sail records for this hull.';
             this.showNoData();
             return;
         }
-
         this.hideNoData();
         this.updateStats(hull, hullData);
-        
         const processedData = this.processDataForHeatmap(hullData);
         this.createHeatmap(processedData, hull);
     }
@@ -252,7 +344,8 @@ class SailAnalysisHeatmap {
         d3.select('#heatmap').selectAll('*').remove();
         this.hideNoData();
         document.querySelector('.legend').style.display = 'none';
-        document.getElementById('hullStats').innerHTML = 'Select a hull to see statistics';
+        document.getElementById('hullStats').textContent = 'Select a hull to see statistics';
+        this.tooltip?.style('opacity', 0);
     }
 
     showNoData() {
@@ -277,7 +370,7 @@ class SailAnalysisHeatmap {
 
     // Public method to handle window resize
     handleResize() {
-        if (this.currentHull) {
+        if (this.currentHull && this.dataLoaded) {
             this.updateVisualization(this.currentHull);
         }
     }

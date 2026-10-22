@@ -70,6 +70,12 @@ All shared nav bars should show:
 - Optional event name and dates are saved/printed. Keep lookup suggestions and manual overrides working.
 - Event details stay when switching boats. Storage remains the most recent declaration per hull.
 
+### Shared Boat/Owner Lookup
+- Declaration and sail analysis extend `BoatLookupController` in `assets/js/boat-lookup.js`; do not duplicate the registry matching or suggestion logic.
+- Load the shared script before the page application script and include `assets/css/boat-lookup.css`.
+- In analysis, names are search queries. Only explicit suggestion/hull selection changes the chart; always keep selected identity and results in sync.
+- Missing registry matches must not block direct hull analysis. Clear old charts/statistics for boats without sail records.
+
 ### CSS Files
 - `assets/css/styles.css` — Main site styles
 - `assets/css/na.css` — North Americans-specific styles
