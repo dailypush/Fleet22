@@ -1,5 +1,5 @@
 {
-    "checked_at": "2026-10-22T01:58:29.347639+00:00",
+    "checked_at": "2026-10-22T02:10:22.659212+00:00",
     "files": {
         "members/j105_members_status.json": {
             "records": 836,
@@ -19,7 +19,7 @@
         },
         "combined/fleet_statistics.json": {
             "records": 7,
-            "sha256": "bdafc4e58bb26ca828151841d7638b6d983c3c071a1f1312d85d23335b574aae"
+            "sha256": "2472c30f80831924befec0f2948658e6cb9c3acc5b284e61bf684303cbc24adf"
         }
     }
 }
