@@ -1,5 +1,7 @@
 """Standardized data loading utilities for Fleet22 scripts."""
 import json
+import os
+import tempfile
 from pathlib import Path
 from typing import List, Dict, Any
 from .logger import setup_logger
@@ -51,9 +53,22 @@ def save_json(data: Any, filepath: Path, indent: int = 4,
         shutil.copy2(filepath, backup_path)
         logger.info(f"Created backup: {backup_path.name}")
     
-    # Save new data
+    # Serialize before touching the destination, then atomically replace it.
     filepath.parent.mkdir(parents=True, exist_ok=True)
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=indent, ensure_ascii=False)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8',
+                                         dir=filepath.parent, prefix=f'.{filepath.name}.',
+                                         suffix='.tmp', delete=False) as f:
+            temporary = Path(f.name)
+            json.dump(data, f, indent=indent, ensure_ascii=False)
+            f.write('\n')
+            f.flush()
+            os.fsync(f.fileno())
+        os.chmod(temporary, filepath.stat().st_mode & 0o777 if filepath.exists() else 0o644)
+        os.replace(temporary, filepath)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
     
     logger.info(f"Saved {len(data) if isinstance(data, list) else 'data'} to {filepath.name}")

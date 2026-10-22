@@ -19,7 +19,7 @@ class SailDeclarationManager {
     constructor() {
         // Configuration
         this.config = {
-            dataUrl: 'https://raw.githubusercontent.com/dailypush/Fleet22/main/data/sails/sail_tags.json',
+            dataUrl: '../../data/sails/sail_tags.json',
             storagePrefix: 'sailDeclaration_',
             autoSaveDelay: 2000, // milliseconds
             sailTypes: {

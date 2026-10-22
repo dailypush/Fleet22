@@ -59352,6 +59352,16 @@
     {
         "Hull": "422",
         "Purchaser": "Mark Prentice",
+        "Certificate No.": "2511247N",
+        "Sailmaker": "North",
+        "Delivery Date": "2026-09-14",
+        "Sail Type": "J",
+        "Fleet": "20",
+        "Notes": "Sail purchased from B. Stone"
+    },
+    {
+        "Hull": "422",
+        "Purchaser": "Mark Prentice",
         "Certificate No.": "2511265N",
         "Sailmaker": "North",
         "Delivery Date": "2026-09-25",
@@ -72505,16 +72515,6 @@
         "Certificate No.": "2503081N",
         "Sailmaker": "North",
         "Delivery Date": "2025-07-29",
-        "Sail Type": "J",
-        "Fleet": "1",
-        "Notes": ""
-    },
-    {
-        "Hull": "116",
-        "Purchaser": "Bruce Stone",
-        "Certificate No.": "2511247N",
-        "Sailmaker": "North",
-        "Delivery Date": "2026-09-14",
         "Sail Type": "J",
         "Fleet": "1",
         "Notes": ""

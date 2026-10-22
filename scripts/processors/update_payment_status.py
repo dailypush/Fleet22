@@ -13,6 +13,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.logger import setup_logger
 from utils.data_loader import load_json, save_json
+from utils.membership import best_membership, is_paid_membership, members_by_hull
+from utils.validation import validate_records
 from utils.path_utils import (
     PROJECT_ROOT,
     BOATS_FILE,
@@ -30,49 +32,16 @@ CURRENT_YEAR = datetime.now().year
 
 def sync_class_dues_from_members(boats_data, members_data):
     """Sync Class Dues payment status from J/105 members data (simplified format)."""
+    validate_records(boats_data, 'boats')
+    validate_records(members_data, 'members')
+    grouped = members_by_hull(members_data)
     updated_count = 0
-    
-    try:
-        # Extract hull numbers from boats for quick lookup
-        boats_hull_numbers = {str(boat["Hull Number"]) for boat in boats_data}
-        
-        # Track latest membership status per hull
-        latest_membership_status = {}
-        
-        for member in members_data:
-            hull_number = str(member.get("Hull", ""))
-            if hull_number in boats_hull_numbers:
-                membership = member.get("Class Membership", "")
-                membership_parts = membership.split()
-                
-                if membership_parts and membership_parts[-1].isdigit():
-                    year = int(membership_parts[-1])
-                    if hull_number not in latest_membership_status or year > latest_membership_status[hull_number]["year"]:
-                        latest_membership_status[hull_number] = {
-                            "year": year,
-                            "status": membership
-                        }
-        
-        # Update boats with Class Dues status (simplified format)
-        for boat in boats_data:
-            hull_number = str(boat.get("Hull Number", ""))
-            member_info = latest_membership_status.get(hull_number)
-            
-            if member_info and member_info["year"] == CURRENT_YEAR:
-                boat['Class Dues'] = 'Paid'
-                updated_count += 1
-                logger.info(f"Hull {hull_number} ({boat.get('Boat Name', 'Unknown')}): Class Dues Paid for {CURRENT_YEAR}")
-            else:
-                boat['Class Dues'] = 'Not Paid'
-                if member_info:
-                    logger.info(f"Hull {hull_number}: Class Dues not paid for {CURRENT_YEAR} (last paid: {member_info['year']})")
-        
-        logger.info(f"Synced Class Dues for {updated_count} boats from members data")
-        return boats_data, updated_count
-        
-    except Exception as e:
-        logger.error(f"Error syncing Class Dues from members: {e}")
-        return boats_data, 0
+    for boat in boats_data:
+        status = best_membership(grouped.get(boat['Hull Number'], []), CURRENT_YEAR)
+        paid = is_paid_membership(status, CURRENT_YEAR)
+        boat['Class Dues'] = 'Paid' if paid else 'Not Paid'
+        updated_count += int(paid)
+    return boats_data, updated_count
 
 
 def generate_summary_report(boats_data):
@@ -154,7 +123,7 @@ def main():
         print(f"Loaded {len(boats_data)} boats from boats_fleet22.json")
         
         # Fleet Dues are manually maintained in boats_fleet22.json
-        print("\n� Fleet Dues: Manually maintained in boats_fleet22.json")
+        print("\nFleet Dues: Manually maintained in boats_fleet22.json")
         logger.info("Fleet Dues status preserved from boats_fleet22.json (manual updates)")
         
         # Load members data for Class Dues
@@ -166,8 +135,7 @@ def main():
             boats_data, class_count = sync_class_dues_from_members(boats_data, members_data)
             print(f"✓ Updated Class Dues for {class_count} boats")
         else:
-            logger.warning(f"Failed to load members data from {MEMBERS_FILE}")
-            print("⚠️  Warning: Could not sync Class Dues (members data unavailable)")
+            raise ValueError("Members data is empty; refusing to publish a partial sync")
         
         # Save updated boats data
         logger.info(f"\nSaving updated boats data to {BOATS_FILE}")

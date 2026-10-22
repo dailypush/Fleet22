@@ -1,120 +1,35 @@
-# Fleet22 Scripts
+# Fleet 22 scripts
 
-Automated data collection, processing, and analysis scripts for Fleet 22 J105 racing data.
-
-## Directory Structure
-
-```
-scripts/
-├── scrapers/        # Web scrapers for external data sources
-├── processors/      # Data combination and processing
-├── validators/      # Data validation and quality checks
-├── analysis/        # Data analysis and visualization
-└── utils/          # Shared utilities and helpers
-```
-
-## Quick Start
-
-### Install Dependencies
+Run commands from the repository root with Python 3.10 or newer.
 
 ```bash
-cd scripts
-pip install -r requirements.txt
+pip install -r scripts/requirements-scraping.lock
+python -m unittest discover -s tests -v
+python -m scripts.update_all_data
 ```
 
-### Run Scrapers
+The update stages membership → sail tags → fleet roster → validation → combined data, then publishes validated files and freshness metadata. It preserves manual Fleet Dues. Individual modules can still be run for troubleshooting, but the staged updater provides whole-pipeline validation before publication.
 
 ```bash
-# Scrape fleet boats data
-python -m scrapers.scrape_fleet_boats
-
-# Scrape sail tags
-python -m scrapers.scrape_sail_tags
-
-# Scrape owner status
-python -m scrapers.scrape_owner_status
+python -m scripts.validators.validate_fleet_data
+python -m scripts.processors.manage_boat_data report
+python -m scripts.processors.manage_boat_data update --hull 493 --paid
+python -m scripts.reports.payment_tracker create
+python -m scripts.processors.manage_boat_data merge
+python -m scripts.reports.generate_payment_followup
+python -m scripts.generate_site --check
+python -m scripts.validators.check_site
 ```
 
-### Process Data
+Install `scripts/requirements.txt` for optional pandas/matplotlib/seaborn analysis. CI only installs the scraping lockfile. To update that lock, install `scripts/requirements-scraping.txt` in a clean Python 3.10+ environment, run the tests, and regenerate with `pip freeze`.
 
-```bash
-# Combine data sources
-python -m processors.combine_data_sources
+Shared code:
 
-# Update payment status
-python -m processors.update_payment_status
-```
+- `utils/membership.py`: season rules, co-owner grouping and representative ownership.
+- `utils/validation.py`: source schemas and snapshot comparison.
+- `utils/data_loader.py`: UTF-8 JSON, original-file backups and atomic writes.
+- `utils/http_client.py`: verified HTTPS, timeouts and bounded GET retries.
+- `utils/path_utils.py`: paths; `FLEET22_DATA_DIR` selects an isolated staging data directory.
+- `utils/logger.py`: file and console logging.
 
-### Validate Data
-
-```bash
-# Validate all fleet data
-python -m validators.validate_fleet_data
-
-# Check sail purchase limits
-python -m validators.check_sail_limits
-```
-
-## Utilities
-
-The `utils/` module provides shared functionality:
-
-- `path_utils.py` - Centralized path management
-- `logger.py` - Consistent logging setup
-- `data_loader.py` - Standard data loading/saving
-
-## Development
-
-### Running Tests
-
-```bash
-pytest tests/
-```
-
-### Code Style
-
-We follow PEP 8. Format code with:
-
-```bash
-black scripts/
-isort scripts/
-```
-
-## Scripts Reference
-
-### Scrapers
-
-- **scrape_fleet_boats.py** - Scrapes boat data from members page
-- **scrape_sail_tags.py** - Scrapes sail certification data
-- **scrape_owner_status.py** - Scrapes owner/membership status
-- **extract_world_sailing_numbers.py** - Extracts WS numbers from race results
-
-### Processors
-
-- **combine_data_sources.py** - Combines fleet, sail, and owner data
-- **update_payment_status.py** - Updates payment status in boat records
-
-### Validators
-
-- **validate_fleet_data.py** - Validates JSON data structure and integrity
-- **check_sail_limits.py** - Checks sail purchase limits per class rules
-
-### Analysis
-
-- **analyze_sailmaker_trends.py** - Analyzes sailmaker purchase trends over time
-
-## Configuration
-
-Paths and settings are managed in `utils/path_utils.py`. Update this file to change:
-
-- Data directory locations
-- File naming patterns
-- Backup strategies
-
-## Logging
-
-All scripts log to `logs/scraping.log`. Configure logging in `utils/logger.py`.
-
-## License
-
-Part of the Fleet22 project. See main repository LICENSE.
+See the root [README](../README.md) and [dues manual](../FLEET_DUES_MANUAL.md) for the data contract and payment workflow.

@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.logger import setup_logger
 from utils.data_loader import load_json, save_json
 from utils.path_utils import BOATS_FILE, MEMBERS_FILE
+from utils.membership import best_membership, is_paid_membership, members_by_hull, primary_member
+from utils.validation import validate_records, validate_update
 
 # Setup logging
 logger = setup_logger(__name__)
@@ -28,15 +30,12 @@ CURRENT_YEAR = str(date.today().year)
 
 def get_existing_fleet_data():
     """Try to load existing boats_fleet22.json data if available"""
-    if BOATS_FILE.exists():
-        try:
-            data = load_json(BOATS_FILE)
-            logger.info(f"Loaded {len(data)} boat entries from existing file: {BOATS_FILE}")
-            return data
-        except Exception as e:
-            logger.error(f"Error loading existing fleet data: {str(e)}")
-    
-    return None
+    if not BOATS_FILE.exists():
+        raise FileNotFoundError("Existing boats file is required to preserve manual Fleet Dues")
+    data = load_json(BOATS_FILE)
+    validate_records(data, 'boats')
+    return data
+
 
 def extract_preserved_data(existing_data):
     """Extract payment and yacht club data from existing boats data, keyed by hull number."""
@@ -72,40 +71,30 @@ def merge_preserved_data(scraped_data, preserved_map):
 
         # Class Dues derived from members data Class Membership field
         class_membership = boat.pop('Class Membership', '')
-        boat['Class Dues'] = 'Paid' if f'Member {CURRENT_YEAR}' in class_membership else 'Not Paid'
+        boat['Class Dues'] = 'Paid' if is_paid_membership(class_membership, CURRENT_YEAR) else 'Not Paid'
     
     logger.info(f"Merged preserved data for {merged_count} boats")
     return scraped_data
 
 def load_fleet22_from_members():
     """Load Fleet 22 boats from j105_members_status.json, deduplicated by hull number."""
-    if not MEMBERS_FILE.exists():
-        logger.warning(f"Members file not found: {MEMBERS_FILE}")
-        return None
+    all_members = load_json(MEMBERS_FILE)
+    validate_records(all_members, 'members')
+    boats = []
+    for hull, records in members_by_hull(all_members).items():
+        fleet_records = [r for r in records if r['Fleet'] == '22']
+        if not fleet_records:
+            continue
+        entry = primary_member(fleet_records, CURRENT_YEAR)
+        boats.append({
+            'Hull Number': hull,
+            'Boat Name': entry.get('Boat Name', ''),
+            'Class Membership': best_membership(records, CURRENT_YEAR),
+        })
+    if not boats:
+        raise ValueError("No Fleet 22 boats extracted from members data")
+    return sorted(boats, key=lambda boat: int(boat['Hull Number']))
 
-    try:
-        all_members = load_json(MEMBERS_FILE)
-        fleet22_entries = [m for m in all_members if m.get('Fleet') == '22']
-        logger.info(f"Found {len(fleet22_entries)} Fleet 22 entries in members data")
-
-        # Deduplicate by hull number (multiple entries = co-owners)
-        seen_hulls = set()
-        boats = []
-        for entry in fleet22_entries:
-            hull = str(entry.get('Hull', ''))
-            if hull and hull not in seen_hulls:
-                seen_hulls.add(hull)
-                boats.append({
-                    'Hull Number': hull,
-                    'Boat Name': entry.get('Boat Name', ''),
-                    'Class Membership': entry.get('Class Membership', ''),
-                })
-        
-        logger.info(f"Deduplicated to {len(boats)} unique Fleet 22 boats")
-        return boats
-    except Exception as e:
-        logger.error(f"Error loading members data: {str(e)}")
-        return None
 
 def main():
     """Main execution function."""
@@ -118,19 +107,15 @@ def main():
     # Load Fleet 22 boats from members JSON
     fresh_data = load_fleet22_from_members()
     
-    if fresh_data:
-        # Merge fresh data with existing preserved data
-        data = merge_preserved_data(fresh_data, preserved_map)
-        logger.info("Updated boat list with preserved data")
-    elif existing_data:
-        # Use existing data if members file unavailable
-        data = existing_data
-        logger.info("Using existing boat data (members file unavailable)")
-    else:
-        logger.error("No data source available")
-        print("Error: No data source available")
-        return False
-    
+    data = merge_preserved_data(fresh_data, preserved_map)
+    validate_update(data, existing_data, 'boats')
+    # Removed boats with paid dues require a deliberate roster update.
+    new_hulls = {b['Hull Number'] for b in data}
+    removed_paid = [b['Hull Number'] for b in existing_data
+                    if b['Fleet Dues'] == 'Paid' and b['Hull Number'] not in new_hulls]
+    if removed_paid:
+        raise ValueError(f"Refusing to remove boats with manual paid dues: {removed_paid}")
+
     # Save the data
     save_json(data, BOATS_FILE)
     logger.info(f"Successfully processed {len(data)} boat entries")
@@ -142,7 +127,7 @@ def main():
 
 if __name__ == "__main__":
     try:
-        main()
+        sys.exit(0 if main() else 1)
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}")
         print(f"Error: {str(e)}")

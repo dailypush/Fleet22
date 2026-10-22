@@ -30,30 +30,6 @@ def load_boats_data(file_path):
         logger.error(f"Error loading boats data: {e}")
         raise
 
-def load_members_data(file_path):
-    """Load members status data from JSON file."""
-    try:
-        logger.info(f"Loading members data from {file_path}")
-        members = load_json(file_path)
-        logger.info(f"Loaded {len(members)} member records")
-        return members
-    except Exception as e:
-        logger.error(f"Error loading members data: {e}")
-        raise
-
-def get_payment_status(members_data):
-    """Extract payment status from members data."""
-    paid_members = set()
-    for member in members_data:
-        # Check if member has paid (status == 'Active' or similar)
-        if member.get('status') == 'Active' or member.get('paid', False):
-            # Extract hull number or boat name
-            if 'hull' in member:
-                paid_members.add(str(member['hull']))
-            elif 'boat' in member:
-                paid_members.add(member['boat'])
-    return paid_members
-
 def categorize_boats(boats_data, paid_members):
     """Categorize boats into paid and unpaid."""
     paid_boats = []
@@ -71,7 +47,7 @@ def categorize_boats(boats_data, paid_members):
         }
         
         # Check if boat is in paid members (by hull or name)
-        if hull in paid_members or boat_name in paid_members:
+        if hull in paid_members:
             paid_boats.append(boat_info)
         else:
             unpaid_boats.append(boat_info)
@@ -85,13 +61,13 @@ def generate_club_breakdown(unpaid_boats):
         club_breakdown[boat['club']].append(boat)
     return dict(club_breakdown)
 
-def generate_report(boats_data, members_data, output_file=None):
+def generate_report(boats_data, members_data=None, output_file=None):
     """Generate comprehensive payment follow-up report."""
     try:
         logger.info("Generating payment follow-up report...")
         
         # Get payment status
-        paid_members = get_payment_status(members_data)
+        paid_members = {b['Hull Number'] for b in boats_data if b.get('Fleet Dues') == 'Paid'}
         
         # Categorize boats
         paid_boats, unpaid_boats = categorize_boats(boats_data, paid_members)
@@ -154,13 +130,13 @@ def generate_report(boats_data, members_data, output_file=None):
         # Contact Information Template
         report_lines.append("\nEMAIL TEMPLATE FOR FOLLOW-UP")
         report_lines.append("-" * 80)
-        report_lines.append("""
+        report_lines.append(f"""
 Subject: Fleet 22 Dues Payment Reminder - [Yacht Club Name]
 
 Dear [Yacht Club Fleet Captain/Secretary],
 
 This is a friendly reminder that the following Fleet 22 boats from [Yacht Club]
-have outstanding dues payments for the 2026 season:
+have outstanding dues payments for the {datetime.now().year} season:
 
 [List boats here]
 
@@ -173,7 +149,7 @@ Annual fleet dues are $150 per boat and help support:
 Payment can be made via:
 - Venmo: @fleet22lakerie
 - Check: Fleet 22, c/o Treasurer
-- Online: https://fleet22.us/fleetdues.html
+- Online: https://fleet22.us/pages/fleetdues.html
 
 Please forward this to your members or let us know if you need assistance
 reaching these boat owners.
@@ -220,12 +196,6 @@ def main():
         help="Path to boats data JSON file"
     )
     parser.add_argument(
-        '--members',
-        type=Path,
-        default=PROJECT_ROOT / 'data' / 'members' / 'j105_members_status.json',
-        help="Path to members status JSON file"
-    )
-    parser.add_argument(
         '--output',
         type=Path,
         default=PROJECT_ROOT / 'data' / 'payments' / 'payment_followup_report.txt',
@@ -243,7 +213,6 @@ def main():
         
         # Load data
         boats_data = load_boats_data(args.boats)
-        members_data = load_members_data(args.members)
         
         # Filter by club if specified
         if args.club:
@@ -251,7 +220,7 @@ def main():
             logger.info(f"Filtered to {len(boats_data)} boats from {args.club}")
         
         # Generate report
-        unpaid_boats, club_breakdown = generate_report(boats_data, members_data, args.output)
+        unpaid_boats, club_breakdown = generate_report(boats_data, output_file=args.output)
         
         return 0
         

@@ -1,5 +1,5 @@
 body {
-    background-image: url('./images/bg_waves.png');
+    background-image: url('../images/bg_waves.png');
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
@@ -11,7 +11,7 @@ body {
 }
 
 .body-background {
-    background-image: url('./images/bg_waves.png');
+    background-image: url('../images/bg_waves.png');
     background-repeat: repeat-x; /* Or repeat-y for vertical movement */
     animation: moveBackground 160s linear infinite;
 }

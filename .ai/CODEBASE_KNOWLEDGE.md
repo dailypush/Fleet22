@@ -1,6 +1,6 @@
 # Fleet 22 — Codebase Knowledge Base
 
-> **Last Updated:** 2026-03-10
+> **Last Updated:** 2026-10-21
 > **Maintained by:** AI agents across sessions
 
 ---
@@ -14,7 +14,7 @@
 - **Two components:** Static HTML website + Python backend scripts
 
 ### Fleet Details
-- ~22 boats in Fleet 22, ~661 total in J/105 class worldwide
+- ~22 boats in Fleet 22, ~662 total in J/105 class worldwide
 - Annual fleet dues: **$150/boat**
 - Payment methods: Venmo (@fleet22lakerie), Check, Online, Cash
 - Yacht clubs: EYC (7 boats), BHSC (4), NCYC (3), BYC (2), SSC (1), GRSC (1)
@@ -28,9 +28,9 @@
 | File | Records | Description |
 |------|---------|-------------|
 | `data/boats/boats_fleet22.json` | ~22 | Fleet 22 boat registry + dues status |
-| `data/members/j105_members_status.json` | ~900+ | Full J/105 class membership roster |
-| `data/sails/sail_tags.json` | ~8,091 | Sail certification records (all fleets) |
-| `data/combined/combined_fleet_data.json` | ~661 | Unified dataset (gitignored, CI artifact) |
+| `data/members/j105_members_status.json` | ~836 | Full J/105 class membership roster |
+| `data/sails/sail_tags.json` | ~8,336 | Sail certification records (all fleets) |
+| `data/combined/combined_fleet_data.json` | ~662 | Tracked unified dataset |
 | `data/fleet22_active_roster.json` | ~18 | Active Fleet 22 roster with owners |
 
 ### Schema: boats_fleet22.json (CURRENT — Simplified Format)
@@ -91,7 +91,7 @@
 
 ## 3. Scripts Architecture
 
-**Root:** `scripts/` — Run with `python -m module.name` from `scripts/` directory
+**Root:** `scripts/` — Run with `python -m scripts.module.name` from the repository root
 **Python:** 3.10+ | **~2,900 lines** across 18 files
 
 ### Scrapers (`scripts/scrapers/`)
@@ -99,8 +99,7 @@
 |--------|--------|--------|
 | `scrape_sail_tags.py` | archive.j105.org sail tag list | sail_tags.json |
 | `scrape_owner_status.py` | archive.j105.org owners page | j105_members_status.json |
-| `scrape_fleet_boats.py` | pages/members.html (GitHub) | boats_fleet22.json |
-| `scrape_fleet_boats_local.py` | pages/members.html (local) | boats_fleet22.json |
+| `scrape_fleet_boats.py` | Fresh members JSON, filtered to Fleet 22 | boats_fleet22.json |
 | `extract_world_sailing_numbers.py` | Race results CSV | — |
 
 ### Processors (`scripts/processors/`)
@@ -139,17 +138,17 @@
 
 ## 4. CI/CD Pipeline
 
-**File:** `.github/workflows/run-python-scripts.yml` (419 lines)
+**File:** `.github/workflows/run-python-scripts.yml`
 
-**Triggers:** Push to main, PRs to main, weekly cron (Monday midnight UTC), manual dispatch
+**Triggers:** Main push, PR, weekly Monday midnight UTC, manual dispatch.
 
-**Jobs (4):**
-1. `fetch-sail-tags` → Scrapes sail data
-2. `fetch-owners-status` → Scrapes member data
-3. `fetch-fleet-boats` → Scrapes fleet boat data (preserves payment fields!)
-4. `process-and-commit` → Download artifacts → validate → combine → commit & push
+**Jobs:** `checks` runs offline unit tests, source validation, shared-template drift checks and local site-link checks. Only non-PR main runs execute `update-data` with write permissions; concurrency groups prevent overlapping same-ref runs.
 
-**Commit behavior:** Only commits tracked files: `boats_fleet22.json`, `j105_members_status.json`, `sail_tags.json`. Combined data is artifact-only (gitignored).
+The staged updater (`scripts/update_all_data.py`) refreshes membership and sails, builds boats from fresh membership, validates all sources, generates combined data, then publishes with backups and individual atomic replacements. An empty parse, suspicious >20% drop, corrupt baseline, removed paid boat or concurrent local source edit prevents publication. `metadata.json` records successful live check time and published file hashes. Disk failures during publication can interrupt the sequence of individual replacements; backups allow recovery.
+
+**Commit behavior:** Tracks all three source snapshots, combined data/statistics and freshness metadata. Normal registry updates preserve manual Fleet Dues and payment reports.
+
+**Dependencies:** CI uses `requirements-scraping.lock`; optional plotting dependencies are separate. Run `python -m unittest discover -s tests -v` for offline regressions.
 
 ---
 
@@ -159,7 +158,7 @@
 |------|------|---------|
 | Home | `index.html` | Landing page with SEO (Schema.org, OG, Twitter) |
 | Members | `pages/members.html` | Fleet 22 boat list (scraped by scripts) |
-| Fleet Dues | `pages/fleetdues.html` | Payment status (fetches JSON from GitHub API) |
+| Fleet Dues | `pages/fleetdues.html` | Payment status (fetches local JSON + freshness metadata) |
 | Classifieds | `pages/classifieds.html` | Boat/equipment listings |
 | Join | `pages/join.html` | Fleet 22 membership info |
 | Media Kit | `pages/media_kit.html` | NA 2024 media/sponsor kit |
@@ -172,11 +171,13 @@
 - `analysis/sail_analysis_heatmap.html` — Comprehensive sail analysis
 - `analysis/treemap/treemap.html` — Sail tag treemap
 
+Shared public navigation/footer come from `templates/` via `python -m scripts.generate_site`. Generated HTML and sitemap stay checked in. Public pages use pinned Bootstrap 5.3.8 with integrity hashes. Analysis pages load shared deployment-local sail data; the duplicate treemap dataset and unused duplicate photos were removed. Original `/images/` URLs remain valid.
+
 ---
 
 ## 6. File Naming & Backup Conventions
 
-- **Backups:** Auto-created before writes: `<filename>_backup_YYYYMMDD_HHMMSS.json`
+- **Backups:** Auto-created before writes: `<filename>_backup_YYYYMMDD_HHMMSS_microseconds.json`
 - **Logs:** `logs/scraping.log`, `logs/data_management.log`, `logs/reports.log`
 - **Log format:** `YYYY-MM-DD HH:MM:SS - module - LEVEL - message`
 - **Payment reports:** `data/payments/payment_sync_report_YYYY.txt`, `payment_sync_summary_YYYY.txt`

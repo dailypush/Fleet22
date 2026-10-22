@@ -5,9 +5,26 @@ This script converts the year-specific dues format to a simple Paid/Not Paid for
 that is easier to maintain and reset each season.
 """
 
-import json
 import sys
 from pathlib import Path
+import re
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from utils.data_loader import load_json, save_json
+from utils.path_utils import BOATS_FILE
+from utils.validation import validate_records
+
+
+def dues_value(boat, field):
+    if field in boat:
+        if boat[field] not in {'Paid', 'Not Paid'}:
+            raise ValueError(f'Invalid {field} value')
+        return boat[field]
+    legacy = sorted((key for key in boat if re.fullmatch(re.escape(field) + r' \d{4}', key)), reverse=True)
+    if not legacy:
+        return 'Not Paid'
+    return 'Paid' if boat[legacy[0]] == 'Paid' else 'Not Paid'
+
 
 def convert_to_simplified_format(input_file: str, output_file: str = None):
     """
@@ -26,8 +43,7 @@ def convert_to_simplified_format(input_file: str, output_file: str = None):
     """
     
     # Read the input file
-    with open(input_file, 'r') as f:
-        data = json.load(f)
+    data = load_json(Path(input_file))
     
     # Convert each boat entry
     simplified_data = []
@@ -36,8 +52,8 @@ def convert_to_simplified_format(input_file: str, output_file: str = None):
             "Hull Number": boat.get("Hull Number", ""),
             "Boat Name": boat.get("Boat Name", ""),
             "Yacht Club": boat.get("Yacht Club", ""),
-            "Fleet Dues": "Paid" if boat.get("Fleet Dues 2025") == "Paid" else "Not Paid",
-            "Class Dues": "Paid" if boat.get("Class Dues 2025") == "Paid" else "Not Paid"
+            "Fleet Dues": dues_value(boat, "Fleet Dues"),
+            "Class Dues": dues_value(boat, "Class Dues")
         }
         simplified_data.append(simplified_boat)
     
@@ -46,8 +62,8 @@ def convert_to_simplified_format(input_file: str, output_file: str = None):
         output_file = input_file
     
     # Write the simplified data
-    with open(output_file, 'w') as f:
-        json.dump(simplified_data, f, indent=4)
+    validate_records(simplified_data, 'boats')
+    save_json(simplified_data, Path(output_file))
     
     print(f"✅ Converted {len(simplified_data)} boat entries to simplified format")
     print(f"📁 Output written to: {output_file}")
@@ -62,8 +78,7 @@ def convert_to_simplified_format(input_file: str, output_file: str = None):
 
 if __name__ == "__main__":
     # Default paths
-    project_root = Path(__file__).parent.parent.parent
-    input_file = project_root / "data" / "boats" / "boats_fleet22.json"
+    input_file = BOATS_FILE
     
     # Allow command-line override
     if len(sys.argv) > 1:

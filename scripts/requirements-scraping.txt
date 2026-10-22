@@ -1,0 +1,7 @@
+# Minimal dependencies for scheduled updates and the standard-library tests.
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+tqdm>=4.66.0
+
+# SoupSieve 3 requires Python 3.11.5; retain Python 3.10 compatibility.
+soupsieve<3

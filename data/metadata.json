@@ -1,0 +1,25 @@
+{
+    "checked_at": "2026-10-22T01:31:09.927624+00:00",
+    "files": {
+        "members/j105_members_status.json": {
+            "records": 836,
+            "sha256": "9a33c26646f9c369cca0fe40e1334a661b4b13b237ab5d3ef18b06c484faa232"
+        },
+        "sails/sail_tags.json": {
+            "records": 8336,
+            "sha256": "2f39e6be19191f823f97871d624361576e72962fff9f51b40b96edfe5f308883"
+        },
+        "boats/boats_fleet22.json": {
+            "records": 22,
+            "sha256": "15f374f0cac18585fcdce12f41770facdb8155dbba96807c368290a8c09ea927"
+        },
+        "combined/combined_fleet_data.json": {
+            "records": 662,
+            "sha256": "2c775fffa5b82e0ed402ed17824d89ffb3c69477b35dfe3b2cb465d9d2d90dd4"
+        },
+        "combined/fleet_statistics.json": {
+            "records": 7,
+            "sha256": "5f3f93830b55a397e34fcc1cb8af51c6e8858f1f7c7ea280f1e728d5d83844b0"
+        }
+    }
+}

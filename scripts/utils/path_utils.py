@@ -1,9 +1,10 @@
 """Centralized path management for Fleet22 scripts."""
 from pathlib import Path
+import os
 
 # Project root (3 levels up from utils/)
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = Path(os.environ.get("FLEET22_DATA_DIR", PROJECT_ROOT / "data"))
 LOGS_DIR = PROJECT_ROOT / "logs"
 
 # Data subdirectories
@@ -22,6 +23,7 @@ SAILS_FILE = SAIL_TAGS_FILE  # Alias for consistency
 MEMBERS_FILE = MEMBERS_DATA / "j105_members_status.json"
 COMBINED_FILE = COMBINED_DATA / "combined_fleet_data.json"
 STATISTICS_FILE = COMBINED_DATA / "fleet_statistics.json"
+METADATA_FILE = DATA_DIR / "metadata.json"
 
 def ensure_directories():
     """Create all required directories if they don't exist."""
@@ -32,7 +34,7 @@ def ensure_directories():
 def get_backup_path(original_file: Path) -> Path:
     """Generate a timestamped backup path for a file."""
     from datetime import datetime
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
     return original_file.parent / f"{original_file.stem}_backup_{timestamp}{original_file.suffix}"
 
 if __name__ == "__main__":

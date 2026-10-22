@@ -4,10 +4,13 @@ Reset all fleet dues to 'Not Paid' at the start of a new sailing season.
 This script resets both Fleet Dues and Class Dues for all boats.
 """
 
-import json
 import sys
 from pathlib import Path
-from datetime import datetime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from utils.data_loader import load_json, save_json
+from utils.path_utils import BOATS_FILE
+from utils.validation import validate_records
 
 def reset_dues_season(input_file: str, output_file: str = None, reset_class_dues: bool = True):
     """
@@ -20,8 +23,8 @@ def reset_dues_season(input_file: str, output_file: str = None, reset_class_dues
     """
     
     # Read the input file
-    with open(input_file, 'r') as f:
-        data = json.load(f)
+    data = load_json(Path(input_file))
+    validate_records(data, 'boats')
     
     # Reset dues for each boat
     reset_count = 0
@@ -40,17 +43,9 @@ def reset_dues_season(input_file: str, output_file: str = None, reset_class_dues
     if output_file is None:
         output_file = input_file
     
-    # Create backup before overwriting
-    if output_file == input_file:
-        backup_file = Path(input_file).parent / f"boats_fleet22_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(backup_file, 'w') as f:
-            json.dump(data, f, indent=4)
-        print(f"📁 Backup created: {backup_file}")
-    
-    # Write the reset data
-    with open(output_file, 'w') as f:
-        json.dump(data, f, indent=4)
-    
+    # save_json backs up the original bytes before replacing the destination.
+    save_json(data, Path(output_file))
+
     print(f"✅ Reset dues for {len(data)} boats")
     print(f"📁 Output written to: {output_file}")
     
@@ -68,8 +63,7 @@ def reset_dues_season(input_file: str, output_file: str = None, reset_class_dues
 def main():
     """Main execution function."""
     # Default paths
-    project_root = Path(__file__).parent.parent.parent
-    boats_file = project_root / "data" / "boats" / "boats_fleet22.json"
+    boats_file = BOATS_FILE
     
     # Parse command line arguments
     import argparse
@@ -109,8 +103,8 @@ Examples:
         sys.exit(1)
     
     # Load data to check current status
-    with open(input_file, 'r') as f:
-        data = json.load(f)
+    data = load_json(Path(input_file))
+    validate_records(data, 'boats')
     
     fleet_paid = sum(1 for b in data if b.get("Fleet Dues") == "Paid")
     class_paid = sum(1 for b in data if b.get("Class Dues") == "Paid")

@@ -1,6 +1,6 @@
 # Fleet 22 — Coding Conventions & Rules
 
-> **Last Updated:** 2026-03-10
+> **Last Updated:** 2026-10-21
 > **Purpose:** Prevent repeated mistakes. Read this BEFORE modifying any code or data.
 
 ---
@@ -11,9 +11,9 @@
 **Fleet Dues are MANUALLY maintained. NEVER auto-overwrite them.**
 
 When scraping or processing boat data:
-- Extract new data from HTML
+- Build fleet boats from freshly fetched class membership records
 - Load existing `boats_fleet22.json`
-- Merge: preserve `Fleet Dues` and `Class Dues` from existing data
+- Merge: preserve `Fleet Dues` and `Yacht Club` from existing data
 - Only `Class Dues` may be auto-synced from membership data
 
 ### 2. Dues Format (Simplified)
@@ -37,19 +37,16 @@ The project uses the **simplified** dues format as of late 2025:
 **Never mix key styles within the same file.**
 
 ### 4. Backup Before Write
-Always create backups before modifying JSON data files. Use `data_loader.save_json()` which handles this automatically. Pattern: `<filename>_backup_YYYYMMDD_HHMMSS.json`
+Always create backups before modifying JSON data files. Use `data_loader.save_json()` which handles this automatically. Pattern: `<filename>_backup_YYYYMMDD_HHMMSS_microseconds.json`
 
 ---
 
 ## Known Pitfalls
 
-### Data Format Mismatch
-Several scripts still reference the **legacy detailed format** (`"Fleet Dues 2025"`, `"Fleet Dues Payment Date"`):
-- `scripts/processors/manage_boat_data.py` — `BOAT_SCHEMA` uses old field names
-- `PAYMENT_DATA_PRESERVATION.md` — Documents the old format as the solution
-- `FLEET_DUES_MANUAL.md` — Describes the old format
+### Shared Membership and Payment Rules
+Use `utils/membership.py`: only a current-calendar-year full `Member` satisfies Class Dues, considering all co-owner records. Associate membership alone does not. Do not infer Fleet Dues from class membership.
 
-**If updating these scripts, align with the simplified format.**
+The boat manager and CSV tracker use the simplified boat schema. CSV details stay in a current-season `Paid YYYY` column; importing YES rows preserves existing paid statuses for NO/blank rows. Historical guides have been replaced with current commands.
 
 ### Yacht Club Data Gaps
 Some boats have missing or placeholder yacht clubs:
@@ -81,6 +78,8 @@ All nav bars should show:
 - [ ] Do not add fields not in the current schema
 
 ### Before Editing HTML Pages
+- Edit shared navigation/footer in `templates/`, then run `python -m scripts.generate_site`
+- Run `python -m scripts.generate_site --check` and `python -m scripts.validators.check_site`
 - [ ] Copyright year: 2026
 - [ ] Nav link text: "North Americans 2026"
 - [ ] Nav link href: `north_americans_2024.html` (unchanged filename)
@@ -97,8 +96,8 @@ All nav bars should show:
 
 ## Git & Deployment Notes
 
-- **Tracked data files:** `boats_fleet22.json`, `j105_members_status.json`, `sail_tags.json`
-- **Gitignored:** `combined_fleet_data.json`, `fleet_statistics.json`, `logs/`, `__pycache__/`
+- **Tracked data files:** source snapshots, `data/combined/*.json`, and `data/metadata.json`
+- **Gitignored:** backups, payment tracker CSVs, logs, bytecode and browser artifacts
 - **CI bot commits as:** `github-actions[bot]`
 - **Artifact retention:** 14 days
 - **Never commit:** Credentials, `.env` files, `node_modules`

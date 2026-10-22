@@ -10,8 +10,10 @@ from typing import List, Dict, Optional, Any
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.logger import setup_logger
-from utils.data_loader import save_json
-from utils.path_utils import SAILS_DATA
+from utils.data_loader import load_json, save_json
+from utils.http_client import fetch_text
+from utils.validation import validate_update
+from utils.path_utils import SAILS_FILE
 
 # Setup logging
 logger = setup_logger(__name__)
@@ -45,9 +47,7 @@ def fetch_url(url: str, headers: Dict[str, str]) -> str:
         time.sleep(1)
         logger.info(f'Requesting {url}')
         
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        return response.text
+        return fetch_text(url, headers)
     except requests.exceptions.RequestException as e:
         logger.error(f'Request failed: {e}')
         raise
@@ -110,13 +110,14 @@ def main():
         if table:
             data = extract_table_data(table)
             if data:
-                output_file = SAILS_DATA / 'sail_tags.json'
-                save_json(data, output_file)
+                previous = load_json(SAILS_FILE) if SAILS_FILE.exists() else None
+                validate_update(data, previous, 'sails')
+                save_json(data, SAILS_FILE)
                 logger.info(f"Successfully scraped {len(data)} sail tag records")
             else:
-                logger.warning("No data extracted from table")
+                raise ValueError("No sail records extracted; keeping the previous snapshot")
         else:
-            logger.warning('Table not found. The script may need adjustment based on the HTML structure.')
+            raise ValueError("Sail table not found; keeping the previous snapshot")
             
     except Exception as e:
         logger.error(f"Script failed: {e}")

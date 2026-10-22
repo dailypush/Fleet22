@@ -12,7 +12,9 @@ from typing import List, Dict, Optional
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.logger import setup_logger
-from utils.data_loader import save_json
+from utils.data_loader import load_json, save_json
+from utils.http_client import fetch_text
+from utils.validation import validate_update
 from utils.path_utils import MEMBERS_FILE
 
 # Setup logging
@@ -41,9 +43,7 @@ def fetch_owner_status() -> str:
         # Send a GET request to the website with headers
         logger.info(f'Requesting {URL}')
         
-        response = requests.get(URL, headers=HEADERS)
-        response.raise_for_status()
-        return response.text
+        return fetch_text(URL, HEADERS)
 
     except requests.exceptions.RequestException as e:
         logger.error(f'Request failed: {e}')
@@ -120,11 +120,12 @@ def main():
         data_list = parse_owner_data(html_content)
         
         if data_list:
-            # Save the data
+            previous = load_json(MEMBERS_FILE) if MEMBERS_FILE.exists() else None
+            validate_update(data_list, previous, 'members')
             save_json(data_list, MEMBERS_FILE)
             logger.info(f"Successfully scraped {len(data_list)} owner records")
         else:
-            logger.warning("No data extracted")
+            raise ValueError("No owner records extracted; keeping the previous snapshot")
             
     except Exception as e:
         logger.error(f"Script failed: {e}")

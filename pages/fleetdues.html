@@ -6,112 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fleet Dues Status</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .paid {
-            background-color: #c3e6cb;
-            /* light green for paid */
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        .not-paid {
-            background-color: #f5c6cb;
-            /* light red for not paid */
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main navigation">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="https://fleet22.us">Fleet 22 Lake Erie</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./classifieds.html">Classifieds</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./members.html" aria-current="page">Members</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./join.html">Join</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./north_americans_2024.html">North Americans 2026</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- shared:navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" aria-label="Main navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Fleet 22 Lake Erie</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/classifieds.html">Classifieds</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/members.html">Members</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../pages/fleetdues.html" aria-current="page">Fleet Dues</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/join.html">Join</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/north_americans_2024.html">North Americans 2026</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+<!-- /shared:navigation -->
+    <main id="main-content">
     <div class="container mt-5">
-        <h2>Fleet Dues Status</h2>
-        <p class="text-muted" id="lastUpdatedDate">Last Updated on: </p>
-        <table class="table table-striped">
+        <h1>Fleet Dues Status</h1>
+        <p class="text-muted" id="lastUpdatedDate">Checking data freshness…</p>
+        <p class="small text-muted d-sm-none">Scroll the table horizontally to see all dues columns.</p>
+        <div class="table-responsive" tabindex="0" role="region" aria-label="Fleet dues table">
+        <table class="table table-striped" data-boats-table data-dues>
             <thead>
                 <tr>
-                    <th>Hull Number</th>
-                    <th>Boat Name</th>
-                    <th>Yacht Club</th>
-                    <th>Fleet Dues</th>
-                    <th>Class Dues</th>
+                    <th scope="col">Hull Number</th>
+                    <th scope="col">Boat Name</th>
+                    <th scope="col">Yacht Club</th>
+                    <th scope="col">Fleet Dues</th>
+                    <th scope="col">Class Dues</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody aria-live="polite">
                 <!-- Table rows will be inserted here -->
             </tbody>
         </table>
+        </div>
     </div>
 
+    </main>
     <!-- Bootstrap and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Function to dynamically fill the table with fleet data
-        function fillTable(data) {
-            const tbody = document.querySelector('table tbody');
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${item["Hull Number"]}</td>
-                    <td>${item["Boat Name"]}</td>
-                    <td>${item["Yacht Club"]}</td>
-                    <td class="${item["Fleet Dues"] === 'Paid' ? 'paid' : 'not-paid'}">${item["Fleet Dues"]}</td>
-                    <td class="${item["Class Dues"] === 'Paid' ? 'paid' : 'not-paid'}">${item["Class Dues"]}</td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script src="../assets/js/boats-table.js" defer></script>
+<!-- shared:footer -->
+<footer class="site-footer mt-5">
+    <div class="container">
+        <p>Contact us: <a href="mailto:info@fleet22.us">info@fleet22.us</a></p>
 
-        fetch('https://api.github.com/repos/dailypush/Fleet22/contents/data/boats/boats_fleet22.json')
-            .then(response => response.json())
-            .then(data => {
-                const content = atob(data.content);
-                const boatsData = JSON.parse(content);
-                fillTable(boatsData);
-                
-                // Fetch last updated date
-                return fetch('https://api.github.com/repos/dailypush/Fleet22/commits?path=data/boats/boats_fleet22.json');
-            })
-            .then(response => response.json())
-            .then(commits => {
-                if (commits.length > 0) {
-                    const lastUpdated = commits[0].commit.author.date; // Get the date of the most recent commit
-                    document.getElementById('lastUpdatedDate').textContent += new Date(lastUpdated).toLocaleDateString();
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Optionally, update the UI to inform the user that an error occurred.
-            });
-    </script>
+        <p>&copy; 2026 Fleet 22 Lake Erie. All rights reserved.</p>
+    </div>
+</footer>
+<!-- /shared:footer -->
 </body>
 
 </html>

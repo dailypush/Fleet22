@@ -16,6 +16,9 @@ from utils.logger import setup_logger
 from utils.data_loader import load_json
 from utils.path_utils import PROJECT_ROOT
 
+CURRENT_YEAR = datetime.now().year
+PAID_COLUMN = f'Paid {CURRENT_YEAR}'
+
 # Setup logging
 logger = setup_logger('payment_tracker', PROJECT_ROOT / 'logs' / 'reports.log')
 
@@ -29,7 +32,7 @@ def create_payment_tracker(boats_data, output_file):
             'Hull',
             'Boat Name',
             'Yacht Club',
-            'Paid 2026',
+            PAID_COLUMN,
             'Payment Date',
             'Payment Method',
             'Amount',
@@ -40,7 +43,7 @@ def create_payment_tracker(boats_data, output_file):
         output_path = Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         
-        with open(output_path, 'w', newline='') as csvfile:
+        with open(output_path, 'x', newline='', encoding='utf-8') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
             
@@ -49,7 +52,7 @@ def create_payment_tracker(boats_data, output_file):
                     'Hull': boat.get('Hull Number', ''),
                     'Boat Name': boat.get('Boat Name', ''),
                     'Yacht Club': boat.get('Yacht Club', ''),
-                    'Paid 2026': 'NO',
+                    PAID_COLUMN: 'YES' if boat.get('Fleet Dues') == 'Paid' else 'NO',
                     'Payment Date': '',
                     'Payment Method': '',
                     'Amount': '',
@@ -72,17 +75,18 @@ def update_payment_status(tracker_file, hull, paid=True, payment_date=None, meth
         rows = []
         updated = False
         
-        with open(tracker_file, 'r') as csvfile:
+        with open(tracker_file, 'r', newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
+            if not {'Hull', PAID_COLUMN}.issubset(reader.fieldnames or []):
+                raise ValueError(f'Tracker must contain Hull and {PAID_COLUMN}')
             for row in reader:
                 if row['Hull'] == str(hull):
-                    row['Paid 2026'] = 'YES' if paid else 'NO'
+                    row[PAID_COLUMN] = 'YES' if paid else 'NO'
                     if payment_date:
                         row['Payment Date'] = payment_date
                     if method:
                         row['Payment Method'] = method
-                    if paid and amount:
-                        row['Amount'] = f"${amount}"
+                    row['Amount'] = f'${amount}' if paid else ''
                     updated = True
                     logger.info(f"Updated hull {hull}: Paid={paid}")
                 rows.append(row)
@@ -92,7 +96,7 @@ def update_payment_status(tracker_file, hull, paid=True, payment_date=None, meth
             return False
         
         # Write back
-        with open(tracker_file, 'w', newline='') as csvfile:
+        with open(tracker_file, 'w', newline='', encoding='utf-8') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=rows[0].keys())
             writer.writeheader()
             writer.writerows(rows)
@@ -112,10 +116,12 @@ def generate_summary(tracker_file):
         paid_boats = []
         unpaid_boats = []
         
-        with open(tracker_file, 'r') as csvfile:
+        with open(tracker_file, 'r', newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
+            if not {'Hull', PAID_COLUMN}.issubset(reader.fieldnames or []):
+                raise ValueError(f'Tracker must contain Hull and {PAID_COLUMN}')
             for row in reader:
-                if row['Paid 2026'].upper() == 'YES':
+                if row[PAID_COLUMN].upper() == 'YES':
                     paid_count += 1
                     paid_boats.append(row)
                     # Extract amount
@@ -178,7 +184,7 @@ def main():
     parser.add_argument(
         '--tracker',
         type=Path,
-        default=PROJECT_ROOT / 'data' / 'payments' / 'payment_tracker_2026.csv',
+        default=PROJECT_ROOT / 'data' / 'payments' / f'payment_tracker_{CURRENT_YEAR}.csv',
         help="Path to payment tracker CSV file"
     )
     parser.add_argument(

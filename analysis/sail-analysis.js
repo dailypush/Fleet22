@@ -238,13 +238,14 @@ class SailAnalysisHeatmap {
         const sailTypes = [...new Set(hullData.map(item => item['Sail Type']))];
         const years = [...new Set(hullData.map(item => new Date(item['Delivery Date']).getFullYear()))];
 
-        statsDiv.innerHTML = `
-            <strong>Hull ${hull} Statistics:</strong><br>
-            Total Sails: ${totalSails}<br>
-            Sailmakers: ${sailmakers.join(', ')}<br>
-            Sail Types: ${sailTypes.join(', ')}<br>
-            Years: ${Math.min(...years)} - ${Math.max(...years)}
-        `;
+        const title = document.createElement('strong');
+        title.textContent = `Hull ${hull} Statistics:`;
+        statsDiv.replaceChildren(title);
+        for (const line of [`Total Sails: ${totalSails}`, `Sailmakers: ${sailmakers.join(', ')}`,
+                            `Sail Types: ${sailTypes.join(', ')}`,
+                            `Years: ${Math.min(...years)} - ${Math.max(...years)}`]) {
+            statsDiv.append(document.createElement('br'), document.createTextNode(line));
+        }
     }
 
     clearVisualization() {
@@ -268,7 +269,10 @@ class SailAnalysisHeatmap {
     }
 
     showError(message) {
-        document.getElementById('loading').innerHTML = `<p class="text-danger">${message}</p>`;
+        const error = document.createElement('p');
+        error.className = 'text-danger';
+        error.textContent = message;
+        document.getElementById('loading').replaceChildren(error);
     }
 
     // Public method to handle window resize
