@@ -4,6 +4,33 @@
 
 The Sail Declaration Form is a modern, ES6+ JavaScript application for managing J/105 North American Championship sail declarations. The codebase has been refactored to follow best practices with proper separation of concerns, comprehensive error handling, and detailed documentation.
 
+## Hull-to-boat lookup and manual overrides
+
+Start with a hull number, boat name, or owner in `Sail_dec_auto.html`. Boat and owner fields show up to eight matching suggestions after two characters, matching partial names regardless of case or accents. Each suggestion includes its hull and related boat/owner to distinguish similar names. Click or tap a suggestion, or use the arrow keys and Enter, to fill the hull, boat, owner and available sail choices.
+
+Typing alone never selects a boat. Escape, Tab, or Enter without a highlighted option keeps the typed text as a manual entry. No match or an unavailable lookup also permits free text. Choosing a different hull clears the previous boat's contact/color/sail details; choosing the same hull preserves them.
+
+Enter a hull number to fill the boat name and owner directly. Both fields remain editable. **Use registry details** restores the suggested values after an override. Changes affect only the declaration; they do not update the fleet registry.
+
+The lookup uses deployment-local membership (`data/members/j105_members_status.json`) and boat (`data/boats/boats_fleet22.json`) snapshots. It prefers owner (`OW`) records over crew/associate records, then current full membership and recent membership years. Equally recent owner records are shown together as co-owners; local fleet boat names take precedence. Historical sail purchasers are never used as current owners.
+
+Boat lookup works independently of sail availability. Missing matches or unavailable membership data leave the owner editable and show inline guidance. Registry results arriving after a manual edit fill only untouched fields. Switching hull clears the previous boat's identity, contact details, colors and sail selections. Leading zeros and surrounding spaces are normalized for matching and storage.
+
+Save/Load preserves edited owner and boat names, including intentionally blank fields, and restores sail selections. Printed output uses those same values and escapes HTML characters.
+
+Run the focused offline tests from the repository root (Node 22 in CI):
+
+```bash
+node --test tests/test_sail_declaration.cjs
+```
+
+For browser testing, serve the repository over HTTP rather than opening a file URL:
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+# Open http://127.0.0.1:8000/tools/documents/Sail_dec_auto.html
+```
+
 ## Architecture
 
 ### File Structure
@@ -65,7 +92,7 @@ async init()
 ```javascript
 async loadSailData()
 ```
-- Fetches sail tag data from GitHub repository
+- Fetches sail tag data from this deployment
 - Implements error handling for network failures
 - Shows loading states during fetch
 - Validates data format
@@ -77,7 +104,7 @@ handleHullNumberChange()
 ```
 - Responds to hull number input
 - Filters sails for the selected hull
-- Auto-fills owner information
+- Auto-fills boat and owner information from registry snapshots, preserving manual edits
 - Initializes sail dropdowns
 
 ```javascript
@@ -266,10 +293,10 @@ State is modified through dedicated methods:
 
 ### Event Listeners
 
-1. **Input Events with Debouncing**
+1. **Hull Input Events**
    ```javascript
-   this.elements.hullNumber.addEventListener('input', 
-       this.debounce(() => this.handleHullNumberChange(), 300)
+   this.elements.hullNumber.addEventListener('input',
+       () => this.handleHullNumberChange()
    );
    ```
 
@@ -375,7 +402,7 @@ Example: `sailDeclaration_123`
     spinnaker1Color: "Red/White",
     spinnaker2Color: "Blue",
     savedAt: "2025-10-11T12:00:00.000Z",
-    version: "2.0"
+    version: "2.2"
 }
 ```
 
@@ -487,7 +514,7 @@ For older browsers, consider adding polyfills for:
 
 1. Clone the repository
 2. Navigate to `tools/documents/`
-3. Open `Sail_dec_auto.html` in a modern browser
+3. Serve the repository over HTTP and open `tools/documents/Sail_dec_auto.html` in a modern browser
 4. Open browser DevTools to view console logs
 
 ### Debugging
@@ -510,7 +537,7 @@ Enable verbose logging by checking browser console. The application logs:
 
 ## Credits
 
-- **Version**: 2.0.0
+- **Version**: 2.2.0
 - **Author**: Fleet22
 - **License**: MIT
 - **Repository**: https://github.com/dailypush/Fleet22
@@ -525,4 +552,4 @@ For issues or questions:
 
 ---
 
-Last Updated: October 11, 2025
+Last Updated: October 21, 2026

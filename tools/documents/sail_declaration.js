@@ -5,7 +5,7 @@
  * It handles fetching sail data, form validation, sail selection, and local storage persistence.
  * 
  * @module SailDeclarationManager
- * @version 2.0.0
+ * @version 2.2.0
  * @author Fleet22
  */
 
@@ -20,6 +20,8 @@ class SailDeclarationManager {
         // Configuration
         this.config = {
             dataUrl: '../../data/sails/sail_tags.json',
+            membersUrl: '../../data/members/j105_members_status.json',
+            boatsUrl: '../../data/boats/boats_fleet22.json',
             storagePrefix: 'sailDeclaration_',
             autoSaveDelay: 2000, // milliseconds
             sailTypes: {
@@ -32,6 +34,12 @@ class SailDeclarationManager {
         // State management
         this.state = {
             sailsData: [],
+            boatLookup: new Map(),
+            boatLookupLoaded: false,
+            ownerLookupUnavailable: false,
+            activeHull: '',
+            identityOverrides: new Set(),
+            suggestions: {field: null, matches: [], activeIndex: -1},
             isLoading: false,
             hasError: false,
             errorMessage: '',
@@ -65,8 +73,9 @@ class SailDeclarationManager {
             // Setup event listeners
             this.setupEventListeners();
             
-            // Load sail data
-            await this.loadSailData();
+            // Boat lookup is optional; unavailable registry data must not block manual entry.
+            await Promise.all([this.loadSailData(), this.loadBoatData()]);
+            this.handleHullNumberChange();
             
             // Try to restore last saved state if hull number exists
             this.checkForAutoRestore();
@@ -85,7 +94,8 @@ class SailDeclarationManager {
         const elementIds = [
             'hullNumber', 'owner', 'boatName', 'email', 'mobile',
             'jib1', 'jib2', 'main', 'spinnaker1', 'spinnaker2',
-            'spinnaker1Color', 'spinnaker2Color'
+            'spinnaker1Color', 'spinnaker2Color', 'boatLookupStatus', 'useRegistryDetails',
+            'ownerSuggestions', 'boatNameSuggestions', 'suggestionStatus'
         ];
 
         elementIds.forEach(id => {
@@ -108,12 +118,28 @@ class SailDeclarationManager {
      * @private
      */
     setupEventListeners() {
-        // Hull number input with debouncing
+        // Clear the previous boat immediately when the hull changes.
         if (this.elements.hullNumber) {
             this.elements.hullNumber.addEventListener('input', 
-                this.debounce(() => this.handleHullNumberChange(), 300)
+                () => this.handleHullNumberChange()
             );
         }
+
+        ['owner', 'boatName'].forEach(field => {
+            this.elements[field]?.addEventListener('input', () => {
+                this.state.identityOverrides.add(field);
+                this.updateBoatLookupStatus();
+                this.showIdentitySuggestions(field);
+            });
+            this.elements[field]?.addEventListener('focus', () => this.showIdentitySuggestions(field));
+            this.elements[field]?.addEventListener('blur', () => this.closeIdentitySuggestions());
+            this.elements[field]?.addEventListener('keydown', event => this.handleSuggestionKeydown(event, field));
+        });
+        this.elements.useRegistryDetails?.addEventListener('click', () => {
+            this.state.identityOverrides.clear();
+            this.applyBoatDetails();
+            this.markAsDirty();
+        });
 
         // Sail dropdown changes
         ['jib1', 'jib2', 'spinnaker1', 'spinnaker2', 'main'].forEach(dropdownId => {
@@ -173,6 +199,7 @@ class SailDeclarationManager {
             }
 
             this.state.sailsData = data;
+            this.handleHullNumberChange();
             console.log(`Successfully loaded ${data.length} sail records`);
             
             this.hideLoadingState();
@@ -188,29 +215,251 @@ class SailDeclarationManager {
         }
     }
 
+    /** Build hull lookups from owner records, never from historical sail purchases. */
+    static buildBoatLookup(members, boats, year = new Date().getFullYear()) {
+        const lookup = new Map();
+        const grouped = new Map();
+        const normalizeHull = value => String(value ?? '').trim().replace(/^0+(?=\d)/, '');
+        const rank = record => {
+            const match = /^(Member|Associate) (\d{4})$/.exec(record['Class Membership'] || '');
+            const memberYear = match ? Number(match[2]) : 0;
+            return [Number(match?.[1] === 'Member' && memberYear === year), memberYear,
+                    Number(match?.[1] === 'Member')];
+        };
+        const compare = (a, b) => {
+            const left = rank(a), right = rank(b);
+            for (let i = 0; i < left.length; i++) {
+                if (left[i] !== right[i]) return right[i] - left[i];
+            }
+            return 0;
+        };
+        for (const member of members) {
+            const hull = normalizeHull(member.Hull);
+            if (!/^\d+$/.test(hull) || hull === '0') continue;
+            if (!grouped.has(hull)) grouped.set(hull, []);
+            grouped.get(hull).push(member);
+        }
+        for (const [hull, records] of grouped) {
+            const owners = records.filter(record => record.Status === 'OW').sort(compare);
+            const primary = owners[0] || [...records].sort(compare)[0];
+            // Equally recent owner records may be co-owners; keep their names together.
+            const currentOwners = owners.filter(record => compare(record, owners[0]) === 0);
+            const names = [...new Set(currentOwners.map(record => record['Owners/Helmsmen']?.trim()).filter(Boolean))].sort();
+            lookup.set(hull, {boatName: primary['Boat Name'] || '', owner: names.join(' / ')});
+        }
+        for (const boat of boats) {
+            const hull = normalizeHull(boat['Hull Number']);
+            if (!/^\d+$/.test(hull) || hull === '0') continue;
+            const details = lookup.get(hull) || {boatName: '', owner: ''};
+            if (boat['Boat Name']) details.boatName = boat['Boat Name'];
+            lookup.set(hull, details);
+        }
+        return lookup;
+    }
+
+    /** Load identity sources independently of sail availability. */
+    async loadBoatData() {
+        const fetchRecords = async url => {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const records = await response.json();
+            if (!Array.isArray(records) || !records.every(record => record && typeof record === 'object')) {
+                throw new Error('Invalid boat lookup data');
+            }
+            return records;
+        };
+        const [members, boats] = await Promise.allSettled([
+            fetchRecords(this.config.membersUrl), fetchRecords(this.config.boatsUrl)
+        ]);
+        this.state.ownerLookupUnavailable = members.status !== 'fulfilled';
+        this.state.boatLookup = SailDeclarationManager.buildBoatLookup(
+            members.status === 'fulfilled' ? members.value : [],
+            boats.status === 'fulfilled' ? boats.value : []
+        );
+        this.state.boatLookupLoaded = true;
+        this.applyBoatDetails();
+        if (typeof document !== 'undefined') {
+            const field = ['owner', 'boatName'].find(id => document.activeElement === this.elements[id]);
+            if (field) this.showIdentitySuggestions(field);
+        }
+    }
+
+    /** Match names locally; typing never selects a boat or changes the hull. */
+    findBoatSuggestions(field, query, limit = 8) {
+        if (!['owner', 'boatName'].includes(field)) return [];
+        const normalize = value => String(value || '').normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/\s+/g, ' ');
+        const search = normalize(query);
+        if (search.length < 2) return [];
+        return [...this.state.boatLookup].map(([hull, details]) => ({hull, ...details}))
+            .filter(match => normalize(match[field]).includes(search))
+            .sort((a, b) => Number(normalize(b[field]).startsWith(search)) - Number(normalize(a[field]).startsWith(search))
+                || a[field].localeCompare(b[field]) || Number(a.hull) - Number(b.hull))
+            .slice(0, limit);
+    }
+
+    showIdentitySuggestions(field) {
+        const input = this.elements[field];
+        const list = this.elements[`${field}Suggestions`];
+        if (!input || !list) return;
+        this.closeIdentitySuggestions();
+        const matches = this.findBoatSuggestions(field, input.value);
+        this.state.suggestions = {field, matches, activeIndex: -1};
+        if (!matches.length) {
+            if (this.elements.suggestionStatus && input.value.trim().length >= 2) {
+                this.elements.suggestionStatus.textContent = this.state.boatLookupLoaded
+                    ? 'No matching suggestions. You can keep your entry.' : 'Suggestions are loading. You can keep typing.';
+            }
+            return;
+        }
+        matches.forEach((match, index) => {
+            const option = document.createElement('div');
+            option.id = `${field}-suggestion-${index}`;
+            option.className = 'identity-option';
+            option.setAttribute('role', 'option');
+            option.setAttribute('aria-selected', 'false');
+            const name = document.createElement('strong');
+            name.textContent = match[field];
+            const context = document.createElement('small');
+            context.textContent = `Hull ${match.hull} · ${field === 'owner' ? match.boatName || 'Boat name unavailable' : match.owner || 'Owner unavailable'}`;
+            option.append(name, context);
+            // Keep input focus so touch and mouse selections don't race its blur handler.
+            option.addEventListener('pointerdown', event => event.preventDefault());
+            option.addEventListener('click', () => this.selectBoatSuggestion(match));
+            list.appendChild(option);
+        });
+        list.hidden = false;
+        input.setAttribute('aria-expanded', 'true');
+        if (this.elements.suggestionStatus) {
+            this.elements.suggestionStatus.textContent = `${matches.length} suggestions. Use the up and down arrow keys and Enter to select, or keep typing your own details.`;
+        }
+    }
+
+    closeIdentitySuggestions() {
+        for (const field of ['owner', 'boatName']) {
+            const input = this.elements[field];
+            input?.setAttribute?.('aria-expanded', 'false');
+            input?.removeAttribute?.('aria-activedescendant');
+            const list = this.elements[`${field}Suggestions`];
+            if (list) {
+                list.hidden = true;
+                list.replaceChildren();
+            }
+        }
+        if (this.elements.suggestionStatus) this.elements.suggestionStatus.textContent = '';
+        this.state.suggestions = {field: null, matches: [], activeIndex: -1};
+    }
+
+    handleSuggestionKeydown(event, field) {
+        if (event.key === 'Escape' || event.key === 'Tab') {
+            this.closeIdentitySuggestions();
+            return;
+        }
+        if (event.key === 'Enter') {
+            // Enter keeps a manual entry unless an option was explicitly highlighted.
+            event.preventDefault();
+            const {matches, activeIndex, field: activeField} = this.state.suggestions;
+            if (activeField === field && activeIndex >= 0) this.selectBoatSuggestion(matches[activeIndex]);
+            else this.closeIdentitySuggestions();
+            return;
+        }
+        if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+        if (this.state.suggestions.field !== field || !this.state.suggestions.matches.length) {
+            this.showIdentitySuggestions(field);
+        }
+        const suggestions = this.state.suggestions;
+        if (!suggestions.matches.length) return;
+        event.preventDefault();
+        const count = suggestions.matches.length;
+        suggestions.activeIndex = event.key === 'ArrowDown'
+            ? (suggestions.activeIndex + 1) % count
+            : (suggestions.activeIndex < 0 ? count - 1 : (suggestions.activeIndex - 1 + count) % count);
+        const list = this.elements[`${field}Suggestions`];
+        [...list.children].forEach((option, index) => {
+            option.setAttribute('aria-selected', String(index === suggestions.activeIndex));
+        });
+        const active = list.children[suggestions.activeIndex];
+        this.elements[field].setAttribute('aria-activedescendant', active.id);
+        active.scrollIntoView({block: 'nearest'});
+    }
+
+    selectBoatSuggestion(match) {
+        if (!match || !this.state.boatLookup.has(match.hull)) return;
+        this.closeIdentitySuggestions();
+        this.state.identityOverrides.clear();
+        this.elements.hullNumber.value = match.hull;
+        this.handleHullNumberChange();
+        this.markAsDirty();
+    }
+
+    getHullNumber() {
+        return (this.elements.hullNumber?.value || '').trim().replace(/^0+(?=\d)/, '');
+    }
+
+    /** Fill only untouched identity fields, including when a lookup finishes late. */
+    applyBoatDetails() {
+        const details = this.state.boatLookup.get(this.getHullNumber());
+        for (const field of ['owner', 'boatName']) {
+            if (this.elements[field] && !this.state.identityOverrides.has(field)) {
+                this.elements[field].value = details?.[field] || '';
+            }
+        }
+        this.updateBoatLookupStatus();
+    }
+
+    updateBoatLookupStatus() {
+        const hull = this.getHullNumber();
+        const details = this.state.boatLookup.get(hull);
+        let message = 'Start with a hull number, boat name, or owner. Choose a suggestion or enter your own details.';
+        if (!hull && this.state.identityOverrides.size) {
+            message = 'Choose a suggestion to fill the hull, or enter the hull number manually.';
+        }
+        if (hull) {
+            if (!this.state.boatLookupLoaded) {
+                message = 'Looking up boat details. You can also enter them manually.';
+            } else if (this.state.identityOverrides.size) {
+                message = `Manual details in use for hull ${hull}.`;
+            } else if (details?.owner && details?.boatName) {
+                message = `Boat and owner matched to hull ${hull}. Edit either field to override.`;
+            } else if (this.state.ownerLookupUnavailable) {
+                message = 'Owner lookup is unavailable. Enter any missing details manually.';
+            } else if (details?.owner || details?.boatName) {
+                message = `Some details matched to hull ${hull}. Enter any missing details manually.`;
+            } else {
+                message = `No boat or owner match for hull ${hull}. Enter the details manually.`;
+            }
+        }
+        if (this.elements.boatLookupStatus) this.elements.boatLookupStatus.textContent = message;
+        if (this.elements.useRegistryDetails) {
+            this.elements.useRegistryDetails.disabled = !details || !(details.owner || details.boatName);
+        }
+    }
+
     /**
      * Handle hull number input changes
      * Updates form with owner information and populates sail dropdowns
      * @private
      */
     handleHullNumberChange() {
-        const hullNumber = this.elements.hullNumber?.value?.trim();
-        
-        if (!hullNumber) {
+        const hullNumber = this.getHullNumber();
+        if (hullNumber !== this.state.activeHull) {
             this.clearAllFields();
-            return;
+            this.state.identityOverrides.clear();
+            this.state.activeHull = hullNumber;
         }
+        this.applyBoatDetails();
+        if (!hullNumber) return;
 
         console.log(`Hull number changed: ${hullNumber}`);
 
         // Filter sails for this hull number
         const filteredSails = this.state.sailsData.filter(
-            sail => sail.Hull === hullNumber
+            sail => String(sail.Hull) === hullNumber
         );
 
         if (filteredSails.length === 0) {
             console.log(`No sails found for hull ${hullNumber}`);
-            this.clearAllFields();
+            this.initializeSailDropdowns([]);
             this.showMessage(`No sails found for hull number ${hullNumber}`, 'warning');
             return;
         }
@@ -219,16 +468,6 @@ class SailDeclarationManager {
         const sortedSails = [...filteredSails].sort((a, b) => 
             new Date(b['Delivery Date']) - new Date(a['Delivery Date'])
         );
-
-        // Auto-fill owner with most recent purchase
-        if (this.elements.owner && sortedSails[0].Purchaser) {
-            this.elements.owner.value = sortedSails[0].Purchaser;
-        }
-
-        // Clear boat name (user should fill this)
-        if (this.elements.boatName) {
-            this.elements.boatName.value = '';
-        }
 
         // Initialize sail dropdowns
         this.initializeSailDropdowns(sortedSails);
@@ -242,8 +481,7 @@ class SailDeclarationManager {
      * @param {Array} sails - Filtered sail data for the selected hull
      */
     initializeSailDropdowns(sails) {
-        // Reset selected tags
-        this.state.selectedTags.clear();
+        this.updateSelectedTags();
 
         // Populate each dropdown
         this.populateSailDropdown('jib1', sails, this.config.sailTypes.jib);
@@ -251,6 +489,7 @@ class SailDeclarationManager {
         this.populateSailDropdown('spinnaker1', sails, this.config.sailTypes.spinnaker);
         this.populateSailDropdown('spinnaker2', sails, this.config.sailTypes.spinnaker);
         this.populateSailDropdown('main', sails, this.config.sailTypes.main);
+        this.updateSelectedTags();
     }
 
     /**
@@ -312,7 +551,7 @@ class SailDeclarationManager {
         this.updateSelectedTags();
         
         // Refresh all dropdowns to exclude newly selected tags
-        const hullNumber = this.elements.hullNumber?.value?.trim();
+        const hullNumber = this.getHullNumber();
         if (hullNumber) {
             const filteredSails = this.state.sailsData.filter(
                 sail => sail.Hull === hullNumber
@@ -429,7 +668,7 @@ class SailDeclarationManager {
      */
     getFormData() {
         return {
-            hullNumber: this.elements.hullNumber?.value || '',
+            hullNumber: this.getHullNumber(),
             owner: this.elements.owner?.value || '',
             boatName: this.elements.boatName?.value || '',
             email: this.elements.email?.value || '',
@@ -479,15 +718,20 @@ class SailDeclarationManager {
      * @returns {string} HTML content for printing
      */
     generatePrintContent(formData, sailDetails) {
+        // Manual overrides and registry strings must print as text, not markup.
+        const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[character]);
+        formData = Object.fromEntries(Object.entries(formData).map(([key, value]) => [key, escape(value)]));
         const formatSailRow = (sailType, sail, color = '') => {
             if (!sail) return '';
             
             return `
                 <tr>
                     <td>${sailType}</td>
-                    <td>${sail['Certificate No.'] || 'N/A'}</td>
-                    <td>${sail.Sailmaker || 'N/A'}</td>
-                    <td>${sail['Delivery Date'] || 'N/A'}</td>
+                    <td>${escape(sail['Certificate No.'] || 'N/A')}</td>
+                    <td>${escape(sail.Sailmaker || 'N/A')}</td>
+                    <td>${escape(sail['Delivery Date'] || 'N/A')}</td>
                     <td>${color || 'N/A'}</td>
                 </tr>
             `;
@@ -597,7 +841,7 @@ class SailDeclarationManager {
             const dataToSave = {
                 ...formData,
                 savedAt: new Date().toISOString(),
-                version: '2.0'
+                version: '2.2'
             };
 
             localStorage.setItem(storageKey, JSON.stringify(dataToSave));
@@ -616,7 +860,7 @@ class SailDeclarationManager {
      */
     async loadDeclaration() {
         try {
-            const hullNumber = this.elements.hullNumber?.value?.trim();
+            const hullNumber = this.getHullNumber();
             
             if (!hullNumber) {
                 alert('Please enter a hull number to load data.');
@@ -633,17 +877,11 @@ class SailDeclarationManager {
 
             const formData = JSON.parse(savedData);
             
-            // Restore form fields
-            this.restoreFormData(formData);
-            
-            // Update form with hull-specific data
+            // Populate the selected hull before restoring saved manual values.
             this.handleHullNumberChange();
-            
-            // Wait for dropdowns to populate, then restore sail selections
-            setTimeout(() => {
-                this.restoreSailSelections(formData);
-                this.state.isDirty = false;
-            }, 100);
+            this.restoreFormData(formData);
+            this.restoreSailSelections(formData);
+            this.state.isDirty = false;
 
             const savedDate = formData.savedAt ? new Date(formData.savedAt).toLocaleString() : 'Unknown';
             this.showMessage(`Declaration for Hull ${hullNumber} loaded successfully! (Saved: ${savedDate})`, 'success');
@@ -660,13 +898,16 @@ class SailDeclarationManager {
      * @param {Object} formData - Saved form data
      */
     restoreFormData(formData) {
+        this.closeIdentitySuggestions();
         const fields = ['owner', 'boatName', 'email', 'mobile', 'spinnaker1Color', 'spinnaker2Color'];
         
         fields.forEach(field => {
-            if (this.elements[field] && formData[field]) {
+            if (this.elements[field] && Object.prototype.hasOwnProperty.call(formData, field)) {
                 this.elements[field].value = formData[field];
+                if (field === 'owner' || field === 'boatName') this.state.identityOverrides.add(field);
             }
         });
+        this.updateBoatLookupStatus();
     }
 
     /**
@@ -693,7 +934,7 @@ class SailDeclarationManager {
         this.updateSelectedTags();
         
         // Refresh dropdowns
-        const hullNumber = this.elements.hullNumber?.value?.trim();
+        const hullNumber = this.getHullNumber();
         if (hullNumber) {
             const filteredSails = this.state.sailsData.filter(sail => sail.Hull === hullNumber);
             if (filteredSails.length > 0) {
@@ -706,6 +947,7 @@ class SailDeclarationManager {
                 });
             }
         }
+        this.updateSelectedTags();
     }
 
     /**
@@ -722,7 +964,8 @@ class SailDeclarationManager {
      * @private
      */
     clearAllFields() {
-        const textFields = ['owner', 'boatName', 'email', 'mobile'];
+        this.closeIdentitySuggestions();
+        const textFields = ['owner', 'boatName', 'email', 'mobile', 'spinnaker1Color', 'spinnaker2Color'];
         textFields.forEach(field => {
             if (this.elements[field]) {
                 this.elements[field].value = '';
@@ -857,7 +1100,11 @@ function loadDeclaration() {
 /**
  * Initialize the application when DOM is ready
  */
-(async function initializeApp() {
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {SailDeclarationManager};
+}
+
+if (typeof document !== 'undefined') (async function initializeApp() {
     try {
         sailDeclarationManager = new SailDeclarationManager();
         await sailDeclarationManager.init();
