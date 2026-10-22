@@ -13,7 +13,7 @@ PUBLIC_PAGES = ['index.html', *sorted(str(p.relative_to(PROJECT_ROOT))
                                     for p in (PROJECT_ROOT / 'pages').rglob('*.html'))]
 GENERATED_PAGES = [*PUBLIC_PAGES, 'tools/test_na.html', 'tools/documents/hull_cleaning.html', 'tools/documents/event_crew_weighin.html']
 NAV_LINKS = [('index.html', 'Home'), ('pages/classifieds.html', 'Classifieds'),
-             ('pages/members.html', 'Members'), ('pages/fleetdues.html', 'Fleet Dues'),
+             ('pages/members.html', 'Members'),
              ('pages/join.html', 'Join'), ('pages/events_archive.html', 'Event Archive')]
 BOOTSTRAP_CSS = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">'
 BOOTSTRAP_JS = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>'
@@ -28,6 +28,25 @@ def render_page(relative, source):
     if relative in tool_labels:
         page_links.append((relative, tool_labels[relative]))
     for target, label in page_links:
+        if target == 'pages/members.html':
+            members_active = relative in {'pages/members.html', 'pages/fleetdues.html'}
+            members_class = 'nav-link dropdown-toggle' + (' active' if members_active else '')
+            children = [
+                ('pages/members.html', 'Members Overview'),
+                ('tools/documents/Sail_dec_auto.html', 'Sail Declaration'),
+                ('pages/members.html#fleet-dues', 'Fleet Dues'),
+                ('pages/fleetdues.html', 'Dues Status'),
+            ]
+            items = []
+            for child_target, child_label in children:
+                current = relative == child_target
+                items.append('                        <li><a class="dropdown-item' + (' active' if current else '') +
+                             f'" href="{root}/{child_target}"' + (' aria-current="page"' if current else '') + f'>{child_label}</a></li>')
+            links.append('                <li class="nav-item dropdown">\n' +
+                         f'                    <button class="{members_class}" type="button" id="membersMenu" data-bs-toggle="dropdown" aria-expanded="false">Members</button>\n' +
+                         '                    <ul class="dropdown-menu" aria-labelledby="membersMenu">\n' +
+                         '\n'.join(items) + '\n                    </ul>\n                </li>')
+            continue
         active = relative == target or (target == 'pages/events_archive.html' and relative in {
             'pages/north_americans_2024.html', 'pages/media_kit.html',
             'pages/news/cleveland-race-week-2024-highlights.html'})
@@ -52,6 +71,9 @@ def render_page(relative, source):
     source = re.sub(r'<link\b[^>]*href="https://[^" ]*/bootstrap(?:@[^/" ]+|/[^/" ]+)?/[^" ]*bootstrap.min.css"[^>]*>', lambda _: BOOTSTRAP_CSS, source)
     source = re.sub(r'<script\b[^>]*src="https://[^" ]*/bootstrap(?:@[^/" ]+|/[^/" ]+)?/[^" ]*bootstrap(?:.bundle)?.min.js"[^>]*></script>', lambda _: BOOTSTRAP_JS, source)
     source = re.sub(r'\s*<script src="https://[^" ]*(?:jquery|popper)[^" ]*"[^>]*></script>', '', source)
+    navigation_script = f'<script src="{root}/assets/js/navigation.js" defer></script>'
+    if navigation_script not in source:
+        source = source.replace('</body>', f'    {navigation_script}\n</body>')
     return source
 
 

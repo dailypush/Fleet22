@@ -10,6 +10,12 @@
         scroll-padding-top: 1rem;
     }
 
+    #member-resources,
+    #sail-declaration,
+    #fleet-dues {
+        scroll-margin-top: 4rem;
+    }
+
     :focus-visible {
         outline: 3px solid #ffbf47;
         outline-offset: 3px;

@@ -28,8 +28,15 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="../pages/classifieds.html">Classifieds</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/members.html">Members</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/fleetdues.html">Fleet Dues</a></li>
+                <li class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle" type="button" id="membersMenu" data-bs-toggle="dropdown" aria-expanded="false">Members</button>
+                    <ul class="dropdown-menu" aria-labelledby="membersMenu">
+                        <li><a class="dropdown-item" href="../pages/members.html">Members Overview</a></li>
+                        <li><a class="dropdown-item" href="../tools/documents/Sail_dec_auto.html">Sail Declaration</a></li>
+                        <li><a class="dropdown-item" href="../pages/members.html#fleet-dues">Fleet Dues</a></li>
+                        <li><a class="dropdown-item" href="../pages/fleetdues.html">Dues Status</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="../pages/join.html">Join</a></li>
                 <li class="nav-item"><a class="nav-link active" href="../pages/events_archive.html" aria-current="page">Event Archive</a></li>
             </ul>
@@ -82,8 +89,8 @@
         </section>
         <aside class="p-4 bg-light rounded">
             <h2 class="h4">Preparing for your next event?</h2>
-            <p>Look up your boat and sail tags in the reusable J/105 sail declaration form.</p>
-            <a href="../tools/documents/Sail_dec_auto.html" class="btn btn-primary">Create a Sail Declaration</a>
+            <p>Find the reusable J/105 sail declaration form and other tools in the Members Area.</p>
+            <a href="./members.html#sail-declaration" class="btn btn-primary">Sail Declaration in Members</a>
         </aside>
     </main>
     <!-- shared:footer -->
@@ -96,5 +103,6 @@
 </footer>
 <!-- /shared:footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script src="../assets/js/navigation.js" defer></script>
 </body>
 </html>

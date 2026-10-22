@@ -58,7 +58,9 @@ Some boats have missing or placeholder yacht clubs:
 The current simplified `boats_fleet22.json` does NOT include `Owner` or `Contact Email`. These fields are available in `j105_members_status.json` and `fleet22_active_roster.json`.
 
 ### HTML Navigation Consistency
-All nav bars should show:
+All shared nav bars should show:
+- A Members dropdown containing Members Overview, Sail Declaration, Fleet Dues, and Dues Status. Fleet Dues is not a separate top-level navigation item.
+- The Members hub uses `member-resources`, `sail-declaration`, and `fleet-dues` anchors; preserve these links.
 - "Event Archive" linking to `pages/events_archive.html` with the appropriate relative path
 - North Americans 2026 is completed; preserve `north_americans_2024.html` and its `current-event` / `historical-event` anchors for archived links
 - Copyright: `© 2026 Fleet 22 Lake Erie`

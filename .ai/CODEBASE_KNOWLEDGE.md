@@ -157,8 +157,8 @@ The staged updater (`scripts/update_all_data.py`) refreshes membership and sails
 | Page | Path | Purpose |
 |------|------|---------|
 | Home | `index.html` | Landing page with SEO (Schema.org, OG, Twitter) |
-| Members | `pages/members.html` | Fleet 22 boat list (scraped by scripts) |
-| Fleet Dues | `pages/fleetdues.html` | Payment status (fetches local JSON + freshness metadata) |
+| Members | `pages/members.html` | Member resource hub, dues instructions, fleet boat list |
+| Dues Status | `pages/fleetdues.html` | Members subpage; fetches local JSON + freshness metadata |
 | Classifieds | `pages/classifieds.html` | Boat/equipment listings |
 | Join | `pages/join.html` | Fleet 22 membership info |
 | Media Kit | `pages/media_kit.html` | NA 2024 media/sponsor kit |
@@ -167,6 +167,8 @@ The staged updater (`scripts/update_all_data.py`) refreshes membership and sails
 | Race Week News | `pages/news/cleveland-race-week-2024-highlights.html` | 2024 CRW recap |
 
 The homepage has an end-of-2026-season wrap-up and 2027 planning message. The 2026 North Americans are archived; registration prompts are removed. Shared navigation points to Event Archive. Existing championship URLs/section anchors remain valid.
+
+Members is the primary entry point for Sail Declaration, Fleet Dues payment instructions, and Dues Status. The shared Members dropdown links to all three. Member-resource cards use `member-resources`, `sail-declaration`, and `fleet-dues` anchors. Declaration and status page URLs remain unchanged and include links back to Members. Homepage/archive resource links lead through the Members hub. `assets/js/navigation.js` closes the mobile menu on destination selection; member-section anchors have spacing below the sticky navbar.
 
 `tools/documents/Sail_dec_auto.html` is a generic J/105 sail declaration with optional event name/dates, hull/name/owner lookup suggestions and editable overrides. Event details persist across boat changes and Save/Load and appear in print; storage is still the latest declaration per hull. `Sail_declaration.html` is the generic blank printable counterpart. Run `node --test tests/test_sail_declaration.cjs` for focused regressions.
 
