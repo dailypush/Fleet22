@@ -162,8 +162,13 @@ The staged updater (`scripts/update_all_data.py`) refreshes membership and sails
 | Classifieds | `pages/classifieds.html` | Boat/equipment listings |
 | Join | `pages/join.html` | Fleet 22 membership info |
 | Media Kit | `pages/media_kit.html` | NA 2024 media/sponsor kit |
-| North Americans | `pages/north_americans_2024.html` | NA 2026 Seattle Championship info |
+| Event Archive | `pages/events_archive.html` | Past championship and race-week links by year |
+| North Americans | `pages/north_americans_2024.html` | Archived Seattle 2026 and Cleveland 2024 championships |
 | Race Week News | `pages/news/cleveland-race-week-2024-highlights.html` | 2024 CRW recap |
+
+The homepage has an end-of-2026-season wrap-up and 2027 planning message. The 2026 North Americans are archived; registration prompts are removed. Shared navigation points to Event Archive. Existing championship URLs/section anchors remain valid.
+
+`tools/documents/Sail_dec_auto.html` is a generic J/105 sail declaration with optional event name/dates, hull/name/owner lookup suggestions and editable overrides. Event details persist across boat changes and Save/Load and appear in print; storage is still the latest declaration per hull. `Sail_declaration.html` is the generic blank printable counterpart. Run `node --test tests/test_sail_declaration.cjs` for focused regressions.
 
 ### Analysis/Visualization Pages
 - `analysis/githeatmap.html` — Git commit activity

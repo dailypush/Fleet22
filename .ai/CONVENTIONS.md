@@ -59,9 +59,14 @@ The current simplified `boats_fleet22.json` does NOT include `Owner` or `Contact
 
 ### HTML Navigation Consistency
 All nav bars should show:
-- "North Americans 2026" (not "2024")
-- Link target: `north_americans_2024.html` (filename kept for URL stability)
+- "Event Archive" linking to `pages/events_archive.html` with the appropriate relative path
+- North Americans 2026 is completed; preserve `north_americans_2024.html` and its `current-event` / `historical-event` anchors for archived links
 - Copyright: `© 2026 Fleet 22 Lake Erie`
+
+### Sail Declaration
+- Interactive and printable forms use generic J/105 branding; no fixed event year or championship logo.
+- Optional event name and dates are saved/printed. Keep lookup suggestions and manual overrides working.
+- Event details stay when switching boats. Storage remains the most recent declaration per hull.
 
 ### CSS Files
 - `assets/css/styles.css` — Main site styles
@@ -81,8 +86,8 @@ All nav bars should show:
 - Edit shared navigation/footer in `templates/`, then run `python -m scripts.generate_site`
 - Run `python -m scripts.generate_site --check` and `python -m scripts.validators.check_site`
 - [ ] Copyright year: 2026
-- [ ] Nav link text: "North Americans 2026"
-- [ ] Nav link href: `north_americans_2024.html` (unchanged filename)
+- [ ] Nav link text: "Event Archive"
+- [ ] Nav link href: relative path to `pages/events_archive.html`
 - [ ] Check both desktop and mobile nav if applicable
 
 ### Before Editing Python Scripts

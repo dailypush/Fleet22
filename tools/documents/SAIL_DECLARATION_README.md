@@ -2,7 +2,13 @@
 
 ## Overview
 
-The Sail Declaration Form is a modern, ES6+ JavaScript application for managing J/105 North American Championship sail declarations. The codebase has been refactored to follow best practices with proper separation of concerns, comprehensive error handling, and detailed documentation.
+The Sail Declaration Form prepares sail lists for any J/105 regatta or event. Optional event name and date fields appear on saved and printed declarations. The form keeps hull/boat/owner lookup, editable overrides, sail-tag selection, and local Save/Load.
+
+## Event details
+
+Event / Regatta Name and Event Dates are optional free-text fields. They remain in place when choosing another boat for the same event. Save/Load includes them; loading an older declaration clears event fields that were not present in the saved data. Storage remains the last saved declaration per hull, so saving another event for the same hull replaces that hull's prior saved declaration.
+
+The printed declaration and the separate blank `Sail_declaration.html` form use generic J/105 branding, with no year or championship fixed in the template.
 
 ## Hull-to-boat lookup and manual overrides
 
@@ -402,7 +408,7 @@ Example: `sailDeclaration_123`
     spinnaker1Color: "Red/White",
     spinnaker2Color: "Blue",
     savedAt: "2025-10-11T12:00:00.000Z",
-    version: "2.2"
+    version: "2.3"
 }
 ```
 
@@ -537,7 +543,7 @@ Enable verbose logging by checking browser console. The application logs:
 
 ## Credits
 
-- **Version**: 2.2.0
+- **Version**: 2.3.0
 - **Author**: Fleet22
 - **License**: MIT
 - **Repository**: https://github.com/dailypush/Fleet22

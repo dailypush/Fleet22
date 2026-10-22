@@ -14,7 +14,7 @@ PUBLIC_PAGES = ['index.html', *sorted(str(p.relative_to(PROJECT_ROOT))
 GENERATED_PAGES = [*PUBLIC_PAGES, 'tools/test_na.html', 'tools/documents/hull_cleaning.html', 'tools/documents/event_crew_weighin.html']
 NAV_LINKS = [('index.html', 'Home'), ('pages/classifieds.html', 'Classifieds'),
              ('pages/members.html', 'Members'), ('pages/fleetdues.html', 'Fleet Dues'),
-             ('pages/join.html', 'Join'), ('pages/north_americans_2024.html', 'North Americans 2026')]
+             ('pages/join.html', 'Join'), ('pages/events_archive.html', 'Event Archive')]
 BOOTSTRAP_CSS = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">'
 BOOTSTRAP_JS = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>'
 
@@ -28,13 +28,15 @@ def render_page(relative, source):
     if relative in tool_labels:
         page_links.append((relative, tool_labels[relative]))
     for target, label in page_links:
-        active = relative == target
+        active = relative == target or (target == 'pages/events_archive.html' and relative in {
+            'pages/north_americans_2024.html', 'pages/media_kit.html',
+            'pages/news/cleveland-race-week-2024-highlights.html'})
         links.append('                <li class="nav-item"><a class="nav-link' + (' active' if active else '') +
-                     f'" href="{root}/{target}"' + (' aria-current="page"' if active else '') + f'>{label}</a></li>')
+                     f'" href="{root}/{target}"' + (' aria-current="page"' if relative == target else '') + f'>{label}</a></li>')
     navigation = Template((PROJECT_ROOT / 'templates/navigation.html').read_text()).substitute(root=root, links='\n'.join(links)).strip()
     extra = ''
     if relative == 'pages/north_americans_2024.html':
-        extra = '        <p><a href="https://www.2026j105northamericans.com/">North Americans official website</a></p>\n        <p>Page last updated: <span id="lastUpdated">Loading...</span></p>'
+        extra = '        <p><a href="./events_archive.html">Browse the event archive</a></p>'
     footer = Template((PROJECT_ROOT / 'templates/footer.html').read_text()).substitute(year=date.today().year, extra=extra).strip()
     for name, content, fallback in [('navigation', navigation, r'<nav\b.*?</nav>'), ('footer', footer, r'<footer\b.*?</footer>')]:
         rendered = f'<!-- shared:{name} -->\n{content}\n<!-- /shared:{name} -->'

@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sail List by Tag Number</title>
+    <title>J/105 Sail Declaration | Fleet 22 Lake Erie</title>
+    <meta name="description" content="Prepare a sail declaration for any J/105 event. Look up your boat, select sail tags, and save or print your declaration.">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -84,14 +85,24 @@
 <body>
     <div class="container container-custom my-3">
         <header class="text-center my-2">
-            <img src="../../assets/na_logos/j105NA2024_logo2.png" alt="Organization Logo" class="mb-2" style="max-width: 200px;">
-            <h1>2024 J/105 North American Championship</h1>
-            <h2>Sail Declaration</h2>
+            <h1>J/105 Sail Declaration</h1>
+            <p class="text-muted">For regattas and events throughout the J/105 class.</p>
         </header>
 
         <div class="container">
-            <p class="text-center mb-3">This form is to list all the sails you will use for the 2024 J/105 North American Championship.</p>
+            <p class="text-center mb-3">List the sails you plan to use at your event. Add event details below, then save or print your declaration.</p>
             <form>
+                <div class="form-row">
+                    <div class="form-group col-md-7">
+                        <label for="eventName">Event / Regatta Name <span class="text-muted">(optional)</span>:</label>
+                        <input type="text" class="form-control" id="eventName" name="eventName" placeholder="Enter event name">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="eventDates">Event Dates <span class="text-muted">(optional)</span>:</label>
+                        <input type="text" class="form-control" id="eventDates" name="eventDates" placeholder="Enter date or date range">
+                    </div>
+                </div>
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="hullNumber">Enter Hull Number:</label>

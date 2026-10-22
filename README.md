@@ -85,7 +85,9 @@ python -m scripts.generate_site --check
 python -m scripts.validators.check_site
 ```
 
-Generated HTML stays checked in, so hosting requires no build. The generator updates the sitemap with real page paths and pins public-page Bootstrap CSS/JS to the same version with integrity hashes. Navigation retains the existing `north_americans_2024.html` URL for stability.
+Generated HTML stays checked in, so hosting requires no build. The generator updates the sitemap with real page paths and pins public-page Bootstrap CSS/JS to the same version with integrity hashes. Navigation links to `pages/events_archive.html`. The North Americans history retains its existing `pages/north_americans_2024.html` URL and section anchors for stability.
+
+The sail declaration is reusable across J/105 events, with optional event name/dates saved and printed alongside boat and sail information.
 
 Members, dues and sail analysis load deployment-local JSON. The dues page displays successful refresh time from `data/metadata.json`; failed data loads show an error. Keep historical event content dated and avoid labeling past events as upcoming.
 

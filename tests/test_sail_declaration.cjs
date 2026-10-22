@@ -9,7 +9,7 @@ const owner = (name, status = 'Member 2026', role = 'OW') => ({
 
 function manager() {
     const form = new SailDeclarationManager();
-    for (const id of ['hullNumber', 'owner', 'boatName', 'email', 'mobile',
+    for (const id of ['hullNumber', 'owner', 'boatName', 'email', 'mobile', 'eventName', 'eventDates',
                       'spinnaker1Color', 'spinnaker2Color']) form.elements[id] = {value: ''};
     form.elements.boatLookupStatus = {textContent: ''};
     form.elements.useRegistryDetails = {disabled: true};
@@ -202,4 +202,39 @@ test('Enter selects a highlighted suggestion and Escape preserves manual input',
     form.handleSuggestionKeydown({key: 'Escape'}, 'owner');
     assert.equal(form.elements.owner.value, 'Charterer');
     assert.equal(form.state.suggestions.field, null);
+});
+
+test('event context is included in form data and survives boat changes', () => {
+    const form = manager();
+    form.elements.eventName.value = 'Lake Erie Invitational';
+    form.elements.eventDates.value = 'June 12–14';
+    form.initializeSailDropdowns = () => {};
+    form.handleHullNumberChange();
+    assert.equal(form.getFormData().eventName, 'Lake Erie Invitational');
+    form.elements.hullNumber.value = '72';
+    form.handleHullNumberChange();
+    assert.equal(form.getFormData().eventDates, 'June 12–14');
+});
+
+test('saved event context restores, while legacy declarations clear stale event fields', () => {
+    const form = manager();
+    form.restoreFormData({eventName: 'Autumn Regatta', eventDates: 'October 10–11', owner: 'Owner'});
+    assert.equal(form.elements.eventName.value, 'Autumn Regatta');
+    assert.equal(form.elements.eventDates.value, 'October 10–11');
+    form.restoreFormData({owner: 'Legacy owner'});
+    assert.equal(form.elements.eventName.value, '');
+    assert.equal(form.elements.eventDates.value, '');
+});
+
+test('generic print uses optional event context safely and has no championship branding', () => {
+    const form = manager();
+    const fields = {hullNumber: '493', owner: 'Owner', eventName: 'Club <Invitational>', eventDates: 'June 12–14'};
+    const html = form.generatePrintContent(fields, {});
+    assert.match(html, /J\/105 Sail Declaration/);
+    assert.match(html, /Club &lt;Invitational&gt;/);
+    assert.match(html, /June 12–14/);
+    assert.ok(!/North American|2024/.test(html));
+    const unnamed = form.generatePrintContent({hullNumber: '493', owner: 'Owner'}, {});
+    assert.ok(!unnamed.includes('<strong>Event:</strong>'));
+    assert.ok(!unnamed.includes('<strong>Event Dates:</strong>'));
 });

@@ -1,11 +1,11 @@
 /**
  * Sail Declaration Form Manager
  * 
- * This module manages the J/105 North American Championship Sail Declaration form.
+ * This module manages a reusable sail declaration for J/105 events.
  * It handles fetching sail data, form validation, sail selection, and local storage persistence.
  * 
  * @module SailDeclarationManager
- * @version 2.2.0
+ * @version 2.3.0
  * @author Fleet22
  */
 
@@ -92,7 +92,7 @@ class SailDeclarationManager {
      */
     cacheElements() {
         const elementIds = [
-            'hullNumber', 'owner', 'boatName', 'email', 'mobile',
+            'hullNumber', 'owner', 'boatName', 'email', 'mobile', 'eventName', 'eventDates',
             'jib1', 'jib2', 'main', 'spinnaker1', 'spinnaker2',
             'spinnaker1Color', 'spinnaker2Color', 'boatLookupStatus', 'useRegistryDetails',
             'ownerSuggestions', 'boatNameSuggestions', 'suggestionStatus'
@@ -668,6 +668,8 @@ class SailDeclarationManager {
      */
     getFormData() {
         return {
+            eventName: this.elements.eventName?.value?.trim() || '',
+            eventDates: this.elements.eventDates?.value?.trim() || '',
             hullNumber: this.getHullNumber(),
             owner: this.elements.owner?.value || '',
             boatName: this.elements.boatName?.value || '',
@@ -739,9 +741,10 @@ class SailDeclarationManager {
 
         return `
             <header class="text-center my-2">
-                <h1>J/105 North American Championship</h1>
-                <h2>Sail Declaration</h2>
-                <p class="text-center mb-3">This form lists all the sails to be used for the 2024 J/105 North American Championship.</p>
+                <h1>J/105 Sail Declaration</h1>
+                ${formData.eventName ? `<p><strong>Event:</strong> ${formData.eventName}</p>` : ''}
+                ${formData.eventDates ? `<p><strong>Event Dates:</strong> ${formData.eventDates}</p>` : ''}
+                <p class="text-center mb-3">Sails declared for use at this J/105 event.</p>
             </header>
             <h3>Sail List for Hull ${formData.hullNumber}</h3>
             <p><strong>Boat Name:</strong> ${formData.boatName || 'Not Provided'}</p>
@@ -841,7 +844,7 @@ class SailDeclarationManager {
             const dataToSave = {
                 ...formData,
                 savedAt: new Date().toISOString(),
-                version: '2.2'
+                version: '2.3'
             };
 
             localStorage.setItem(storageKey, JSON.stringify(dataToSave));
@@ -899,6 +902,10 @@ class SailDeclarationManager {
      */
     restoreFormData(formData) {
         this.closeIdentitySuggestions();
+        // Older declarations have no event context; don't retain a different event.
+        for (const field of ['eventName', 'eventDates']) {
+            if (this.elements[field]) this.elements[field].value = formData[field] || '';
+        }
         const fields = ['owner', 'boatName', 'email', 'mobile', 'spinnaker1Color', 'spinnaker2Color'];
         
         fields.forEach(field => {
