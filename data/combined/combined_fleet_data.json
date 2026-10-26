@@ -9315,7 +9315,7 @@
     {
         "hull_number": "101",
         "owner": "Judith McLean",
-        "boat_name": "Esprit d\\'Ecosse",
+        "boat_name": "Esprit d'Ecosse",
         "fleet": "5",
         "class_membership": "Member 2026",
         "sail_tags": [
@@ -11565,7 +11565,7 @@
     {
         "hull_number": "123",
         "owner": "Mark DenUyl",
-        "boat_name": "Good Lookin\\'",
+        "boat_name": "Good Lookin'",
         "fleet": "18",
         "class_membership": "Member 2024",
         "sail_tags": [
@@ -23777,18 +23777,6 @@
                 "type": "S89"
             },
             {
-                "certificate": "1109320N",
-                "sailmaker": "North",
-                "delivery_date": "2012-03-03",
-                "type": "S89"
-            },
-            {
-                "certificate": "1109332N",
-                "sailmaker": "North",
-                "delivery_date": "2012-03-23",
-                "type": "J"
-            },
-            {
                 "certificate": "0611433K",
                 "sailmaker": "UK Halsey",
                 "delivery_date": "2007-06-14",
@@ -23799,6 +23787,18 @@
                 "sailmaker": "North",
                 "delivery_date": "2010-07-01",
                 "type": "S89"
+            },
+            {
+                "certificate": "1109320N",
+                "sailmaker": "North",
+                "delivery_date": "2012-03-03",
+                "type": "S89"
+            },
+            {
+                "certificate": "1109332N",
+                "sailmaker": "North",
+                "delivery_date": "2012-03-23",
+                "type": "J"
             }
         ]
     },
@@ -38155,6 +38155,12 @@
                 "sailmaker": "Quantum",
                 "delivery_date": "2025-12-18",
                 "type": "M"
+            },
+            {
+                "certificate": "2604112Q",
+                "sailmaker": "Quantum",
+                "delivery_date": "2026-10-21",
+                "type": "S89"
             }
         ]
     },
@@ -40738,30 +40744,6 @@
                 "type": "S89"
             },
             {
-                "certificate": "1207137U",
-                "sailmaker": "Ullman",
-                "delivery_date": "2012-09-10",
-                "type": "M"
-            },
-            {
-                "certificate": "1207138U",
-                "sailmaker": "Ullman",
-                "delivery_date": "2012-09-10",
-                "type": "J"
-            },
-            {
-                "certificate": "1312337U",
-                "sailmaker": "Ullman",
-                "delivery_date": "2013-11-06",
-                "type": "M"
-            },
-            {
-                "certificate": "1312338U",
-                "sailmaker": "Ullman",
-                "delivery_date": "2013-11-06",
-                "type": "J"
-            },
-            {
                 "certificate": "0705188U",
                 "sailmaker": "Ullman",
                 "delivery_date": "2007-06-11",
@@ -40789,6 +40771,30 @@
                 "certificate": "0903064U",
                 "sailmaker": "Ullman",
                 "delivery_date": "2010-12-21",
+                "type": "J"
+            },
+            {
+                "certificate": "1207137U",
+                "sailmaker": "Ullman",
+                "delivery_date": "2012-09-10",
+                "type": "M"
+            },
+            {
+                "certificate": "1207138U",
+                "sailmaker": "Ullman",
+                "delivery_date": "2012-09-10",
+                "type": "J"
+            },
+            {
+                "certificate": "1312337U",
+                "sailmaker": "Ullman",
+                "delivery_date": "2013-11-06",
+                "type": "M"
+            },
+            {
+                "certificate": "1312338U",
+                "sailmaker": "Ullman",
+                "delivery_date": "2013-11-06",
                 "type": "J"
             }
         ]
@@ -42894,7 +42900,7 @@
     {
         "hull_number": "479",
         "owner": "Branwell Lepp",
-        "boat_name": "It Wasn\\\\\\\\\\\\\\'t Me",
+        "boat_name": "It Wasn't Me",
         "fleet": "5",
         "class_membership": "Member 2026",
         "sail_tags": [

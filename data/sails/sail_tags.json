@@ -12440,6 +12440,16 @@
         "Notes": ""
     },
     {
+        "Hull": "419",
+        "Purchaser": "Andy Cherner",
+        "Certificate No.": "2604112Q",
+        "Sailmaker": "Quantum",
+        "Delivery Date": "2026-10-21",
+        "Sail Type": "S89",
+        "Fleet": "3",
+        "Notes": ""
+    },
+    {
         "Hull": "293",
         "Purchaser": "George Chernev",
         "Certificate No.": "2501031N",
@@ -53822,66 +53832,6 @@
     {
         "Hull": "445",
         "Purchaser": "Michael O'Connell",
-        "Certificate No.": "1207137U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2012-09-10",
-        "Sail Type": "M",
-        "Fleet": "0",
-        "Notes": ""
-    },
-    {
-        "Hull": "445",
-        "Purchaser": "Michael O'Connell",
-        "Certificate No.": "1207138U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2012-09-10",
-        "Sail Type": "J",
-        "Fleet": "0",
-        "Notes": ""
-    },
-    {
-        "Hull": "445",
-        "Purchaser": "Michael O'Connell",
-        "Certificate No.": "1312337U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2013-11-06",
-        "Sail Type": "M",
-        "Fleet": "0",
-        "Notes": ""
-    },
-    {
-        "Hull": "445",
-        "Purchaser": "Michael O'Connell",
-        "Certificate No.": "1312338U",
-        "Sailmaker": "Ullman",
-        "Delivery Date": "2013-11-06",
-        "Sail Type": "J",
-        "Fleet": "0",
-        "Notes": ""
-    },
-    {
-        "Hull": "271",
-        "Purchaser": "Thomas O'Grady",
-        "Certificate No.": "1109320N",
-        "Sailmaker": "North",
-        "Delivery Date": "2012-03-03",
-        "Sail Type": "S89",
-        "Fleet": "5",
-        "Notes": ""
-    },
-    {
-        "Hull": "271",
-        "Purchaser": "Thomas O'Grady",
-        "Certificate No.": "1109332N",
-        "Sailmaker": "North",
-        "Delivery Date": "2012-03-23",
-        "Sail Type": "J",
-        "Fleet": "5",
-        "Notes": ""
-    },
-    {
-        "Hull": "445",
-        "Purchaser": "Michael O'Connell",
         "Certificate No.": "0705188U",
         "Sailmaker": "Ullman",
         "Delivery Date": "2007-06-11",
@@ -53928,6 +53878,46 @@
         "Sail Type": "J",
         "Fleet": "0",
         "Notes": "Sail returned to Ullman Sails from Mike Schiltz, and re-issued to Mike O'Connell per BC e-mail 12/21/10"
+    },
+    {
+        "Hull": "445",
+        "Purchaser": "Michael O'Connell",
+        "Certificate No.": "1207137U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2012-09-10",
+        "Sail Type": "M",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "445",
+        "Purchaser": "Michael O'Connell",
+        "Certificate No.": "1207138U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2012-09-10",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "445",
+        "Purchaser": "Michael O'Connell",
+        "Certificate No.": "1312337U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2013-11-06",
+        "Sail Type": "M",
+        "Fleet": "0",
+        "Notes": ""
+    },
+    {
+        "Hull": "445",
+        "Purchaser": "Michael O'Connell",
+        "Certificate No.": "1312338U",
+        "Sailmaker": "Ullman",
+        "Delivery Date": "2013-11-06",
+        "Sail Type": "J",
+        "Fleet": "0",
+        "Notes": ""
     },
     {
         "Hull": "628",
@@ -53986,6 +53976,26 @@
         "Sailmaker": "North",
         "Delivery Date": "2010-07-01",
         "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "271",
+        "Purchaser": "Thomas O'Grady",
+        "Certificate No.": "1109320N",
+        "Sailmaker": "North",
+        "Delivery Date": "2012-03-03",
+        "Sail Type": "S89",
+        "Fleet": "5",
+        "Notes": ""
+    },
+    {
+        "Hull": "271",
+        "Purchaser": "Thomas O'Grady",
+        "Certificate No.": "1109332N",
+        "Sailmaker": "North",
+        "Delivery Date": "2012-03-23",
+        "Sail Type": "J",
         "Fleet": "5",
         "Notes": ""
     },
